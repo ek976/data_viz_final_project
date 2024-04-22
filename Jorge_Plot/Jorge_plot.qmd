@@ -188,7 +188,7 @@ Highcharts.chart('container', {
             minSize: '20%',
             maxSize: '100%',
             zMin: 0,
-            zMax: 100,
+            zMax: 400,
             layoutAlgorithm: {
                 gravitationalConstant: 0.05,
                 splitSeries: true,
