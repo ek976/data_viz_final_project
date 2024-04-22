@@ -1,0 +1,145 @@
+---
+title: "Split Packed Bubble Plot"
+author: "Jorge Bris Moreno"
+format:
+    html:
+        embed-resources: true
+        code-fold: true
+        toc: true
+---
+
+```{r echo=FALSE, results='asis'}
+cat('
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+')
+```
+
+```{r}
+# Libraries
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(viridis)
+library(jsonlite)
+#library(observable)
+```
+
+```{r, message=FALSE, warning=FALSE}
+# will exclide these as they are combinations of the others. I can always add them:
+#- "Gross enrolment ratio, primary and lower secondary, female (%)"
+#- "Gross enrolment ratio, primary and secondary, female (%)"
+#- "Gross enrolment ratio, primary to tertiary, female (%)"
+df <- read_csv("../cleaned_data/filtered_education_data.csv")
+```
+
+```{r}
+indicators <- c("Gross enrolment ratio, lower secondary, female (%)",
+                "Gross enrolment ratio, post-secondary non-tertiary, female (%)",
+                "Gross enrolment ratio, pre-primary, female (%)",
+                "Gross enrolment ratio, primary, female (%)",
+                "Gross enrolment ratio, secondary, female (%)",
+                "Gross enrolment ratio, tertiary, female (%)",
+                "Gross enrolment ratio, upper secondary, female (%)")
+
+data_filtered <- df %>%
+  filter(`Country Code` %in% c("ARB", "EAS", "EMU", "ECS", "HPC", "LAC", "MEA", "MNA", "OED", "SSA")) %>%
+  filter(`Indicator Name` %in% indicators)
+
+# Rename the indicators
+new_names <- c("lower secondary", "post-secondary non-tertiary", "pre-primary", 
+               "primary", "secondary", "tertiary", "upper secondary")
+
+names_mapping <- setNames(new_names, indicators)
+
+data_filtered$`Indicator Name` <- names_mapping[data_filtered$`Indicator Name`]
+
+# Select and rename relevant columns
+data_final <- data_filtered %>%
+  select(`Country Name`, `Country Code`, `Indicator Name`, `2014`) %>%
+  rename(Value = `2014`, Indicator = `Indicator Name`)
+
+# Display the final cleaned data
+print(data_final)
+```
+
+```{r}
+df_json <- toJSON(data_final, dataframe = "columns")
+```
+
+```{r}
+cat(df_json)
+#cat(paste0('df_json = ', df_json))
+```
+
+```{ojs}
+df_ojs = `{"Country Name":["Arab World","Arab World","Arab World","Arab World","Arab World","Arab World","Arab World","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","East Asia & Pacific","Euro area","Euro area","Euro area","Euro area","Euro area","Euro area","Euro area","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Heavily indebted poor countries (HIPC)","Heavily indebted poor countries (HIPC)","Heavily indebted poor countries (HIPC)","Heavily indebted poor countries (HIPC)","Heavily indebted poor countries (HIPC)","Heavily indebted poor countries (HIPC)","Heavily indebted poor countries (HIPC)","Latin America & Caribbean (excluding high income)","Latin America & Caribbean (excluding high income)","Latin America & Caribbean (excluding high income)","Latin America & Caribbean (excluding high income)","Latin America & Caribbean (excluding high income)","Latin America & Caribbean (excluding high income)","Latin America & Caribbean (excluding high income)","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa","Middle East & North Africa (excluding high income)","Middle East & North Africa (excluding high income)","Middle East & North Africa (excluding high income)","Middle East & North Africa (excluding high income)","Middle East & North Africa (excluding high income)","Middle East & North Africa (excluding high income)","Middle East & North Africa (excluding high income)","OECD members","OECD members","OECD members","OECD members","OECD members","OECD members","OECD members","Sub-Saharan Africa (excluding high income)","Sub-Saharan Africa (excluding high income)","Sub-Saharan Africa (excluding high income)","Sub-Saharan Africa (excluding high income)","Sub-Saharan Africa (excluding high income)","Sub-Saharan Africa (excluding high income)","Sub-Saharan Africa (excluding high income)"],"Country Code":["ARB","ARB","ARB","ARB","ARB","ARB","ARB","EAS","EAS","EAS","EAS","EAS","EAS","EAS","EMU","EMU","EMU","EMU","EMU","EMU","EMU","ECS","ECS","ECS","ECS","ECS","ECS","ECS","HPC","HPC","HPC","HPC","HPC","HPC","HPC","LAC","LAC","LAC","LAC","LAC","LAC","LAC","MEA","MEA","MEA","MEA","MEA","MEA","MEA","MNA","MNA","MNA","MNA","MNA","MNA","MNA","OED","OED","OED","OED","OED","OED","OED","SSA","SSA","SSA","SSA","SSA","SSA","SSA"],"Indicator":["lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary","lower secondary","post-secondary non-tertiary","pre-primary","primary","secondary","tertiary","upper secondary"],"Value":[81.054,"NA",25.3707,93.608,67.9689,28.768,54.5065,96.6641,"NA",76.0034,104.9668,88.3206,41.4262,79.7367,108.7706,"NA",102.3132,103.4798,110.7075,76.299,112.9169,103.7713,"NA",74.2163,103.1583,105.389,69.8713,107.4027,44.166,"NA",18.0427,98.0805,35.621,6.233,24.4659,108.0586,"NA",72.4493,107.3809,97.1722,48.967,84.4792,88.4424,"NA",29.5462,103.047,76.9069,38.2514,65.6759,86.992,"NA",26.8679,102.4904,74.3971,36.1012,62.3747,107.3207,"NA",79.3329,102.2592]}`
+
+data = JSON.parse(df_ojs)
+
+```
+
+```{ojs}
+
+seriesData = [];
+data["Country Name"].forEach((country, index) => {
+  let value = data["Value"][index];
+  if (value !== "NA") {
+    const found = seriesData.find(s => s.name === country);
+    if (found) {
+      found.data.push({ name: country, value: parseFloat(value) });
+    } else {
+      seriesData.push({ name: country, data: [{ name: country, value: parseFloat(value) }] });
+    }
+  }
+});
+
+// Initialize Highcharts directly
+Highcharts.chart('container', {
+  chart: {
+      type: 'packedbubble',
+      height: '100%'
+  },
+  title: {
+      text: 'Female Gross Enrollment Ratios by Region (2014)',
+      align: 'left'
+  },
+  tooltip: {
+      useHTML: true,
+      pointFormat: '<b>{point.name}:</b> {point.value}%'
+  },
+  plotOptions: {
+      packedbubble: {
+          minSize: '20%',
+          maxSize: '100%',
+          zMin: 0,
+          zMax: 100,
+          layoutAlgorithm: {
+              gravitationalConstant: 0.05,
+              splitSeries: true,
+              seriesInteraction: false,
+              dragBetweenSeries: true,
+              parentNodeLimit: true
+          },
+          dataLabels: {
+              enabled: true,
+              format: '{point.name}',
+              filter: {
+                  property: 'y',
+                  operator: '>',
+                  value: 10
+              },
+              style: {
+                  color: 'black',
+                  textOutline: 'none',
+                  fontWeight: 'normal'
+              }
+          }
+      }
+  },
+  series: seriesData
+});
+```
