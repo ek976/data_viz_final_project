@@ -19,7 +19,7 @@ cat('
 ')
 ```
 
-```{r}
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
 # Libraries
 library(tidyverse)
 library(ggplot2)
@@ -27,17 +27,9 @@ library(dplyr)
 library(viridis)
 library(jsonlite)
 #library(observable)
-```
 
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-# will exclide these as they are combinations of the others. I can always add them:
-#- "Gross enrolment ratio, primary and lower secondary, female (%)"
-#- "Gross enrolment ratio, primary and secondary, female (%)"
-#- "Gross enrolment ratio, primary to tertiary, female (%)"
 df <- read_csv("../cleaned_data/filtered_education_data.csv")
-```
 
-```{r, eval=FALSE}
 indicators <- c("Gross enrolment ratio, lower secondary, female (%)",
                 "Gross enrolment ratio, post-secondary non-tertiary, female (%)",
                 "Gross enrolment ratio, pre-primary, female (%)",
@@ -65,13 +57,9 @@ data_final <- data_filtered %>%
 
 # Display the final cleaned data
 print(data_final)
-```
 
-```{r, eval=FALSE}
 df_json <- toJSON(data_final, dataframe = "columns")
-```
 
-```{r, eval=FALSE}
 df_json
 ```
 
@@ -170,43 +158,47 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 
 <div id="container"></div>
 
-```{ojs}
-Highcharts.chart('container', {
-    chart: {
-        type: 'packedbubble',
-        height: '100%'
-    },
-    title: {
-        text: 'Female Gross Enrollment Ratios by Region (2014)'
-    },
-    tooltip: {
-        useHTML: true,
-        pointFormat: '<b>{point.name}:</b> {point.value}%'
-    },
-    plotOptions: {
-        packedbubble: {
-            minSize: '20%',
-            maxSize: '100%',
-            zMin: 0,
-            zMax: 400,
-            layoutAlgorithm: {
-                gravitationalConstant: 0.05,
-                splitSeries: true,
-                seriesInteraction: false,
-                dragBetweenSeries: true,
-                parentNodeLimit: true
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}',
-                style: {
-                    color: 'black',
-                    textOutline: 'none',
-                    fontWeight: 'normal'
+```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE, results='asis'}
+function renderChart() {
+    Highcharts.chart('container', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
+        title: {
+            text: 'Female Gross Enrollment Ratios by Region (2014)'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}%'
+        },
+        plotOptions: {
+            packedbubble: {
+                minSize: '20%',
+                maxSize: '100%',
+                zMin: 0,
+                zMax: 400,
+                layoutAlgorithm: {
+                    gravitationalConstant: 0.05,
+                    splitSeries: true,
+                    seriesInteraction: false,
+                    dragBetweenSeries: true,
+                    parentNodeLimit: true
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        color: 'black',
+                        textOutline: 'none',
+                        fontWeight: 'normal'
+                    }
                 }
             }
-        }
-    },
-    series: seriesData
-});
+        },
+        series: seriesData
+    });
+}
+
+renderChart();
 ```
