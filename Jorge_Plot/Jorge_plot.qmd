@@ -10,6 +10,7 @@ format:
 ---
 
 ```{r, echo=FALSE, results='asis', runtime="js"}
+# Calling highcharts
 cat('
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -26,10 +27,11 @@ library(ggplot2)
 library(dplyr)
 library(viridis)
 library(jsonlite)
-#library(observable)
 
+# read df
 df <- read_csv("../cleaned_data/filtered_education_data.csv")
 
+# Select the indicators
 indicators <- c("Gross enrolment ratio, lower secondary, female (%)",
                 "Gross enrolment ratio, post-secondary non-tertiary, female (%)",
                 "Gross enrolment ratio, pre-primary, female (%)",
@@ -38,6 +40,7 @@ indicators <- c("Gross enrolment ratio, lower secondary, female (%)",
                 "Gross enrolment ratio, tertiary, female (%)",
                 "Gross enrolment ratio, upper secondary, female (%)")
 
+# Filter the data
 data_filtered <- df %>%
   filter(`Country Name` %in% c("Arab World", "East Asia & Pacific", "Euro area", "Europe & Central Asia", "Heavily indebted poor countries (HIPC)", "Latin America & Caribbean (excluding high income)", "Middle East & North Africa", "Middle East & North Africa (excluding high income)", "OECD members", "Sub-Saharan Africa (excluding high income)")) %>%
   filter(`Indicator Name` %in% indicators)
@@ -46,25 +49,29 @@ data_filtered <- df %>%
 new_names <- c("lower secondary", "post-secondary non-tertiary", "pre-primary", 
                "primary", "secondary", "tertiary", "upper secondary")
 
+# Create a mapping between the old and new names
 names_mapping <- setNames(new_names, indicators)
 
+# Rename the indicators
 data_filtered$`Indicator Name` <- names_mapping[data_filtered$`Indicator Name`]
 
-# Select and rename relevant columns
+# Select and rename columns
 data_final <- data_filtered %>%
   select(`Country Name`, `Indicator Name`, `2014`) %>%
   rename(Value = `2014`, Indicator = `Indicator Name`)
 
-# Display the final cleaned data
+# print data
 print(data_final)
 
+# json format
 df_json <- toJSON(data_final, dataframe = "columns")
 
+# print json format to manually paste
 df_json
 ```
 
 ```{ojs}
-// Define the initial dataset
+// Define dataset
 initialData = [
   {"Country Name":"Arab World","Indicator":"lower secondary","Value":81.054},
   {"Country Name":"Arab World","Indicator":"post-secondary non-tertiary","Value":"NA"},
@@ -138,13 +145,13 @@ initialData = [
   {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"upper secondary","Value":108.0586}
 ];
 
-// Filter and parse the dataset to remove "NA" values and convert "Value" to float
+// Filter and parse the dataset
 parsedData = initialData.filter(d => d.Value !== "NA").map(d => ({
   ...d,
   Value: parseFloat(d.Value)
 }));
 
-// Reduce the data to group it by "Country Name" and accumulate the indicators and values
+// Group by "Country Name" and accumulate indicators and values
 seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, Value }) => {
   let group = acc.find(g => g.name === countryName);
   if (!group) {
@@ -156,9 +163,13 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 }, []);
 ```
 
-<div id="container"></div>
+<figure>
+  <div id="container"></div>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
+</figure>
 
-```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE, results='asis'}
+```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE}
+// Highcharts plotting
 function renderChart() {
     Highcharts.chart('container', {
         chart: {
@@ -174,7 +185,7 @@ function renderChart() {
         },
         plotOptions: {
             packedbubble: {
-                minSize: '20%',
+                minSize: '10%',
                 maxSize: '100%',
                 zMin: 0,
                 zMax: 400,
@@ -197,8 +208,7 @@ function renderChart() {
             }
         },
         series: seriesData
-    });
-}
-
+    })};
+// Render the chart
 renderChart();
 ```

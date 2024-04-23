@@ -143,7 +143,7 @@ function renderChart() {
         },
         plotOptions: {
             packedbubble: {
-                minSize: '20%',
+                minSize: '10%',
                 maxSize: '100%',
                 zMin: 0,
                 zMax: 400,
