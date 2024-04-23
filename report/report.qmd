@@ -2,12 +2,16 @@
 title: "Global study of Gender Inequality in Education Access"
 author: "Jorge Bris Moreno, Liz Kovalchuk, Tiana Le, and Sheeba Moghal"
 format:
-    html:
-        embed-resources: true
-        code-fold: true
-        toc: true
-        before_body: scripts.html
+  html:
+    embed-resources: true
+    toc: true
+    before_body: scripts.html
+editor_options:
+  chunk_output_type: console
+execute:
+  echo: false
 ---
+
 # Abstract
 
 # Introduction
@@ -120,7 +124,7 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 
 <figure>
   <div id="container"></div>
-  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values.</figcaption>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
 </figure>
 
 ```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE}
