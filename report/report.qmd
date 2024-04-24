@@ -184,3 +184,7 @@ function renderChart() {
     })};
 renderChart();
 ```
+
+From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. While looking at every regions data is important, it is worth noting that for some of them there is a lack of information for some education levels. This limits our ability to make a full comparison between regions. However, it still allows us to see the disparities between regions. Subsahaaran Africa, heavily indebted poor countries, and the Middle East and North Africa seem to have the lowest enrollment ratios across all education levels for female students. On the other hand, the Euro area, Europe and Central Asia, and OECD members have the highest enrollment ratios for female students. 
+
+This is important information to consider as we move forward with our analysis. One can think that it may be due to economic reasons, social and ideological reasons, or even political reasons. However, this problem has been present for decades and instead of taking assumptions to answer this question, we should identify the key reasons for this disparity and address it accordingly.
