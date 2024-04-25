@@ -43,6 +43,7 @@ cat('
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 ')
 ```
+
 ```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE}
 // Define the initial dataset
 initialData = [
