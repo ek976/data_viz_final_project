@@ -143,6 +143,9 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 </figure>
 
 ```{ojs, message=FALSE, warning=FALSE, echo = FALSE}
+hex_colors = [
+    "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
+]
 
 function renderChart() {
     Highcharts.chart('container', {
@@ -181,8 +184,13 @@ function renderChart() {
                 }
             }
         },
-        series: seriesData
-    })};
+        series: seriesData.map((series, index) => ({
+           ...series,
+            color: hex_colors[index % hex_colors.length]
+        }))
+    });
+};
+
 renderChart();
 ```
 
