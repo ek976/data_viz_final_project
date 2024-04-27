@@ -13,7 +13,7 @@ execute:
 ---
 
 # Abstract
-In this article we aim to explore gender inequality in education access across the globe. Education is one of the key drivers in the development of society. For that reason, we will be using data obrained from the World Bank to analyze the relationship between this gap and other factors such as GDP, GNI, population, and other variables. The data is utilized is from the years 2010, 2011, 2012, 2013, and 2014. We will focuss on a larger global scale and then dive down into specific regions in order to identify trends and patterns that are important to explore further through our analysis. Additionally, we will be looking at what regions have the highest diparity in education enrollment based on gender and what factors may be contributing to this disparity, whether they are economic, social, or political.
+In this article we aim to explore gender inequality in education access across the globe. Education is one of the key drivers in the development of society. For that reason, we will be using data obtained from the World Bank to analyze the relationship between this gap and other factors such as GDP, GNI, population, and other variables. The data is utilized is from the years 2010, 2011, 2012, 2013, and 2014. We will focuss on a larger global scale and then dive down into specific regions in order to identify trends and patterns that are important to explore further through our analysis. Additionally, we will be looking at what regions have the highest diparity in education enrollment based on gender and what factors may be contributing to this disparity, whether they are economic, social, or political.
 
 
 # Introduction
