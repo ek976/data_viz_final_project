@@ -1,0 +1,1453 @@
+﻿Country Name,Country Code,Indicator Name,Indicator Code
+Arab World,ARB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Arab World,ARB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Arab World,ARB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Arab World,ARB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Arab World,ARB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Arab World,ARB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+East Asia & Pacific,EAS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+East Asia & Pacific,EAS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+East Asia & Pacific,EAS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+East Asia & Pacific,EAS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+East Asia & Pacific,EAS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+East Asia & Pacific,EAS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+East Asia & Pacific (excluding high income),EAP,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+East Asia & Pacific (excluding high income),EAP,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+East Asia & Pacific (excluding high income),EAP,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+East Asia & Pacific (excluding high income),EAP,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+East Asia & Pacific (excluding high income),EAP,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+East Asia & Pacific (excluding high income),EAP,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Euro area,EMU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Euro area,EMU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Euro area,EMU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Euro area,EMU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Euro area,EMU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Euro area,EMU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Europe & Central Asia,ECS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Europe & Central Asia,ECS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Europe & Central Asia,ECS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Europe & Central Asia,ECS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Europe & Central Asia,ECS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Europe & Central Asia,ECS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Europe & Central Asia (excluding high income),ECA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Europe & Central Asia (excluding high income),ECA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Europe & Central Asia (excluding high income),ECA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Europe & Central Asia (excluding high income),ECA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Europe & Central Asia (excluding high income),ECA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Europe & Central Asia (excluding high income),ECA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+European Union,EUU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+European Union,EUU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+European Union,EUU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+European Union,EUU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+European Union,EUU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+European Union,EUU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Heavily indebted poor countries (HIPC),HPC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Heavily indebted poor countries (HIPC),HPC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Heavily indebted poor countries (HIPC),HPC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Heavily indebted poor countries (HIPC),HPC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Heavily indebted poor countries (HIPC),HPC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Heavily indebted poor countries (HIPC),HPC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+High income,HIC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+High income,HIC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+High income,HIC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+High income,HIC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+High income,HIC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+High income,HIC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Latin America & Caribbean,LCN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Latin America & Caribbean,LCN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Latin America & Caribbean,LCN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Latin America & Caribbean,LCN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Latin America & Caribbean,LCN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Latin America & Caribbean,LCN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Latin America & Caribbean (excluding high income),LAC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Latin America & Caribbean (excluding high income),LAC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Latin America & Caribbean (excluding high income),LAC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Latin America & Caribbean (excluding high income),LAC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Latin America & Caribbean (excluding high income),LAC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Latin America & Caribbean (excluding high income),LAC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Least developed countries: UN classification,LDC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Least developed countries: UN classification,LDC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Least developed countries: UN classification,LDC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Least developed countries: UN classification,LDC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Least developed countries: UN classification,LDC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Least developed countries: UN classification,LDC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Low & middle income,LMY,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Low & middle income,LMY,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Low & middle income,LMY,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Low & middle income,LMY,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Low & middle income,LMY,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Low & middle income,LMY,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Low income,LIC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Low income,LIC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Low income,LIC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Low income,LIC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Low income,LIC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Low income,LIC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Lower middle income,LMC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Lower middle income,LMC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Lower middle income,LMC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Lower middle income,LMC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Lower middle income,LMC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Lower middle income,LMC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Middle East & North Africa,MEA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Middle East & North Africa,MEA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Middle East & North Africa,MEA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Middle East & North Africa,MEA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Middle East & North Africa,MEA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Middle East & North Africa,MEA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Middle East & North Africa (excluding high income),MNA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Middle East & North Africa (excluding high income),MNA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Middle East & North Africa (excluding high income),MNA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Middle East & North Africa (excluding high income),MNA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Middle East & North Africa (excluding high income),MNA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Middle East & North Africa (excluding high income),MNA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Middle income,MIC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Middle income,MIC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Middle income,MIC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Middle income,MIC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Middle income,MIC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Middle income,MIC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+North America,NAC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+North America,NAC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+North America,NAC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+North America,NAC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+North America,NAC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+North America,NAC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+OECD members,OED,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+OECD members,OED,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+OECD members,OED,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+OECD members,OED,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+OECD members,OED,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+OECD members,OED,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+South Asia,SAS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+South Asia,SAS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+South Asia,SAS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+South Asia,SAS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+South Asia,SAS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+South Asia,SAS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sub-Saharan Africa,SSF,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sub-Saharan Africa,SSF,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sub-Saharan Africa,SSF,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sub-Saharan Africa,SSF,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sub-Saharan Africa,SSF,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sub-Saharan Africa,SSF,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sub-Saharan Africa (excluding high income),SSA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sub-Saharan Africa (excluding high income),SSA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sub-Saharan Africa (excluding high income),SSA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sub-Saharan Africa (excluding high income),SSA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sub-Saharan Africa (excluding high income),SSA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sub-Saharan Africa (excluding high income),SSA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Upper middle income,UMC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Upper middle income,UMC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Upper middle income,UMC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Upper middle income,UMC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Upper middle income,UMC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Upper middle income,UMC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+World,WLD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+World,WLD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+World,WLD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+World,WLD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+World,WLD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+World,WLD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Afghanistan,AFG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Afghanistan,AFG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Afghanistan,AFG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Afghanistan,AFG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Afghanistan,AFG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Afghanistan,AFG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Albania,ALB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Albania,ALB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Albania,ALB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Albania,ALB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Albania,ALB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Albania,ALB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Algeria,DZA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Algeria,DZA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Algeria,DZA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Algeria,DZA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Algeria,DZA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Algeria,DZA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+American Samoa,ASM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+American Samoa,ASM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+American Samoa,ASM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+American Samoa,ASM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+American Samoa,ASM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+American Samoa,ASM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Andorra,AND,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Andorra,AND,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Andorra,AND,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Andorra,AND,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Andorra,AND,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Andorra,AND,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Angola,AGO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Angola,AGO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Angola,AGO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Angola,AGO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Angola,AGO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Angola,AGO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Antigua and Barbuda,ATG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Antigua and Barbuda,ATG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Antigua and Barbuda,ATG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Antigua and Barbuda,ATG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Antigua and Barbuda,ATG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Antigua and Barbuda,ATG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Argentina,ARG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Argentina,ARG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Argentina,ARG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Argentina,ARG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Argentina,ARG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Argentina,ARG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Armenia,ARM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Armenia,ARM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Armenia,ARM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Armenia,ARM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Armenia,ARM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Armenia,ARM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Aruba,ABW,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Aruba,ABW,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Aruba,ABW,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Aruba,ABW,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Aruba,ABW,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Aruba,ABW,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Australia,AUS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Australia,AUS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Australia,AUS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Australia,AUS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Australia,AUS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Australia,AUS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Austria,AUT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Austria,AUT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Austria,AUT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Austria,AUT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Austria,AUT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Austria,AUT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Azerbaijan,AZE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Azerbaijan,AZE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Azerbaijan,AZE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Azerbaijan,AZE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Azerbaijan,AZE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Azerbaijan,AZE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Bahamas, The",BHS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Bahamas, The",BHS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Bahamas, The",BHS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Bahamas, The",BHS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Bahamas, The",BHS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Bahamas, The",BHS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bahrain,BHR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bahrain,BHR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bahrain,BHR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bahrain,BHR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bahrain,BHR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bahrain,BHR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bangladesh,BGD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bangladesh,BGD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bangladesh,BGD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bangladesh,BGD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bangladesh,BGD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bangladesh,BGD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Barbados,BRB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Barbados,BRB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Barbados,BRB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Barbados,BRB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Barbados,BRB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Barbados,BRB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Belarus,BLR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Belarus,BLR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Belarus,BLR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Belarus,BLR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Belarus,BLR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Belarus,BLR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Belgium,BEL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Belgium,BEL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Belgium,BEL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Belgium,BEL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Belgium,BEL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Belgium,BEL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Belize,BLZ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Belize,BLZ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Belize,BLZ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Belize,BLZ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Belize,BLZ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Belize,BLZ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Benin,BEN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Benin,BEN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Benin,BEN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Benin,BEN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Benin,BEN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Benin,BEN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bermuda,BMU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bermuda,BMU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bermuda,BMU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bermuda,BMU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bermuda,BMU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bermuda,BMU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bhutan,BTN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bhutan,BTN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bhutan,BTN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bhutan,BTN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bhutan,BTN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bhutan,BTN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bolivia,BOL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bolivia,BOL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bolivia,BOL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bolivia,BOL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bolivia,BOL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bolivia,BOL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bosnia and Herzegovina,BIH,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bosnia and Herzegovina,BIH,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bosnia and Herzegovina,BIH,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bosnia and Herzegovina,BIH,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bosnia and Herzegovina,BIH,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bosnia and Herzegovina,BIH,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Botswana,BWA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Botswana,BWA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Botswana,BWA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Botswana,BWA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Botswana,BWA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Botswana,BWA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Brazil,BRA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Brazil,BRA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Brazil,BRA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Brazil,BRA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Brazil,BRA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Brazil,BRA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+British Virgin Islands,VGB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+British Virgin Islands,VGB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+British Virgin Islands,VGB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+British Virgin Islands,VGB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+British Virgin Islands,VGB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+British Virgin Islands,VGB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Brunei Darussalam,BRN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Brunei Darussalam,BRN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Brunei Darussalam,BRN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Brunei Darussalam,BRN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Brunei Darussalam,BRN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Brunei Darussalam,BRN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Bulgaria,BGR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Bulgaria,BGR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Bulgaria,BGR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Bulgaria,BGR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Bulgaria,BGR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Bulgaria,BGR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Burkina Faso,BFA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Burkina Faso,BFA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Burkina Faso,BFA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Burkina Faso,BFA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Burkina Faso,BFA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Burkina Faso,BFA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Burundi,BDI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Burundi,BDI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Burundi,BDI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Burundi,BDI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Burundi,BDI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Burundi,BDI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cabo Verde,CPV,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cabo Verde,CPV,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cabo Verde,CPV,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cabo Verde,CPV,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cabo Verde,CPV,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cabo Verde,CPV,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cambodia,KHM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cambodia,KHM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cambodia,KHM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cambodia,KHM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cambodia,KHM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cambodia,KHM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cameroon,CMR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cameroon,CMR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cameroon,CMR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cameroon,CMR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cameroon,CMR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cameroon,CMR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Canada,CAN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Canada,CAN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Canada,CAN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Canada,CAN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Canada,CAN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Canada,CAN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cayman Islands,CYM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cayman Islands,CYM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cayman Islands,CYM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cayman Islands,CYM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cayman Islands,CYM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cayman Islands,CYM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Central African Republic,CAF,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Central African Republic,CAF,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Central African Republic,CAF,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Central African Republic,CAF,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Central African Republic,CAF,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Central African Republic,CAF,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Chad,TCD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Chad,TCD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Chad,TCD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Chad,TCD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Chad,TCD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Chad,TCD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Channel Islands,CHI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Channel Islands,CHI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Channel Islands,CHI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Channel Islands,CHI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Channel Islands,CHI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Channel Islands,CHI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Chile,CHL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Chile,CHL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Chile,CHL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Chile,CHL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Chile,CHL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Chile,CHL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+China,CHN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+China,CHN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+China,CHN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+China,CHN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+China,CHN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+China,CHN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Colombia,COL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Colombia,COL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Colombia,COL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Colombia,COL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Colombia,COL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Colombia,COL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Comoros,COM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Comoros,COM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Comoros,COM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Comoros,COM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Comoros,COM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Comoros,COM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Congo, Dem. Rep.",COD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Congo, Dem. Rep.",COD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Congo, Dem. Rep.",COD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Congo, Dem. Rep.",COD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Congo, Dem. Rep.",COD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Congo, Dem. Rep.",COD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Congo, Rep.",COG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Congo, Rep.",COG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Congo, Rep.",COG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Congo, Rep.",COG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Congo, Rep.",COG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Congo, Rep.",COG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Costa Rica,CRI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Costa Rica,CRI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Costa Rica,CRI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Costa Rica,CRI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Costa Rica,CRI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Costa Rica,CRI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cote d'Ivoire,CIV,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cote d'Ivoire,CIV,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cote d'Ivoire,CIV,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cote d'Ivoire,CIV,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cote d'Ivoire,CIV,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cote d'Ivoire,CIV,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Croatia,HRV,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Croatia,HRV,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Croatia,HRV,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Croatia,HRV,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Croatia,HRV,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Croatia,HRV,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cuba,CUB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cuba,CUB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cuba,CUB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cuba,CUB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cuba,CUB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cuba,CUB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Curacao,CUW,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Curacao,CUW,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Curacao,CUW,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Curacao,CUW,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Curacao,CUW,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Curacao,CUW,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Cyprus,CYP,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Cyprus,CYP,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Cyprus,CYP,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Cyprus,CYP,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Cyprus,CYP,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Cyprus,CYP,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Czech Republic,CZE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Czech Republic,CZE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Czech Republic,CZE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Czech Republic,CZE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Czech Republic,CZE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Czech Republic,CZE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Denmark,DNK,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Denmark,DNK,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Denmark,DNK,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Denmark,DNK,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Denmark,DNK,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Denmark,DNK,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Djibouti,DJI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Djibouti,DJI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Djibouti,DJI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Djibouti,DJI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Djibouti,DJI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Djibouti,DJI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Dominica,DMA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Dominica,DMA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Dominica,DMA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Dominica,DMA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Dominica,DMA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Dominica,DMA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Dominican Republic,DOM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Dominican Republic,DOM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Dominican Republic,DOM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Dominican Republic,DOM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Dominican Republic,DOM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Dominican Republic,DOM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Ecuador,ECU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Ecuador,ECU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Ecuador,ECU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Ecuador,ECU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Ecuador,ECU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Ecuador,ECU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Egypt, Arab Rep.",EGY,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Egypt, Arab Rep.",EGY,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Egypt, Arab Rep.",EGY,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Egypt, Arab Rep.",EGY,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Egypt, Arab Rep.",EGY,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Egypt, Arab Rep.",EGY,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+El Salvador,SLV,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+El Salvador,SLV,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+El Salvador,SLV,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+El Salvador,SLV,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+El Salvador,SLV,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+El Salvador,SLV,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Equatorial Guinea,GNQ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Equatorial Guinea,GNQ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Equatorial Guinea,GNQ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Equatorial Guinea,GNQ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Equatorial Guinea,GNQ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Equatorial Guinea,GNQ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Eritrea,ERI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Eritrea,ERI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Eritrea,ERI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Eritrea,ERI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Eritrea,ERI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Eritrea,ERI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Estonia,EST,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Estonia,EST,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Estonia,EST,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Estonia,EST,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Estonia,EST,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Estonia,EST,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Ethiopia,ETH,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Ethiopia,ETH,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Ethiopia,ETH,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Ethiopia,ETH,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Ethiopia,ETH,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Ethiopia,ETH,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Faroe Islands,FRO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Faroe Islands,FRO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Faroe Islands,FRO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Faroe Islands,FRO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Faroe Islands,FRO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Faroe Islands,FRO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Fiji,FJI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Fiji,FJI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Fiji,FJI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Fiji,FJI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Fiji,FJI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Fiji,FJI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Finland,FIN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Finland,FIN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Finland,FIN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Finland,FIN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Finland,FIN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Finland,FIN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+France,FRA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+France,FRA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+France,FRA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+France,FRA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+France,FRA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+France,FRA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+French Polynesia,PYF,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+French Polynesia,PYF,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+French Polynesia,PYF,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+French Polynesia,PYF,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+French Polynesia,PYF,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+French Polynesia,PYF,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Gabon,GAB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Gabon,GAB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Gabon,GAB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Gabon,GAB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Gabon,GAB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Gabon,GAB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Gambia, The",GMB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Gambia, The",GMB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Gambia, The",GMB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Gambia, The",GMB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Gambia, The",GMB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Gambia, The",GMB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Georgia,GEO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Georgia,GEO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Georgia,GEO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Georgia,GEO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Georgia,GEO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Georgia,GEO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Germany,DEU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Germany,DEU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Germany,DEU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Germany,DEU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Germany,DEU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Germany,DEU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Ghana,GHA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Ghana,GHA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Ghana,GHA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Ghana,GHA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Ghana,GHA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Ghana,GHA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Gibraltar,GIB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Gibraltar,GIB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Gibraltar,GIB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Gibraltar,GIB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Gibraltar,GIB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Gibraltar,GIB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Greece,GRC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Greece,GRC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Greece,GRC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Greece,GRC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Greece,GRC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Greece,GRC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Greenland,GRL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Greenland,GRL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Greenland,GRL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Greenland,GRL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Greenland,GRL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Greenland,GRL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Grenada,GRD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Grenada,GRD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Grenada,GRD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Grenada,GRD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Grenada,GRD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Grenada,GRD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Guam,GUM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Guam,GUM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Guam,GUM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Guam,GUM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Guam,GUM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Guam,GUM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Guatemala,GTM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Guatemala,GTM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Guatemala,GTM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Guatemala,GTM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Guatemala,GTM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Guatemala,GTM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Guinea,GIN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Guinea,GIN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Guinea,GIN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Guinea,GIN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Guinea,GIN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Guinea,GIN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Guinea-Bissau,GNB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Guinea-Bissau,GNB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Guinea-Bissau,GNB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Guinea-Bissau,GNB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Guinea-Bissau,GNB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Guinea-Bissau,GNB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Guyana,GUY,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Guyana,GUY,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Guyana,GUY,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Guyana,GUY,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Guyana,GUY,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Guyana,GUY,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Haiti,HTI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Haiti,HTI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Haiti,HTI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Haiti,HTI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Haiti,HTI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Haiti,HTI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Honduras,HND,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Honduras,HND,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Honduras,HND,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Honduras,HND,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Honduras,HND,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Honduras,HND,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Hong Kong SAR, China",HKG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Hong Kong SAR, China",HKG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Hong Kong SAR, China",HKG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Hong Kong SAR, China",HKG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Hong Kong SAR, China",HKG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Hong Kong SAR, China",HKG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Hungary,HUN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Hungary,HUN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Hungary,HUN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Hungary,HUN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Hungary,HUN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Hungary,HUN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Iceland,ISL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Iceland,ISL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Iceland,ISL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Iceland,ISL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Iceland,ISL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Iceland,ISL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+India,IND,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+India,IND,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+India,IND,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+India,IND,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+India,IND,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+India,IND,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Indonesia,IDN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Indonesia,IDN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Indonesia,IDN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Indonesia,IDN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Indonesia,IDN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Indonesia,IDN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Iran, Islamic Rep.",IRN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Iran, Islamic Rep.",IRN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Iran, Islamic Rep.",IRN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Iran, Islamic Rep.",IRN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Iran, Islamic Rep.",IRN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Iran, Islamic Rep.",IRN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Iraq,IRQ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Iraq,IRQ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Iraq,IRQ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Iraq,IRQ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Iraq,IRQ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Iraq,IRQ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Ireland,IRL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Ireland,IRL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Ireland,IRL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Ireland,IRL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Ireland,IRL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Ireland,IRL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Isle of Man,IMN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Isle of Man,IMN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Isle of Man,IMN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Isle of Man,IMN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Isle of Man,IMN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Isle of Man,IMN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Israel,ISR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Israel,ISR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Israel,ISR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Israel,ISR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Israel,ISR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Israel,ISR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Italy,ITA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Italy,ITA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Italy,ITA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Italy,ITA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Italy,ITA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Italy,ITA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Jamaica,JAM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Jamaica,JAM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Jamaica,JAM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Jamaica,JAM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Jamaica,JAM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Jamaica,JAM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Japan,JPN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Japan,JPN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Japan,JPN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Japan,JPN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Japan,JPN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Japan,JPN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Jordan,JOR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Jordan,JOR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Jordan,JOR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Jordan,JOR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Jordan,JOR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Jordan,JOR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Kazakhstan,KAZ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Kazakhstan,KAZ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Kazakhstan,KAZ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Kazakhstan,KAZ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Kazakhstan,KAZ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Kazakhstan,KAZ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Kenya,KEN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Kenya,KEN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Kenya,KEN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Kenya,KEN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Kenya,KEN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Kenya,KEN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Kiribati,KIR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Kiribati,KIR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Kiribati,KIR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Kiribati,KIR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Kiribati,KIR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Kiribati,KIR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Korea, Dem. People’s Rep.",PRK,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Korea, Dem. People’s Rep.",PRK,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Korea, Dem. People’s Rep.",PRK,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Korea, Dem. People’s Rep.",PRK,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Korea, Dem. People’s Rep.",PRK,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Korea, Dem. People’s Rep.",PRK,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Korea, Rep.",KOR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Korea, Rep.",KOR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Korea, Rep.",KOR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Korea, Rep.",KOR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Korea, Rep.",KOR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Korea, Rep.",KOR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Kosovo,XKX,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Kosovo,XKX,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Kosovo,XKX,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Kosovo,XKX,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Kosovo,XKX,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Kosovo,XKX,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Kuwait,KWT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Kuwait,KWT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Kuwait,KWT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Kuwait,KWT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Kuwait,KWT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Kuwait,KWT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Kyrgyz Republic,KGZ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Kyrgyz Republic,KGZ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Kyrgyz Republic,KGZ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Kyrgyz Republic,KGZ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Kyrgyz Republic,KGZ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Kyrgyz Republic,KGZ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Lao PDR,LAO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Lao PDR,LAO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Lao PDR,LAO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Lao PDR,LAO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Lao PDR,LAO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Lao PDR,LAO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Latvia,LVA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Latvia,LVA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Latvia,LVA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Latvia,LVA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Latvia,LVA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Latvia,LVA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Lebanon,LBN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Lebanon,LBN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Lebanon,LBN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Lebanon,LBN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Lebanon,LBN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Lebanon,LBN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Lesotho,LSO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Lesotho,LSO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Lesotho,LSO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Lesotho,LSO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Lesotho,LSO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Lesotho,LSO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Liberia,LBR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Liberia,LBR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Liberia,LBR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Liberia,LBR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Liberia,LBR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Liberia,LBR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Libya,LBY,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Libya,LBY,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Libya,LBY,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Libya,LBY,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Libya,LBY,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Libya,LBY,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Liechtenstein,LIE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Liechtenstein,LIE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Liechtenstein,LIE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Liechtenstein,LIE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Liechtenstein,LIE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Liechtenstein,LIE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Lithuania,LTU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Lithuania,LTU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Lithuania,LTU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Lithuania,LTU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Lithuania,LTU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Lithuania,LTU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Luxembourg,LUX,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Luxembourg,LUX,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Luxembourg,LUX,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Luxembourg,LUX,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Luxembourg,LUX,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Luxembourg,LUX,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Macao SAR, China",MAC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Macao SAR, China",MAC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Macao SAR, China",MAC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Macao SAR, China",MAC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Macao SAR, China",MAC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Macao SAR, China",MAC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Macedonia, FYR",MKD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Macedonia, FYR",MKD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Macedonia, FYR",MKD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Macedonia, FYR",MKD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Macedonia, FYR",MKD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Macedonia, FYR",MKD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Madagascar,MDG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Madagascar,MDG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Madagascar,MDG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Madagascar,MDG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Madagascar,MDG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Madagascar,MDG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Malawi,MWI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Malawi,MWI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Malawi,MWI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Malawi,MWI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Malawi,MWI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Malawi,MWI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Malaysia,MYS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Malaysia,MYS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Malaysia,MYS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Malaysia,MYS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Malaysia,MYS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Malaysia,MYS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Maldives,MDV,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Maldives,MDV,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Maldives,MDV,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Maldives,MDV,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Maldives,MDV,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Maldives,MDV,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Mali,MLI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Mali,MLI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Mali,MLI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Mali,MLI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Mali,MLI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Mali,MLI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Malta,MLT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Malta,MLT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Malta,MLT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Malta,MLT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Malta,MLT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Malta,MLT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Marshall Islands,MHL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Marshall Islands,MHL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Marshall Islands,MHL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Marshall Islands,MHL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Marshall Islands,MHL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Marshall Islands,MHL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Mauritania,MRT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Mauritania,MRT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Mauritania,MRT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Mauritania,MRT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Mauritania,MRT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Mauritania,MRT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Mauritius,MUS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Mauritius,MUS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Mauritius,MUS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Mauritius,MUS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Mauritius,MUS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Mauritius,MUS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Mexico,MEX,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Mexico,MEX,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Mexico,MEX,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Mexico,MEX,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Mexico,MEX,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Mexico,MEX,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Micronesia, Fed. Sts.",FSM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Micronesia, Fed. Sts.",FSM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Micronesia, Fed. Sts.",FSM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Micronesia, Fed. Sts.",FSM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Micronesia, Fed. Sts.",FSM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Micronesia, Fed. Sts.",FSM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Moldova,MDA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Moldova,MDA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Moldova,MDA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Moldova,MDA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Moldova,MDA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Moldova,MDA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Monaco,MCO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Monaco,MCO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Monaco,MCO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Monaco,MCO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Monaco,MCO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Monaco,MCO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Mongolia,MNG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Mongolia,MNG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Mongolia,MNG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Mongolia,MNG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Mongolia,MNG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Mongolia,MNG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Montenegro,MNE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Montenegro,MNE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Montenegro,MNE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Montenegro,MNE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Montenegro,MNE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Montenegro,MNE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Morocco,MAR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Morocco,MAR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Morocco,MAR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Morocco,MAR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Morocco,MAR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Morocco,MAR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Mozambique,MOZ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Mozambique,MOZ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Mozambique,MOZ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Mozambique,MOZ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Mozambique,MOZ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Mozambique,MOZ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Myanmar,MMR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Myanmar,MMR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Myanmar,MMR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Myanmar,MMR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Myanmar,MMR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Myanmar,MMR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Namibia,NAM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Namibia,NAM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Namibia,NAM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Namibia,NAM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Namibia,NAM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Namibia,NAM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Nauru,NRU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Nauru,NRU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Nauru,NRU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Nauru,NRU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Nauru,NRU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Nauru,NRU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Nepal,NPL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Nepal,NPL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Nepal,NPL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Nepal,NPL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Nepal,NPL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Nepal,NPL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Netherlands,NLD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Netherlands,NLD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Netherlands,NLD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Netherlands,NLD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Netherlands,NLD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Netherlands,NLD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+New Caledonia,NCL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+New Caledonia,NCL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+New Caledonia,NCL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+New Caledonia,NCL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+New Caledonia,NCL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+New Caledonia,NCL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+New Zealand,NZL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+New Zealand,NZL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+New Zealand,NZL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+New Zealand,NZL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+New Zealand,NZL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+New Zealand,NZL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Nicaragua,NIC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Nicaragua,NIC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Nicaragua,NIC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Nicaragua,NIC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Nicaragua,NIC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Nicaragua,NIC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Niger,NER,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Niger,NER,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Niger,NER,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Niger,NER,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Niger,NER,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Niger,NER,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Nigeria,NGA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Nigeria,NGA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Nigeria,NGA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Nigeria,NGA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Nigeria,NGA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Nigeria,NGA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Northern Mariana Islands,MNP,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Northern Mariana Islands,MNP,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Northern Mariana Islands,MNP,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Northern Mariana Islands,MNP,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Northern Mariana Islands,MNP,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Northern Mariana Islands,MNP,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Norway,NOR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Norway,NOR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Norway,NOR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Norway,NOR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Norway,NOR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Norway,NOR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Oman,OMN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Oman,OMN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Oman,OMN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Oman,OMN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Oman,OMN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Oman,OMN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Pakistan,PAK,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Pakistan,PAK,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Pakistan,PAK,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Pakistan,PAK,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Pakistan,PAK,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Pakistan,PAK,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Palau,PLW,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Palau,PLW,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Palau,PLW,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Palau,PLW,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Palau,PLW,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Palau,PLW,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Panama,PAN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Panama,PAN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Panama,PAN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Panama,PAN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Panama,PAN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Panama,PAN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Papua New Guinea,PNG,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Papua New Guinea,PNG,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Papua New Guinea,PNG,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Papua New Guinea,PNG,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Papua New Guinea,PNG,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Papua New Guinea,PNG,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Paraguay,PRY,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Paraguay,PRY,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Paraguay,PRY,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Paraguay,PRY,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Paraguay,PRY,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Paraguay,PRY,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Peru,PER,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Peru,PER,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Peru,PER,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Peru,PER,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Peru,PER,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Peru,PER,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Philippines,PHL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Philippines,PHL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Philippines,PHL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Philippines,PHL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Philippines,PHL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Philippines,PHL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Poland,POL,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Poland,POL,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Poland,POL,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Poland,POL,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Poland,POL,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Poland,POL,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Portugal,PRT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Portugal,PRT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Portugal,PRT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Portugal,PRT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Portugal,PRT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Portugal,PRT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Puerto Rico,PRI,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Puerto Rico,PRI,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Puerto Rico,PRI,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Puerto Rico,PRI,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Puerto Rico,PRI,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Puerto Rico,PRI,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Qatar,QAT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Qatar,QAT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Qatar,QAT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Qatar,QAT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Qatar,QAT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Qatar,QAT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Romania,ROU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Romania,ROU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Romania,ROU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Romania,ROU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Romania,ROU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Romania,ROU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Russian Federation,RUS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Russian Federation,RUS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Russian Federation,RUS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Russian Federation,RUS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Russian Federation,RUS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Russian Federation,RUS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Rwanda,RWA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Rwanda,RWA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Rwanda,RWA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Rwanda,RWA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Rwanda,RWA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Rwanda,RWA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Samoa,WSM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Samoa,WSM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Samoa,WSM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Samoa,WSM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Samoa,WSM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Samoa,WSM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+San Marino,SMR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+San Marino,SMR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+San Marino,SMR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+San Marino,SMR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+San Marino,SMR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+San Marino,SMR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sao Tome and Principe,STP,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sao Tome and Principe,STP,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sao Tome and Principe,STP,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sao Tome and Principe,STP,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sao Tome and Principe,STP,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sao Tome and Principe,STP,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Saudi Arabia,SAU,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Saudi Arabia,SAU,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Saudi Arabia,SAU,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Saudi Arabia,SAU,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Saudi Arabia,SAU,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Saudi Arabia,SAU,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Senegal,SEN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Senegal,SEN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Senegal,SEN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Senegal,SEN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Senegal,SEN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Senegal,SEN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Serbia,SRB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Serbia,SRB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Serbia,SRB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Serbia,SRB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Serbia,SRB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Serbia,SRB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Seychelles,SYC,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Seychelles,SYC,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Seychelles,SYC,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Seychelles,SYC,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Seychelles,SYC,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Seychelles,SYC,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sierra Leone,SLE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sierra Leone,SLE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sierra Leone,SLE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sierra Leone,SLE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sierra Leone,SLE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sierra Leone,SLE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Singapore,SGP,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Singapore,SGP,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Singapore,SGP,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Singapore,SGP,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Singapore,SGP,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Singapore,SGP,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sint Maarten (Dutch part),SXM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sint Maarten (Dutch part),SXM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sint Maarten (Dutch part),SXM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sint Maarten (Dutch part),SXM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sint Maarten (Dutch part),SXM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sint Maarten (Dutch part),SXM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Slovak Republic,SVK,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Slovak Republic,SVK,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Slovak Republic,SVK,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Slovak Republic,SVK,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Slovak Republic,SVK,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Slovak Republic,SVK,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Slovenia,SVN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Slovenia,SVN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Slovenia,SVN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Slovenia,SVN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Slovenia,SVN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Slovenia,SVN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Solomon Islands,SLB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Solomon Islands,SLB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Solomon Islands,SLB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Solomon Islands,SLB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Solomon Islands,SLB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Solomon Islands,SLB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Somalia,SOM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Somalia,SOM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Somalia,SOM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Somalia,SOM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Somalia,SOM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Somalia,SOM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+South Africa,ZAF,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+South Africa,ZAF,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+South Africa,ZAF,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+South Africa,ZAF,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+South Africa,ZAF,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+South Africa,ZAF,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+South Sudan,SSD,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+South Sudan,SSD,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+South Sudan,SSD,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+South Sudan,SSD,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+South Sudan,SSD,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+South Sudan,SSD,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Spain,ESP,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Spain,ESP,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Spain,ESP,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Spain,ESP,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Spain,ESP,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Spain,ESP,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sri Lanka,LKA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sri Lanka,LKA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sri Lanka,LKA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sri Lanka,LKA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sri Lanka,LKA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sri Lanka,LKA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+St. Kitts and Nevis,KNA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+St. Kitts and Nevis,KNA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+St. Kitts and Nevis,KNA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+St. Kitts and Nevis,KNA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+St. Kitts and Nevis,KNA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+St. Kitts and Nevis,KNA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+St. Lucia,LCA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+St. Lucia,LCA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+St. Lucia,LCA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+St. Lucia,LCA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+St. Lucia,LCA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+St. Lucia,LCA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+St. Martin (French part),MAF,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+St. Martin (French part),MAF,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+St. Martin (French part),MAF,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+St. Martin (French part),MAF,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+St. Martin (French part),MAF,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+St. Martin (French part),MAF,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+St. Vincent and the Grenadines,VCT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+St. Vincent and the Grenadines,VCT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+St. Vincent and the Grenadines,VCT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+St. Vincent and the Grenadines,VCT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+St. Vincent and the Grenadines,VCT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+St. Vincent and the Grenadines,VCT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sudan,SDN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sudan,SDN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sudan,SDN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sudan,SDN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sudan,SDN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sudan,SDN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Suriname,SUR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Suriname,SUR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Suriname,SUR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Suriname,SUR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Suriname,SUR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Suriname,SUR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Swaziland,SWZ,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Swaziland,SWZ,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Swaziland,SWZ,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Swaziland,SWZ,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Swaziland,SWZ,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Swaziland,SWZ,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Sweden,SWE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Sweden,SWE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Sweden,SWE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Sweden,SWE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Sweden,SWE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Sweden,SWE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Switzerland,CHE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Switzerland,CHE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Switzerland,CHE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Switzerland,CHE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Switzerland,CHE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Switzerland,CHE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Syrian Arab Republic,SYR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Syrian Arab Republic,SYR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Syrian Arab Republic,SYR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Syrian Arab Republic,SYR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Syrian Arab Republic,SYR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Syrian Arab Republic,SYR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Tajikistan,TJK,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Tajikistan,TJK,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Tajikistan,TJK,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Tajikistan,TJK,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Tajikistan,TJK,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Tajikistan,TJK,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Tanzania,TZA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Tanzania,TZA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Tanzania,TZA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Tanzania,TZA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Tanzania,TZA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Tanzania,TZA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Thailand,THA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Thailand,THA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Thailand,THA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Thailand,THA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Thailand,THA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Thailand,THA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Timor-Leste,TLS,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Timor-Leste,TLS,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Timor-Leste,TLS,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Timor-Leste,TLS,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Timor-Leste,TLS,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Timor-Leste,TLS,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Togo,TGO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Togo,TGO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Togo,TGO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Togo,TGO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Togo,TGO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Togo,TGO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Tonga,TON,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Tonga,TON,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Tonga,TON,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Tonga,TON,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Tonga,TON,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Tonga,TON,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Trinidad and Tobago,TTO,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Trinidad and Tobago,TTO,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Trinidad and Tobago,TTO,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Trinidad and Tobago,TTO,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Trinidad and Tobago,TTO,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Trinidad and Tobago,TTO,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Tunisia,TUN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Tunisia,TUN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Tunisia,TUN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Tunisia,TUN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Tunisia,TUN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Tunisia,TUN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Turkey,TUR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Turkey,TUR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Turkey,TUR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Turkey,TUR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Turkey,TUR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Turkey,TUR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Turkmenistan,TKM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Turkmenistan,TKM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Turkmenistan,TKM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Turkmenistan,TKM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Turkmenistan,TKM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Turkmenistan,TKM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Turks and Caicos Islands,TCA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Turks and Caicos Islands,TCA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Turks and Caicos Islands,TCA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Turks and Caicos Islands,TCA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Turks and Caicos Islands,TCA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Turks and Caicos Islands,TCA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Tuvalu,TUV,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Tuvalu,TUV,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Tuvalu,TUV,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Tuvalu,TUV,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Tuvalu,TUV,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Tuvalu,TUV,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Uganda,UGA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Uganda,UGA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Uganda,UGA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Uganda,UGA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Uganda,UGA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Uganda,UGA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Ukraine,UKR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Ukraine,UKR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Ukraine,UKR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Ukraine,UKR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Ukraine,UKR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Ukraine,UKR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+United Arab Emirates,ARE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+United Arab Emirates,ARE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+United Arab Emirates,ARE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+United Arab Emirates,ARE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+United Arab Emirates,ARE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+United Arab Emirates,ARE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+United Kingdom,GBR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+United Kingdom,GBR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+United Kingdom,GBR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+United Kingdom,GBR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+United Kingdom,GBR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+United Kingdom,GBR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+United States,USA,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+United States,USA,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+United States,USA,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+United States,USA,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+United States,USA,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+United States,USA,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Uruguay,URY,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Uruguay,URY,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Uruguay,URY,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Uruguay,URY,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Uruguay,URY,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Uruguay,URY,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Uzbekistan,UZB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Uzbekistan,UZB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Uzbekistan,UZB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Uzbekistan,UZB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Uzbekistan,UZB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Uzbekistan,UZB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Vanuatu,VUT,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Vanuatu,VUT,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Vanuatu,VUT,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Vanuatu,VUT,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Vanuatu,VUT,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Vanuatu,VUT,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Venezuela, RB",VEN,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Venezuela, RB",VEN,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Venezuela, RB",VEN,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Venezuela, RB",VEN,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Venezuela, RB",VEN,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Venezuela, RB",VEN,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Vietnam,VNM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Vietnam,VNM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Vietnam,VNM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Vietnam,VNM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Vietnam,VNM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Vietnam,VNM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Virgin Islands (U.S.),VIR,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Virgin Islands (U.S.),VIR,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Virgin Islands (U.S.),VIR,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Virgin Islands (U.S.),VIR,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Virgin Islands (U.S.),VIR,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Virgin Islands (U.S.),VIR,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+West Bank and Gaza,PSE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+West Bank and Gaza,PSE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+West Bank and Gaza,PSE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+West Bank and Gaza,PSE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+West Bank and Gaza,PSE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+West Bank and Gaza,PSE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+"Yemen, Rep.",YEM,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+"Yemen, Rep.",YEM,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+"Yemen, Rep.",YEM,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+"Yemen, Rep.",YEM,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+"Yemen, Rep.",YEM,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+"Yemen, Rep.",YEM,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Zambia,ZMB,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Zambia,ZMB,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Zambia,ZMB,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Zambia,ZMB,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Zambia,ZMB,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Zambia,ZMB,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV
+Zimbabwe,ZWE,Government expenditure per primary student (constant US$),UIS.XUNIT.USCONST.1.FSGOV
+Zimbabwe,ZWE,Government expenditure per primary student (US$),UIS.XUNIT.US.1.FSGOV
+Zimbabwe,ZWE,Government expenditure per secondary student (constant US$),UIS.XUNIT.USCONST.23.FSGOV
+Zimbabwe,ZWE,Government expenditure per secondary student (US$),UIS.XUNIT.US.23.FSGOV
+Zimbabwe,ZWE,Government expenditure per tertiary student (constant US$),UIS.XUNIT.USCONST.56.FSGOV
+Zimbabwe,ZWE,Government expenditure per tertiary student (US$),UIS.XUNIT.US.56.FSGOV

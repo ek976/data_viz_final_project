@@ -1,0 +1,44 @@
+
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+# Load the tidy data
+df <- read.csv('../data/tidy_data.csv')
+
+unique_values <- unique(df$Series.Name)
+print(unique_values)
+```
+
+
+```{r}
+# Load the tidy data
+df <- read.csv('../data/tidy_data.csv')
+
+# Display the first few rows of the data frame
+print(head(df))
+
+# Select rows where the 'Series Name' column matches specific conditions
+df <- df[(df$Series.Name == "GDP per capita (constant 2010 US$)"),]
+
+df <- df[((df$Country.Name == "High income") | (df$Country.Name == "Upper middle income") | (df$Country.Name == "Lower middle income") | (df$Country.Name == "Low income")) ,]
+
+tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
+
+```
+
+
+```{r}
+oecd_plot <- ggplot(df, aes(x = Year, y = Value, color = Country.Name)) +
+  geom_line() +
+  scale_color_manual(values = tiana_palette, name="Country") +
+  scale_x_continuous(breaks = seq(2006, 2022, by = 2)) + 
+  labs(title = "Overall Gender Gap Index in Five OECD Countries",
+       x = "Year",
+       y = "Index")
+
+print(oecd_plot)
+```
+
