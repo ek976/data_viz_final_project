@@ -63,25 +63,6 @@ results
 ::: {.panel-tabset}
 
 ## Primary enrollment
-<figure>
-  <div id="primary-container" style="width: 467%; height: 500px;"></div>
-  <figcaption>Hello</figcaption>
-</figure>
-
-## Secondary enrollment
-<figure>
-  <div id="secondary-container" style="width: 467%; height: 500px;"></div>
-  <figcaption>Hello</figcaption>
-</figure>
-
-## Third enrollment
-<figure>
-  <div id="tertiary-container" style="width: 467%; height: 500px;"></div>
-  <figcaption>Hello</figcaption>
-</figure>
-
-:::
-
 ```{ojs}
 colorPalette = [
   [0, '#330f63'],    // dark blue-purple
@@ -852,7 +833,15 @@ series: [{
 }]
 });
 })();
+```
 
+<figure>
+  <div id="primary-container" style="width: 467%; height: 500px;"></div>
+  <figcaption>Hello</figcaption>
+</figure>
+
+## Secondary enrollment
+```{ojs}
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
@@ -1528,7 +1517,15 @@ series: [{
 }]
 });
 })();
+```
 
+<figure>
+  <div id="secondary-container" style="width: 467%; height: 500px;"></div>
+  <figcaption>Hello</figcaption>
+</figure>
+
+## Third enrollment
+```{ojs}
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
@@ -2141,3 +2138,11 @@ series: [{
 });
 })();
 ```
+
+<figure>
+  <div id="tertiary-container" style="width: 467%; height: 500px;"></div>
+  <figcaption>Hello</figcaption>
+</figure>
+
+:::
+
