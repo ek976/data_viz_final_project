@@ -1,6 +1,6 @@
 ---
 title: "Plot 5: Government GDP"
-author: "Tiana Le"
+author: "Sheeba"
 format:
   html:
     embed-resources: true
@@ -55,7 +55,6 @@ viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "re
 
 ```{ojs}
 
-
 viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Select Dataset', value: 'Primary'})
 
 width = 800; // Define a default width for your visualization
@@ -103,7 +102,7 @@ chart = async () => {
     .selectAll()
     .data(data)
     .join('rect')
-    .attr('fill', d => d3.schemeRdBu[3][d.value > 0 ? 2 : 0])
+    .attr('fill', d => d.value > 0 ? '#3d6469' : '#d40637') // Change colors here
     .attr('x', d => x(Math.min(d.value, 0)))
     .attr('y', d => y(d.country_name))
     .attr('width', d => Math.abs(x(d.value) - x(0)))
@@ -140,6 +139,7 @@ chart = async () => {
 }
 
 chart();
+
 
 ```
 
