@@ -1,0 +1,201 @@
+---
+title: "Split Packed Bubble Plot"
+author: "Jorge Bris Moreno"
+format:
+    html:
+        embed-resources: true
+        code-fold: true
+        toc: true
+        before_body: scripts.html
+---
+
+```{r, echo=FALSE, results='asis', runtime="js"}
+# Calling highcharts
+cat('
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+')
+```
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+# Load necessary libraries
+library(dplyr)
+library(jsonlite)
+
+# Read data from CSV
+data <- read.csv("cleaned_data/filtered_education_data.csv")
+```
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+head(data)
+```
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+indicators <- c("Gross enrolment ratio, primary, female (%)",
+                "Gross enrolment ratio, secondary, female (%)",
+                "Gross enrolment ratio, tertiary, female (%)")
+
+save_json_by_indicator <- function(indicator_name) {
+  filtered_data <- data %>%
+    filter(Indicator.Name == indicator_name, !is.na(X2014)) %>%
+    mutate(Country = Country.Name, Value = X2014) %>%
+    select(Country, Indicator = Indicator.Name, Value) %>%
+    filter(!Country %in% c("Arab World", "East Asia & Pacific", "East Asia & Pacific (excluding high income)", "Euro area", "Europe & Central Asia", "Europe & Central Asia (excluding high income)", "European Union", "Heavily indebted poor countries (HIPC)", "High income", "Latin America & Caribbean", "Latin America & Caribbean (excluding high income)", "Low & middle income", "Low income", "Lower middle income", "Middle East & North Africa", "Middle East & North Africa (excluding high income)", "Middle income", "North America", "OECD members", "South Asia", "Sub-Saharan Africa", "Sub-Saharan Africa (excluding high income)", "Upper middle income", "World", "Least developed countries: UN classification"))
+
+  if (nrow(filtered_data) > 0) {
+    json_data <- toJSON(filtered_data, pretty = TRUE)
+    file_name <- paste0("Jorge_Plot/data/", gsub("[, %]", "", gsub(" ", "_", indicator_name)), ".json")
+    write(json_data, file = file_name)
+    return(paste("Data written to", file_name, "with", nrow(filtered_data), "records"))
+  } else {
+    return(paste("No data found for", indicator_name))
+  }
+}
+
+results <- lapply(indicators, save_json_by_indicator)
+results
+```
+
+::: {.panel-tabset}
+
+## Primary enrollment
+<div id="primary-container"></div>
+
+
+## Secondary enrollment
+<div id="secondary-container"></div>
+
+## Third enrollment
+<div id="tertiary-container"></div>
+
+:::
+
+```{ojs}
+indicators = {
+    primary: 'data/Gross_enrolment_ratio_primary_female_percent.json';
+    secondary: 'data/Gross_enrolment_ratio_secondary_female_percent.json';
+    tertiary: 'data/Gross_enrolment_ratio_tertiary_female_percent.json'
+};
+
+function getGraticule() {
+    const data = [];
+
+    // Meridians
+    for (let x = -180; x <= 180; x += 15) {
+        data.push({
+            geometry: {
+                type: 'LineString',
+                coordinates: x % 90 === 0 ? [
+                    [x, -90],
+                    [x, 0],
+                    [x, 90]
+                ] : [
+                    [x, -80],
+                    [x, 80]
+                ]
+            }
+        });
+    }
+
+    // Latitudes
+    for (let y = -90; y <= 90; y += 10) {
+        const coordinates = [];
+        for (let x = -180; x <= 180; x += 5) {
+            coordinates.push([x, y]);
+        }
+        data.push({
+            geometry: {
+                type: 'LineString',
+                coordinates
+            },
+            lineWidth: y === 0 ? 2 : undefined
+        });
+    }
+
+    return data;
+}
+
+function loadData(indicatorKey) {
+    const dataUrl = indicators[indicatorKey];
+    return new Promise((resolve, reject) => {
+        Highcharts.getJSON(dataUrl, function(data) {
+            resolve(data);
+        });
+    });
+}
+
+function renderChart(indicatorKey, containerId) {
+    loadData(indicatorKey).then(data => {
+        Highcharts.getJSON(
+            'https://code.highcharts.com/mapdata/custom/world.topo.json',
+            function (topology) {
+                const chart = Highcharts.mapChart(containerId, {
+                    chart: {
+                        map: topology
+                    },
+                    title: {
+                        text: `Enrolment Ratio, ${indicatorKey}, Female (%)`
+                    },
+                    series: [{
+                        name: 'Graticule',
+                        id: 'graticule',
+                        type: 'mapline',
+                        data: getGraticule(),
+                        nullColor: 'rgba(0, 0, 0, 0.05)',
+                        accessibility: {
+                            enabled: false
+                        },
+                        enableMouseTracking: false
+                    }, {
+                        data: data,
+                        joinBy: ['iso-a3', 'code'],
+                        name: `Enrolment Ratio, ${indicatorKey}`,
+                        states: {
+                            hover: {
+                                color: '#BADA55'
+                            }
+                        },
+                        tooltip: {
+                            pointFormat: '{point.name}: {point.value}%'
+                        }
+                    }]
+                });
+            }
+        );
+    });
+}
+
+function renderPrimaryChart() {
+    renderChart('primary', 'primary-container');
+}
+
+function renderSecondaryChart() {
+    renderChart('secondary', 'secondary-container');
+}
+
+function renderTertiaryChart() {
+    renderChart('tertiary', 'tertiary-container');
+}
+
+// Load all data and render maps
+renderPrimaryChart();
+renderSecondaryChart();
+renderTertiaryChart();
+```
+
+::: {.panel-tabset}
+
+## Primary enrollment
+<div id="primary-container"></div>
+
+
+## Secondary enrollment
+<div id="secondary-container"></div>
+
+## Third enrollment
+<div id="tertiary-container"></div>
+
+:::

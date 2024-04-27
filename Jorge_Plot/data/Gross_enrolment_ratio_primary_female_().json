@@ -1,0 +1,762 @@
+[
+  {
+    "Country": "Afghanistan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 91.7579
+  },
+  {
+    "Country": "Albania",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.1673
+  },
+  {
+    "Country": "Algeria",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 115.1333
+  },
+  {
+    "Country": "Antigua and Barbuda",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 93.3092
+  },
+  {
+    "Country": "Argentina",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 109.7614
+  },
+  {
+    "Country": "Aruba",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 115.4297
+  },
+  {
+    "Country": "Australia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.7587
+  },
+  {
+    "Country": "Austria",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.6984
+  },
+  {
+    "Country": "Azerbaijan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.493
+  },
+  {
+    "Country": "Bahrain",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.456
+  },
+  {
+    "Country": "Barbados",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 94.1669
+  },
+  {
+    "Country": "Belarus",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.0571
+  },
+  {
+    "Country": "Belgium",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.9222
+  },
+  {
+    "Country": "Belize",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 108.95
+  },
+  {
+    "Country": "Benin",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 119.9226
+  },
+  {
+    "Country": "Bermuda",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 86.0617
+  },
+  {
+    "Country": "Bhutan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.8738
+  },
+  {
+    "Country": "Bolivia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 95.8438
+  },
+  {
+    "Country": "Botswana",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.8012
+  },
+  {
+    "Country": "Brazil",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 108.9931
+  },
+  {
+    "Country": "Brunei Darussalam",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 107.5561
+  },
+  {
+    "Country": "Bulgaria",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.7499
+  },
+  {
+    "Country": "Burkina Faso",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 85.0913
+  },
+  {
+    "Country": "Burundi",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 128.4259
+  },
+  {
+    "Country": "Cabo Verde",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 109.907
+  },
+  {
+    "Country": "Cambodia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 113.1353
+  },
+  {
+    "Country": "Cameroon",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 106.885
+  },
+  {
+    "Country": "Chile",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.8515
+  },
+  {
+    "Country": "China",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.0123
+  },
+  {
+    "Country": "Colombia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.7424
+  },
+  {
+    "Country": "Comoros",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.4594
+  },
+  {
+    "Country": "Congo, Dem. Rep.",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.8445
+  },
+  {
+    "Country": "Costa Rica",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 110.286
+  },
+  {
+    "Country": "Cote d'Ivoire",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 83.5878
+  },
+  {
+    "Country": "Croatia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.7139
+  },
+  {
+    "Country": "Cuba",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 95.8327
+  },
+  {
+    "Country": "Cyprus",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.5871
+  },
+  {
+    "Country": "Czech Republic",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.8783
+  },
+  {
+    "Country": "Denmark",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.6596
+  },
+  {
+    "Country": "Djibouti",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 63.263
+  },
+  {
+    "Country": "Dominica",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 117.9919
+  },
+  {
+    "Country": "Dominican Republic",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 95.7246
+  },
+  {
+    "Country": "Ecuador",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 113.4911
+  },
+  {
+    "Country": "Egypt, Arab Rep.",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 103.7742
+  },
+  {
+    "Country": "El Salvador",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 109.7239
+  },
+  {
+    "Country": "Eritrea",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 47.1461
+  },
+  {
+    "Country": "Estonia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.0226
+  },
+  {
+    "Country": "Ethiopia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 95.8226
+  },
+  {
+    "Country": "Finland",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.3999
+  },
+  {
+    "Country": "France",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.971
+  },
+  {
+    "Country": "Gambia, The",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 90.8281
+  },
+  {
+    "Country": "Georgia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 117.5432
+  },
+  {
+    "Country": "Germany",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.9817
+  },
+  {
+    "Country": "Ghana",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 106.4023
+  },
+  {
+    "Country": "Greece",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 97.1059
+  },
+  {
+    "Country": "Grenada",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.2528
+  },
+  {
+    "Country": "Guatemala",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.5921
+  },
+  {
+    "Country": "Guinea",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 83.7966
+  },
+  {
+    "Country": "Honduras",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 108.0323
+  },
+  {
+    "Country": "Hungary",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.9149
+  },
+  {
+    "Country": "India",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 114.0863
+  },
+  {
+    "Country": "Indonesia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.4599
+  },
+  {
+    "Country": "Iran, Islamic Rep.",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.5957
+  },
+  {
+    "Country": "Ireland",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.5718
+  },
+  {
+    "Country": "Israel",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.3748
+  },
+  {
+    "Country": "Italy",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.0766
+  },
+  {
+    "Country": "Japan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.1876
+  },
+  {
+    "Country": "Jordan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 97.6112
+  },
+  {
+    "Country": "Kazakhstan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.3404
+  },
+  {
+    "Country": "Kenya",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.5768
+  },
+  {
+    "Country": "Kiribati",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 115.182
+  },
+  {
+    "Country": "Korea, Rep.",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.5283
+  },
+  {
+    "Country": "Kuwait",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 103.025
+  },
+  {
+    "Country": "Kyrgyz Republic",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 107.0264
+  },
+  {
+    "Country": "Lao PDR",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 113.4927
+  },
+  {
+    "Country": "Latvia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.9731
+  },
+  {
+    "Country": "Lebanon",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 89.9923
+  },
+  {
+    "Country": "Lesotho",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.8455
+  },
+  {
+    "Country": "Liberia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 91.59
+  },
+  {
+    "Country": "Liechtenstein",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.2556
+  },
+  {
+    "Country": "Lithuania",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.6071
+  },
+  {
+    "Country": "Luxembourg",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 97.3323
+  },
+  {
+    "Country": "Macao SAR, China",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 96.3242
+  },
+  {
+    "Country": "Macedonia, FYR",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 89.6473
+  },
+  {
+    "Country": "Madagascar",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 146.542
+  },
+  {
+    "Country": "Malawi",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 147.9642
+  },
+  {
+    "Country": "Malaysia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.905
+  },
+  {
+    "Country": "Mali",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 72.977
+  },
+  {
+    "Country": "Malta",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.7591
+  },
+  {
+    "Country": "Mauritania",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.6721
+  },
+  {
+    "Country": "Mauritius",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 103.7294
+  },
+  {
+    "Country": "Mexico",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 103.1544
+  },
+  {
+    "Country": "Micronesia, Fed. Sts.",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 97.1805
+  },
+  {
+    "Country": "Moldova",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 92.8593
+  },
+  {
+    "Country": "Mongolia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.6383
+  },
+  {
+    "Country": "Morocco",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 113.3955
+  },
+  {
+    "Country": "Mozambique",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.2787
+  },
+  {
+    "Country": "Myanmar",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.2936
+  },
+  {
+    "Country": "Nauru",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.4011
+  },
+  {
+    "Country": "Nepal",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 140.6295
+  },
+  {
+    "Country": "Netherlands",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.095
+  },
+  {
+    "Country": "New Zealand",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.4593
+  },
+  {
+    "Country": "Niger",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 65.0248
+  },
+  {
+    "Country": "Norway",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.1206
+  },
+  {
+    "Country": "Oman",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 114.0607
+  },
+  {
+    "Country": "Pakistan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 85.8102
+  },
+  {
+    "Country": "Palau",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.791
+  },
+  {
+    "Country": "Panama",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.8738
+  },
+  {
+    "Country": "Peru",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.4283
+  },
+  {
+    "Country": "Poland",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.6509
+  },
+  {
+    "Country": "Portugal",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 106.1384
+  },
+  {
+    "Country": "Puerto Rico",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 90.4305
+  },
+  {
+    "Country": "Qatar",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.7764
+  },
+  {
+    "Country": "Russian Federation",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.9205
+  },
+  {
+    "Country": "Rwanda",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 135.1156
+  },
+  {
+    "Country": "Samoa",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 106.2645
+  },
+  {
+    "Country": "Sao Tome and Principe",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 109.4119
+  },
+  {
+    "Country": "Saudi Arabia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 108.2517
+  },
+  {
+    "Country": "Senegal",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 84.3095
+  },
+  {
+    "Country": "Serbia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 101.3633
+  },
+  {
+    "Country": "Seychelles",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.7033
+  },
+  {
+    "Country": "Slovak Republic",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.3733
+  },
+  {
+    "Country": "Slovenia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.3749
+  },
+  {
+    "Country": "Solomon Islands",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 112.103
+  },
+  {
+    "Country": "South Africa",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 97.2689
+  },
+  {
+    "Country": "Spain",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.2732
+  },
+  {
+    "Country": "Sri Lanka",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 100.1062
+  },
+  {
+    "Country": "St. Kitts and Nevis",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 84.4902
+  },
+  {
+    "Country": "St. Vincent and the Grenadines",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 103.0432
+  },
+  {
+    "Country": "Suriname",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 118.2731
+  },
+  {
+    "Country": "Swaziland",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 107.951
+  },
+  {
+    "Country": "Sweden",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 124.2636
+  },
+  {
+    "Country": "Switzerland",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 103.2725
+  },
+  {
+    "Country": "Tajikistan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 97.1398
+  },
+  {
+    "Country": "Tanzania",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 84.6786
+  },
+  {
+    "Country": "Thailand",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 104.0782
+  },
+  {
+    "Country": "Timor-Leste",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 136.047
+  },
+  {
+    "Country": "Togo",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 121.4028
+  },
+  {
+    "Country": "Tonga",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 107.465
+  },
+  {
+    "Country": "Tunisia",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 111.3951
+  },
+  {
+    "Country": "Turkey",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.6009
+  },
+  {
+    "Country": "Turkmenistan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 88.6385
+  },
+  {
+    "Country": "Tuvalu",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 102.1212
+  },
+  {
+    "Country": "Ukraine",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 105.0629
+  },
+  {
+    "Country": "United Arab Emirates",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 107.1077
+  },
+  {
+    "Country": "United Kingdom",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 108.0794
+  },
+  {
+    "Country": "United States",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.2292
+  },
+  {
+    "Country": "Uruguay",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 107.2961
+  },
+  {
+    "Country": "Uzbekistan",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 98.9494
+  },
+  {
+    "Country": "Venezuela, RB",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 99.6989
+  },
+  {
+    "Country": "Vietnam",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 108.6183
+  },
+  {
+    "Country": "West Bank and Gaza",
+    "Indicator": "Gross enrolment ratio, primary, female (%)",
+    "Value": 94.567
+  }
+]

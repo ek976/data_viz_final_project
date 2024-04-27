@@ -1,0 +1,582 @@
+[
+  {
+    "Country": "Afghanistan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 3.6733
+  },
+  {
+    "Country": "Albania",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 73.827
+  },
+  {
+    "Country": "Algeria",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 41.9319
+  },
+  {
+    "Country": "Argentina",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 102.8994
+  },
+  {
+    "Country": "Armenia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 48.4957
+  },
+  {
+    "Country": "Aruba",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 23.0432
+  },
+  {
+    "Country": "Australia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 106.3088
+  },
+  {
+    "Country": "Austria",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 87.602
+  },
+  {
+    "Country": "Azerbaijan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 24.7532
+  },
+  {
+    "Country": "Bahrain",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 57.6057
+  },
+  {
+    "Country": "Bangladesh",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 11.3874
+  },
+  {
+    "Country": "Belarus",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 101.9697
+  },
+  {
+    "Country": "Belgium",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 83.3614
+  },
+  {
+    "Country": "Bermuda",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 36.0804
+  },
+  {
+    "Country": "Botswana",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 27.8302
+  },
+  {
+    "Country": "Brazil",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 56.7165
+  },
+  {
+    "Country": "Brunei Darussalam",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 40.1249
+  },
+  {
+    "Country": "Bulgaria",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 78.9854
+  },
+  {
+    "Country": "Burundi",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 2.4079
+  },
+  {
+    "Country": "Cabo Verde",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 26.752
+  },
+  {
+    "Country": "Cameroon",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 14.0186
+  },
+  {
+    "Country": "Chad",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 1.133
+  },
+  {
+    "Country": "Chile",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 92.2786
+  },
+  {
+    "Country": "China",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 42.5336
+  },
+  {
+    "Country": "Colombia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 57.1454
+  },
+  {
+    "Country": "Comoros",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 7.9895
+  },
+  {
+    "Country": "Costa Rica",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 58.7833
+  },
+  {
+    "Country": "Cote d'Ivoire",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 6.3929
+  },
+  {
+    "Country": "Croatia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 80.7207
+  },
+  {
+    "Country": "Cyprus",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 62.5988
+  },
+  {
+    "Country": "Czech Republic",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 77.3893
+  },
+  {
+    "Country": "Denmark",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 95.3878
+  },
+  {
+    "Country": "Dominican Republic",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 58.839
+  },
+  {
+    "Country": "Egypt, Arab Rep.",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 29.9151
+  },
+  {
+    "Country": "El Salvador",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 30.1207
+  },
+  {
+    "Country": "Eritrea",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 1.6987
+  },
+  {
+    "Country": "Estonia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 86.7456
+  },
+  {
+    "Country": "Ethiopia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 5.2668
+  },
+  {
+    "Country": "Finland",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 97.1937
+  },
+  {
+    "Country": "France",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 71.0006
+  },
+  {
+    "Country": "Georgia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 43.6902
+  },
+  {
+    "Country": "Germany",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 63.2546
+  },
+  {
+    "Country": "Ghana",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 12.6413
+  },
+  {
+    "Country": "Greece",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 113.7101
+  },
+  {
+    "Country": "Guinea",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 6.68
+  },
+  {
+    "Country": "Honduras",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 24.3899
+  },
+  {
+    "Country": "Hong Kong SAR, China",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 73.7638
+  },
+  {
+    "Country": "Hungary",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 60.0327
+  },
+  {
+    "Country": "India",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 25.3059
+  },
+  {
+    "Country": "Indonesia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 32.8157
+  },
+  {
+    "Country": "Iran, Islamic Rep.",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 63.6432
+  },
+  {
+    "Country": "Ireland",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 80.3093
+  },
+  {
+    "Country": "Israel",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 76.1696
+  },
+  {
+    "Country": "Italy",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 73.4761
+  },
+  {
+    "Country": "Japan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 60.8813
+  },
+  {
+    "Country": "Kazakhstan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 54.169
+  },
+  {
+    "Country": "Korea, Rep.",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 80.6135
+  },
+  {
+    "Country": "Kyrgyz Republic",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 52.08
+  },
+  {
+    "Country": "Lao PDR",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 16.6891
+  },
+  {
+    "Country": "Latvia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 79.2217
+  },
+  {
+    "Country": "Lebanon",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 45.7461
+  },
+  {
+    "Country": "Lesotho",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 11.6922
+  },
+  {
+    "Country": "Liechtenstein",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 24.1411
+  },
+  {
+    "Country": "Lithuania",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 82.0082
+  },
+  {
+    "Country": "Macao SAR, China",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 78.6494
+  },
+  {
+    "Country": "Macedonia, FYR",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 44.2541
+  },
+  {
+    "Country": "Madagascar",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 4.5715
+  },
+  {
+    "Country": "Malaysia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 33.1642
+  },
+  {
+    "Country": "Maldives",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 20.2525
+  },
+  {
+    "Country": "Malta",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 50.8826
+  },
+  {
+    "Country": "Mauritius",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 42.6936
+  },
+  {
+    "Country": "Mexico",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 30.0302
+  },
+  {
+    "Country": "Moldova",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 47.2774
+  },
+  {
+    "Country": "Mongolia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 75.916
+  },
+  {
+    "Country": "Morocco",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 24.681
+  },
+  {
+    "Country": "Mozambique",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 4.9736
+  },
+  {
+    "Country": "New Zealand",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 94.0069
+  },
+  {
+    "Country": "Norway",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 91.3718
+  },
+  {
+    "Country": "Pakistan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 10.6705
+  },
+  {
+    "Country": "Philippines",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 40.2738
+  },
+  {
+    "Country": "Poland",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 82.5519
+  },
+  {
+    "Country": "Portugal",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 70.3753
+  },
+  {
+    "Country": "Puerto Rico",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 98.8313
+  },
+  {
+    "Country": "Qatar",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 39.2326
+  },
+  {
+    "Country": "Romania",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 59.061
+  },
+  {
+    "Country": "Russian Federation",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 86.1742
+  },
+  {
+    "Country": "Rwanda",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 6.8717
+  },
+  {
+    "Country": "Sao Tome and Principe",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 9.0473
+  },
+  {
+    "Country": "Saudi Arabia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 59.8529
+  },
+  {
+    "Country": "Senegal",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 7.7223
+  },
+  {
+    "Country": "Serbia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 66.011
+  },
+  {
+    "Country": "Seychelles",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 9.3471
+  },
+  {
+    "Country": "Slovak Republic",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 64.5809
+  },
+  {
+    "Country": "Slovenia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 98.4889
+  },
+  {
+    "Country": "South Africa",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 23.3078
+  },
+  {
+    "Country": "Spain",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 96.9299
+  },
+  {
+    "Country": "Sri Lanka",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 21.6925
+  },
+  {
+    "Country": "St. Kitts and Nevis",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 79.7278
+  },
+  {
+    "Country": "St. Lucia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 22.8565
+  },
+  {
+    "Country": "Sudan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 16.8261
+  },
+  {
+    "Country": "Sweden",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 75.96
+  },
+  {
+    "Country": "Switzerland",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 57.7078
+  },
+  {
+    "Country": "Syrian Arab Republic",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 44.9824
+  },
+  {
+    "Country": "Tajikistan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 18.4034
+  },
+  {
+    "Country": "Thailand",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 60.0294
+  },
+  {
+    "Country": "Togo",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 5.9446
+  },
+  {
+    "Country": "Tunisia",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 43.1046
+  },
+  {
+    "Country": "Turkey",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 80.1422
+  },
+  {
+    "Country": "Turkmenistan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 6.1999
+  },
+  {
+    "Country": "Uganda",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 4.1609
+  },
+  {
+    "Country": "Ukraine",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 88.4045
+  },
+  {
+    "Country": "United Kingdom",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 64.1236
+  },
+  {
+    "Country": "United States",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 100.702
+  },
+  {
+    "Country": "Uzbekistan",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 6.4973
+  },
+  {
+    "Country": "Vietnam",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 31.2313
+  },
+  {
+    "Country": "West Bank and Gaza",
+    "Indicator": "Gross enrolment ratio, tertiary, female (%)",
+    "Value": 53.7615
+  }
+]
