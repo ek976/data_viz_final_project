@@ -12,7 +12,7 @@ format:
 
 ```{ojs}
 d7 = require('d3@7') 
-primaryData = d7.csv('primary_updated.csv', function(d){
+primaryData = d7.csv('primary_1.csv', function(d){
   return {
     country_name: d.country_name,
     year1: +d.year1,
@@ -25,7 +25,7 @@ primaryData
 
 ```{ojs}
 
-secondaryData = d7.csv('secondary_updated.csv', function(d){
+secondaryData = d7.csv('secondary_1.csv', function(d){
   return {
     country_name: d.country_name,
     year1: +d.year1,
@@ -37,7 +37,7 @@ secondaryData
 
 ```{ojs}
 
-tertiaryData = d7.csv('tertiary_updated.csv', function(d){
+tertiaryData = d7.csv('tertiary_1.csv', function(d){
   return {
     country_name: d.country_name,
     year1: +d.year1,
