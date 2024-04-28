@@ -2,12 +2,15 @@
 title: "Split Packed Bubble Plot"
 author: "Jorge Bris Moreno"
 format:
-    html:
-        embed-resources: true
-        code-fold: true
-        toc: true
-        before_body: scripts.html
----
+  html:
+    embed-resources: true
+    toc: true
+    before_body: scripts.html
+editor_options:
+  chunk_output_type: console
+execute:
+  echo: false
+--- 
 
 ```{r, echo=FALSE, results='asis', runtime="js"}
 # Calling highcharts
@@ -836,8 +839,8 @@ series: [{
 ```
 
 <figure>
-  <div id="primary-container" style="width: 467%; height: 500px;"></div>
-  <figcaption>Hello</figcaption>
+  <div id="primary-container" style="width: 100%; height: 400px;"></div>
+  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
 </figure>
 
 ## Secondary enrollment
@@ -1520,8 +1523,8 @@ series: [{
 ```
 
 <figure>
-  <div id="secondary-container" style="width: 467%; height: 500px;"></div>
-  <figcaption>Hello</figcaption>
+  <div id="secondary-container" style="width: 100%; height: 400px;"></div>
+  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
 </figure>
 
 ## Third enrollment
@@ -2140,8 +2143,8 @@ series: [{
 ```
 
 <figure>
-  <div id="tertiary-container" style="width: 467%; height: 500px;"></div>
-  <figcaption>Hello</figcaption>
+  <div id="tertiary-container" style="width: 100%; height: 400px;"></div>
+  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
 </figure>
 
 :::
