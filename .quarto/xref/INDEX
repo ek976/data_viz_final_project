@@ -1,0 +1,77 @@
+{
+  "parallel_coordinates_plot/parallel_coord_plot.ipynb": {
+    "parallel_coord_plot.html": "3e2af921"
+  },
+  "theme.ipynb": {
+    "theme.html": "228060e9"
+  },
+  "EdStats_cleaning_eda.ipynb": {
+    "EdStats_cleaning_eda.html": "d659e042"
+  },
+  "tiana/code/linked_plotting.ipynb": {
+    "linked_plotting.html": "d6be13cc"
+  },
+  "tiana/code/linked_plotting_v2.ipynb": {
+    "linked_plotting_v2.html": "d62eb67d"
+  },
+  "tiana/code/reviewingdata.ipynb": {
+    "reviewingdata.html": "4741ab29"
+  },
+  "tiana/code/plotting.qmd": {
+    "plotting.html": "dc6e71ab"
+  },
+  "tiana/code/linked_plotting_v3.ipynb": {
+    "linked_plotting_v3.html": "9e7b1550"
+  },
+  "Jorge_Plot/Jorge_plot.qmd": {
+    "Jorge_plot.html": "209979ca"
+  },
+  "Jorge_Plot/Globe_plot.qmd": {
+    "Globe_plot.html": "14f28abc"
+  },
+  "Jorge_Plot/jorge_try_tabojs.qmd": {
+    "jorge_try_tabojs.html": "1d259cca"
+  },
+  "Jorge_Plot/try.qmd": {
+    "try.html": "f28d726b"
+  },
+  "code/EdStats_cleaning_eda.ipynb": {
+    "EdStats_cleaning_eda.html": "2543a97c"
+  },
+  "code/education_cleaning.ipynb": {
+    "education_cleaning.html": "7c550d73"
+  },
+  "code/population_cleaning.ipynb": {
+    "population_cleaning.html": "f6a0b83e"
+  },
+  "sheeba/data_munging.ipynb": {
+    "data_munging.html": "5e02072e"
+  },
+  "sheeba/sheeba.qmd": {
+    "sheeba.html": "4e26b5c6"
+  },
+  "sheeba/sheeba-1.qmd": {
+    "sheeba-1.html": "19a3e78e"
+  },
+  "sheeba/reviewingdata.ipynb": {
+    "reviewingdata.html": "ef007370"
+  },
+  "sheeba/plotting.qmd": {
+    "plotting.html": "30528ad8"
+  },
+  "map/map.ipynb": {
+    "map.html": "6aa1cc5e"
+  },
+  "report/report.qmd": {
+    "report.html": "3b7e42c9"
+  },
+  "data_cleaning/education_cleaning.ipynb": {
+    "education_cleaning.html": "f870c904"
+  },
+  "resources.qmd": {
+    "resources.html": "fe382f10"
+  },
+  "parallel_coordinates_plot/stand_alone_plot.ipynb": {
+    "stand_alone_plot.html": "c6b4fa0b"
+  }
+}
