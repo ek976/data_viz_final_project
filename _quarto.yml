@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "Global Female Education Attainment"
+  navbar:
+    left:
+      - href: report/report.qmd
+        text: Global Female Education Attainment
+      - href: "https://github.com/ek976/data_viz_final_project"
+        text: Code  
+
+
+format:
+  html:
+    theme: lux
+    toc: true
+
+
+
