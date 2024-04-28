@@ -12,6 +12,8 @@ execute:
 --- 
 
 ```{r, echo=FALSE, results='asis', runtime="js"}
+# data from here: https://ourworldindata.org/grapher/world-regions-according-to-the-world-bank?tab=table
+
 # Calling highcharts
 cat('
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
@@ -21,62 +23,31 @@ cat('
 ```
 
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
-# Load necessary libraries
+# libraries
 library(dplyr)
 library(jsonlite)
 
-# Read data from CSV
-data <- read.csv("cleaned_data/sorted_merged_df_cleaned.csv")
-```
+# Load the data
+data <- read.csv("Jorge/data/world-regions-according-to-the-world-bank.csv")
 
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-head(data)
-```
+# select only columns of interest Code and `World Region according to the World Bank``
+data <- data %>% select(Code, World.Region.according.to.the.World.Bank)
+data <- data %>% rename(name = Code, value = World.Region.according.to.the.World.Bank)
 
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-# Load library to read xlsx files
-library(readxl)
+# change regions to region numbers
+data$value[data$value == "South Asia"] <- 1
+data$value[data$value == "Europe and Central Asia"] <- 2
+data$value[data$value == "Latin America and Caribbean"] <- 3
+data$value[data$value == "Middle East and North Africa"] <- 4
+data$value[data$value == "East Asia and Pacific"] <- 5
+data$value[data$value == "Sub-Saharan Africa"] <- 6
+data$value[data$value == "North America"] <- 7
 
-df1 <- read_xlsx("parallel_coordinates_plot/Region_Country.xlsx")
+# value to numeric
+data$value <- as.numeric(data$value)
 
-# Change column name A to Country.Name and B to Country.Code
-colnames(df1) <- c("Country.Name", "Country.Code")
-
-# keep only Country.Name and Country.Code columns
-df1 <- df1[, c("Country.Name", "Country.Code")]
-head(df1)
-```
-
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-# Defining countries to exclude
-exclude_countries <- c("Arab World", "East Asia & Pacific", "East Asia & Pacific (excluding high income)", "Euro area", 
-                       "Europe & Central Asia", "Europe & Central Asia (excluding high income)", "European Union", 
-                       "Heavily indebted poor countries (HIPC)", "High income", "Latin America & Caribbean", 
-                       "Latin America & Caribbean (excluding high income)", "Low & middle income", "Low income", 
-                       "Lower middle income", "Middle East & North Africa", "Middle East & North Africa (excluding high income)", 
-                       "Middle income", "North America", "OECD members", "South Asia", "Sub-Saharan Africa", 
-                       "Sub-Saharan Africa (excluding high income)", "Upper middle income", "World", 
-                       "Least developed countries: UN classification")
-
-# Filtering the data
-filtered_data <- data %>% 
-  filter(!Country.Name %in% exclude_countries) %>%
-  select(Country.Name, numeric_region)
-
-# Assuming df1 is already loaded and has a column named Country.Name
-merged_data <- merge(filtered_data, df1, by = "Country.Name")
-
-# Removing the Country.Name column
-final_data <- merged_data %>% select(-Country.Name)
-
-# Renaming columns
-final_data <- rename(final_data, name = Country.Code, value = numeric_region)
-
-# Remove duplicates in name column
-final_data <- final_data[!duplicated(final_data$name), ]
-
-# Saving the final data frame to JSON
-write_json(final_data, "Jorge/data/regions.json", pretty = TRUE)
+# save into json pretty
+writeLines(toJSON(data, pretty = TRUE), "Jorge/data/regions.json")
 ```
 
 ```{ojs}
@@ -88,280 +59,872 @@ write_json(final_data, "Jorge/data/regions.json", pretty = TRUE)
     // Data appears to be a constant structure so it can be declared with 'const'
     let regions = [
   {
-    "value": 1,
-    "name": "AFG"
+    "name": "AFG",
+    "value": 1
   },
   {
-    "value": 2,
-    "name": "ALB"
+    "name": "ALB",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "AUT"
+    "name": "DZA",
+    "value": 4
   },
   {
-    "value": 2,
-    "name": "AZE"
+    "name": "ASM",
+    "value": 5
   },
   {
-    "value": 2,
-    "name": "BLR"
+    "name": "AND",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "BEL"
+    "name": "AGO",
+    "value": 6
   },
   {
-    "value": 3,
-    "name": "BLZ"
+    "name": "ATG",
+    "value": 3
   },
   {
-    "value": 1,
-    "name": "BTN"
+    "name": "ARG",
+    "value": 3
   },
   {
-    "value": 4,
-    "name": "BRN"
+    "name": "ARM",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "BGR"
+    "name": "ABW",
+    "value": 3
   },
   {
-    "value": 5,
-    "name": "BFA"
+    "name": "AUS",
+    "value": 5
   },
   {
-    "value": 5,
-    "name": "BDI"
+    "name": "AUT",
+    "value": 2
   },
   {
-    "value": 5,
-    "name": "CPV"
+    "name": "AZE",
+    "value": 2
   },
   {
-    "value": 3,
-    "name": "CHL"
+    "name": "BHS",
+    "value": 3
   },
   {
-    "value": 4,
-    "name": "CHN"
+    "name": "BHR",
+    "value": 4
   },
   {
-    "value": 3,
-    "name": "COL"
+    "name": "BGD",
+    "value": 1
   },
   {
-    "value": 3,
-    "name": "CRI"
+    "name": "BRB",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "CYP"
+    "name": "BLR",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "DNK"
+    "name": "BEL",
+    "value": 2
   },
   {
-    "value": 3,
-    "name": "DOM"
+    "name": "BLZ",
+    "value": 3
   },
   {
-    "value": 3,
-    "name": "ECU"
+    "name": "BEN",
+    "value": 6
   },
   {
-    "value": 6,
-    "name": "EGY"
+    "name": "BMU",
+    "value": 7
   },
   {
-    "value": 3,
-    "name": "SLV"
+    "name": "BTN",
+    "value": 1
   },
   {
-    "value": 2,
-    "name": "FIN"
+    "name": "BOL",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "FRA"
+    "name": "BIH",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "DEU"
+    "name": "BWA",
+    "value": 6
   },
   {
-    "value": 3,
-    "name": "GTM"
+    "name": "BRA",
+    "value": 3
   },
   {
-    "value": 3,
-    "name": "HND"
+    "name": "VGB",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "HUN"
+    "name": "BRN",
+    "value": 5
   },
   {
-    "value": 4,
-    "name": "IDN"
+    "name": "BGR",
+    "value": 2
   },
   {
-    "value": 6,
-    "name": "IRN"
+    "name": "BFA",
+    "value": 6
   },
   {
-    "value": 6,
-    "name": "ISR"
+    "name": "BDI",
+    "value": 6
   },
   {
-    "value": 2,
-    "name": "KAZ"
+    "name": "KHM",
+    "value": 5
   },
   {
-    "value": 6,
-    "name": "KWT"
+    "name": "CMR",
+    "value": 6
   },
   {
-    "value": 4,
-    "name": "LAO"
+    "name": "CAN",
+    "value": 7
   },
   {
-    "value": 2,
-    "name": "LVA"
+    "name": "CPV",
+    "value": 6
   },
   {
-    "value": 5,
-    "name": "LSO"
+    "name": "CYM",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "LTU"
+    "name": "CAF",
+    "value": 6
   },
   {
-    "value": 5,
-    "name": "MWI"
+    "name": "TCD",
+    "value": 6
   },
   {
-    "value": 6,
-    "name": "MLT"
+    "name": "OWID_CIS",
+    "value": 2
   },
   {
-    "value": 5,
-    "name": "MRT"
+    "name": "CHL",
+    "value": 3
   },
   {
-    "value": 5,
-    "name": "MUS"
+    "name": "CHN",
+    "value": 5
   },
   {
-    "value": 3,
-    "name": "MEX"
+    "name": "COL",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "MDA"
+    "name": "COM",
+    "value": 6
   },
   {
-    "value": 5,
-    "name": "MOZ"
+    "name": "COG",
+    "value": 6
   },
   {
-    "value": 1,
-    "name": "NPL"
+    "name": "CRI",
+    "value": 3
   },
   {
-    "value": 4,
-    "name": "NZL"
+    "name": "CIV",
+    "value": 6
   },
   {
-    "value": 5,
-    "name": "NER"
+    "name": "HRV",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "NOR"
+    "name": "CUB",
+    "value": 3
   },
   {
-    "value": 1,
-    "name": "PAK"
+    "name": "CUW",
+    "value": 3
   },
   {
-    "value": 3,
-    "name": "PER"
+    "name": "CYP",
+    "value": 2
   },
   {
-    "value": 2,
-    "name": "PRT"
+    "name": "CZE",
+    "value": 2
   },
   {
-    "value": 5,
-    "name": "RWA"
+    "name": "COD",
+    "value": 6
   },
   {
-    "value": 2,
-    "name": "SRB"
+    "name": "DNK",
+    "value": 2
   },
   {
-    "value": 5,
-    "name": "SYC"
+    "name": "DJI",
+    "value": 4
   },
   {
-    "value": 2,
-    "name": "SVK"
+    "name": "DMA",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "SVN"
+    "name": "DOM",
+    "value": 3
   },
   {
-    "value": 5,
-    "name": "ZAF"
+    "name": "TLS",
+    "value": 5
   },
   {
-    "value": 2,
-    "name": "ESP"
+    "name": "ECU",
+    "value": 3
   },
   {
-    "value": 3,
-    "name": "KNA"
+    "name": "EGY",
+    "value": 4
   },
   {
-    "value": 3,
-    "name": "VCT"
+    "name": "SLV",
+    "value": 3
   },
   {
-    "value": 2,
-    "name": "SWE"
+    "name": "GNQ",
+    "value": 6
   },
   {
-    "value": 2,
-    "name": "CHE"
+    "name": "ERI",
+    "value": 6
   },
   {
-    "value": 4,
-    "name": "TLS"
+    "name": "EST",
+    "value": 2
   },
   {
-    "value": 4,
-    "name": "TON"
+    "name": "SWZ",
+    "value": 6
   },
   {
-    "value": 2,
-    "name": "UKR"
+    "name": "ETH",
+    "value": 6
   },
   {
-    "value": 2,
-    "name": "GBR"
+    "name": "FRO",
+    "value": 2
   },
   {
-    "value": 7,
-    "name": "USA"
+    "name": "FJI",
+    "value": 5
   },
   {
-    "value": 6,
-    "name": "PSE"
+    "name": "FIN",
+    "value": 2
+  },
+  {
+    "name": "FRA",
+    "value": 2
+  },
+  {
+    "name": "PYF",
+    "value": 5
+  },
+  {
+    "name": "GAB",
+    "value": 6
+  },
+  {
+    "name": "GMB",
+    "value": 6
+  },
+  {
+    "name": "GEO",
+    "value": 2
+  },
+  {
+    "name": "DEU",
+    "value": 2
+  },
+  {
+    "name": "GHA",
+    "value": 6
+  },
+  {
+    "name": "GIB",
+    "value": 2
+  },
+  {
+    "name": "GRC",
+    "value": 2
+  },
+  {
+    "name": "GRL",
+    "value": 2
+  },
+  {
+    "name": "GRD",
+    "value": 3
+  },
+  {
+    "name": "GUM",
+    "value": 5
+  },
+  {
+    "name": "GTM",
+    "value": 3
+  },
+  {
+    "name": "GIN",
+    "value": 6
+  },
+  {
+    "name": "GNB",
+    "value": 6
+  },
+  {
+    "name": "GUY",
+    "value": 3
+  },
+  {
+    "name": "HTI",
+    "value": 3
+  },
+  {
+    "name": "HND",
+    "value": 3
+  },
+  {
+    "name": "HKG",
+    "value": 5
+  },
+  {
+    "name": "HUN",
+    "value": 2
+  },
+  {
+    "name": "ISL",
+    "value": 2
+  },
+  {
+    "name": "IND",
+    "value": 1
+  },
+  {
+    "name": "IDN",
+    "value": 5
+  },
+  {
+    "name": "IRN",
+    "value": 4
+  },
+  {
+    "name": "IRQ",
+    "value": 4
+  },
+  {
+    "name": "IRL",
+    "value": 2
+  },
+  {
+    "name": "IMN",
+    "value": 2
+  },
+  {
+    "name": "ISR",
+    "value": 4
+  },
+  {
+    "name": "ITA",
+    "value": 2
+  },
+  {
+    "name": "JAM",
+    "value": 3
+  },
+  {
+    "name": "JPN",
+    "value": 5
+  },
+  {
+    "name": "JOR",
+    "value": 4
+  },
+  {
+    "name": "KAZ",
+    "value": 2
+  },
+  {
+    "name": "KEN",
+    "value": 6
+  },
+  {
+    "name": "KIR",
+    "value": 5
+  },
+  {
+    "name": "OWID_KOS",
+    "value": 2
+  },
+  {
+    "name": "KWT",
+    "value": 4
+  },
+  {
+    "name": "KGZ",
+    "value": 2
+  },
+  {
+    "name": "LAO",
+    "value": 5
+  },
+  {
+    "name": "LVA",
+    "value": 2
+  },
+  {
+    "name": "LBN",
+    "value": 4
+  },
+  {
+    "name": "LSO",
+    "value": 6
+  },
+  {
+    "name": "LBR",
+    "value": 6
+  },
+  {
+    "name": "LBY",
+    "value": 4
+  },
+  {
+    "name": "LIE",
+    "value": 2
+  },
+  {
+    "name": "LTU",
+    "value": 2
+  },
+  {
+    "name": "LUX",
+    "value": 2
+  },
+  {
+    "name": "MAC",
+    "value": 5
+  },
+  {
+    "name": "MDG",
+    "value": 6
+  },
+  {
+    "name": "MWI",
+    "value": 6
+  },
+  {
+    "name": "MYS",
+    "value": 5
+  },
+  {
+    "name": "MDV",
+    "value": 1
+  },
+  {
+    "name": "MLI",
+    "value": 6
+  },
+  {
+    "name": "MLT",
+    "value": 4
+  },
+  {
+    "name": "MHL",
+    "value": 5
+  },
+  {
+    "name": "MRT",
+    "value": 6
+  },
+  {
+    "name": "MUS",
+    "value": 6
+  },
+  {
+    "name": "MEX",
+    "value": 3
+  },
+  {
+    "name": "",
+    "value": 5
+  },
+  {
+    "name": "MDA",
+    "value": 2
+  },
+  {
+    "name": "MCO",
+    "value": 2
+  },
+  {
+    "name": "MNG",
+    "value": 5
+  },
+  {
+    "name": "MNE",
+    "value": 2
+  },
+  {
+    "name": "MAR",
+    "value": 4
+  },
+  {
+    "name": "MOZ",
+    "value": 6
+  },
+  {
+    "name": "MMR",
+    "value": 5
+  },
+  {
+    "name": "NAM",
+    "value": 6
+  },
+  {
+    "name": "NRU",
+    "value": 5
+  },
+  {
+    "name": "NPL",
+    "value": 1
+  },
+  {
+    "name": "NLD",
+    "value": 2
+  },
+  {
+    "name": "NCL",
+    "value": 5
+  },
+  {
+    "name": "NZL",
+    "value": 5
+  },
+  {
+    "name": "NIC",
+    "value": 3
+  },
+  {
+    "name": "NER",
+    "value": 6
+  },
+  {
+    "name": "NGA",
+    "value": 6
+  },
+  {
+    "name": "PRK",
+    "value": 5
+  },
+  {
+    "name": "MKD",
+    "value": 2
+  },
+  {
+    "name": "MNP",
+    "value": 5
+  },
+  {
+    "name": "NOR",
+    "value": 2
+  },
+  {
+    "name": "OMN",
+    "value": 4
+  },
+  {
+    "name": "PAK",
+    "value": 1
+  },
+  {
+    "name": "PLW",
+    "value": 5
+  },
+  {
+    "name": "PSE",
+    "value": 4
+  },
+  {
+    "name": "PAN",
+    "value": 3
+  },
+  {
+    "name": "PNG",
+    "value": 5
+  },
+  {
+    "name": "PRY",
+    "value": 3
+  },
+  {
+    "name": "PER",
+    "value": 3
+  },
+  {
+    "name": "PHL",
+    "value": 5
+  },
+  {
+    "name": "POL",
+    "value": 2
+  },
+  {
+    "name": "PRT",
+    "value": 2
+  },
+  {
+    "name": "PRI",
+    "value": 3
+  },
+  {
+    "name": "QAT",
+    "value": 4
+  },
+  {
+    "name": "ROU",
+    "value": 2
+  },
+  {
+    "name": "RUS",
+    "value": 2
+  },
+  {
+    "name": "RWA",
+    "value": 6
+  },
+  {
+    "name": "KNA",
+    "value": 3
+  },
+  {
+    "name": "LCA",
+    "value": 3
+  },
+  {
+    "name": "MAF",
+    "value": 3
+  },
+  {
+    "name": "VCT",
+    "value": 3
+  },
+  {
+    "name": "WSM",
+    "value": 5
+  },
+  {
+    "name": "SMR",
+    "value": 2
+  },
+  {
+    "name": "STP",
+    "value": 6
+  },
+  {
+    "name": "SAU",
+    "value": 4
+  },
+  {
+    "name": "SEN",
+    "value": 6
+  },
+  {
+    "name": "SRB",
+    "value": 2
+  },
+  {
+    "name": "SYC",
+    "value": 6
+  },
+  {
+    "name": "SLE",
+    "value": 6
+  },
+  {
+    "name": "SGP",
+    "value": 5
+  },
+  {
+    "name": "SXM",
+    "value": 3
+  },
+  {
+    "name": "SVK",
+    "value": 2
+  },
+  {
+    "name": "SVN",
+    "value": 2
+  },
+  {
+    "name": "SLB",
+    "value": 5
+  },
+  {
+    "name": "SOM",
+    "value": 6
+  },
+  {
+    "name": "ZAF",
+    "value": 6
+  },
+  {
+    "name": "KOR",
+    "value": 5
+  },
+  {
+    "name": "SSD",
+    "value": 6
+  },
+  {
+    "name": "ESP",
+    "value": 2
+  },
+  {
+    "name": "LKA",
+    "value": 1
+  },
+  {
+    "name": "SDN",
+    "value": 6
+  },
+  {
+    "name": "SUR",
+    "value": 3
+  },
+  {
+    "name": "SWE",
+    "value": 2
+  },
+  {
+    "name": "CHE",
+    "value": 2
+  },
+  {
+    "name": "SYR",
+    "value": 4
+  },
+  {
+    "name": "TJK",
+    "value": 2
+  },
+  {
+    "name": "TZA",
+    "value": 6
+  },
+  {
+    "name": "THA",
+    "value": 5
+  },
+  {
+    "name": "TGO",
+    "value": 6
+  },
+  {
+    "name": "TON",
+    "value": 5
+  },
+  {
+    "name": "TTO",
+    "value": 3
+  },
+  {
+    "name": "TUN",
+    "value": 4
+  },
+  {
+    "name": "TUR",
+    "value": 2
+  },
+  {
+    "name": "TKM",
+    "value": 2
+  },
+  {
+    "name": "TCA",
+    "value": 3
+  },
+  {
+    "name": "TUV",
+    "value": 5
+  },
+  {
+    "name": "UGA",
+    "value": 6
+  },
+  {
+    "name": "UKR",
+    "value": 2
+  },
+  {
+    "name": "ARE",
+    "value": 4
+  },
+  {
+    "name": "GBR",
+    "value": 2
+  },
+  {
+    "name": "USA",
+    "value": 7
+  },
+  {
+    "name": "VIR",
+    "value": 3
+  },
+  {
+    "name": "URY",
+    "value": 3
+  },
+  {
+    "name": "UZB",
+    "value": 2
+  },
+  {
+    "name": "VUT",
+    "value": 5
+  },
+  {
+    "name": "VEN",
+    "value": 3
+  },
+  {
+    "name": "VNM",
+    "value": 5
+  },
+  {
+    "name": "YEM",
+    "value": 4
+  },
+  {
+    "name": "ZMB",
+    "value": 6
+  },
+  {
+    "name": "ZWE",
+    "value": 6
   }
 ];
 
@@ -388,37 +951,37 @@ write_json(final_data, "Jorge/data/regions.json", pretty = TRUE)
         from: 1,
         to: 2,
         color: '#3d6469',
-        name: 'South Asia'
+        name: 'South Asia (1)'
     }, {
         from: 2,
         to: 3,
         color: '#ffa205',
-        name: 'Europe & Central Asia'
+        name: 'Europe & Central Asia (2)'
     }, {
         from: 3,
         to: 4,
         color: '#ff4500',
-        name: 'Middle East & North Africa'
+        name: 'Latin America & Caribbean (3)'
     }, {
         from: 4,
         to: 5,
         color: '#08030a',
-        name: 'East Asia & Pacific'
+        name: 'Middle East & North Africa (4)'
     }, {
         from: 5,
         to: 6,
 color: '#feeece',
-        name: 'Sub-Saharan Africa'
+        name: 'East Asia & Pacific (5)'
     }, {
         from: 6,
         to: 7,
         color: '#d40637',
-        name: 'Latin America & Caribbean'
+        name: 'Sub-Saharan Africa (6)'
     }, {
         from: 7,
         to: 8,
         color: '#5f0922',
-        name: 'North America'
+        name: 'North America (7)'
     }]
         },
         series: [{
