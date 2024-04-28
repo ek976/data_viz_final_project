@@ -1,0 +1,4 @@
+"0","# create plot"
+"0","line_plot <- ggplot(plot_df, aes(x = Year, y = Value, color = Country Name)) +"
+"2","Error: unexpected symbol in ""line_plot <- ggplot(plot_df, aes(x = Year, y = Value, color = Country Name""
+"

@@ -1,0 +1,8 @@
+"0","# Define the specific values"
+"0","specific_values <- c(""Upper middle income"", ""Middle income"", ""Lower middle income"", ""High income"", ""Low & middle income"", ""Low income"")"
+"0",""
+"0","# Subset the dataframe to include only rows with the specific values in the column"
+"0","subset_df <- df1[df1$Country.Name %in% specific_values, ]"
+"0",""
+"0","# View the subsetted dataframe"
+"0","head(subset_df)"

@@ -1,0 +1,5 @@
+"0",""
+"0","#df <- read.csv('../data/tidy_data.csv')"
+"0",""
+"0","#unique_values <- unique(df$Series.Name)"
+"0","#print(unique_values)"
