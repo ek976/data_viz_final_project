@@ -1,0 +1,320 @@
+---
+title: "Global study of Gender Inequality in Education Access"
+authors: "Jorge Bris Moreno, Liz Kovalchuk, Tiana Le, and Sheeba Moghal"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    before_body: scripts.html
+editor_options:
+  chunk_output_type: console
+execute:
+  echo: false
+---
+
+```{r} 
+#| label: common-setup
+#| echo: false 
+#| warning: false 
+library(reticulate)
+use_condaenv("gu", required=TRUE)
+
+``` 
+
+
+# Abstract
+In this article we aim to explore gender inequality in education access across the globe. Education is one of the key drivers in the development of society. Using data obtained from the World Bank, our team analyzed the relationship between education attainment, gender, and other economic factors such as Gross Domestic Product (GDP), the Gross National Income (GNI) index, population, and other variables. The data utilized is from the years 2010, 2011, 2012, 2013, and 2014. This project focuses on a larger global scale and then provides the interactivity for readers to dive into specific regions, countries, and demographics in order to identify trends and patterns. We hope that you find this dataset as interesting and expository as we did - from regions with the highest diparity in education enrollment based on gender to the linkage of other factors that may be contributing to this disparity encourages us to ask questions about the forces at play (economic, political, social) affecting women's access to education and thus to a better life.
+
+
+# Introduction
+
+Education is one of the most important factors in the development of society. Throughout all history, women have been marginalized in the education system. This has led to a significant gap in the education. The United Nations has recognized this issue and has emphasized the importance of education in the sustainable development of society. While this gender gap has been closing over the years, we will aim to explore the current state of this gap and what are the factors that may be contributing to its continued existence so that we can better understand how to address this issue. 
+
+To do this, we will not only take into account factors like global development or macroeconomics but we will try to dive deeper into gender roles in society.  We will address six critical questions:
+
+- How do literacy rates correlate with population growth rates across different regions and time periods?
+- How does the allocation of resources to education influence literacy rates?
+-  In what ways do literacy and education contribute to economic growth and development?
+- To what extent does gender equality manifest in educational access, participation, and outcomes?
+- How do trends in education mirror trends in employment, particularly regarding gender?
+- What specific obstacles hinder gender equality in educational access, retention, and achievement? 
+
+By answering the above, we will be able to find out the importance of education in the development of countries and population, the influence it has within the working industry, what role economics plays in education, and explore further issues in the current gender gap. Hopefully, this study will help us better understand this gap and how to address it in the future.
+
+
+# Let's Start with the World 
+
+[ insert map plot here ] 
+
+
+
+
+# Teasing out Enrollment by Region 
+
+[ Female Gross Enrollment Ratios by Region (2014) ] 
+
+To begin our analysis, we will be looking at different regions usually studied by global organizations like the World Bank. We will be focusing on the following regions: Arab World, East Asia & Pacific, Euro area, Europe & Central Asia, Heavily indebted poor countries (HIPC), Latin America & Caribbean (excluding high income), Middle East & North Africa, Middle East & North Africa (excluding high income), OECD members, and Sub-Saharan Africa (excluding high income). The objective is to visualize the differences in women's enrollment at different education levels across the world at a global scale and identify any trends or patterns that may arise. This will also allow us to consider if some regions are worth exploring in more detail than others in our analysis.
+
+```{r, echo=FALSE, results='asis', runtime="js"}
+cat('
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+')
+```
+
+```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE}
+// Define the initial dataset
+initialData = [
+  {"Country Name":"Arab World","Indicator":"lower secondary","Value":81.054},
+  {"Country Name":"Arab World","Indicator":"post-secondary non-tertiary","Value":"NA"},
+  {"Country Name":"Arab World","Indicator":"pre-primary","Value":25.3707},
+  {"Country Name":"Arab World","Indicator":"primary","Value":93.608},
+  {"Country Name":"Arab World","Indicator":"secondary","Value":67.9689},
+  {"Country Name":"Arab World","Indicator":"tertiary","Value":28.768},
+  {"Country Name":"Arab World","Indicator":"upper secondary","Value":54.5065},
+  {"Country Name":"East Asia & Pacific","Indicator":"lower secondary","Value":96.6641},
+  {"Country Name":"East Asia & Pacific","Indicator":"post-secondary non-tertiary","Value":"NA"},
+  {"Country Name":"East Asia & Pacific","Indicator":"pre-primary","Value":76.0034},
+  {"Country Name":"East Asia & Pacific","Indicator":"primary","Value":104.9668},
+  {"Country Name":"East Asia & Pacific","Indicator":"secondary","Value":88.3206},
+  {"Country Name":"East Asia & Pacific","Indicator":"tertiary","Value":41.4262},
+  {"Country Name":"East Asia & Pacific","Indicator":"upper secondary","Value":79.7367},
+  {"Country Name":"Euro area","Indicator":"lower secondary","Value":108.7706},
+  {"Country Name":"Euro area","Indicator":"post-secondary non-tertiary","Value":"NA"},
+  {"Country Name":"Euro area","Indicator":"pre-primary","Value":102.3132},
+  {"Country Name":"Euro area","Indicator":"primary","Value":103.4798},
+  {"Country Name":"Euro area","Indicator":"secondary","Value":110.7075},
+  {"Country Name":"Euro area","Indicator":"tertiary","Value":76.299},
+  {"Country Name":"Euro area","Indicator":"upper secondary","Value":112.9169},
+  {"Country Name":"Europe & Central Asia","Indicator":"lower secondary","Value":103.7713},
+  {"Country Name":"Europe & Central Asia","Indicator":"post-secondary non-tertiary","Value":"NA"},
+  {"Country Name":"Europe & Central Asia","Indicator":"pre-primary","Value":74.2163},
+  {"Country Name":"Europe & Central Asia","Indicator":"primary","Value":103.1583},
+  {"Country Name":"Europe & Central Asia","Indicator":"secondary","Value":105.389},
+  {"Country Name":"Europe & Central Asia","Indicator":"tertiary","Value":69.8713},
+  {"Country Name":"Europe & Central Asia","Indicator":"upper secondary","Value":107.4027},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"lower secondary","Value":"NA"},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"post-secondary non-tertiary","Value":18.0427},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"pre-primary","Value":98.0805},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"primary","Value":35.621},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"secondary","Value":6.233},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"tertiary","Value":24.4659},
+  {"Country Name":"Heavily indebted poor countries (HIPC)","Indicator":"upper secondary","Value":108.0586},
+  {"Country Name":"Latin America & Caribbean (excluding high income)","Indicator":"lower secondary","Value":"NA"},
+  {"Country Name":"Latin America & Caribbean(excluding high income)","Indicator":"post-secondary non-tertiary","Value":72.4493},
+  {"Country Name":"Latin America & Caribbean (excluding high income)","Indicator":"pre-primary","Value":107.3809},
+  {"Country Name":"Latin America & Caribbean (excluding high income)","Indicator":"primary","Value":97.1722},
+  {"Country Name":"Latin America & Caribbean (excluding high income)","Indicator":"secondary","Value":48.967},
+  {"Country Name":"Latin America & Caribbean (excluding high income)","Indicator":"tertiary","Value":84.4792},
+  {"Country Name":"Latin America & Caribbean (excluding high income)","Indicator":"upper secondary","Value":88.4424},
+  {"Country Name":"Middle East & North Africa","Indicator":"lower secondary","Value":"NA"},
+  {"Country Name":"Middle East & North Africa","Indicator":"post-secondary non-tertiary","Value":29.5462},
+  {"Country Name":"Middle East & North Africa","Indicator":"pre-primary","Value":103.047},
+  {"Country Name":"Middle East & North Africa","Indicator":"primary","Value":76.9069},
+  {"Country Name":"Middle East & North Africa","Indicator":"secondary","Value":38.2514},
+  {"Country Name":"Middle East & North Africa","Indicator":"tertiary","Value":65.6759},
+  {"Country Name":"Middle East & North Africa","Indicator":"upper secondary","Value":86.992},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"lower secondary","Value":"NA"},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"post-secondary non-tertiary","Value":26.8679},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"pre-primary","Value":102.4904},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"primary","Value":74.3971},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"secondary","Value":36.1012},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"tertiary","Value":62.3747},
+  {"Country Name":"Middle East & North Africa (excluding high income)","Indicator":"upper secondary","Value":107.3207},
+  {"Country Name":"OECD members","Indicator":"lower secondary","Value":79.3329},
+  {"Country Name":"OECD members","Indicator":"post-secondary non-tertiary","Value":"NA"},
+  {"Country Name":"OECD members","Indicator":"pre-primary","Value":102.2592},
+  {"Country Name":"OECD members","Indicator":"primary","Value":104.3177},
+  {"Country Name":"OECD members","Indicator":"secondary","Value":75.5335},
+  {"Country Name":"OECD members","Indicator":"tertiary","Value":101.3419},
+  {"Country Name":"OECD members","Indicator":"upper secondary","Value":46.1386},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"lower secondary","Value":"NA"},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"post-secondary non-tertiary","Value":22.0271},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"pre-primary","Value":94.7689},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"primary","Value":39.5373},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"secondary","Value":7.2426},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"tertiary","Value":31.7493},
+  {"Country Name":"Sub-Saharan Africa (excluding high income)","Indicator":"upper secondary","Value":108.0586}
+];
+
+// Filter and parse the dataset to remove "NA" values and convert "Value" to float
+parsedData = initialData.filter(d => d.Value !== "NA").map(d => ({
+  ...d,
+  Value: parseFloat(d.Value)
+}));
+
+// Reduce the data to group it by "Country Name" and accumulate the indicators and values
+seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, Value }) => {
+  let group = acc.find(g => g.name === countryName);
+  if (!group) {
+    group = { name: countryName, data: [] };
+    acc.push(group);
+  }
+  group.data.push({ name: Indicator, value: Value });
+  return acc;
+}, []);
+```
+
+```{ojs, message=FALSE, warning=FALSE, echo = FALSE}
+hex_colors = [
+    "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
+]
+
+function renderChart() {
+    Highcharts.chart('container', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
+        title: {
+            text: 'Female Gross Enrollment Ratios by Region (2014)'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}%'
+        },
+        plotOptions: {
+            packedbubble: {
+                minSize: '10%',
+                maxSize: '100%',
+                zMin: 0,
+                zMax: 400,
+                layoutAlgorithm: {
+                    gravitationalConstant: 0.05,
+                    splitSeries: true,
+                    seriesInteraction: false,
+                    dragBetweenSeries: true,
+                    parentNodeLimit: true
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        color: 'black',
+                        textOutline: 'none',
+                        fontWeight: 'normal'
+                    }
+                }
+            }
+        },
+        series: seriesData.map((series, index) => ({
+           ...series,
+            color: hex_colors[index % hex_colors.length]
+        }))
+    });
+};
+
+renderChart();
+```
+
+
+<figure>
+  <div id="container"></div>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
+</figure>
+
+From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. While looking at every regions data is important, it is worth noting that for some of them there is a lack of information for some education levels. This limits our ability to make a full comparison between regions. However, it still allows us to see the disparities between regions. Subsahaaran Africa, heavily indebted poor countries, and the Middle East and North Africa seem to have the lowest enrollment ratios across all education levels for female students. On the other hand, the Euro area, Europe and Central Asia, and OECD members have the highest enrollment ratios for female students. 
+
+This is important information to consider as we move forward with our analysis. One can think that it may be due to economic reasons, social and ideological reasons, or even political reasons. However, this problem has been present for decades and instead of taking assumptions to answer this question, we should identify the key reasons for this disparity and address it accordingly.
+
+# 
+
+
+# Economic Influences on Female Access to Education 
+
+The World Bank assigns the world’s economies to four income groups, low income, lower-middle, upper-middle, and high income. 
+
+| Income Category   | FY 2022           | FY 2023           | FY 2024           |
+|-------------------|-------------------|-------------------|-------------------|
+| Low Income        | ≤ 1,045           | ≤ 1,085           | ≤ 1,135           |
+| Lower-middle      | 1,046 - 4,095     | 1,086 - 4,255     | 1,136 - 4,465     |
+| Upper-middle      | 4,096 - 12,695    | 4,256 - 13,205    | 4,466 - 13,845    |
+| High Income       | ≥ 12,695          | ≥ 13,205          | ≥ 13,846         |
+
+
+
+The classifications are updated each year on July 1 and are based on the GNI per capita of the previous year (2021). GNI measures are expressed in United States dollars (USD), and are determined using conversion factors derived according to the Atlas method (The Atlas method smooths exchange rate fluctuations using a three-year moving average, price-adjusted conversion factor. The USD estimate of GNI per capita is derived by applying the Atlas conversion factor to estimates measured in  local currency units (LCU)).
+
+
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+# correct df 
+sorted_merged_df_cleaned = pd.read_csv('../cleaned_data/sorted_merged_df_cleaned.csv')
+
+# normalize enrollment 
+from sklearn.preprocessing import MinMaxScaler
+
+# Define the columns to normalize
+columns_to_normalize = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2011 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2012 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2013 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2014 (Gross enrolment ratio, primary and secondary, female (%))']
+
+# Initialize the MinMaxScaler
+scaler = MinMaxScaler()
+
+# Normalize the specified columns
+df_normalized = sorted_merged_df_cleaned.copy()  # Create a copy of the DataFrame to avoid modifying the original
+df_normalized[columns_to_normalize] = scaler.fit_transform(df_normalized[columns_to_normalize])
+
+# Define dimensions for the parallel coordinates plot
+dimensions = ['2014 (GDP per capita (current US$))', 
+              '2014 (Gross enrolment ratio, primary and secondary, female (%))',
+              '2014 (GNI per capita, Atlas method (current US$))']
+
+# Define your custom color scale
+hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#d40637"]
+
+# Define custom labels for the color scale
+color_labels = ['Low income', 'Lower middle income', 'Upper middle income', 'High income']
+
+# Calculate the intervals for each color in the custom scale
+color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]
+
+# Define custom labels for the dimensions
+custom_labels = ['GDP per capita', 'Primary and secondary School', 'GNI per capita']
+
+# Create the parallel coordinates plot using plotly.graph_objects
+fig = go.Figure()
+
+# Add parallel coordinates trace
+fig.add_trace(go.Parcoords(
+    line=dict(color=df_normalized['numeric_income'], 
+              colorscale=hex_colors,  # Use your custom color scale
+              showscale=True,  # Set showscale to True to display the color scale
+              colorbar=dict(  # Define the color bar properties
+                  title='Income Group',  # Set the title of the color scale
+                  tickvals=[0, 1, 2, 3],  # Specify the tick values
+                  ticktext=color_labels,  # Specify the tick labels
+                  tickmode='array'  # Use array mode for custom tick labels
+              )
+             ),
+    dimensions=[
+        dict(range=[df_normalized[dim].min(), df_normalized[dim].max()],
+             label=label,  # Use custom label
+             tickformat='.2f' if dim == dimensions[1] else '',  # Set tick format to display percentages
+             values=df_normalized[dim])  # Keep values unchanged
+        for dim, label in zip(dimensions, custom_labels)
+    ],
+))
+
+# Update layout to add title
+fig.update_layout(
+    title="2014 Female Enrollment vs. Economic Measures in US$",  # Set the title of the plot
+    title_x=0.5  # Set the x position of the title
+)
+
+
+```
+
+
+# Sources 
+
+https://blogs.worldbank.org/en/opendata/new-world-bank-country-classifications-income-level-2022-2023
+
