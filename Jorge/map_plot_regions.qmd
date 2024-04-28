@@ -12,6 +12,8 @@ execute:
 --- 
 
 ```{r, echo=FALSE, results='asis', runtime="js"}
+# data from here: https://ourworldindata.org/grapher/world-regions-according-to-the-world-bank?tab=table
+
 # Calling highcharts
 cat('
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
