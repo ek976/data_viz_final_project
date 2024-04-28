@@ -1,0 +1,107 @@
+[
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "primary",
+    "Value": 104.9668
+  },
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "secondary",
+    "Value": 88.3206
+  },
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "tertiary",
+    "Value": 41.4262
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "primary",
+    "Value": 103.1583
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "secondary",
+    "Value": 105.389
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "tertiary",
+    "Value": 69.8713
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "primary",
+    "Value": 107.0963
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "secondary",
+    "Value": 97.2036
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "tertiary",
+    "Value": 50.4229
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "primary",
+    "Value": 103.047
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "secondary",
+    "Value": 76.9069
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "tertiary",
+    "Value": 38.2514
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "primary",
+    "Value": 99.3733
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "secondary",
+    "Value": 99.5089
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "tertiary",
+    "Value": 97.5233
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "primary",
+    "Value": 112.5074
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "secondary",
+    "Value": 64.4181
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "tertiary",
+    "Value": 19.9473
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "primary",
+    "Value": 94.7694
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "secondary",
+    "Value": 39.5397
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "tertiary",
+    "Value": 7.2428
+  }
+]

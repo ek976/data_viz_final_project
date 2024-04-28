@@ -1,0 +1,250 @@
+---
+title: "Split Packed Bubble Plot"
+author: "Jorge Bris Moreno"
+format:
+    html:
+        embed-resources: true
+        code-fold: true
+        toc: true
+---
+
+```{r, echo=FALSE, results='asis', runtime="js"}
+# Calling highcharts
+cat('
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+')
+```
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+# Libraries
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(viridis)
+library(jsonlite)
+
+# Load the data
+data <- read.csv("cleaned_data/filtered_education_data.csv")
+head(data)
+```
+
+
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
+# Read the data
+data <- read.csv("cleaned_data/filtered_education_data.csv")
+
+# Define the lists of countries and indicators
+countries <- c("South Asia", "Europe & Central Asia", "Middle East & North Africa",
+               "East Asia & Pacific", "Sub-Saharan Africa", "Latin America & Caribbean",
+               "North America")
+indicators <- c("Gross enrolment ratio, primary, female (%)",
+                "Gross enrolment ratio, secondary, female (%)",
+                "Gross enrolment ratio, tertiary, female (%)")
+
+# Filter the data
+filtered_data <- data %>%
+  filter(Country.Name %in% countries, Indicator.Name %in% indicators) %>%
+  select(Country.Name, Indicator.Name, X2014)
+
+# change values of Indicator.Name: "Gross enrolment ratio, primary, female (%)" to primary, "Gross enrolment ratio, secondary, female (%)" to secondary, and "Gross enrolment ratio, tertiary, female (%)" to terciary
+filtered_data$Indicator.Name[filtered_data$Indicator.Name == "Gross enrolment ratio, primary, female (%)"] <- "primary"
+filtered_data$Indicator.Name[filtered_data$Indicator.Name == "Gross enrolment ratio, secondary, female (%)"] <- "secondary"
+filtered_data$Indicator.Name[filtered_data$Indicator.Name == "Gross enrolment ratio, tertiary, female (%)"] <- "tertiary"
+
+# Rename columns
+final_data <- filtered_data %>%
+  rename(`Country Name` = Country.Name, `Indicator` = Indicator.Name, `Value` = X2014)
+
+# Save as JSON
+jsonlite::write_json(final_data, "Jorge/data/bubble_data.json", pretty = TRUE)
+```
+
+```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE}
+// Define the initial dataset
+initialData = [
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "primary",
+    "Value": 104.9668
+  },
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "secondary",
+    "Value": 88.3206
+  },
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "tertiary",
+    "Value": 41.4262
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "primary",
+    "Value": 103.1583
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "secondary",
+    "Value": 105.389
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "tertiary",
+    "Value": 69.8713
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "primary",
+    "Value": 107.0963
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "secondary",
+    "Value": 97.2036
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "tertiary",
+    "Value": 50.4229
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "primary",
+    "Value": 103.047
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "secondary",
+    "Value": 76.9069
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "tertiary",
+    "Value": 38.2514
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "primary",
+    "Value": 99.3733
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "secondary",
+    "Value": 99.5089
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "tertiary",
+    "Value": 97.5233
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "primary",
+    "Value": 112.5074
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "secondary",
+    "Value": 64.4181
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "tertiary",
+    "Value": 19.9473
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "primary",
+    "Value": 94.7694
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "secondary",
+    "Value": 39.5397
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "tertiary",
+    "Value": 7.2428
+  }
+]
+;
+
+// Filter and parse the dataset to remove "NA" values and convert "Value" to float
+parsedData = initialData.filter(d => d.Value !== "NA").map(d => ({
+  ...d,
+  Value: parseFloat(d.Value)
+}));
+
+// Reduce the data to group it by "Country Name" and accumulate the indicators and values
+seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, Value }) => {
+  let group = acc.find(g => g.name === countryName);
+  if (!group) {
+    group = { name: countryName, data: [] };
+    acc.push(group);
+  }
+  group.data.push({ name: Indicator, value: Value });
+  return acc;
+}, []);
+```
+
+```{ojs, message=FALSE, warning=FALSE, echo = FALSE}
+hex_colors = [
+    "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
+]
+
+function renderChart() {
+    Highcharts.chart('container', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
+        title: {
+            text: 'Female Gross Enrollment Ratios by Region (2014)'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}%'
+        },
+        plotOptions: {
+            packedbubble: {
+                minSize: '10%',
+                maxSize: '100%',
+                zMin: 0,
+                zMax: 400,
+                layoutAlgorithm: {
+                    gravitationalConstant: 0.05,
+                    splitSeries: true,
+                    seriesInteraction: false,
+                    dragBetweenSeries: true,
+                    parentNodeLimit: true
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        color: 'black',
+                        textOutline: 'none',
+                        fontWeight: 'normal'
+                    }
+                }
+            }
+        },
+        series: seriesData.map((series, index) => ({
+           ...series,
+            color: hex_colors[index % hex_colors.length]
+        }))
+    });
+};
+
+renderChart();
+```
+
+<figure>
+  <div id="container"></div>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
+</figure>

@@ -1,0 +1,32 @@
+---
+title: "Authors"
+format:
+  html:
+    embed-resources: true
+    toc: true
+editor_options:
+  chunk_output_type: console
+execute:
+  echo: false
+--- 
+
+# Jorge Bris Moreno
+<table>
+  <tr>
+    <td><img src="images/Jorge.JPG" alt="Jorge Bris Moreno" width="180" /></td>
+    <td>
+      <ul>
+        <li>Email: <a href="mailto:jb3128@georgetown.edu">jb3128@georgetown.edu</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jorge-bris-moreno-0b1b3b1b1/">Jorge Bris Moreno</a></li>
+        <li>GitHub: <a href="https://github.com/jbrismor">Jorge Bris Moreno</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+# Sheeba Moghal
+
+# Tiana Le 
+
+# Liz Kovalchuk
+

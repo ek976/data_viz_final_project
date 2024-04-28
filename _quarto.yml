@@ -9,6 +9,8 @@ website:
         text: Global Female Education Attainment
       - href: "https://github.com/ek976/data_viz_final_project"
         text: Code  
+      - href: Authors.qmd
+        text: Authors
 
 
 format:

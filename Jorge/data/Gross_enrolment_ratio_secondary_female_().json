@@ -1,0 +1,630 @@
+[
+  {
+    "name": "ARB",
+    "value": 67.9689
+  },
+  {
+    "name": "EAS",
+    "value": 88.3206
+  },
+  {
+    "name": "EAP",
+    "value": 86.9022
+  },
+  {
+    "name": "EMU",
+    "value": 110.7075
+  },
+  {
+    "name": "ECS",
+    "value": 105.389
+  },
+  {
+    "name": "ECA",
+    "value": 97.3475
+  },
+  {
+    "name": "EUU",
+    "value": 112.6944
+  },
+  {
+    "name": "HPC",
+    "value": 35.621
+  },
+  {
+    "name": "HIC",
+    "value": 106.1772
+  },
+  {
+    "name": "LCN",
+    "value": 97.2036
+  },
+  {
+    "name": "LAC",
+    "value": 97.1722
+  },
+  {
+    "name": "LDC",
+    "value": 40.0149
+  },
+  {
+    "name": "LMY",
+    "value": 70.4674
+  },
+  {
+    "name": "LIC",
+    "value": 35.3647
+  },
+  {
+    "name": "LMC",
+    "value": 67.3353
+  },
+  {
+    "name": "MEA",
+    "value": 76.9069
+  },
+  {
+    "name": "MNA",
+    "value": 74.3971
+  },
+  {
+    "name": "MIC",
+    "value": 77.8225
+  },
+  {
+    "name": "NAC",
+    "value": 99.5089
+  },
+  {
+    "name": "OED",
+    "value": 104.3177
+  },
+  {
+    "name": "SAS",
+    "value": 64.4181
+  },
+  {
+    "name": "SSF",
+    "value": 39.5397
+  },
+  {
+    "name": "SSA",
+    "value": 39.5373
+  },
+  {
+    "name": "UMC",
+    "value": 95.6858
+  },
+  {
+    "name": "WLD",
+    "value": 76.0124
+  },
+  {
+    "name": "AFG",
+    "value": 39.6748
+  },
+  {
+    "name": "ALB",
+    "value": 92.6062
+  },
+  {
+    "name": "ATG",
+    "value": 102.8447
+  },
+  {
+    "name": "ARG",
+    "value": 110.3069
+  },
+  {
+    "name": "AUS",
+    "value": 133.6293
+  },
+  {
+    "name": "AUT",
+    "value": 96.9263
+  },
+  {
+    "name": "BHR",
+    "value": 99.3264
+  },
+  {
+    "name": "BRB",
+    "value": 110.681
+  },
+  {
+    "name": "BLR",
+    "value": 106.099
+  },
+  {
+    "name": "BEL",
+    "value": 175.3805
+  },
+  {
+    "name": "BLZ",
+    "value": 81.706
+  },
+  {
+    "name": "BEN",
+    "value": 43.8578
+  },
+  {
+    "name": "BMU",
+    "value": 77.4333
+  },
+  {
+    "name": "BTN",
+    "value": 87.0563
+  },
+  {
+    "name": "BOL",
+    "value": 84.9471
+  },
+  {
+    "name": "BRA",
+    "value": 105.7857
+  },
+  {
+    "name": "BRN",
+    "value": 99.1009
+  },
+  {
+    "name": "BGR",
+    "value": 99.0442
+  },
+  {
+    "name": "BFA",
+    "value": 28.2284
+  },
+  {
+    "name": "BDI",
+    "value": 34.8233
+  },
+  {
+    "name": "CPV",
+    "value": 98.5005
+  },
+  {
+    "name": "CMR",
+    "value": 51.8602
+  },
+  {
+    "name": "CHL",
+    "value": 101.2064
+  },
+  {
+    "name": "CHN",
+    "value": 95.4449
+  },
+  {
+    "name": "COL",
+    "value": 102.6041
+  },
+  {
+    "name": "COM",
+    "value": 62.3779
+  },
+  {
+    "name": "COD",
+    "value": 33.3291
+  },
+  {
+    "name": "CRI",
+    "value": 123.6083
+  },
+  {
+    "name": "CIV",
+    "value": 33.1844
+  },
+  {
+    "name": "HRV",
+    "value": 100.8856
+  },
+  {
+    "name": "CUB",
+    "value": 101.4099
+  },
+  {
+    "name": "CYP",
+    "value": 99.4557
+  },
+  {
+    "name": "CZE",
+    "value": 105.3879
+  },
+  {
+    "name": "DNK",
+    "value": 132.1924
+  },
+  {
+    "name": "DJI",
+    "value": 41.4593
+  },
+  {
+    "name": "DOM",
+    "value": 82.3859
+  },
+  {
+    "name": "ECU",
+    "value": 106.5813
+  },
+  {
+    "name": "EGY",
+    "value": 85.8612
+  },
+  {
+    "name": "SLV",
+    "value": 81.3212
+  },
+  {
+    "name": "ERI",
+    "value": 31.256
+  },
+  {
+    "name": "EST",
+    "value": 110.0609
+  },
+  {
+    "name": "FIN",
+    "value": 152.1228
+  },
+  {
+    "name": "FRA",
+    "value": 111.2346
+  },
+  {
+    "name": "GEO",
+    "value": 99.6031
+  },
+  {
+    "name": "DEU",
+    "value": 99.5183
+  },
+  {
+    "name": "GHA",
+    "value": 56.0564
+  },
+  {
+    "name": "GRC",
+    "value": 103.3957
+  },
+  {
+    "name": "GRD",
+    "value": 100.5079
+  },
+  {
+    "name": "GTM",
+    "value": 61.5023
+  },
+  {
+    "name": "GIN",
+    "value": 30.6916
+  },
+  {
+    "name": "HND",
+    "value": 73.7329
+  },
+  {
+    "name": "HKG",
+    "value": 98.6149
+  },
+  {
+    "name": "HUN",
+    "value": 107.1067
+  },
+  {
+    "name": "IND",
+    "value": 74.7918
+  },
+  {
+    "name": "IDN",
+    "value": 82.1618
+  },
+  {
+    "name": "IRN",
+    "value": 87.9024
+  },
+  {
+    "name": "IRL",
+    "value": 128.6722
+  },
+  {
+    "name": "ISR",
+    "value": 102.6643
+  },
+  {
+    "name": "ITA",
+    "value": 101.4576
+  },
+  {
+    "name": "JAM",
+    "value": 86.3304
+  },
+  {
+    "name": "JPN",
+    "value": 101.9092
+  },
+  {
+    "name": "JOR",
+    "value": 84.8077
+  },
+  {
+    "name": "KAZ",
+    "value": 106.8409
+  },
+  {
+    "name": "KOR",
+    "value": 97.9589
+  },
+  {
+    "name": "KWT",
+    "value": 98.9087
+  },
+  {
+    "name": "KGZ",
+    "value": 91.1788
+  },
+  {
+    "name": "LAO",
+    "value": 54.5729
+  },
+  {
+    "name": "LVA",
+    "value": 114.0094
+  },
+  {
+    "name": "LBN",
+    "value": 61.8202
+  },
+  {
+    "name": "LSO",
+    "value": 60.4161
+  },
+  {
+    "name": "LBR",
+    "value": 33.1167
+  },
+  {
+    "name": "LIE",
+    "value": 103.2742
+  },
+  {
+    "name": "LTU",
+    "value": 104.617
+  },
+  {
+    "name": "LUX",
+    "value": 103.4755
+  },
+  {
+    "name": "MAC",
+    "value": 95.0437
+  },
+  {
+    "name": "MKD",
+    "value": 77.0836
+  },
+  {
+    "name": "MDG",
+    "value": 38.0608
+  },
+  {
+    "name": "MWI",
+    "value": 37.5407
+  },
+  {
+    "name": "MYS",
+    "value": 80.6655
+  },
+  {
+    "name": "MLI",
+    "value": 37.3652
+  },
+  {
+    "name": "MLT",
+    "value": 96.4711
+  },
+  {
+    "name": "MRT",
+    "value": 28.5849
+  },
+  {
+    "name": "MUS",
+    "value": 98.9862
+  },
+  {
+    "name": "MEX",
+    "value": 93.4649
+  },
+  {
+    "name": "MDA",
+    "value": 87.8893
+  },
+  {
+    "name": "MOZ",
+    "value": 30.5309
+  },
+  {
+    "name": "MMR",
+    "value": 51.9519
+  },
+  {
+    "name": "NRU",
+    "value": 83.4437
+  },
+  {
+    "name": "NPL",
+    "value": 68.8987
+  },
+  {
+    "name": "NZL",
+    "value": 120.9874
+  },
+  {
+    "name": "NER",
+    "value": 15.5587
+  },
+  {
+    "name": "NOR",
+    "value": 110.6189
+  },
+  {
+    "name": "PAK",
+    "value": 36.606
+  },
+  {
+    "name": "PLW",
+    "value": 116.9367
+  },
+  {
+    "name": "PAN",
+    "value": 78.3069
+  },
+  {
+    "name": "PER",
+    "value": 95.502
+  },
+  {
+    "name": "POL",
+    "value": 106.0829
+  },
+  {
+    "name": "PRT",
+    "value": 114.9665
+  },
+  {
+    "name": "PRI",
+    "value": 83.9338
+  },
+  {
+    "name": "QAT",
+    "value": 100.5274
+  },
+  {
+    "name": "ROU",
+    "value": 94.2833
+  },
+  {
+    "name": "RUS",
+    "value": 99.5336
+  },
+  {
+    "name": "RWA",
+    "value": 40.8854
+  },
+  {
+    "name": "WSM",
+    "value": 92.1822
+  },
+  {
+    "name": "STP",
+    "value": 80.4445
+  },
+  {
+    "name": "SAU",
+    "value": 93.7468
+  },
+  {
+    "name": "SRB",
+    "value": 95.4097
+  },
+  {
+    "name": "SYC",
+    "value": 81.1022
+  },
+  {
+    "name": "SVK",
+    "value": 92.3471
+  },
+  {
+    "name": "SVN",
+    "value": 110.5333
+  },
+  {
+    "name": "ZAF",
+    "value": 111.5194
+  },
+  {
+    "name": "ESP",
+    "value": 130.4096
+  },
+  {
+    "name": "KNA",
+    "value": 92.7512
+  },
+  {
+    "name": "LCA",
+    "value": 86.2007
+  },
+  {
+    "name": "VCT",
+    "value": 103.1762
+  },
+  {
+    "name": "SUR",
+    "value": 88.6371
+  },
+  {
+    "name": "SWZ",
+    "value": 65.8041
+  },
+  {
+    "name": "SWE",
+    "value": 141.5963
+  },
+  {
+    "name": "CHE",
+    "value": 98.2076
+  },
+  {
+    "name": "THA",
+    "value": 130.0553
+  },
+  {
+    "name": "TLS",
+    "value": 75.973
+  },
+  {
+    "name": "TON",
+    "value": 94.221
+  },
+  {
+    "name": "TUR",
+    "value": 101.1408
+  },
+  {
+    "name": "TKM",
+    "value": 83.7067
+  },
+  {
+    "name": "TUV",
+    "value": 90.2128
+  },
+  {
+    "name": "UKR",
+    "value": 98.2202
+  },
+  {
+    "name": "GBR",
+    "value": 130.4024
+  },
+  {
+    "name": "USA",
+    "value": 98.4728
+  },
+  {
+    "name": "URY",
+    "value": 99.996
+  },
+  {
+    "name": "UZB",
+    "value": 95.5688
+  },
+  {
+    "name": "VEN",
+    "value": 95.0397
+  },
+  {
+    "name": "PSE",
+    "value": 86.1715
+  }
+]
