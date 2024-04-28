@@ -5,7 +5,6 @@ format:
   html:
     embed-resources: true
     toc: true
-    before_body: scripts.html
 editor_options:
   chunk_output_type: console
 execute:
@@ -53,7 +52,12 @@ cat('
 ')
 ```
 
-```{ojs}
+<figure>
+  <div id="container1" style="width: 100%; height: 500px;"></div>
+  <figcaption>This is a map of the classification of regions provided by the World Bank. Each country is colored by the region they are in, the numbers are insicators for each region, and you can zoom in and out with the + and - bottons, as well as move around the map by clicking and dragging.</figcaption>
+</figure>
+
+<script>
 (async () => {
     // Fetch the topology data for the world map
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
@@ -1001,13 +1005,7 @@ color: '#feeece',
         }]
     });
 })();
-```
-
-<figure>
-  <div id="container1" style="width: 100%; height: 500px;"></div>
-  <figcaption>This is a map of the classification of regions provided by the World Bank. Each country is colored by the region they are in, the numbers are insicators for each region, and you can zoom in and out with the + and - bottons, as well as move around the map by clicking and dragging.</figcaption>
-</figure>
-
+</script>
 
 # Let's Start with the World 
 
@@ -1066,7 +1064,12 @@ results
 
 ## Primary Ed.
 
-```{ojs}
+<figure>
+  <div id="primary-container" style="width: 100%; height: 500px;"></div>
+  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
+</figure>
+
+<script>
 colorPalette = [
   [0, '#330f63'],    // dark blue-purple
   [0.1, '#481567'],  // deep purple
@@ -1836,12 +1839,7 @@ async function renderMapChart(data, colorPalette) {
 }
 
 renderMapChart(data1, colorPalette);
-```
-
-<figure>
-  <div id="primary-container" style="width: 100%; height: 500px;"></div>
-  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
-</figure>
+</script>
 
 ## Secondary Ed.
 
@@ -1850,7 +1848,7 @@ renderMapChart(data1, colorPalette);
   <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
 </figure>
 
-```{ojs}
+<script>
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
@@ -2526,10 +2524,16 @@ series: [{
 }]
 });
 })();
-```
+</script>
 
 ## Tertiary Ed.
-```{ojs}
+
+<figure>
+  <div id="tertiary-container" style="width: 100%; height: 500px;"></div>
+  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
+</figure>
+
+<script>
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
@@ -3141,12 +3145,7 @@ series: [{
 }]
 });
 })();
-```
-
-<figure>
-  <div id="tertiary-container" style="width: 100%; height: 500px;"></div>
-  <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
-</figure>
+</script>
 
 :::
 
@@ -3165,7 +3164,12 @@ cat('
 ')
 ```
 
-```{ojs, message=FALSE, warning=FALSE, echo = FALSE, return = FALSE}
+<figure>
+  <div id="container"></div>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
+</figure>
+
+<script>
 // Define the initial dataset
 initialData = [
   {
@@ -3292,9 +3296,7 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
   group.data.push({ name: Indicator, value: Value });
   return acc;
 }, []);
-```
 
-```{ojs, message=FALSE, warning=FALSE, echo = FALSE}
 hex_colors = [
     "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
 ]
@@ -3344,12 +3346,7 @@ function renderChart() {
 };
 
 renderChart();
-```
-
-<figure>
-  <div id="container"></div>
-  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
-</figure>
+</script>
 
 From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. While looking at every regions data is important, it is worth noting that for some of them there is a lack of information for some education levels. This limits our ability to make a full comparison between regions. However, it still allows us to see the disparities between regions. Subsahaaran Africa, heavily indebted poor countries, and the Middle East and North Africa seem to have the lowest enrollment ratios across all education levels for female students. On the other hand, the Euro area, Europe and Central Asia, and OECD members have the highest enrollment ratios for female students. 
 
