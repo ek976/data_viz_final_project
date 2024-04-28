@@ -5,7 +5,6 @@ format:
   html:
     embed-resources: true
     toc: true
-    before_body: scripts.html
 editor_options:
   chunk_output_type: console
 execute:
