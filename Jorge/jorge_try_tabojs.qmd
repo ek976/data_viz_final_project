@@ -6,7 +6,6 @@ format:
         embed-resources: true
         code-fold: true
         toc: true
-        before_body: scripts.html
 ---
 
 ```{r, echo=FALSE, results='asis', runtime="js"}
@@ -290,23 +289,34 @@ function renderTertiaryChart() {
     }))
   });
 }
-
-// Render the charts
-renderPrimaryChart();
-renderSecondaryChart();
-renderTertiaryChart();
 ```
 
 ::: {.panel-tabset}
 
 ## Primary
+```{ojs}
+// Render the charts
+renderPrimaryChart()
+```
+
 <div id="primary-container"></div>
 
 
 ## Secondary
+```{ojs}
+// Render the charts
+renderSecondaryChart();
+```
+
 <div id="secondary-container"></div>
 
 ## Third
+
 <div id="tertiary-container"></div>
+
+```{ojs}
+// Render the charts
+renderTertiaryChart();
+```
 
 :::

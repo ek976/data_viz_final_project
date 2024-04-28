@@ -73,5 +73,17 @@
   },
   "parallel_coordinates_plot/stand_alone_plot.ipynb": {
     "stand_alone_plot.html": "c6b4fa0b"
+  },
+  "Jorge/Jorge_plot.qmd": {
+    "Jorge_plot.html": "84b022b1"
+  },
+  "Jorge/Globe_plot.qmd": {
+    "Globe_plot.html": "a16655fd"
+  },
+  "Jorge/jorge_try_tabojs.qmd": {
+    "jorge_try_tabojs.html": "d682a9dc"
+  },
+  "Jorge/map_plot_regions.qmd": {
+    "map_plot_regions.html": "5fe3b30e"
   }
 }

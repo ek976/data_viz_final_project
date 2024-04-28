@@ -34,7 +34,7 @@ head(data)
 ```
 
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
-ilibrary(dplyr)
+library(dplyr)
 library(jsonlite)
 
 indicators <- c("Gross enrolment ratio, primary, female (%)",
