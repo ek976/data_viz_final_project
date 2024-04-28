@@ -1,5 +1,5 @@
 ---
-title: "Split Packed Bubble Plot"
+title: "Globe Plots"
 author: "Jorge Bris Moreno"
 format:
   html:
@@ -30,21 +30,16 @@ data <- read.csv("cleaned_data/filtered_education_data.csv")
 ```
 
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
-head(data)
-```
-
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-library(dplyr)
-library(jsonlite)
-
+# Indicators to keep
 indicators <- c("Gross enrolment ratio, primary, female (%)",
                 "Gross enrolment ratio, secondary, female (%)",
                 "Gross enrolment ratio, tertiary, female (%)")
 
+# Function to save data to JSON
 save_json_by_indicator <- function(indicator_name) {
   filtered_data <- data %>%
     filter(Indicator.Name == indicator_name, !is.na(X2014)) %>%
-    mutate(name = Country.Code, value = X2014) %>%
+    mutate(name = Country.Name, value = X2014) %>%
     select(name, value) %>%
     filter(!name %in% c("Arab World", "East Asia & Pacific", "East Asia & Pacific (excluding high income)", "Euro area", "Europe & Central Asia", "Europe & Central Asia (excluding high income)", "European Union", "Heavily indebted poor countries (HIPC)", "High income", "Latin America & Caribbean", "Latin America & Caribbean (excluding high income)", "Low & middle income", "Low income", "Lower middle income", "Middle East & North Africa", "Middle East & North Africa (excluding high income)", "Middle income", "North America", "OECD members", "South Asia", "Sub-Saharan Africa", "Sub-Saharan Africa (excluding high income)", "Upper middle income", "World", "Least developed countries: UN classification"))
 
@@ -58,8 +53,8 @@ save_json_by_indicator <- function(indicator_name) {
   }
 }
 
+# Save data to JSON
 results <- lapply(indicators, save_json_by_indicator)
-results
 ```
 
 ::: {.panel-tabset}
@@ -67,6 +62,7 @@ results
 ## Primary Ed.
 
 ```{ojs}
+// Color palette for the map
 colorPalette = [
   [0, '#330f63'],    // dark blue-purple
   [0.1, '#481567'],  // deep purple
@@ -80,7 +76,7 @@ colorPalette = [
   [0.9, '#f9c957'],  // yellow-orange
   [1, '#fcffa4']     // very light yellow
 ];
-
+// Data
 data1 = [
   {
     "name": "ARB",
@@ -791,7 +787,7 @@ data1 = [
     "value": 94.567
   }
 ];
-
+// map funtion
 async function renderMapChart(data, colorPalette) {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
         .then(response => response.json());
@@ -834,7 +830,7 @@ async function renderMapChart(data, colorPalette) {
         }]
     });
 }
-
+// render map
 renderMapChart(data1, colorPalette);
 ```
 
@@ -851,11 +847,11 @@ renderMapChart(data1, colorPalette);
 </figure>
 
 ```{ojs}
+// function for map
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
 
-    // Data appears to be a constant structure so it can be declared with 'const'
     let data2 = [
   {
     "name": "ARB",
@@ -1487,7 +1483,7 @@ renderMapChart(data1, colorPalette);
   }
 ];
 
- // Initialize the map chart with the topology and data
+ // Initialize the map
 Highcharts.mapChart(document.getElementById('secondary-container'), {
 chart: {
 map: topology
@@ -1530,11 +1526,11 @@ series: [{
 
 ## Tertiary Ed.
 ```{ojs}
+// function for map
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
 
-    // Data appears to be a constant structure so it can be declared with 'const'
     let data3 = [
   {
     "name": "ARB",
@@ -2102,7 +2098,7 @@ series: [{
   }
 ];
 
- // Initialize the map chart with the topology and data
+// Initialize the map 
 Highcharts.mapChart(document.getElementById('tertiary-container'), {
 chart: {
 map: topology

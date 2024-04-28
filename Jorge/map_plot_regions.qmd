@@ -51,12 +51,12 @@ writeLines(toJSON(data, pretty = TRUE), "Jorge/data/regions.json")
 ```
 
 ```{ojs}
+// load the data and highcharts world map topology
 (async () => {
     // Fetch the topology data for the world map
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
         .then(response => response.json());
 
-    // Data appears to be a constant structure so it can be declared with 'const'
     let regions = [
   {
     "name": "AFG",
@@ -927,7 +927,7 @@ writeLines(toJSON(data, pretty = TRUE), "Jorge/data/regions.json")
     "value": 6
   }
 ];
-
+// Create the chart
     Highcharts.mapChart('container1', {
         chart: {
             map: topology

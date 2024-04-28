@@ -17,7 +17,6 @@ execute:
 #| warning: false 
 library(reticulate)
 use_condaenv("gu", required=TRUE)
-
 ``` 
 
 # Abstract
@@ -49,6 +48,11 @@ cat('
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
 <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 ')
 ```
 
@@ -58,12 +62,12 @@ cat('
 </figure>
 
 <script>
+// load data and highcharts topology
 (async () => {
     // Fetch the topology data for the world map
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
         .then(response => response.json());
 
-    // Data appears to be a constant structure so it can be declared with 'const'
     let regions = [
   {
     "name": "AFG",
@@ -934,7 +938,7 @@ cat('
     "value": 6
   }
 ];
-
+// Create the chart
     Highcharts.mapChart('container1', {
         chart: {
             map: topology
@@ -1009,15 +1013,6 @@ color: '#feeece',
 
 # Let's Start with the World 
 
-```{r, echo=FALSE, results='asis', runtime="js"}
-# Calling highcharts
-cat('
-<script src="https://code.highcharts.com/maps/highmaps.js"></script>
-<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
-')
-```
-
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
 # Load necessary libraries
 library(dplyr)
@@ -1025,20 +1020,13 @@ library(jsonlite)
 
 # Read data from CSV
 data <- read.csv("cleaned_data/filtered_education_data.csv")
-```
 
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-head(data)
-```
-
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-ilibrary(dplyr)
-library(jsonlite)
-
+# indicators to keep
 indicators <- c("Gross enrolment ratio, primary, female (%)",
                 "Gross enrolment ratio, secondary, female (%)",
                 "Gross enrolment ratio, tertiary, female (%)")
 
+# Function to save data to JSON
 save_json_by_indicator <- function(indicator_name) {
   filtered_data <- data %>%
     filter(Indicator.Name == indicator_name, !is.na(X2014)) %>%
@@ -1055,9 +1043,8 @@ save_json_by_indicator <- function(indicator_name) {
     return(paste("No data found for", indicator_name))
   }
 }
-
+# Save data to JSON
 results <- lapply(indicators, save_json_by_indicator)
-results
 ```
 
 ::: {.panel-tabset}
@@ -1070,6 +1057,7 @@ results
 </figure>
 
 <script>
+// Define colors
 colorPalette = [
   [0, '#330f63'],    // dark blue-purple
   [0.1, '#481567'],  // deep purple
@@ -1083,7 +1071,7 @@ colorPalette = [
   [0.9, '#f9c957'],  // yellow-orange
   [1, '#fcffa4']     // very light yellow
 ];
-
+// define data
 data1 = [
   {
     "name": "ARB",
@@ -1794,7 +1782,7 @@ data1 = [
     "value": 94.567
   }
 ];
-
+// load topology and render map
 async function renderMapChart(data, colorPalette) {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
         .then(response => response.json());
@@ -1849,11 +1837,12 @@ renderMapChart(data1, colorPalette);
 </figure>
 
 <script>
+// define data and load topology
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
 
-    // Data appears to be a constant structure so it can be declared with 'const'
+// data
     let data2 = [
   {
     "name": "ARB",
@@ -2485,7 +2474,7 @@ renderMapChart(data1, colorPalette);
   }
 ];
 
- // Initialize the map chart with the topology and data
+ // Map chart
 Highcharts.mapChart(document.getElementById('secondary-container'), {
 chart: {
 map: topology
@@ -2534,11 +2523,11 @@ series: [{
 </figure>
 
 <script>
+// define data and load topology
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
        .then(response => response.json());
-
-    // Data appears to be a constant structure so it can be declared with 'const'
+// data
     let data3 = [
   {
     "name": "ARB",
@@ -3106,7 +3095,7 @@ series: [{
   }
 ];
 
- // Initialize the map chart with the topology and data
+ // Map chart
 Highcharts.mapChart(document.getElementById('tertiary-container'), {
 chart: {
 map: topology
@@ -3154,15 +3143,6 @@ series: [{
 [ Female Gross Enrollment Ratios by Region (2014) ] 
 
 To begin our analysis, we will be looking at different regions usually studied by global organizations like the World Bank. We will be focusing on the following regions: Arab World, East Asia & Pacific, Euro area, Europe & Central Asia, Heavily indebted poor countries (HIPC), Latin America & Caribbean (excluding high income), Middle East & North Africa, Middle East & North Africa (excluding high income), OECD members, and Sub-Saharan Africa (excluding high income). The objective is to visualize the differences in women's enrollment at different education levels across the world at a global scale and identify any trends or patterns that may arise. This will also allow us to consider if some regions are worth exploring in more detail than others in our analysis.
-```{r, echo=FALSE, results='asis', runtime="js"}
-cat('
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-')
-```
 
 <figure>
   <div id="container"></div>
@@ -3170,7 +3150,7 @@ cat('
 </figure>
 
 <script>
-// Define the initial dataset
+// Define initial dataset
 initialData = [
   {
     "Country Name": "East Asia & Pacific",
@@ -3297,10 +3277,11 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
   return acc;
 }, []);
 
+// bubble colors
 hex_colors = [
     "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
 ]
-
+// plot
 function renderChart() {
     Highcharts.chart('container', {
         chart: {
@@ -3344,7 +3325,7 @@ function renderChart() {
         }))
     });
 };
-
+// call function
 renderChart();
 </script>
 
@@ -3412,36 +3393,29 @@ color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]
 custom_labels = ['GDP per capita', 'Primary and secondary School', 'GNI per capita']
 
 # Create the parallel coordinates plot using plotly.graph_objects
-fig = go.Figure()
-
-# Add parallel coordinates trace
-fig.add_trace(go.Parcoords(
+fig = go.Figure(data=go.Parcoords(
     line=dict(color=df_normalized['numeric_income'], 
-              colorscale=hex_colors,  # Use your custom color scale
-              showscale=True,  # Set showscale to True to display the color scale
-              colorbar=dict(  # Define the color bar properties
-                  title='Income Group',  # Set the title of the color scale
-                  tickvals=[0, 1, 2, 3],  # Specify the tick values
-                  ticktext=color_labels,  # Specify the tick labels
-                  tickmode='array'  # Use array mode for custom tick labels
-              )
-             ),
+              colorscale=hex_colors,
+              showscale=True,
+              colorbar=dict(
+                  title='Income Group',
+                  tickvals=[0, 1, 2, 3],
+                  ticktext=color_labels,
+                  tickmode='array'
+              )),
     dimensions=[
         dict(range=[df_normalized[dim].min(), df_normalized[dim].max()],
-             label=label,  # Use custom label
-             tickformat='.2f' if dim == dimensions[1] else '',  # Set tick format to display percentages
-             values=df_normalized[dim])  # Keep values unchanged
+             label=label,
+             tickformat='.2f' if dim == dimensions[1] else '',
+             values=df_normalized[dim])
         for dim, label in zip(dimensions, custom_labels)
-    ],
+    ]
 ))
 
-# Update layout to add title
 fig.update_layout(
-    title="2014 Female Enrollment vs. Economic Measures in US$",  # Set the title of the plot
-    title_x=0.5  # Set the x position of the title
+    title_text="2014 Female Enrollment vs. Economic Measures in US$",  # Set the title of the plot
+    title_x=0.5  # Center the title
 )
-
-
 ```
 
 # Sources 
