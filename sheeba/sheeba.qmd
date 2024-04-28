@@ -51,13 +51,18 @@ tertiaryData
 
 viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"})
 
+
 ```
 
 ```{ojs}
 
-viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Select Dataset', value: 'Primary'})
 
-width = 800; // Define a default width for your visualization
+viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Select Dataset', value: 'Primary'})
+```
+
+```{ojs}
+
+
 
 chart = async () => {
   const selected = await selectedDataset;
@@ -76,9 +81,9 @@ chart = async () => {
   }));
 
   const barHeight = 25;
-  const marginTop = 35;
+  const marginTop = 50; // Increased to accommodate the title
   const marginRight = 70;
-  const marginBottom = 10;
+  const marginBottom = 50; // Increased to accommodate the x-axis label
   const marginLeft = 120;
   const height = Math.ceil((data.length + 0.1) * barHeight) + marginTop + marginBottom;
 
@@ -92,30 +97,57 @@ chart = async () => {
     .padding(0.1);
 
   const format = d3.format(metric === 'absolute' ? '+,d' : '+.1%');
-  const tickFormat = metric === 'absolute' ? d3.formatPrefix('+.1', 1e6) : d3.format('+.0%');
+  const tickFormat = metric === 'absolute' ? d3.formatPrefix('+.1', 1e1) : d3.format('+.0%');
 
   const svg = d3.create('svg')
     .attr('viewBox', [0, 0, width, height])
-    .attr('style', 'max-width: 100%; height: auto; font: 10px sans-serif;');
+    .attr('style', 'max-width: 100%; height: auto; font-family: monospace; font-size: 10px;');
 
+  // Chart Title
+  svg.append('text')
+    .attr('x', width / 2)
+    .attr('y', 30)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '16px')
+    .style('font-weight', 'bold')
+    .text('Government GDP Change by Country');
+
+  // X-axis Label
+  svg.append('text')
+    .attr('x', width / 2)
+    .attr('y', height - 15)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .text('Change in GDP');
+
+  // Y-axis Label
+  svg.append('text')
+    .attr('transform', `rotate(-90)`)
+    .attr('x', -(height / 2))
+    .attr('y', marginLeft - 40)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .text('Country');
+
+  // Remaining SVG drawing code unchanged, add bars, texts, and axes
   svg.append('g')
-    .selectAll()
+    .selectAll('rect')
     .data(data)
     .join('rect')
-    .attr('fill', d => d.value > 0 ? '#3d6469' : '#d40637') // Change colors here
+    .attr('fill', d => d.value > 0 ? '#3d6469' : '#d40637')
     .attr('x', d => x(Math.min(d.value, 0)))
     .attr('y', d => y(d.country_name))
     .attr('width', d => Math.abs(x(d.value) - x(0)))
     .attr('height', y.bandwidth());
 
   svg.append('g')
-    .attr('font-family', 'sans-serif')
+    .attr('font-family', 'monospace')
     .attr('font-size', 10)
-    .selectAll()
+    .selectAll('text')
     .data(data)
     .join('text')
     .attr('text-anchor', d => d.value < 0 ? 'end' : 'start')
-    .attr('x', d => x(d.value) + Math.sign(d.value - 0) * 4)
+    .attr('x', d => x(d.value) + Math.sign(d.value) * 4)
     .attr('y', d => y(d.country_name) + y.bandwidth() / 2)
     .attr('dy', '0.35em')
     .text(d => format(d.value));
@@ -139,7 +171,36 @@ chart = async () => {
 }
 
 chart();
+```
 
+```{ojs}
+
+Plot.plot({
+  height: 800,
+  x: {axis: "top"},
+  y: {axis: null},
+  marginLeft: 40,
+  color: {scheme: "PiYG"},
+  marks: [
+    Plot.barX(primaryData, {
+      y: "State",
+      x: (d) => d[2019] - d[2010],
+      fill: (d) => d[2019] > d[2010],
+      sort: { y: "x" }
+    }),
+    d3
+      .groups(primaryData, (d) => d[2019] > d[2010])
+      .map(([growth, states]) =>
+        Plot.text(states, {
+          x: 0,
+          text: "State",
+          y: "State",
+          textAnchor: growth ? "end" : "start",
+          dx: growth ? -4 : 4
+        })
+      )
+  ]
+})
 
 ```
 
