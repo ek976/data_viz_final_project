@@ -57,7 +57,7 @@ viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "re
 ```{ojs}
 
 
-viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Select Dataset', value: 'Primary'})
+viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Dataset: ', value: 'Primary'})
 ```
 
 ```{ojs}
@@ -81,9 +81,9 @@ chart = async () => {
   }));
 
   const barHeight = 25;
-  const marginTop = 50; // Increased to accommodate the title
+  const marginTop = 50; 
   const marginRight = 70;
-  const marginBottom = 50; // Increased to accommodate the x-axis label
+  const marginBottom = 50; 
   const marginLeft = 120;
   const height = Math.ceil((data.length + 0.1) * barHeight) + marginTop + marginBottom;
 
@@ -106,11 +106,11 @@ chart = async () => {
   // Chart Title
   svg.append('text')
     .attr('x', width / 2)
-    .attr('y', 30)
+    .attr('y', 13)
     .attr('text-anchor', 'middle')
     .style('font-size', '16px')
     .style('font-weight', 'bold')
-    .text('Government GDP Change by Country');
+    .text('Government Spending for Education');
 
   // X-axis Label
   svg.append('text')
@@ -118,7 +118,7 @@ chart = async () => {
     .attr('y', height - 15)
     .attr('text-anchor', 'middle')
     .style('font-size', '12px')
-    .text('Change in GDP');
+    .text('Dollar / Per Person');
 
   // Y-axis Label
   svg.append('text')
@@ -173,34 +173,5 @@ chart = async () => {
 chart();
 ```
 
-```{ojs}
 
-Plot.plot({
-  height: 800,
-  x: {axis: "top"},
-  y: {axis: null},
-  marginLeft: 40,
-  color: {scheme: "PiYG"},
-  marks: [
-    Plot.barX(primaryData, {
-      y: "State",
-      x: (d) => d[2019] - d[2010],
-      fill: (d) => d[2019] > d[2010],
-      sort: { y: "x" }
-    }),
-    d3
-      .groups(primaryData, (d) => d[2019] > d[2010])
-      .map(([growth, states]) =>
-        Plot.text(states, {
-          x: 0,
-          text: "State",
-          y: "State",
-          textAnchor: growth ? "end" : "start",
-          dx: growth ? -4 : 4
-        })
-      )
-  ]
-})
-
-```
 
