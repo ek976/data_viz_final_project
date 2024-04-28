@@ -2,31 +2,509 @@
 
 ```{r}
 library(ggplot2)
+library(dplyr)
+library(tidyr)
 ```
 
 ```{r}
-# Load the tidy data
-df <- read.csv('../data/tidy_data.csv')
+read <- read.csv('../../cleaned_data/labor_force_all.csv')
+read <- select(read, -Country.Code, -Indicator.Code)
+unique_values1 <- unique(read$Indicator.Name)
+print(unique_values1)
+```
 
-unique_values <- unique(df$Series.Name)
-print(unique_values)
+```{r}
+# Unpivot the data
+read <- pivot_longer(read, cols = -c(1:2), names_to = "Year", values_to = "Value")
+read <- na.omit(read)
+read$Year <- gsub("X", "", read$Year)
+read$Year <- as.numeric(read$Year)
+```
+
+
+
+```{r}
+# Define income groups
+low_income <- c(
+    "Afghanistan", "Korea, Dem. People's Rep", "South Sudan", "Burkina Faso", "Liberia",
+    "Sudan", "Burundi", "Madagascar", "Syrian Arab Republic", "Central African Republic",
+    "Malawi", "Togo", "Chad", "Mali", "Uganda", "Congo, Dem. Rep", "Mozambique",
+    "Yemen, Rep.", "Eritrea", "Niger", "Ethiopia", "Rwanda", "Gambia, The", "Sierra Leone",
+    "Guinea-Bissau", "Somalia"
+)
+
+lower_middle_income <- c(
+    "Angola", "Jordan", "Philippines", "Algeria", "India", "Samoa", "Bangladesh",
+    "Iran, Islamic Rep", "São Tomé and Principe", "Benin", "Kenya", "Senegal", "Bhutan",
+    "Kiribati", "Solomon Islands", "Bolivia", "Kyrgyz Republic", "Sri Lanka", "Cabo Verde",
+    "Lao PDR", "Tanzania", "Cambodia", "Lebanon", "Tajikistan", "Cameroon", "Lesotho",
+    "Timor-Leste", "Comoros", "Mauritania", "Tunisia", "Congo, Rep.", "Micronesia, Fed. Sts.",
+    "Ukraine", "Côte d'Ivoire", "Mongolia", "Uzbekistan", "Djibouti", "Morocco", "Vanuatu",
+    "Egypt, Arab Rep.", "Myanmar", "Vietnam", "Eswatini", "Nepal", "Zambia", "Ghana",
+    "Nicaragua", "Zimbabwe", "Guinea", "Nigeria", "Haiti", "Pakistan", "Honduras",
+    "Papua New Guinea"
+)
+
+upper_middle_income <- c(
+    "Albania", "Fiji", "North Macedonia", "Argentina", "Gabon", "Palau", "Armenia",
+    "Georgia", "Paraguay", "Azerbaijan", "Grenada", "Peru", "Belarus", "Guatemala",
+    "Russian Federation", "Belize", "Indonesia", "Serbia", "Bosnia and Herzegovina",
+    "Iraq", "South Africa", "Botswana", "Jamaica", "St. Lucia", "Brazil", "Kazakhstan",
+    "St. Vincent and the Grenadines", "Bulgaria", "Kosovo", "Suriname", "China", "Libya",
+    "Thailand", "Colombia", "Malaysia", "Tonga", "Costa Rica", "Maldives", "Türkiye",
+    "Cuba", "Marshall Islands", "Turkmenistan", "Dominica", "Mauritius", "Tuvalu",
+    "Dominican Republic", "Mexico", "West Bank and Gaza", "El Salvador", "Moldova",
+    "Equatorial Guinea", "Montenegro", "Ecuador", "Namibia"
+)
+
+high_income <- c(
+    "American Samoa", "Germany", "Oman", "Andorra", "Gibraltar", "Panama", "Antigua and Barbuda",
+    "Greece", "Poland", "Aruba", "Greenland", "Portugal", "Australia", "Guam", "Puerto Rico",
+    "Austria", "Hong Kong SAR, China", "Qatar", "Bahamas, The", "Hungary", "Romania", "Bahrain",
+    "Iceland", "San Marino", "Barbados", "Ireland", "Saudi Arabia", "Belgium", "Isle of Man",
+    "Seychelles", "Bermuda", "Israel", "Singapore", "British Virgin Islands", "Italy",
+    "Sint Maarten (Dutch part)", "Brunei Darussalam", "Japan", "Slovak Republic", "Canada",
+    "Korea, Rep.", "Slovenia", "Cayman Islands", "Kuwait", "Spain", "Channel Islands", "Latvia",
+    "St. Kitts and Nevis", "Chile", "Liechtenstein", "St. Martin (French part)", "Croatia",
+    "Lithuania", "Sweden", "Curaçao", "Luxembourg", "Switzerland", "Cyprus", "Macao SAR, China",
+    "Taiwan, China", "Czech Republic", "Malta", "Trinidad and Tobago", "Denmark", "Monaco",
+    "Turks and Caicos Islands", "Estonia", "Nauru", "United Arab Emirates", "Faroe Islands",
+    "Netherlands", "United Kingdom", "Finland", "New Caledonia", "United States", "France",
+    "New Zealand", "Uruguay", "French Polynesia", "Northern Mariana Islands", "Virgin Islands (U.S.)",
+    "Guyana", "Norway"
+)
+
+# Create income_groups list
+income_groups <- list(
+    low_income = low_income,
+    lower_middle_income = lower_middle_income,
+    upper_middle_income = upper_middle_income,
+    high_income = high_income
+)
+
+```
+
+```{r}
+# Assuming you have loaded your dataframe into a variable named df
+# And you have already created the income_groups list as provided earlier
+# Assuming your dataframe is named "read_df"
+# And you have already created the income_groups list as provided earlier
+
+# Function to categorize countries into income groups
+categorize_income <- function(country_name) {
+  if (country_name %in% income_groups$low_income) {
+    return("Low-Income")
+  } else if (country_name %in% income_groups$lower_middle_income) {
+    return("Lower-Middle-Income")
+  } else if (country_name %in% income_groups$upper_middle_income) {
+    return("Upper-Middle-Income")
+  } else if (country_name %in% income_groups$high_income) {
+    return("High-Income")
+  } else {
+    return(NA) # Handle countries not found in any income group
+  }
+}
+
+# Apply the function to create a new column with income groupings
+read$Income_Group <- sapply(read$Country.Name, categorize_income)
+
+
+read <- read[!is.na(read$Country.Name), ]
+
+```
+
+
+
+```{r}
+
+#df <- read.csv('../data/tidy_data.csv')
+
+#unique_values <- unique(df$Series.Name)
+#print(unique_values)
 ```
 
 
 ```{r}
 # Load the tidy data
-df <- read.csv('../data/tidy_data.csv')
+#df <- read.csv('../data/tidy_data.csv')
 
 # Display the first few rows of the data frame
-print(head(df))
+#print(head(df))
 
 # Select rows where the 'Series Name' column matches specific conditions
-df <- df[(df$Series.Name == "GDP per capita (constant 2010 US$)"),]
+df <- read[(read$Indicator.Name == "Labor force with advanced education, female (% of female labor force)"),]
+df <- na.omit(df)
 
-df <- df[((df$Country.Name == "High income") | (df$Country.Name == "Upper middle income") | (df$Country.Name == "Lower middle income") | (df$Country.Name == "Low income")) ,]
+# Calculate average percentage by income group
+df_avg <- aggregate(Value ~ Income_Group+Year, data = df, FUN = mean, na.rm = TRUE)
+
+df_avg <- df_avg[(df_avg$Year>=2010) & (df_avg$Year<=2013),]
+
+df_label <- df_avg[(df_avg$Year==2011),]
+
+#df <- df[((df$Country.Name == "High income") | (df$Country.Name == "Upper middle income") | (df$Country.Name == "Lower middle income") | (df$Country.Name == "Low income")) ,]
+
+#df <- df[((df$Country.Name == "Euro area") | (df$Country.Name == "Europe & Central Asia") | (df$Country.Name == "South Africa") | (df$Country.Name == "Latin America & Caribbean")) ,]
+
+#df <- df[((df$Year==2012) | (df$Year==2013) | (df$Year==2014)) ,]
+#df <- df[((df$Country.Name=="Euro area") | (df$Country.Name=="Europe & Central Asia") | (df$Country.Name=="Latin America & Caribbean")) ,]
+
+tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
+#tiana_palette <- c('#E70E02','#6B892F',  '#332288')
+
+```
+
+
+```{r}
+plot1 <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
+  geom_line() +
+  scale_color_manual(values = tiana_palette, name="Country") +
+  #scale_x_continuous(breaks = seq(2000, 2020, by = 2)) + 
+  ylim(20, 100) + 
+  theme(legend.position = "none") +
+  labs(title = "Female with Advanced Education",
+       x = "Year",
+       y = "Percentage") + geom_text(data = df_label, aes(label = Income_Group),
+            nudge_x = 0.25, nudge_y = 3, check_overlap = TRUE)
+
+print(plot1)
+```
+
+
+```{r}
+# Load the tidy data
+#df <- read.csv('../data/tidy_data.csv')
+
+# Display the first few rows of the data frame
+#print(head(df))
+
+# Select rows where the 'Series Name' column matches specific conditions
+df <- read[(read$Indicator.Name == "Labor force with advanced education, male (% of male labor force)"),]
+df <- na.omit(df)
+
+# Calculate average percentage by income group
+df_avg <- aggregate(Value ~ Income_Group+Year, data = df, FUN = mean, na.rm = TRUE)
+
+df_avg <- df_avg[(df_avg$Year>=2010) & (df_avg$Year<=2013),]
+df_label <- df_avg[(df_avg$Year==2011),]
+
+tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
+#tiana_palette <- c('#E70E02','#6B892F',  '#332288')
+
+```
+
+
+```{r}
+plot2 <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
+  geom_line() +
+  scale_color_manual(values = tiana_palette, name="Country") +
+  #scale_x_continuous(breaks = seq(2000, 2020, by = 2)) + 
+  ylim(20, 100) + 
+  theme(legend.position = "none") +
+  labs(title = "Male with Advanced Education",
+       x = "Year",
+       y = "Percentage") + geom_text(data = df_label, aes(label = Income_Group),
+            nudge_x = 0.25, nudge_y = 3, check_overlap = TRUE)
+
+print(plot2)
+```
+
+
+```{r}
+# Load the tidy data
+#df <- read.csv('../data/tidy_data.csv')
+
+# Display the first few rows of the data frame
+#print(head(df))
+
+# Select rows where the 'Series Name' column matches specific conditions
+df <- read[(read$Indicator.Name == "Labor force with basic education, female (% of female labor force)"),]
+df <- na.omit(df)
+
+# Calculate average percentage by income group
+df_avg <- aggregate(Value ~ Income_Group+Year, data = df, FUN = mean, na.rm = TRUE)
+
+df_avg <- df_avg[(df_avg$Year>=2010) & (df_avg$Year<=2013),]
+df_label <- df_avg[(df_avg$Year==2011),]
+
+tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
+#tiana_palette <- c('#E70E02','#6B892F',  '#332288')
+
+```
+
+
+```{r}
+plot3 <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
+  geom_line() +
+  scale_color_manual(values = tiana_palette, name="Country") +
+  #scale_x_continuous(breaks = seq(2000, 2020, by = 2)) + 
+  ylim(20, 100) +  
+  theme(legend.position = "none") +
+  labs(title = "Female with Basic Education",
+       x = "Year",
+       y = "Percentage") + geom_text(data = df_label, aes(label = Income_Group),
+            nudge_x = 0.25, nudge_y = 3, check_overlap = TRUE)
+
+print(plot3)
+```
+
+```{r}
+# Load the tidy data
+#df <- read.csv('../data/tidy_data.csv')
+
+# Display the first few rows of the data frame
+#print(head(df))
+
+# Select rows where the 'Series Name' column matches specific conditions
+df <- read[(read$Indicator.Name == "Labor force with basic education, male (% of male labor force)"),]
+df <- na.omit(df)
+
+# Calculate average percentage by income group
+df_avg <- aggregate(Value ~ Income_Group+Year, data = df, FUN = mean, na.rm = TRUE)
+
+df_avg <- df_avg[(df_avg$Year>=2010) & (df_avg$Year<=2013),]
+df_label <- df_avg[(df_avg$Year==2011),]
+
+tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
+#tiana_palette <- c('#E70E02','#6B892F',  '#332288')
+
+```
+
+
+```{r}
+plot4 <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
+  geom_line() +
+  scale_color_manual(values = tiana_palette, name="Country") +
+  #scale_x_continuous(breaks = seq(2000, 2020, by = 2)) + 
+  ylim(20, 100) + 
+  theme(legend.position = "right", legend.key.size = unit(0.5, "lines")) +
+  theme(legend.position = "none") +
+  labs(title = "Male with Basic Education",
+       x = "Year",
+       y = "Percentage")
+
+print(plot4)
+```
+
+```{r}
+
+library(gridExtra)
+
+facet_plots <- grid.arrange(plot1, plot2, plot3, plot4, ncol = 2)
+
+
+print(facet_plots)
+
+```
+```{r}
+
+my_theme <- theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "#2589BD"),
+    axis.title.x = element_text(family = "Georgia", color="black"),
+    axis.ticks = element_blank(),
+    axis.text = element_text(family = "Georgia", color="black"),
+    plot.subtitle = element_text(family = "Georgia", face = "italic"),
+    panel.background = element_rect(fill = "#DCEFF9", color="#DCEFF9"),
+    panel.grid.minor = element_line(color="#EEF7FC"),
+    panel.grid.major = element_line(color = "#EEF7FC"),
+    legend.key = element_rect(fill = "#EEF7FC", color="#EEF7FC"),
+    legend.background = element_rect(fill="#EEF7FC", color="#124A68"), 
+    legend.text = element_text(family = "Georgia"),
+    plot.title = element_text(family = "Georgia", size = 16, face = "bold"),
+    axis.title = element_text(family = "Georgia", face = "bold"),
+    legend.title = element_text(family = "Georgia", face = "bold"),
+    plot.caption = element_text(family = "Georgia", face = "italic"))
+
+```
+
+
+```{r}
+theme_set(my_theme)
+```
+
+
+
+```{r}
+
+
+# Load the tidy data
+# df <- read.csv('../data/tidy_data.csv')
+
+# Display the first few rows of the data frame
+# print(head(df))
+
+# Select rows where the 'Series Name' column matches specific conditions
+df <- read[((read$Indicator.Name == "Labor force with advanced education, female (% of female labor force)") | (read$Indicator.Name == "Labor force with advanced education, male (% of male labor force)") | (read$Indicator.Name == "Labor force with basic education, female (% of female labor force)") |
+(read$Indicator.Name == "Labor force with basic education, male (% of male labor force)")),]
+df <- na.omit(df)
+
+# Calculate average percentage by income group
+df_avg <- aggregate(Value ~ Income_Group + Year + Indicator.Name, data = df, FUN = mean, na.rm = TRUE)
+
+# Filter for the years 2010 to 2013
+df_avg <- df_avg[df_avg$Year >= 2010 & df_avg$Year <= 2013, ]
+
+# Filter for the year 2011 to use for labeling
+df_label <- df_avg[df_avg$Year == 2011, ]
 
 tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
 
+# Define the plot function
+plot_fun <- function(df, df_label, title) {
+  ggplot(df, aes(x = Year, y = Value, color = Income_Group)) +
+    geom_line() +
+    geom_text(data = df_label, aes(label = Income_Group),
+              nudge_x = 0.25, nudge_y = 3, check_overlap = TRUE) +
+    scale_color_manual(values = tiana_palette, name = "Country") +
+    ylim(20, 100) + 
+    labs(title = title,
+         x = "Year",
+         y = "Percentage") +
+    theme(legend.position = "none")
+}
+
+# Create facet_wrap plot
+facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
+  geom_line() +
+  scale_color_manual(values = tiana_palette, name = "Country") +
+  ylim(20, 100) +
+  labs(title = "Labor Force with Education Levels",
+       x = "Year",
+       y = "Percentage") +
+  facet_wrap(~Indicator.Name)
+
+print(facet_plot)
+
+```
+
+
+
+
+
+# Appendix
+
+
+```{r}
+#unique(read$Country.Name)
+```
+
+```{r}
+head(read)
+```
+
+```{r}
+df1=read
+```
+
+```{r}
+# Define the specific values
+specific_values <- c("Upper middle income", "Middle income", "Lower middle income", "High income", "Low & middle income", "Low income")
+
+# Subset the dataframe to include only rows with the specific values in the column
+subset_df <- df1[df1$Country.Name %in% specific_values, ]
+
+# View the subsetted dataframe
+head(subset_df)
+
+```
+
+```{r}
+# Define income groups
+low_income <- c(
+    "Afghanistan", "Korea, Dem. People's Rep", "South Sudan", "Burkina Faso", "Liberia",
+    "Sudan", "Burundi", "Madagascar", "Syrian Arab Republic", "Central African Republic",
+    "Malawi", "Togo", "Chad", "Mali", "Uganda", "Congo, Dem. Rep", "Mozambique",
+    "Yemen, Rep.", "Eritrea", "Niger", "Ethiopia", "Rwanda", "Gambia, The", "Sierra Leone",
+    "Guinea-Bissau", "Somalia"
+)
+
+lower_middle_income <- c(
+    "Angola", "Jordan", "Philippines", "Algeria", "India", "Samoa", "Bangladesh",
+    "Iran, Islamic Rep", "São Tomé and Principe", "Benin", "Kenya", "Senegal", "Bhutan",
+    "Kiribati", "Solomon Islands", "Bolivia", "Kyrgyz Republic", "Sri Lanka", "Cabo Verde",
+    "Lao PDR", "Tanzania", "Cambodia", "Lebanon", "Tajikistan", "Cameroon", "Lesotho",
+    "Timor-Leste", "Comoros", "Mauritania", "Tunisia", "Congo, Rep.", "Micronesia, Fed. Sts.",
+    "Ukraine", "Côte d'Ivoire", "Mongolia", "Uzbekistan", "Djibouti", "Morocco", "Vanuatu",
+    "Egypt, Arab Rep.", "Myanmar", "Vietnam", "Eswatini", "Nepal", "Zambia", "Ghana",
+    "Nicaragua", "Zimbabwe", "Guinea", "Nigeria", "Haiti", "Pakistan", "Honduras",
+    "Papua New Guinea"
+)
+
+upper_middle_income <- c(
+    "Albania", "Fiji", "North Macedonia", "Argentina", "Gabon", "Palau", "Armenia",
+    "Georgia", "Paraguay", "Azerbaijan", "Grenada", "Peru", "Belarus", "Guatemala",
+    "Russian Federation", "Belize", "Indonesia", "Serbia", "Bosnia and Herzegovina",
+    "Iraq", "South Africa", "Botswana", "Jamaica", "St. Lucia", "Brazil", "Kazakhstan",
+    "St. Vincent and the Grenadines", "Bulgaria", "Kosovo", "Suriname", "China", "Libya",
+    "Thailand", "Colombia", "Malaysia", "Tonga", "Costa Rica", "Maldives", "Türkiye",
+    "Cuba", "Marshall Islands", "Turkmenistan", "Dominica", "Mauritius", "Tuvalu",
+    "Dominican Republic", "Mexico", "West Bank and Gaza", "El Salvador", "Moldova",
+    "Equatorial Guinea", "Montenegro", "Ecuador", "Namibia"
+)
+
+high_income <- c(
+    "American Samoa", "Germany", "Oman", "Andorra", "Gibraltar", "Panama", "Antigua and Barbuda",
+    "Greece", "Poland", "Aruba", "Greenland", "Portugal", "Australia", "Guam", "Puerto Rico",
+    "Austria", "Hong Kong SAR, China", "Qatar", "Bahamas, The", "Hungary", "Romania", "Bahrain",
+    "Iceland", "San Marino", "Barbados", "Ireland", "Saudi Arabia", "Belgium", "Isle of Man",
+    "Seychelles", "Bermuda", "Israel", "Singapore", "British Virgin Islands", "Italy",
+    "Sint Maarten (Dutch part)", "Brunei Darussalam", "Japan", "Slovak Republic", "Canada",
+    "Korea, Rep.", "Slovenia", "Cayman Islands", "Kuwait", "Spain", "Channel Islands", "Latvia",
+    "St. Kitts and Nevis", "Chile", "Liechtenstein", "St. Martin (French part)", "Croatia",
+    "Lithuania", "Sweden", "Curaçao", "Luxembourg", "Switzerland", "Cyprus", "Macao SAR, China",
+    "Taiwan, China", "Czech Republic", "Malta", "Trinidad and Tobago", "Denmark", "Monaco",
+    "Turks and Caicos Islands", "Estonia", "Nauru", "United Arab Emirates", "Faroe Islands",
+    "Netherlands", "United Kingdom", "Finland", "New Caledonia", "United States", "France",
+    "New Zealand", "Uruguay", "French Polynesia", "Northern Mariana Islands", "Virgin Islands (U.S.)",
+    "Guyana", "Norway"
+)
+
+# Create income_groups list
+income_groups <- list(
+    low_income = low_income,
+    lower_middle_income = lower_middle_income,
+    upper_middle_income = upper_middle_income,
+    high_income = high_income
+)
+
+```
+
+```{r}
+# Assuming you have loaded your dataframe into a variable named df
+# And you have already created the income_groups list as provided earlier
+# Assuming your dataframe is named "read_df"
+# And you have already created the income_groups list as provided earlier
+
+# Function to categorize countries into income groups
+categorize_income <- function(country_name) {
+  if (country_name %in% income_groups$low_income) {
+    return("Low-Income")
+  } else if (country_name %in% income_groups$lower_middle_income) {
+    return("Lower-Middle-Income")
+  } else if (country_name %in% income_groups$upper_middle_income) {
+    return("Upper-Middle-Income")
+  } else if (country_name %in% income_groups$high_income) {
+    return("High-Income")
+  } else {
+    return(NA) # Handle countries not found in any income group
+  }
+}
+
+# Apply the function to create a new column with income groupings
+read$Income_Group <- sapply(read$Country.Name, categorize_income)
+
+
+read <- read[!is.na(read$Country.Name), ]
+
+```
+
+
+```{r}
+df <- subset_df
+df <- df[((df$Year==2012) | (df$Year==2013) | (df$Year==2014)) ,]
+df <- df[(df$Indicator.Name=="Labor force, female (% of total labor force)"),]
+tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
 ```
 
 
@@ -34,8 +512,8 @@ tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288'
 oecd_plot <- ggplot(df, aes(x = Year, y = Value, color = Country.Name)) +
   geom_line() +
   scale_color_manual(values = tiana_palette, name="Country") +
-  scale_x_continuous(breaks = seq(2006, 2022, by = 2)) + 
-  labs(title = "Overall Gender Gap Index in Five OECD Countries",
+  #scale_x_continuous(breaks = seq(2000, 2020, by = 2)) + 
+  labs(title = "",
        x = "Year",
        y = "Index")
 
