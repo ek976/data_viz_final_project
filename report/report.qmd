@@ -96,7 +96,7 @@ results
 
 ::: {.panel-tabset}
 
-## Primary Ed. enrollment
+## Primary Ed.
 
 ```{ojs}
 colorPalette = [
@@ -869,13 +869,13 @@ async function renderMapChart(data, colorPalette) {
 
 renderMapChart(data1, colorPalette);
 ```
-
 <figure>
+
   <div id="primary-container" style="width: 100%; height: 500px;"></div>
   <figcaption>These plots show the Gross Enrollment Ratio per education level around the world. Only the values collected by the World Bank are being displayed. Countries that did not share information do not display any values. Note that because of the way data is collected,  small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. However, this allows us to visualize high vs low enrollment and contrast regions of interest.</figcaption>
 </figure>
 
-## Secondary Ed. enrollment
+## Secondary Ed.
 
 <figure>
   <div id="secondary-container" style="width: 100%; height: 500px;"></div>
@@ -1560,7 +1560,7 @@ series: [{
 })();
 ```
 
-## Tertiary Ed. enrollment
+## Tertiary Ed.
 ```{ojs}
 (async () => {
     let topology = await fetch('https://code.highcharts.com/mapdata/custom/world.topo.json')
@@ -2181,9 +2181,6 @@ series: [{
 </figure>
 
 :::
-
-
-
 
 # Teasing out Enrollment by Region 
 
