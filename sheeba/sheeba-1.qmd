@@ -1,5 +1,5 @@
 ---
-title: "Plot 5: Government GDP"
+title: "Plot 4: Parallel Plot"
 author: "Sheeba"
 format:
   html:
@@ -10,12 +10,12 @@ format:
             <script src="https://d3js.org/d3.v7.min.js"></script>
 ---
 
-```{ojs}
 
+```{ojs}
 // Import the necessary libraries
 d3 = require('d3@7');
 // Define and load your datasets
-primaryData = d3.csv('primary_updated.csv', function(d){
+dat = d3.csv('cleaned_data/sorted_merged_df_cleaned.csv', function(d){
   return {
     country_name: d.country_name,
     year1: +d.year1,
@@ -23,111 +23,6 @@ primaryData = d3.csv('primary_updated.csv', function(d){
   }
 });
 
-secondaryData = d3.csv('secondary_updated.csv', function(d){
-  return {
-    country_name: d.country_name,
-    year1: +d.year1,
-    year2: +d.year2,
-  }
-});
-
-tertiaryData = d3.csv('tertiary_updated.csv', function(d){
-  return {
-    country_name: d.country_name,
-    year1: +d.year1,
-    year2: +d.year2,
-  }
-});
-
-// Define metric selection
-viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"});
-
-// Define dataset selection
-viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Select Dataset', value: 'Primary'});
-
-// Visualization width
-width = 800;
-
-// Chart rendering function
-async function chart() {
-  const dataset = await {
-    'Primary': primaryData,
-    'Secondary': secondaryData,
-    'Tertiary': tertiaryData
-  }[selectedDataset.value];
-
-  const data = dataset.map(d => ({
-    country_name: d.country_name,
-    value: metric.value === 'absolute' ? d.year2 - d.year1 : (d.year2 - d.year1) / d.year1
-  }));
-
-  // Visualization parameters
-  const barHeight = 25;
-  const marginTop = 35;
-  const marginRight = 70;
-  const marginBottom = 10;
-  const marginLeft = 120;
-  const height = Math.ceil((data.length + 0.1) * barHeight) + marginTop + marginBottom;
-
-  // Scales
-  const x = d3.scaleLinear()
-    .domain(d3.extent(data, d => d.value))
-    .rangeRound([marginLeft, width - marginRight]);
-
-  const y = d3.scaleBand()
-    .domain(data.map(d => d.country_name))
-    .rangeRound([marginTop, height - marginBottom])
-    .padding(0.1);
-
-  const formatValue = d3.format('.2f'); // Adjust tick format to display small numbers effectively
-
-  // Create SVG element
-  const svg = d3.create('svg')
-    .attr('viewBox', [0, 0, width, height])
-    .style('max-width', '100%')
-    .style('height', 'auto')
-    .style('font-family', 'monospace')
-    .style('font-size', '10px');
-
-  // Draw bars
-  svg.append('g')
-    .selectAll('rect')
-    .data(data)
-    .join('rect')
-    .attr('fill', d => d.value > 0 ? '#3d6469' : '#d40637')
-    .attr('x', d => x(Math.min(d.value, 0)))
-    .attr('y', d => y(d.country_name))
-    .attr('width', d => Math.abs(x(d.value) - x(0)))
-    .attr('height', y.bandwidth());
-
-  // Draw text labels
-  svg.append('g')
-    .attr('font-size', 10)
-    .selectAll('text')
-    .data(data)
-    .join('text')
-    .attr('text-anchor', d => d.value < 0 ? 'end' : 'start')
-    .attr('x', d => x(d.value) + Math.sign(d.value - 0) * 4)
-    .attr('y', d => y(d.country_name) + y.bandwidth() / 2)
-    .attr('dy', '0.35em')
-    .text(d => formatValue(d.value));
-
-  // Append axes
-  svg.append('g')
-    .attr('transform', `translate(0,${marginTop})`)
-    .call(d3.axisTop(x).ticks(width / 80).tickFormat(d3.format('.2f')))
-    .call(g => g.selectAll('.tick line').clone()
-      .attr('y2', height - marginTop - marginBottom)
-      .attr('stroke-opacity', 0.1))
-    .call(g => g.select('.domain').remove());
-
-  svg.append('g')
-    .attr('transform', `translate(${x(0)},0)`)
-    .call(d3.axisLeft(y).tickSize(0).tickPadding(6));
-
-  return svg.node();
-}
-
-chart();
+dat
 
 ```
