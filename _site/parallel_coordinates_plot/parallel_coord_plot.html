@@ -1,0 +1,2714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Global Female Education Attainment - Assign color to country per region</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Global Female Education Attainment</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../report/report.html" rel="" target="">
+ <span class="menu-text">Global Female Education Attainment</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/ek976/data_viz_final_project" rel="" target="">
+ <span class="menu-text">Code</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assign color to country per region</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution_count="1317">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the DataFrame from the specified location</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">'../cleaned_data/filtered_education_data.csv'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the DataFrame for the desired indicators</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> df[df[<span class="st">'Indicator Name'</span>].isin([<span class="st">'GNI per capita, Atlas method (current US$)'</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'GDP per capita (current US$)'</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'Gross enrolment ratio, primary and secondary, female (%)'</span>])]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a copy of the filtered DataFrame</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> filtered_df.copy()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with missing values</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>filtered_df.dropna(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify dimensions and create the plot</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.parallel_coordinates(filtered_df, </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                              dimensions<span class="op">=</span>[<span class="st">'2010'</span>, <span class="st">'2011'</span>, <span class="st">'2012'</span>, <span class="st">'2013'</span>, <span class="st">'2014'</span>],</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                              color_continuous_scale<span class="op">=</span>px.colors.diverging.Tealrose,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                              color_continuous_midpoint<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the title of the plot</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>fig.update_layout(title<span class="op">=</span><span class="st">'Parallel Coordinates Plot of Economic Indicators'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1318">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="1319">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the DataFrame from the specified location</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">'../cleaned_data/filtered_education_data.csv'</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(file_path)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the DataFrame for the desired indicators</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> df[df[<span class="st">'Indicator Name'</span>].isin([<span class="st">'GNI per capita, Atlas method (current US$)'</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'GDP per capita (current US$)'</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'Gross enrolment ratio, primary and secondary, female (%)'</span>])]</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of missing values</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>na_counts <span class="op">=</span> filtered_df.isna().<span class="bu">sum</span>()</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of missing values in each column:"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(na_counts)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of missing values in each column:
+Country Name        0
+Country Code        0
+Indicator Name      0
+2010              120
+2011              115
+2012              128
+2013              142
+2014              175
+dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1320">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print column names</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Column names:"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(filtered_df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Column names:
+Index(['Country Name', 'Country Code', 'Indicator Name', '2010', '2011',
+       '2012', '2013', '2014'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1321">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>filtered_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1321">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Country Code</th>
+<th data-quarto-table-cell-role="th">Indicator Name</th>
+<th data-quarto-table-cell-role="th">2010</th>
+<th data-quarto-table-cell-role="th">2011</th>
+<th data-quarto-table-cell-role="th">2012</th>
+<th data-quarto-table-cell-role="th">2013</th>
+<th data-quarto-table-cell-role="th">2014</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Arab World</td>
+<td>ARB</td>
+<td>GDP per capita (current US$)</td>
+<td>6032.961957</td>
+<td>7005.479541</td>
+<td>7571.402403</td>
+<td>7715.998677</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Arab World</td>
+<td>ARB</td>
+<td>GNI per capita, Atlas method (current US$)</td>
+<td>5913.744794</td>
+<td>6305.644064</td>
+<td>7196.532736</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">15</td>
+<td>Arab World</td>
+<td>ARB</td>
+<td>Gross enrolment ratio, primary and secondary, ...</td>
+<td>79.459587</td>
+<td>80.523216</td>
+<td>82.163383</td>
+<td>80.916183</td>
+<td>81.176811</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">30</td>
+<td>East Asia &amp; Pacific</td>
+<td>EAS</td>
+<td>GDP per capita (current US$)</td>
+<td>7679.834203</td>
+<td>8844.822997</td>
+<td>9402.722845</td>
+<td>9447.701067</td>
+<td>9665.056079</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">33</td>
+<td>East Asia &amp; Pacific</td>
+<td>EAS</td>
+<td>GNI per capita, Atlas method (current US$)</td>
+<td>7340.783300</td>
+<td>8139.099704</td>
+<td>9098.578815</td>
+<td>9704.781244</td>
+<td>9924.208999</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="1322">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with missing values</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>filtered_df.dropna(inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/dt/dqsy5q5s0yjbqldcj0ghd9fr0000gt/T/ipykernel_30867/129057884.py:2: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1323">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>filtered_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1323">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Country Code</th>
+<th data-quarto-table-cell-role="th">Indicator Name</th>
+<th data-quarto-table-cell-role="th">2010</th>
+<th data-quarto-table-cell-role="th">2011</th>
+<th data-quarto-table-cell-role="th">2012</th>
+<th data-quarto-table-cell-role="th">2013</th>
+<th data-quarto-table-cell-role="th">2014</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">15</td>
+<td>Arab World</td>
+<td>ARB</td>
+<td>Gross enrolment ratio, primary and secondary, ...</td>
+<td>79.459587</td>
+<td>80.523216</td>
+<td>82.163383</td>
+<td>80.916183</td>
+<td>81.176811</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">30</td>
+<td>East Asia &amp; Pacific</td>
+<td>EAS</td>
+<td>GDP per capita (current US$)</td>
+<td>7679.834203</td>
+<td>8844.822997</td>
+<td>9402.722845</td>
+<td>9447.701067</td>
+<td>9665.056079</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">33</td>
+<td>East Asia &amp; Pacific</td>
+<td>EAS</td>
+<td>GNI per capita, Atlas method (current US$)</td>
+<td>7340.783300</td>
+<td>8139.099704</td>
+<td>9098.578815</td>
+<td>9704.781244</td>
+<td>9924.208999</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">45</td>
+<td>East Asia &amp; Pacific</td>
+<td>EAS</td>
+<td>Gross enrolment ratio, primary and secondary, ...</td>
+<td>93.903923</td>
+<td>95.538612</td>
+<td>96.855042</td>
+<td>97.916283</td>
+<td>96.509628</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">60</td>
+<td>East Asia &amp; Pacific (excluding high income)</td>
+<td>EAP</td>
+<td>GDP per capita (current US$)</td>
+<td>4010.464900</td>
+<td>4867.116671</td>
+<td>5390.929190</td>
+<td>5908.427878</td>
+<td>6307.578998</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="1324">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> filtered_df[<span class="st">'Country Name'</span>].unique()</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Arab World' 'East Asia &amp; Pacific'
+ 'East Asia &amp; Pacific (excluding high income)' 'Euro area'
+ 'Europe &amp; Central Asia' 'Europe &amp; Central Asia (excluding high income)'
+ 'European Union' 'Heavily indebted poor countries (HIPC)' 'High income'
+ 'Latin America &amp; Caribbean'
+ 'Latin America &amp; Caribbean (excluding high income)'
+ 'Least developed countries: UN classification' 'Low &amp; middle income'
+ 'Low income' 'Lower middle income' 'Middle East &amp; North Africa'
+ 'Middle East &amp; North Africa (excluding high income)' 'Middle income'
+ 'North America' 'OECD members' 'South Asia' 'Sub-Saharan Africa'
+ 'Sub-Saharan Africa (excluding high income)' 'Upper middle income'
+ 'World' 'Afghanistan' 'Albania' 'Algeria' 'American Samoa' 'Andorra'
+ 'Angola' 'Antigua and Barbuda' 'Argentina' 'Armenia' 'Australia'
+ 'Austria' 'Azerbaijan' 'Bahamas, The' 'Bahrain' 'Bangladesh' 'Barbados'
+ 'Belarus' 'Belgium' 'Belize' 'Benin' 'Bhutan' 'Bolivia'
+ 'Bosnia and Herzegovina' 'Botswana' 'Brazil' 'Brunei Darussalam'
+ 'Bulgaria' 'Burkina Faso' 'Burundi' 'Cabo Verde' 'Cambodia' 'Cameroon'
+ 'Canada' 'Central African Republic' 'Chad' 'Chile' 'China' 'Colombia'
+ 'Comoros' 'Congo, Dem. Rep.' 'Congo, Rep.' 'Costa Rica' "Cote d'Ivoire"
+ 'Croatia' 'Cuba' 'Cyprus' 'Czech Republic' 'Denmark' 'Djibouti'
+ 'Dominica' 'Dominican Republic' 'Ecuador' 'Egypt, Arab Rep.'
+ 'El Salvador' 'Equatorial Guinea' 'Estonia' 'Ethiopia' 'Faroe Islands'
+ 'Fiji' 'Finland' 'France' 'Gabon' 'Gambia, The' 'Georgia' 'Germany'
+ 'Ghana' 'Greece' 'Greenland' 'Grenada' 'Guam' 'Guatemala' 'Guinea'
+ 'Guinea-Bissau' 'Guyana' 'Haiti' 'Honduras' 'Hong Kong SAR, China'
+ 'Hungary' 'Iceland' 'India' 'Indonesia' 'Iran, Islamic Rep.' 'Iraq'
+ 'Ireland' 'Isle of Man' 'Israel' 'Italy' 'Jamaica' 'Japan' 'Jordan'
+ 'Kazakhstan' 'Kenya' 'Kiribati' 'Korea, Rep.' 'Kosovo' 'Kuwait'
+ 'Kyrgyz Republic' 'Lao PDR' 'Latvia' 'Lebanon' 'Lesotho' 'Liberia'
+ 'Liechtenstein' 'Lithuania' 'Luxembourg' 'Macao SAR, China'
+ 'Macedonia, FYR' 'Madagascar' 'Malawi' 'Malaysia' 'Maldives' 'Mali'
+ 'Malta' 'Marshall Islands' 'Mauritania' 'Mauritius' 'Mexico'
+ 'Micronesia, Fed. Sts.' 'Moldova' 'Mongolia' 'Montenegro' 'Morocco'
+ 'Mozambique' 'Myanmar' 'Namibia' 'Nepal' 'Netherlands' 'New Zealand'
+ 'Nicaragua' 'Niger' 'Nigeria' 'Northern Mariana Islands' 'Norway' 'Oman'
+ 'Pakistan' 'Palau' 'Panama' 'Papua New Guinea' 'Paraguay' 'Peru'
+ 'Philippines' 'Poland' 'Portugal' 'Qatar' 'Romania' 'Russian Federation'
+ 'Rwanda' 'Samoa' 'San Marino' 'Sao Tome and Principe' 'Saudi Arabia'
+ 'Senegal' 'Serbia' 'Seychelles' 'Sierra Leone' 'Singapore'
+ 'Slovak Republic' 'Slovenia' 'Solomon Islands' 'South Africa' 'Spain'
+ 'Sri Lanka' 'St. Kitts and Nevis' 'St. Lucia'
+ 'St. Vincent and the Grenadines' 'Sudan' 'Suriname' 'Swaziland' 'Sweden'
+ 'Switzerland' 'Tajikistan' 'Tanzania' 'Thailand' 'Timor-Leste' 'Togo'
+ 'Tonga' 'Trinidad and Tobago' 'Tunisia' 'Turkey' 'Turkmenistan' 'Tuvalu'
+ 'Uganda' 'Ukraine' 'United Arab Emirates' 'United Kingdom'
+ 'United States' 'Uruguay' 'Uzbekistan' 'Vanuatu' 'Venezuela, RB'
+ 'Vietnam' 'Virgin Islands (U.S.)' 'West Bank and Gaza' 'Yemen, Rep.'
+ 'Zambia' 'Zimbabwe']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1325">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># drop non-country aggregate from countries_only df </span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># List of values to drop</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>values_to_drop <span class="op">=</span> [<span class="st">'Arab World'</span>, <span class="st">'East Asia &amp; Pacific'</span>, <span class="st">'East Asia &amp; Pacific (excluding high income)'</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Euro area'</span>, <span class="st">'Europe &amp; Central Asia'</span>, <span class="st">'Europe &amp; Central Asia (excluding high income)'</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'European Union'</span>, <span class="st">'Heavily indebted poor countries (HIPC)'</span>, <span class="st">'High income'</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Latin America &amp; Caribbean'</span>, <span class="st">'Latin America &amp; Caribbean (excluding high income)'</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Least developed countries: UN classification'</span>, <span class="st">'Low &amp; middle income'</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Low income'</span>, <span class="st">'Lower middle income'</span>, <span class="st">'Middle East &amp; North Africa'</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Middle East &amp; North Africa (excluding high income)'</span>, <span class="st">'Middle income'</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'North America'</span>, <span class="st">'OECD members'</span>, <span class="st">'South Asia'</span>, <span class="st">'Sub-Saharan Africa'</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Sub-Saharan Africa (excluding high income)'</span>, <span class="st">'Upper middle income'</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'World'</span>]</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the specified values from the 'Country Name' column in filtered_df</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> filtered_df[<span class="op">~</span>filtered_df[<span class="st">'Country Name'</span>].isin(values_to_drop)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="1326">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the DataFrame for the desired indicators</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> filtered_df[filtered_df[<span class="st">'Indicator Name'</span>].isin([<span class="st">'GNI per capita, Atlas method (current US$)'</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'GDP per capita (current US$)'</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'Gross enrolment ratio, primary and secondary, female (%)'</span>])]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Pivot the DataFrame</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>pivot_df <span class="op">=</span> filtered_df.pivot_table(index<span class="op">=</span>[<span class="st">'Country Name'</span>, <span class="st">'Country Code'</span>], </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                                   columns<span class="op">=</span><span class="st">'Indicator Name'</span>, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                                   values<span class="op">=</span>[<span class="st">'2010'</span>, <span class="st">'2011'</span>, <span class="st">'2012'</span>, <span class="st">'2013'</span>, <span class="st">'2014'</span>])</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Flatten the multi-index columns</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>pivot_df.columns <span class="op">=</span> [<span class="ss">f'</span><span class="sc">{</span>indicator<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">)'</span> <span class="cf">for</span> indicator, year <span class="kw">in</span> pivot_df.columns]</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Reset index</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>pivot_df.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the resulting DataFrame</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>pivot_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1326">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Country Code</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>553.300289</td>
+<td>500.0</td>
+<td>63.583031</td>
+<td>603.537023</td>
+<td>560.0</td>
+<td>64.985352</td>
+<td>669.009051</td>
+<td>670.0</td>
+<td>68.563148</td>
+<td>631.744971</td>
+<td>670.0</td>
+<td>67.952309</td>
+<td>612.069651</td>
+<td>630.0</td>
+<td>67.998932</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Albania</td>
+<td>ALB</td>
+<td>4094.358832</td>
+<td>4360.0</td>
+<td>91.484253</td>
+<td>4437.178068</td>
+<td>4410.0</td>
+<td>93.153198</td>
+<td>4247.614308</td>
+<td>4360.0</td>
+<td>94.872810</td>
+<td>4413.081697</td>
+<td>4480.0</td>
+<td>97.304619</td>
+<td>4578.666728</td>
+<td>4440.0</td>
+<td>98.766541</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Algeria</td>
+<td>DZA</td>
+<td>4463.394675</td>
+<td>4460.0</td>
+<td>NaN</td>
+<td>5432.413320</td>
+<td>4580.0</td>
+<td>NaN</td>
+<td>5565.134521</td>
+<td>5140.0</td>
+<td>NaN</td>
+<td>5471.123389</td>
+<td>5480.0</td>
+<td>NaN</td>
+<td>5466.425778</td>
+<td>5470.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>American Samoa</td>
+<td>ASM</td>
+<td>10352.822762</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>10375.994215</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11660.329531</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11589.853002</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11598.751736</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Andorra</td>
+<td>AND</td>
+<td>39736.354063</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>41098.766942</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>38391.080867</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>40619.711298</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>42294.994727</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="1327">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all unique Country Name </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> pivot_df[<span class="st">'Country Name'</span>].unique()</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Afghanistan' 'Albania' 'Algeria' 'American Samoa' 'Andorra' 'Angola'
+ 'Antigua and Barbuda' 'Argentina' 'Armenia' 'Australia' 'Austria'
+ 'Azerbaijan' 'Bahamas, The' 'Bahrain' 'Bangladesh' 'Barbados' 'Belarus'
+ 'Belgium' 'Belize' 'Benin' 'Bhutan' 'Bolivia' 'Bosnia and Herzegovina'
+ 'Botswana' 'Brazil' 'Brunei Darussalam' 'Bulgaria' 'Burkina Faso'
+ 'Burundi' 'Cabo Verde' 'Cambodia' 'Cameroon' 'Canada'
+ 'Central African Republic' 'Chad' 'Chile' 'China' 'Colombia' 'Comoros'
+ 'Congo, Dem. Rep.' 'Congo, Rep.' 'Costa Rica' "Cote d'Ivoire" 'Croatia'
+ 'Cuba' 'Cyprus' 'Czech Republic' 'Denmark' 'Djibouti' 'Dominica'
+ 'Dominican Republic' 'Ecuador' 'Egypt, Arab Rep.' 'El Salvador'
+ 'Equatorial Guinea' 'Estonia' 'Ethiopia' 'Faroe Islands' 'Fiji' 'Finland'
+ 'France' 'Gabon' 'Gambia, The' 'Georgia' 'Germany' 'Ghana' 'Greece'
+ 'Greenland' 'Grenada' 'Guam' 'Guatemala' 'Guinea' 'Guinea-Bissau'
+ 'Guyana' 'Haiti' 'Honduras' 'Hong Kong SAR, China' 'Hungary' 'Iceland'
+ 'India' 'Indonesia' 'Iran, Islamic Rep.' 'Iraq' 'Ireland' 'Isle of Man'
+ 'Israel' 'Italy' 'Jamaica' 'Japan' 'Jordan' 'Kazakhstan' 'Kenya'
+ 'Kiribati' 'Korea, Rep.' 'Kosovo' 'Kuwait' 'Kyrgyz Republic' 'Lao PDR'
+ 'Latvia' 'Lebanon' 'Lesotho' 'Liberia' 'Liechtenstein' 'Lithuania'
+ 'Luxembourg' 'Macao SAR, China' 'Macedonia, FYR' 'Madagascar' 'Malawi'
+ 'Malaysia' 'Maldives' 'Mali' 'Malta' 'Marshall Islands' 'Mauritania'
+ 'Mauritius' 'Mexico' 'Micronesia, Fed. Sts.' 'Moldova' 'Mongolia'
+ 'Montenegro' 'Morocco' 'Mozambique' 'Myanmar' 'Namibia' 'Nepal'
+ 'Netherlands' 'New Zealand' 'Nicaragua' 'Niger' 'Nigeria'
+ 'Northern Mariana Islands' 'Norway' 'Oman' 'Pakistan' 'Palau' 'Panama'
+ 'Papua New Guinea' 'Paraguay' 'Peru' 'Philippines' 'Poland' 'Portugal'
+ 'Qatar' 'Romania' 'Russian Federation' 'Rwanda' 'Samoa' 'San Marino'
+ 'Sao Tome and Principe' 'Saudi Arabia' 'Senegal' 'Serbia' 'Seychelles'
+ 'Sierra Leone' 'Singapore' 'Slovak Republic' 'Slovenia' 'Solomon Islands'
+ 'South Africa' 'Spain' 'Sri Lanka' 'St. Kitts and Nevis' 'St. Lucia'
+ 'St. Vincent and the Grenadines' 'Sudan' 'Suriname' 'Swaziland' 'Sweden'
+ 'Switzerland' 'Tajikistan' 'Tanzania' 'Thailand' 'Timor-Leste' 'Togo'
+ 'Tonga' 'Trinidad and Tobago' 'Tunisia' 'Turkey' 'Turkmenistan' 'Tuvalu'
+ 'Uganda' 'Ukraine' 'United Arab Emirates' 'United Kingdom'
+ 'United States' 'Uruguay' 'Uzbekistan' 'Vanuatu' 'Venezuela, RB'
+ 'Vietnam' 'Virgin Islands (U.S.)' 'West Bank and Gaza' 'Yemen, Rep.'
+ 'Zambia' 'Zimbabwe']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1328">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># replace Macedonia </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace the value 'Macedonia, FYR' with 'Macedonia' in the 'Country Name' column</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>pivot_df[<span class="st">'Country Name'</span>].replace(<span class="st">'Macedonia, FYR'</span>, <span class="st">'Macedonia'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="1329">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all unique Country Name </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> pivot_df[<span class="st">'Country Name'</span>].unique()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Afghanistan' 'Albania' 'Algeria' 'American Samoa' 'Andorra' 'Angola'
+ 'Antigua and Barbuda' 'Argentina' 'Armenia' 'Australia' 'Austria'
+ 'Azerbaijan' 'Bahamas, The' 'Bahrain' 'Bangladesh' 'Barbados' 'Belarus'
+ 'Belgium' 'Belize' 'Benin' 'Bhutan' 'Bolivia' 'Bosnia and Herzegovina'
+ 'Botswana' 'Brazil' 'Brunei Darussalam' 'Bulgaria' 'Burkina Faso'
+ 'Burundi' 'Cabo Verde' 'Cambodia' 'Cameroon' 'Canada'
+ 'Central African Republic' 'Chad' 'Chile' 'China' 'Colombia' 'Comoros'
+ 'Congo, Dem. Rep.' 'Congo, Rep.' 'Costa Rica' "Cote d'Ivoire" 'Croatia'
+ 'Cuba' 'Cyprus' 'Czech Republic' 'Denmark' 'Djibouti' 'Dominica'
+ 'Dominican Republic' 'Ecuador' 'Egypt, Arab Rep.' 'El Salvador'
+ 'Equatorial Guinea' 'Estonia' 'Ethiopia' 'Faroe Islands' 'Fiji' 'Finland'
+ 'France' 'Gabon' 'Gambia, The' 'Georgia' 'Germany' 'Ghana' 'Greece'
+ 'Greenland' 'Grenada' 'Guam' 'Guatemala' 'Guinea' 'Guinea-Bissau'
+ 'Guyana' 'Haiti' 'Honduras' 'Hong Kong SAR, China' 'Hungary' 'Iceland'
+ 'India' 'Indonesia' 'Iran, Islamic Rep.' 'Iraq' 'Ireland' 'Isle of Man'
+ 'Israel' 'Italy' 'Jamaica' 'Japan' 'Jordan' 'Kazakhstan' 'Kenya'
+ 'Kiribati' 'Korea, Rep.' 'Kosovo' 'Kuwait' 'Kyrgyz Republic' 'Lao PDR'
+ 'Latvia' 'Lebanon' 'Lesotho' 'Liberia' 'Liechtenstein' 'Lithuania'
+ 'Luxembourg' 'Macao SAR, China' 'Macedonia' 'Madagascar' 'Malawi'
+ 'Malaysia' 'Maldives' 'Mali' 'Malta' 'Marshall Islands' 'Mauritania'
+ 'Mauritius' 'Mexico' 'Micronesia, Fed. Sts.' 'Moldova' 'Mongolia'
+ 'Montenegro' 'Morocco' 'Mozambique' 'Myanmar' 'Namibia' 'Nepal'
+ 'Netherlands' 'New Zealand' 'Nicaragua' 'Niger' 'Nigeria'
+ 'Northern Mariana Islands' 'Norway' 'Oman' 'Pakistan' 'Palau' 'Panama'
+ 'Papua New Guinea' 'Paraguay' 'Peru' 'Philippines' 'Poland' 'Portugal'
+ 'Qatar' 'Romania' 'Russian Federation' 'Rwanda' 'Samoa' 'San Marino'
+ 'Sao Tome and Principe' 'Saudi Arabia' 'Senegal' 'Serbia' 'Seychelles'
+ 'Sierra Leone' 'Singapore' 'Slovak Republic' 'Slovenia' 'Solomon Islands'
+ 'South Africa' 'Spain' 'Sri Lanka' 'St. Kitts and Nevis' 'St. Lucia'
+ 'St. Vincent and the Grenadines' 'Sudan' 'Suriname' 'Swaziland' 'Sweden'
+ 'Switzerland' 'Tajikistan' 'Tanzania' 'Thailand' 'Timor-Leste' 'Togo'
+ 'Tonga' 'Trinidad and Tobago' 'Tunisia' 'Turkey' 'Turkmenistan' 'Tuvalu'
+ 'Uganda' 'Ukraine' 'United Arab Emirates' 'United Kingdom'
+ 'United States' 'Uruguay' 'Uzbekistan' 'Vanuatu' 'Venezuela, RB'
+ 'Vietnam' 'Virgin Islands (U.S.)' 'West Bank and Gaza' 'Yemen, Rep.'
+ 'Zambia' 'Zimbabwe']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1330">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># assign colors per region </span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the Excel file</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>region_country_df <span class="op">=</span> pd.read_csv(<span class="st">'/Users/lkovalchuk/Desktop/Georgetown/DSAN-5200/Final_Project/data_viz_final_project/parallel_coordinates_plot/Region_Country.csv'</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the DataFrame</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(region_country_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       Economy Code                     Region         Income group  \
+0        Aruba  ABW  Latin America &amp; Caribbean          High income   
+1  Afghanistan  AFG                 South Asia           Low income   
+2       Angola  AGO         Sub-Saharan Africa  Lower middle income   
+3      Albania  ALB      Europe &amp; Central Asia  Upper middle income   
+4      Andorra  AND      Europe &amp; Central Asia          High income   
+
+  Lending category  Unnamed: 5  
+0              NaN         NaN  
+1              IDA         NaN  
+2             IBRD         NaN  
+3             IBRD         NaN  
+4              NaN         NaN  </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1331">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all column names of the DataFrame</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(region_country_df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Index(['Economy', 'Code', 'Region', 'Income group', 'Lending category',
+       'Unnamed: 5'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1332">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop Columns </span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the Excel file</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>region_country_df <span class="op">=</span> pd.read_excel(<span class="st">'Region_Country.xlsx'</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the specified columns</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>region_country_df.drop(columns<span class="op">=</span>[<span class="st">'Lending category'</span>, <span class="st">'Code'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename the 'Economy' column to 'Country Name'</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>region_country_df.rename(columns<span class="op">=</span>{<span class="st">'Economy'</span>: <span class="st">'Country Name'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the DataFrame to verify changes</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(region_country_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>FileNotFoundError: [Errno 2] No such file or directory: 'Region_Country.xlsx'</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all unique values in the 'Country Name' column</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> region_country_df[<span class="st">'Country Name'</span>].unique()</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Aruba' 'Afghanistan' 'Angola' 'Albania' 'Andorra' 'United Arab Emirates'
+ 'Argentina' 'Armenia' 'American Samoa' 'Antigua and Barbuda' 'Australia'
+ 'Austria' 'Azerbaijan' 'Burundi' 'Belgium' 'Benin' 'Burkina Faso'
+ 'Bangladesh' 'Bulgaria' 'Bahrain' 'Bahamas, The' 'Bosnia and Herzegovina'
+ 'Belarus' 'Belize' 'Bermuda' 'Bolivia' 'Brazil' 'Barbados'
+ 'Brunei Darussalam' 'Bhutan' 'Botswana' 'Central African Republic'
+ 'Canada' 'Switzerland' 'Channel Islands' 'Chile' 'China' 'Côte d’Ivoire'
+ 'Cameroon' 'Congo, Dem. Rep.' 'Congo, Rep.' 'Colombia' 'Comoros'
+ 'Cabo Verde' 'Costa Rica' 'Cuba' 'Curaçao' 'Cayman Islands' 'Cyprus'
+ 'Czechia' 'Germany' 'Djibouti' 'Dominica' 'Denmark' 'Dominican Republic'
+ 'Algeria' 'Ecuador' 'Egypt, Arab Rep.' 'Eritrea' 'Spain' 'Estonia'
+ 'Ethiopia' 'Finland' 'Fiji' 'France' 'Faroe Islands'
+ 'Micronesia, Fed. Sts.' 'Gabon' 'United Kingdom' 'Georgia' 'Ghana'
+ 'Gibraltar' 'Guinea' 'Gambia, The' 'Guinea-Bissau' 'Equatorial Guinea'
+ 'Greece' 'Grenada' 'Greenland' 'Guatemala' 'Guam' 'Guyana'
+ 'Hong Kong SAR, China' 'Honduras' 'Croatia' 'Haiti' 'Hungary' 'Indonesia'
+ 'Isle of Man' 'India' 'Ireland' 'Iran, Islamic Rep.' 'Iraq' 'Iceland'
+ 'Israel' 'Italy' 'Jamaica' 'Jordan' 'Japan' 'Kazakhstan' 'Kenya'
+ 'Kyrgyz Republic' 'Cambodia' 'Kiribati' 'St. Kitts and Nevis'
+ 'Korea, Rep.' 'Kuwait' 'Lao PDR' 'Lebanon' 'Liberia' 'Libya' 'St. Lucia'
+ 'Liechtenstein' 'Sri Lanka' 'Lesotho' 'Lithuania' 'Luxembourg' 'Latvia'
+ 'Macao SAR, China' 'St. Martin (French part)' 'Morocco' 'Monaco'
+ 'Moldova' 'Madagascar' 'Maldives' 'Mexico' 'Marshall Islands'
+ 'North Macedonia' 'Mali' 'Malta' 'Myanmar' 'Montenegro' 'Mongolia'
+ 'Northern Mariana Islands' 'Mozambique' 'Mauritania' 'Mauritius' 'Malawi'
+ 'Malaysia' 'Namibia' 'New Caledonia' 'Niger' 'Nigeria' 'Nicaragua'
+ 'Netherlands' 'Norway' 'Nepal' 'Nauru' 'New Zealand' 'Oman' 'Pakistan'
+ 'Panama' 'Peru' 'Philippines' 'Palau' 'Papua New Guinea' 'Poland'
+ 'Puerto Rico' "Korea, Dem. People's Rep." 'Portugal' 'Paraguay'
+ 'West Bank and Gaza' 'French Polynesia' 'Qatar' 'Romania'
+ 'Russian Federation' 'Rwanda' 'Saudi Arabia' 'Sudan' 'Senegal'
+ 'Singapore' 'Solomon Islands' 'Sierra Leone' 'El Salvador' 'San Marino'
+ 'Somalia' 'Serbia' 'South Sudan' 'São Tomé and Príncipe' 'Suriname'
+ 'Slovak Republic' 'Slovenia' 'Sweden' 'Eswatini'
+ 'Sint Maarten (Dutch part)' 'Seychelles' 'Syrian Arab Republic'
+ 'Turks and Caicos Islands' 'Chad' 'Togo' 'Thailand' 'Tajikistan'
+ 'Turkmenistan' 'Timor-Leste' 'Tonga' 'Trinidad and Tobago' 'Tunisia'
+ 'Türkiye' 'Tuvalu' 'Taiwan, China' 'Tanzania' 'Uganda' 'Ukraine'
+ 'Uruguay' 'United States' 'Uzbekistan' 'St. Vincent and the Grenadines'
+ 'Venezuela, RB' 'British Virgin Islands' 'Virgin Islands (U.S.)'
+ 'Vietnam' 'Vanuatu' 'Samoa' 'Kosovo' 'Yemen, Rep.' 'South Africa'
+ 'Zambia' 'Zimbabwe' nan 'Africa Eastern and Southern'
+ 'Africa Western and Central' 'Arab World' 'Caribbean small states'
+ 'Central Europe and the Baltics' 'Early-demographic dividend'
+ 'East Asia &amp; Pacific' 'East Asia &amp; Pacific (excluding high income)'
+ 'East Asia &amp; Pacific (IDA &amp; IBRD)' 'Euro area' 'Europe &amp; Central Asia'
+ 'Europe &amp; Central Asia (excluding high income)'
+ 'Europe &amp; Central Asia (IDA &amp; IBRD)' 'European Union'
+ 'Fragile and conflict affected situations'
+ 'Heavily indebted poor countries (HIPC)' 'High income' 'IBRD only'
+ 'IDA &amp; IBRD total' 'IDA blend' 'IDA only' 'IDA total'
+ 'Late-demographic dividend' 'Latin America &amp; Caribbean'
+ 'Latin America &amp; Caribbean (excluding high income)'
+ 'Latin America &amp; Caribbean (IDA &amp; IBRD)'
+ 'Least developed countries: UN classification' 'Low &amp; middle income'
+ 'Low income' 'Lower middle income' 'Middle East &amp; North Africa'
+ 'Middle East &amp; North Africa (excluding high income)'
+ 'Middle East &amp; North Africa (IDA &amp; IBRD)' 'Middle income' 'North America'
+ 'OECD members' 'Other small states' 'Pacific island small states'
+ 'Post-demographic dividend' 'Pre-demographic dividend' 'Small states'
+ 'South Asia' 'South Asia (IDA &amp; IBRD)' 'Sub-Saharan Africa'
+ 'Sub-Saharan Africa (excluding high income)'
+ 'Sub-Saharan Africa (IDA &amp; IBRD)' 'Upper middle income' 'World']</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge region_country_df with pivot_df based on 'Country Name'</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>merged_df <span class="op">=</span> pd.merge(pivot_df, region_country_df, on<span class="op">=</span><span class="st">'Country Name'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the merged DataFrame</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>merged_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1185">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Country Code</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>AFG</td>
+<td>553.300289</td>
+<td>500.0</td>
+<td>63.583031</td>
+<td>603.537023</td>
+<td>560.0</td>
+<td>64.985352</td>
+<td>669.009051</td>
+<td>670.0</td>
+<td>68.563148</td>
+<td>631.744971</td>
+<td>670.0</td>
+<td>67.952309</td>
+<td>612.069651</td>
+<td>630.0</td>
+<td>67.998932</td>
+<td>South Asia</td>
+<td>Low income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Albania</td>
+<td>ALB</td>
+<td>4094.358832</td>
+<td>4360.0</td>
+<td>91.484253</td>
+<td>4437.178068</td>
+<td>4410.0</td>
+<td>93.153198</td>
+<td>4247.614308</td>
+<td>4360.0</td>
+<td>94.872810</td>
+<td>4413.081697</td>
+<td>4480.0</td>
+<td>97.304619</td>
+<td>4578.666728</td>
+<td>4440.0</td>
+<td>98.766541</td>
+<td>Europe &amp; Central Asia</td>
+<td>Upper middle income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Algeria</td>
+<td>DZA</td>
+<td>4463.394675</td>
+<td>4460.0</td>
+<td>NaN</td>
+<td>5432.413320</td>
+<td>4580.0</td>
+<td>NaN</td>
+<td>5565.134521</td>
+<td>5140.0</td>
+<td>NaN</td>
+<td>5471.123389</td>
+<td>5480.0</td>
+<td>NaN</td>
+<td>5466.425778</td>
+<td>5470.0</td>
+<td>NaN</td>
+<td>Middle East &amp; North Africa</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>American Samoa</td>
+<td>ASM</td>
+<td>10352.822762</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>10375.994215</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11660.329531</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11589.853002</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11598.751736</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>East Asia &amp; Pacific</td>
+<td>High income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Andorra</td>
+<td>AND</td>
+<td>39736.354063</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>41098.766942</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>38391.080867</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>40619.711298</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>42294.994727</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Europe &amp; Central Asia</td>
+<td>High income</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the 'Country Code' column</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>merged_df.drop(columns<span class="op">=</span>[<span class="st">'Country Code'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Move the 'Region' column to the second position</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> <span class="bu">list</span>(merged_df.columns)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>cols.insert(<span class="dv">1</span>, cols.pop(cols.index(<span class="st">'Region'</span>)))</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>merged_df <span class="op">=</span> merged_df[cols]</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the modified DataFrame</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>merged_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1186">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>South Asia</td>
+<td>553.300289</td>
+<td>500.0</td>
+<td>63.583031</td>
+<td>603.537023</td>
+<td>560.0</td>
+<td>64.985352</td>
+<td>669.009051</td>
+<td>670.0</td>
+<td>68.563148</td>
+<td>631.744971</td>
+<td>670.0</td>
+<td>67.952309</td>
+<td>612.069651</td>
+<td>630.0</td>
+<td>67.998932</td>
+<td>Low income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Albania</td>
+<td>Europe &amp; Central Asia</td>
+<td>4094.358832</td>
+<td>4360.0</td>
+<td>91.484253</td>
+<td>4437.178068</td>
+<td>4410.0</td>
+<td>93.153198</td>
+<td>4247.614308</td>
+<td>4360.0</td>
+<td>94.872810</td>
+<td>4413.081697</td>
+<td>4480.0</td>
+<td>97.304619</td>
+<td>4578.666728</td>
+<td>4440.0</td>
+<td>98.766541</td>
+<td>Upper middle income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Algeria</td>
+<td>Middle East &amp; North Africa</td>
+<td>4463.394675</td>
+<td>4460.0</td>
+<td>NaN</td>
+<td>5432.413320</td>
+<td>4580.0</td>
+<td>NaN</td>
+<td>5565.134521</td>
+<td>5140.0</td>
+<td>NaN</td>
+<td>5471.123389</td>
+<td>5480.0</td>
+<td>NaN</td>
+<td>5466.425778</td>
+<td>5470.0</td>
+<td>NaN</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>American Samoa</td>
+<td>East Asia &amp; Pacific</td>
+<td>10352.822762</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>10375.994215</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11660.329531</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11589.853002</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11598.751736</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>High income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Andorra</td>
+<td>Europe &amp; Central Asia</td>
+<td>39736.354063</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>41098.766942</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>38391.080867</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>40619.711298</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>42294.994727</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>High income</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all unique values in the 'Region' column</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>unique_regions <span class="op">=</span> merged_df[<span class="st">'Region'</span>].unique()</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_regions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['South Asia' 'Europe &amp; Central Asia' 'Middle East &amp; North Africa'
+ 'East Asia &amp; Pacific' 'Sub-Saharan Africa' 'Latin America &amp; Caribbean'
+ 'North America' nan]</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>na_count <span class="op">=</span> merged_df[<span class="st">'Region'</span>].isna().<span class="bu">sum</span>()</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of missing values in the 'Region' column:"</span>, na_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of missing values in the 'Region' column: 6</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the DataFrame for rows where the 'Region' column has missing values</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>na_countries <span class="op">=</span> merged_df[merged_df[<span class="st">'Region'</span>].isna()]</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the country names with missing values in the 'Region' column</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Countries with missing values in the 'Region' column:"</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(na_countries[<span class="st">'Country Name'</span>].unique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Countries with missing values in the 'Region' column:
+["Cote d'Ivoire" 'Czech Republic' 'Macedonia' 'Sao Tome and Principe'
+ 'Swaziland' 'Turkey']</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dictionary containing manual mappings of countries to regions</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>manual_mappings <span class="op">=</span> {</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cote d'Ivoire"</span>: <span class="st">"Sub-Saharan Africa"</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Czech Republic"</span>: <span class="st">"Europe &amp; Central Asia"</span>,</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Macedonia"</span>: <span class="st">"Europe &amp; Central Asia"</span>,</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sao Tome and Principe"</span>: <span class="st">"Sub-Saharan Africa"</span>,</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Swaziland"</span>: <span class="st">"Sub-Saharan Africa"</span>,</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Turkey"</span>: <span class="st">"Europe &amp; Central Asia"</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Update the 'Region' column with manual mappings</span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>merged_df[<span class="st">'Region'</span>] <span class="op">=</span> merged_df[<span class="st">'Region'</span>].fillna(merged_df[<span class="st">'Country Name'</span>].<span class="bu">map</span>(manual_mappings))</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the updated DataFrame</span></span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>merged_df.head() </span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1190">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>South Asia</td>
+<td>553.300289</td>
+<td>500.0</td>
+<td>63.583031</td>
+<td>603.537023</td>
+<td>560.0</td>
+<td>64.985352</td>
+<td>669.009051</td>
+<td>670.0</td>
+<td>68.563148</td>
+<td>631.744971</td>
+<td>670.0</td>
+<td>67.952309</td>
+<td>612.069651</td>
+<td>630.0</td>
+<td>67.998932</td>
+<td>Low income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Albania</td>
+<td>Europe &amp; Central Asia</td>
+<td>4094.358832</td>
+<td>4360.0</td>
+<td>91.484253</td>
+<td>4437.178068</td>
+<td>4410.0</td>
+<td>93.153198</td>
+<td>4247.614308</td>
+<td>4360.0</td>
+<td>94.872810</td>
+<td>4413.081697</td>
+<td>4480.0</td>
+<td>97.304619</td>
+<td>4578.666728</td>
+<td>4440.0</td>
+<td>98.766541</td>
+<td>Upper middle income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Algeria</td>
+<td>Middle East &amp; North Africa</td>
+<td>4463.394675</td>
+<td>4460.0</td>
+<td>NaN</td>
+<td>5432.413320</td>
+<td>4580.0</td>
+<td>NaN</td>
+<td>5565.134521</td>
+<td>5140.0</td>
+<td>NaN</td>
+<td>5471.123389</td>
+<td>5480.0</td>
+<td>NaN</td>
+<td>5466.425778</td>
+<td>5470.0</td>
+<td>NaN</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>American Samoa</td>
+<td>East Asia &amp; Pacific</td>
+<td>10352.822762</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>10375.994215</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11660.329531</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11589.853002</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>11598.751736</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>High income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Andorra</td>
+<td>Europe &amp; Central Asia</td>
+<td>39736.354063</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>41098.766942</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>38391.080867</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>40619.711298</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>42294.994727</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>High income</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the DataFrame by the values of the column 'Region'</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>sorted_merged_df <span class="op">=</span> merged_df.sort_values(by<span class="op">=</span><span class="st">'Region'</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the sorted DataFrame</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>sorted_merged_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1191">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>Lao PDR</td>
+<td>East Asia &amp; Pacific</td>
+<td>1141.127115</td>
+<td>1000.0</td>
+<td>75.316368</td>
+<td>1304.384015</td>
+<td>1120.0</td>
+<td>71.887253</td>
+<td>1588.633147</td>
+<td>1350.0</td>
+<td>73.593727</td>
+<td>1838.806020</td>
+<td>1590.0</td>
+<td>76.030861</td>
+<td>2017.587781</td>
+<td>1840.0</td>
+<td>79.039917</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">190</td>
+<td>Vietnam</td>
+<td>East Asia &amp; Pacific</td>
+<td>1333.583524</td>
+<td>1270.0</td>
+<td>NaN</td>
+<td>1542.669881</td>
+<td>1390.0</td>
+<td>NaN</td>
+<td>1754.547974</td>
+<td>1550.0</td>
+<td>NaN</td>
+<td>1907.564382</td>
+<td>1740.0</td>
+<td>NaN</td>
+<td>2052.319084</td>
+<td>1900.0</td>
+<td>NaN</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">93</td>
+<td>Korea, Rep.</td>
+<td>East Asia &amp; Pacific</td>
+<td>22086.952919</td>
+<td>21260.0</td>
+<td>NaN</td>
+<td>24079.788524</td>
+<td>22540.0</td>
+<td>NaN</td>
+<td>24358.782176</td>
+<td>24550.0</td>
+<td>NaN</td>
+<td>25890.018670</td>
+<td>25760.0</td>
+<td>NaN</td>
+<td>27811.366384</td>
+<td>26800.0</td>
+<td>NaN</td>
+<td>High income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">155</td>
+<td>Singapore</td>
+<td>East Asia &amp; Pacific</td>
+<td>46569.679506</td>
+<td>44790.0</td>
+<td>NaN</td>
+<td>53166.675806</td>
+<td>48150.0</td>
+<td>NaN</td>
+<td>54431.161990</td>
+<td>51110.0</td>
+<td>NaN</td>
+<td>56029.189142</td>
+<td>54700.0</td>
+<td>NaN</td>
+<td>56336.072341</td>
+<td>55720.0</td>
+<td>NaN</td>
+<td>High income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">113</td>
+<td>Marshall Islands</td>
+<td>East Asia &amp; Pacific</td>
+<td>3146.763948</td>
+<td>3790.0</td>
+<td>NaN</td>
+<td>3297.558144</td>
+<td>3950.0</td>
+<td>NaN</td>
+<td>3516.899911</td>
+<td>3980.0</td>
+<td>NaN</td>
+<td>3614.130661</td>
+<td>4300.0</td>
+<td>NaN</td>
+<td>3461.781164</td>
+<td>4500.0</td>
+<td>NaN</td>
+<td>Upper middle income</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>na_count <span class="op">=</span> sorted_merged_df[<span class="st">'Region'</span>].isna().<span class="bu">sum</span>()</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of missing values in the 'Region' column:"</span>, na_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of missing values in the 'Region' column: 0</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2010 (GDP per capita (current US$))'</span>, </span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2010 (GNI per capita, Atlas method (current US$))'</span>, </span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot without specifying color</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.parallel_coordinates(sorted_merged_df, </span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>                               dimensions<span class="op">=</span>dimensions)</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of missing values in each column</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>na_count <span class="op">=</span> sorted_merged_df.isna().<span class="bu">sum</span>()</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the number of missing values in each column</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of missing values in each column:"</span>)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(na_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of missing values in each column:
+Country Name                                                         0
+Region                                                               0
+2010 (GDP per capita (current US$))                                  0
+2010 (GNI per capita, Atlas method (current US$))                   13
+2010 (Gross enrolment ratio, primary and secondary, female (%))    123
+2011 (GDP per capita (current US$))                                  0
+2011 (GNI per capita, Atlas method (current US$))                   13
+2011 (Gross enrolment ratio, primary and secondary, female (%))    123
+2012 (GDP per capita (current US$))                                  0
+2012 (GNI per capita, Atlas method (current US$))                   13
+2012 (Gross enrolment ratio, primary and secondary, female (%))    123
+2013 (GDP per capita (current US$))                                  0
+2013 (GNI per capita, Atlas method (current US$))                   13
+2013 (Gross enrolment ratio, primary and secondary, female (%))    123
+2014 (GDP per capita (current US$))                                  0
+2014 (GNI per capita, Atlas method (current US$))                   13
+2014 (Gross enrolment ratio, primary and secondary, female (%))    123
+Income group                                                         7
+dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with NaN values</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned <span class="op">=</span> sorted_merged_df.dropna()</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1195">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>Lao PDR</td>
+<td>East Asia &amp; Pacific</td>
+<td>1141.127115</td>
+<td>1000.0</td>
+<td>75.316368</td>
+<td>1304.384015</td>
+<td>1120.0</td>
+<td>71.887253</td>
+<td>1588.633147</td>
+<td>1350.0</td>
+<td>73.593727</td>
+<td>1838.806020</td>
+<td>1590.0</td>
+<td>76.030861</td>
+<td>2017.587781</td>
+<td>1840.0</td>
+<td>79.039917</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>Brunei Darussalam</td>
+<td>East Asia &amp; Pacific</td>
+<td>35268.101170</td>
+<td>33300.0</td>
+<td>102.963638</td>
+<td>47017.027300</td>
+<td>35490.0</td>
+<td>103.664131</td>
+<td>47651.259090</td>
+<td>42290.0</td>
+<td>106.335953</td>
+<td>44597.279682</td>
+<td>45180.0</td>
+<td>106.268639</td>
+<td>41530.668979</td>
+<td>42930.0</td>
+<td>102.807732</td>
+<td>High income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">173</td>
+<td>Timor-Leste</td>
+<td>East Asia &amp; Pacific</td>
+<td>806.062774</td>
+<td>2850.0</td>
+<td>100.388390</td>
+<td>931.046033</td>
+<td>3770.0</td>
+<td>104.204803</td>
+<td>1027.784502</td>
+<td>4090.0</td>
+<td>105.107460</td>
+<td>1190.510366</td>
+<td>3570.0</td>
+<td>105.413261</td>
+<td>1196.061391</td>
+<td>2840.0</td>
+<td>107.542572</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">80</td>
+<td>Indonesia</td>
+<td>East Asia &amp; Pacific</td>
+<td>3113.480635</td>
+<td>2640.0</td>
+<td>94.157623</td>
+<td>3634.276805</td>
+<td>3080.0</td>
+<td>95.573029</td>
+<td>3687.953996</td>
+<td>3570.0</td>
+<td>95.417648</td>
+<td>3620.663981</td>
+<td>3730.0</td>
+<td>93.966583</td>
+<td>3491.595887</td>
+<td>3620.0</td>
+<td>93.448242</td>
+<td>Upper middle income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>China</td>
+<td>East Asia &amp; Pacific</td>
+<td>4560.512586</td>
+<td>4340.0</td>
+<td>96.348831</td>
+<td>5633.795717</td>
+<td>5060.0</td>
+<td>98.502243</td>
+<td>6337.883323</td>
+<td>5940.0</td>
+<td>100.422417</td>
+<td>7077.770765</td>
+<td>6800.0</td>
+<td>102.656258</td>
+<td>7683.502613</td>
+<td>7520.0</td>
+<td>99.647728</td>
+<td>Upper middle income</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned[<span class="st">'Region'</span>].dtype</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1196">
+<pre><code>dtype('O')</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned[<span class="st">'Region'</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1197">
+<pre><code>array(['East Asia &amp; Pacific', 'Europe &amp; Central Asia',
+       'Latin America &amp; Caribbean', 'Middle East &amp; North Africa',
+       'North America', 'South Asia', 'Sub-Saharan Africa'], dtype=object)</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the mapping dictionary</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the 'numeric_region' column to the DataFrame next to the 'Region' column</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.insert(loc<span class="op">=</span>sorted_merged_df_cleaned.columns.get_loc(<span class="st">'Region'</span>) <span class="op">+</span> <span class="dv">1</span>, column<span class="op">=</span><span class="st">'numeric_region'</span>, value<span class="op">=</span>sorted_merged_df_cleaned[<span class="st">'Region'</span>].<span class="bu">map</span>(region_mapping))</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1198">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">numeric_region</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>Lao PDR</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>1141.127115</td>
+<td>1000.0</td>
+<td>75.316368</td>
+<td>1304.384015</td>
+<td>1120.0</td>
+<td>71.887253</td>
+<td>1588.633147</td>
+<td>1350.0</td>
+<td>73.593727</td>
+<td>1838.806020</td>
+<td>1590.0</td>
+<td>76.030861</td>
+<td>2017.587781</td>
+<td>1840.0</td>
+<td>79.039917</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>Brunei Darussalam</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>35268.101170</td>
+<td>33300.0</td>
+<td>102.963638</td>
+<td>47017.027300</td>
+<td>35490.0</td>
+<td>103.664131</td>
+<td>47651.259090</td>
+<td>42290.0</td>
+<td>106.335953</td>
+<td>44597.279682</td>
+<td>45180.0</td>
+<td>106.268639</td>
+<td>41530.668979</td>
+<td>42930.0</td>
+<td>102.807732</td>
+<td>High income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">173</td>
+<td>Timor-Leste</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>806.062774</td>
+<td>2850.0</td>
+<td>100.388390</td>
+<td>931.046033</td>
+<td>3770.0</td>
+<td>104.204803</td>
+<td>1027.784502</td>
+<td>4090.0</td>
+<td>105.107460</td>
+<td>1190.510366</td>
+<td>3570.0</td>
+<td>105.413261</td>
+<td>1196.061391</td>
+<td>2840.0</td>
+<td>107.542572</td>
+<td>Lower middle income</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">80</td>
+<td>Indonesia</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>3113.480635</td>
+<td>2640.0</td>
+<td>94.157623</td>
+<td>3634.276805</td>
+<td>3080.0</td>
+<td>95.573029</td>
+<td>3687.953996</td>
+<td>3570.0</td>
+<td>95.417648</td>
+<td>3620.663981</td>
+<td>3730.0</td>
+<td>93.966583</td>
+<td>3491.595887</td>
+<td>3620.0</td>
+<td>93.448242</td>
+<td>Upper middle income</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>China</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>4560.512586</td>
+<td>4340.0</td>
+<td>96.348831</td>
+<td>5633.795717</td>
+<td>5060.0</td>
+<td>98.502243</td>
+<td>6337.883323</td>
+<td>5940.0</td>
+<td>100.422417</td>
+<td>7077.770765</td>
+<td>6800.0</td>
+<td>102.656258</td>
+<td>7683.502613</td>
+<td>7520.0</td>
+<td>99.647728</td>
+<td>Upper middle income</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add a new column 'numeric income'</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the mapping dictionary for income groups</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>income_mapping <span class="op">=</span> {</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Low income'</span>: <span class="dv">0</span>,</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Lower middle income'</span>: <span class="dv">1</span>,</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Upper middle income'</span>: <span class="dv">2</span>,</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'High income'</span>: <span class="dv">3</span></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a new column 'numeric_income' to the DataFrame based on the mapping</span></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned[<span class="st">'numeric_income'</span>] <span class="op">=</span> sorted_merged_df_cleaned[<span class="st">'Income group'</span>].<span class="bu">map</span>(income_mapping)</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/dt/dqsy5q5s0yjbqldcj0ghd9fr0000gt/T/ipykernel_30867/1300855223.py:11: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the file path where you want to save the CSV file</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">'../cleaned_data/sorted_merged_df_cleaned.csv'</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the DataFrame as a CSV file</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.to_csv(file_path, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to map regions to numeric values</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2010 (GDP per capita (current US$))'</span>, </span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2010 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#08030a"</span>, <span class="st">"#feeece"</span>, <span class="st">"#d40637"</span>, <span class="st">"#5f0922"</span>]</span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot and specify color based on 'numeric_region'</span></span>
+<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.parallel_coordinates(sorted_merged_df_cleaned, </span>
+<span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a>                               dimensions<span class="op">=</span>dimensions,</span>
+<span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a>                               color<span class="op">=</span><span class="st">'numeric_region'</span>,</span>
+<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a>                               color_continuous_scale<span class="op">=</span>hex_colors,</span>
+<span id="cb54-31"><a href="#cb54-31" aria-hidden="true" tabindex="-1"></a>                               color_continuous_midpoint<span class="op">=</span><span class="bu">min</span>(color_intervals) <span class="op">+</span> <span class="fl">0.5</span>,  <span class="co"># Set midpoint for discrete scale</span></span>
+<span id="cb54-32"><a href="#cb54-32" aria-hidden="true" tabindex="-1"></a>                               range_color<span class="op">=</span>(<span class="dv">0</span>, <span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>))  <span class="co"># Ensure correct range for colors</span></span>
+<span id="cb54-33"><a href="#cb54-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-34"><a href="#cb54-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Add annotations for 'Country Name' on the left axis</span></span>
+<span id="cb54-35"><a href="#cb54-35" aria-hidden="true" tabindex="-1"></a>annotations <span class="op">=</span> []</span>
+<span id="cb54-36"><a href="#cb54-36" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (country, gdp) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(sorted_merged_df_cleaned[<span class="st">'Country Name'</span>], sorted_merged_df_cleaned[<span class="st">'2010 (GDP per capita (current US$))'</span>])):</span>
+<span id="cb54-37"><a href="#cb54-37" aria-hidden="true" tabindex="-1"></a>    annotations.append(<span class="bu">dict</span>(x<span class="op">=</span>gdp, y<span class="op">=</span>i, xref<span class="op">=</span><span class="st">'x'</span>, yref<span class="op">=</span><span class="st">'y'</span>,</span>
+<span id="cb54-38"><a href="#cb54-38" aria-hidden="true" tabindex="-1"></a>                            text<span class="op">=</span>country, showarrow<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb54-39"><a href="#cb54-39" aria-hidden="true" tabindex="-1"></a>                            font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, size<span class="op">=</span><span class="dv">10</span>)))</span>
+<span id="cb54-40"><a href="#cb54-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-41"><a href="#cb54-41" aria-hidden="true" tabindex="-1"></a>fig.update_layout(annotations<span class="op">=</span>annotations)</span>
+<span id="cb54-42"><a href="#cb54-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-43"><a href="#cb54-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Hide the color scale that is useless in this case</span></span>
+<span id="cb54-44"><a href="#cb54-44" aria-hidden="true" tabindex="-1"></a>fig.update_layout(coloraxis_showscale<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb54-45"><a href="#cb54-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-46"><a href="#cb54-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb54-47"><a href="#cb54-47" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to map regions to numeric values</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#08030a"</span>, <span class="st">"#feeece"</span>, <span class="st">"#d40637"</span>, <span class="st">"#5f0922"</span>]</span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot and specify color based on 'numeric_region'</span></span>
+<span id="cb56-28"><a href="#cb56-28" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.parallel_coordinates(sorted_merged_df_cleaned, </span>
+<span id="cb56-29"><a href="#cb56-29" aria-hidden="true" tabindex="-1"></a>                               dimensions<span class="op">=</span>dimensions,</span>
+<span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a>                               color<span class="op">=</span><span class="st">'numeric_region'</span>,</span>
+<span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a>                               color_continuous_scale<span class="op">=</span>hex_colors,</span>
+<span id="cb56-32"><a href="#cb56-32" aria-hidden="true" tabindex="-1"></a>                               color_continuous_midpoint<span class="op">=</span><span class="bu">min</span>(color_intervals) <span class="op">+</span> <span class="fl">0.5</span>,  <span class="co"># Set midpoint for discrete scale</span></span>
+<span id="cb56-33"><a href="#cb56-33" aria-hidden="true" tabindex="-1"></a>                               range_color<span class="op">=</span>(<span class="dv">0</span>, <span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>))  <span class="co"># Ensure correct range for colors</span></span>
+<span id="cb56-34"><a href="#cb56-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-35"><a href="#cb56-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Add annotations for 'Country Name' on the left axis</span></span>
+<span id="cb56-36"><a href="#cb56-36" aria-hidden="true" tabindex="-1"></a>annotations <span class="op">=</span> []</span>
+<span id="cb56-37"><a href="#cb56-37" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (country, gdp) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(sorted_merged_df_cleaned[<span class="st">'Country Name'</span>], sorted_merged_df_cleaned[<span class="st">'2014 (GDP per capita (current US$))'</span>])):</span>
+<span id="cb56-38"><a href="#cb56-38" aria-hidden="true" tabindex="-1"></a>    annotations.append(<span class="bu">dict</span>(x<span class="op">=</span>gdp, y<span class="op">=</span>i, xref<span class="op">=</span><span class="st">'x'</span>, yref<span class="op">=</span><span class="st">'y'</span>,</span>
+<span id="cb56-39"><a href="#cb56-39" aria-hidden="true" tabindex="-1"></a>                            text<span class="op">=</span>country, showarrow<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb56-40"><a href="#cb56-40" aria-hidden="true" tabindex="-1"></a>                            font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, size<span class="op">=</span><span class="dv">10</span>)))</span>
+<span id="cb56-41"><a href="#cb56-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb56-42"><a href="#cb56-42" aria-hidden="true" tabindex="-1"></a>fig.update_layout(annotations<span class="op">=</span>annotations)</span>
+<span id="cb56-43"><a href="#cb56-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-44"><a href="#cb56-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Hide the color scale that is useless in this case</span></span>
+<span id="cb56-45"><a href="#cb56-45" aria-hidden="true" tabindex="-1"></a>fig.update_layout(coloraxis_showscale<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb56-46"><a href="#cb56-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-47"><a href="#cb56-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb56-48"><a href="#cb56-48" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to map regions to numeric values</span></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb58-18"><a href="#cb58-18" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb58-19"><a href="#cb58-19" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb58-20"><a href="#cb58-20" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb58-21"><a href="#cb58-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-22"><a href="#cb58-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb58-23"><a href="#cb58-23" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#08030a"</span>, <span class="st">"#feeece"</span>, <span class="st">"#d40637"</span>, <span class="st">"#5f0922"</span>]</span>
+<span id="cb58-24"><a href="#cb58-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-25"><a href="#cb58-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb58-26"><a href="#cb58-26" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb58-27"><a href="#cb58-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-28"><a href="#cb58-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb58-29"><a href="#cb58-29" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb58-30"><a href="#cb58-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-31"><a href="#cb58-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb58-32"><a href="#cb58-32" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb58-33"><a href="#cb58-33" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>sorted_merged_df_cleaned[<span class="st">'numeric_region'</span>], </span>
+<span id="cb58-34"><a href="#cb58-34" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb58-35"><a href="#cb58-35" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>),  <span class="co"># Set showscale to True to display the color scale</span></span>
+<span id="cb58-36"><a href="#cb58-36" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb58-37"><a href="#cb58-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[sorted_merged_df_cleaned[dim].<span class="bu">min</span>(), sorted_merged_df_cleaned[dim].<span class="bu">max</span>()],</span>
+<span id="cb58-38"><a href="#cb58-38" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>dim, values<span class="op">=</span>sorted_merged_df_cleaned[dim])</span>
+<span id="cb58-39"><a href="#cb58-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim <span class="kw">in</span> dimensions</span>
+<span id="cb58-40"><a href="#cb58-40" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb58-41"><a href="#cb58-41" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb58-42"><a href="#cb58-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-43"><a href="#cb58-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Add annotations for 'Country Name' on the left axis</span></span>
+<span id="cb58-44"><a href="#cb58-44" aria-hidden="true" tabindex="-1"></a>annotations <span class="op">=</span> []</span>
+<span id="cb58-45"><a href="#cb58-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (country, gdp) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(sorted_merged_df_cleaned[<span class="st">'Country Name'</span>], sorted_merged_df_cleaned[<span class="st">'2014 (GDP per capita (current US$))'</span>])):</span>
+<span id="cb58-46"><a href="#cb58-46" aria-hidden="true" tabindex="-1"></a>    annotations.append(<span class="bu">dict</span>(x<span class="op">=</span>gdp, y<span class="op">=</span>i, xref<span class="op">=</span><span class="st">'x'</span>, yref<span class="op">=</span><span class="st">'y'</span>,</span>
+<span id="cb58-47"><a href="#cb58-47" aria-hidden="true" tabindex="-1"></a>                            text<span class="op">=</span>country, showarrow<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb58-48"><a href="#cb58-48" aria-hidden="true" tabindex="-1"></a>                            font<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, size<span class="op">=</span><span class="dv">10</span>)))</span>
+<span id="cb58-49"><a href="#cb58-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-50"><a href="#cb58-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout with annotations</span></span>
+<span id="cb58-51"><a href="#cb58-51" aria-hidden="true" tabindex="-1"></a>fig.update_layout(annotations<span class="op">=</span>annotations)</span>
+<span id="cb58-52"><a href="#cb58-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-53"><a href="#cb58-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb58-54"><a href="#cb58-54" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to map regions to numeric values</span></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb60-21"><a href="#cb60-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-22"><a href="#cb60-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb60-23"><a href="#cb60-23" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#08030a"</span>, <span class="st">"#feeece"</span>, <span class="st">"#d40637"</span>, <span class="st">"#5f0922"</span>]</span>
+<span id="cb60-24"><a href="#cb60-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-25"><a href="#cb60-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb60-26"><a href="#cb60-26" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb60-27"><a href="#cb60-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-28"><a href="#cb60-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb60-29"><a href="#cb60-29" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb60-30"><a href="#cb60-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-31"><a href="#cb60-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb60-32"><a href="#cb60-32" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb60-33"><a href="#cb60-33" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>sorted_merged_df_cleaned[<span class="st">'numeric_region'</span>], </span>
+<span id="cb60-34"><a href="#cb60-34" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb60-35"><a href="#cb60-35" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">False</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb60-36"><a href="#cb60-36" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb60-37"><a href="#cb60-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[sorted_merged_df_cleaned[dim].<span class="bu">min</span>(), sorted_merged_df_cleaned[dim].<span class="bu">max</span>()],</span>
+<span id="cb60-38"><a href="#cb60-38" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>dim, values<span class="op">=</span>sorted_merged_df_cleaned[dim])</span>
+<span id="cb60-39"><a href="#cb60-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim <span class="kw">in</span> dimensions</span>
+<span id="cb60-40"><a href="#cb60-40" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb60-41"><a href="#cb60-41" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Index(['Country Name', 'Country Code', 'Indicator Name', '2010', '2011',
+       '2012', '2013', '2014'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># normalize enrollment </span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the columns to normalize</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>columns_to_normalize <span class="op">=</span> [<span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the MinMaxScaler</span></span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize the specified columns</span></span>
+<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a>df_normalized <span class="op">=</span> sorted_merged_df_cleaned.copy()  <span class="co"># Create a copy of the DataFrame to avoid modifying the original</span></span>
+<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a>df_normalized[columns_to_normalize] <span class="op">=</span> scaler.fit_transform(df_normalized[columns_to_normalize])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if any value in the specified columns is above 100</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>above_100 <span class="op">=</span> df_normalized[columns_to_normalize] <span class="op">&gt;</span> <span class="dv">100</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if any value in any row of the specified columns is above 100</span></span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>any_above_100 <span class="op">=</span> above_100.<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the rows where any value is above 100</span></span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_normalized[any_above_100])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Empty DataFrame
+Columns: [Country Name, Region, numeric_region, 2010 (GDP per capita (current US$)), 2010 (GNI per capita, Atlas method (current US$)), 2010 (Gross enrolment ratio, primary and secondary, female (%)), 2011 (GDP per capita (current US$)), 2011 (GNI per capita, Atlas method (current US$)), 2011 (Gross enrolment ratio, primary and secondary, female (%)), 2012 (GDP per capita (current US$)), 2012 (GNI per capita, Atlas method (current US$)), 2012 (Gross enrolment ratio, primary and secondary, female (%)), 2013 (GDP per capita (current US$)), 2013 (GNI per capita, Atlas method (current US$)), 2013 (Gross enrolment ratio, primary and secondary, female (%)), 2014 (GDP per capita (current US$)), 2014 (GNI per capita, Atlas method (current US$)), 2014 (Gross enrolment ratio, primary and secondary, female (%)), Income group, numeric_income]
+Index: []</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to map regions to numeric values</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb67-19"><a href="#cb67-19" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb67-20"><a href="#cb67-20" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb67-21"><a href="#cb67-21" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb67-22"><a href="#cb67-22" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
+<span id="cb67-23"><a href="#cb67-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-24"><a href="#cb67-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb67-25"><a href="#cb67-25" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#08030a"</span>, <span class="st">"#feeece"</span>, <span class="st">"#d40637"</span>, <span class="st">"#5f0922"</span>]</span>
+<span id="cb67-26"><a href="#cb67-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-27"><a href="#cb67-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb67-28"><a href="#cb67-28" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb67-29"><a href="#cb67-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-30"><a href="#cb67-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-31"><a href="#cb67-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom dimension labels</span></span>
+<span id="cb67-32"><a href="#cb67-32" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [</span>
+<span id="cb67-33"><a href="#cb67-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2010'</span>,</span>
+<span id="cb67-34"><a href="#cb67-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2011'</span>,</span>
+<span id="cb67-35"><a href="#cb67-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2012'</span>,</span>
+<span id="cb67-36"><a href="#cb67-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2013'</span>,</span>
+<span id="cb67-37"><a href="#cb67-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2014'</span></span>
+<span id="cb67-38"><a href="#cb67-38" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb67-39"><a href="#cb67-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-40"><a href="#cb67-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb67-41"><a href="#cb67-41" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb67-42"><a href="#cb67-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-43"><a href="#cb67-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb67-44"><a href="#cb67-44" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb67-45"><a href="#cb67-45" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>sorted_merged_df_cleaned[<span class="st">'numeric_region'</span>], </span>
+<span id="cb67-46"><a href="#cb67-46" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb67-47"><a href="#cb67-47" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">False</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb67-48"><a href="#cb67-48" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb67-49"><a href="#cb67-49" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[sorted_merged_df_cleaned[dim].<span class="bu">min</span>(), sorted_merged_df_cleaned[dim].<span class="bu">max</span>()],</span>
+<span id="cb67-50"><a href="#cb67-50" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>custom_labels[i],  <span class="co"># Use custom label</span></span>
+<span id="cb67-51"><a href="#cb67-51" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>sorted_merged_df_cleaned[dim])</span>
+<span id="cb67-52"><a href="#cb67-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, dim <span class="kw">in</span> <span class="bu">enumerate</span>(dimensions)</span>
+<span id="cb67-53"><a href="#cb67-53" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb67-54"><a href="#cb67-54" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb67-55"><a href="#cb67-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-56"><a href="#cb67-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb67-57"><a href="#cb67-57" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb67-58"><a href="#cb67-58" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Female Primary and Secondary School Enrollment"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb67-59"><a href="#cb67-59" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb67-60"><a href="#cb67-60" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb67-61"><a href="#cb67-61" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized contains the normalized data</span></span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
+<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom dimension labels</span></span>
+<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [</span>
+<span id="cb69-14"><a href="#cb69-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2010'</span>,</span>
+<span id="cb69-15"><a href="#cb69-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2011'</span>,</span>
+<span id="cb69-16"><a href="#cb69-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2012'</span>,</span>
+<span id="cb69-17"><a href="#cb69-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2013'</span>,</span>
+<span id="cb69-18"><a href="#cb69-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2014'</span></span>
+<span id="cb69-19"><a href="#cb69-19" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb69-20"><a href="#cb69-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-21"><a href="#cb69-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb69-22"><a href="#cb69-22" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb69-23"><a href="#cb69-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-24"><a href="#cb69-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb69-25"><a href="#cb69-25" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb69-26"><a href="#cb69-26" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_region'</span>], </span>
+<span id="cb69-27"><a href="#cb69-27" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb69-28"><a href="#cb69-28" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">False</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb69-29"><a href="#cb69-29" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb69-30"><a href="#cb69-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[<span class="dv">0</span>, <span class="dv">100</span>],  <span class="co"># Set range from 0 to 100</span></span>
+<span id="cb69-31"><a href="#cb69-31" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>custom_labels[i],  <span class="co"># Use custom label</span></span>
+<span id="cb69-32"><a href="#cb69-32" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim] <span class="op">*</span> <span class="dv">100</span>)  <span class="co"># Multiply normalized values by 100</span></span>
+<span id="cb69-33"><a href="#cb69-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, dim <span class="kw">in</span> <span class="bu">enumerate</span>(dimensions)</span>
+<span id="cb69-34"><a href="#cb69-34" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb69-35"><a href="#cb69-35" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb69-36"><a href="#cb69-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-37"><a href="#cb69-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb69-38"><a href="#cb69-38" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb69-39"><a href="#cb69-39" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Female Primary and Secondary School Enrollment"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb69-40"><a href="#cb69-40" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb69-41"><a href="#cb69-41" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print unique values in the 'income group' column of the numeric_region DataFrame</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>unique_income_groups <span class="op">=</span> sorted_merged_df_cleaned[<span class="st">'Income group'</span>].unique()</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_income_groups)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Lower middle income' 'High income' 'Upper middle income' 'Low income']</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your color categories and their corresponding colors</span></span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a><span class="co"># income_colors = {</span></span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Low income': 0,</span></span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Lower middle income': 1,</span></span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Upper middle income': 2,</span></span>
+<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'High income': 3</span></span>
+<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb73-11"><a href="#cb73-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb73-13"><a href="#cb73-13" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
+<span id="cb73-14"><a href="#cb73-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-15"><a href="#cb73-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized contains the normalized data</span></span>
+<span id="cb73-16"><a href="#cb73-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb73-17"><a href="#cb73-17" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb73-18"><a href="#cb73-18" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb73-19"><a href="#cb73-19" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb73-20"><a href="#cb73-20" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb73-21"><a href="#cb73-21" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
+<span id="cb73-22"><a href="#cb73-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-23"><a href="#cb73-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom dimension labels</span></span>
+<span id="cb73-24"><a href="#cb73-24" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [</span>
+<span id="cb73-25"><a href="#cb73-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2010'</span>,</span>
+<span id="cb73-26"><a href="#cb73-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2011'</span>,</span>
+<span id="cb73-27"><a href="#cb73-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2012'</span>,</span>
+<span id="cb73-28"><a href="#cb73-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2013'</span>,</span>
+<span id="cb73-29"><a href="#cb73-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2014'</span></span>
+<span id="cb73-30"><a href="#cb73-30" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb73-31"><a href="#cb73-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-32"><a href="#cb73-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb73-33"><a href="#cb73-33" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb73-34"><a href="#cb73-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-35"><a href="#cb73-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb73-36"><a href="#cb73-36" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb73-37"><a href="#cb73-37" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
+<span id="cb73-38"><a href="#cb73-38" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb73-39"><a href="#cb73-39" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb73-40"><a href="#cb73-40" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb73-41"><a href="#cb73-41" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[<span class="dv">0</span>, <span class="dv">100</span>],  <span class="co"># Set range from 0 to 100</span></span>
+<span id="cb73-42"><a href="#cb73-42" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>custom_labels[i],  <span class="co"># Use custom label</span></span>
+<span id="cb73-43"><a href="#cb73-43" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim] <span class="op">*</span> <span class="dv">100</span>)  <span class="co"># Multiply normalized values by 100</span></span>
+<span id="cb73-44"><a href="#cb73-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, dim <span class="kw">in</span> <span class="bu">enumerate</span>(dimensions)</span>
+<span id="cb73-45"><a href="#cb73-45" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb73-46"><a href="#cb73-46" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb73-47"><a href="#cb73-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-48"><a href="#cb73-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb73-49"><a href="#cb73-49" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb73-50"><a href="#cb73-50" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Female Primary and Secondary School Enrollment"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb73-51"><a href="#cb73-51" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb73-52"><a href="#cb73-52" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary to map regions to numeric values</span></span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Europe &amp; Central Asia'</span>: <span class="dv">2</span>,</span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Latin America &amp; Caribbean'</span>: <span class="dv">3</span>,</span>
+<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'East Asia &amp; Pacific'</span>: <span class="dv">4</span>,</span>
+<span id="cb75-12"><a href="#cb75-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sub-Saharan Africa'</span>: <span class="dv">5</span>,</span>
+<span id="cb75-13"><a href="#cb75-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Middle East &amp; North Africa'</span>: <span class="dv">6</span>,</span>
+<span id="cb75-14"><a href="#cb75-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'North America'</span>: <span class="dv">7</span></span>
+<span id="cb75-15"><a href="#cb75-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb75-16"><a href="#cb75-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-17"><a href="#cb75-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized contains the normalized data</span></span>
+<span id="cb75-18"><a href="#cb75-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb75-19"><a href="#cb75-19" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2010 (GDP per capita (current US$))'</span>,</span>
+<span id="cb75-20"><a href="#cb75-20" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2011 (GDP per capita (current US$))'</span>,</span>
+<span id="cb75-21"><a href="#cb75-21" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2012 (GDP per capita (current US$))'</span>,</span>
+<span id="cb75-22"><a href="#cb75-22" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2013 (GDP per capita (current US$))'</span>,</span>
+<span id="cb75-23"><a href="#cb75-23" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GDP per capita (current US$))'</span>]</span>
+<span id="cb75-24"><a href="#cb75-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb75-25"><a href="#cb75-25" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#08030a"</span>, <span class="st">"#feeece"</span>, <span class="st">"#d40637"</span>, <span class="st">"#5f0922"</span>]</span>
+<span id="cb75-26"><a href="#cb75-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-27"><a href="#cb75-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb75-28"><a href="#cb75-28" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb75-29"><a href="#cb75-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-30"><a href="#cb75-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb75-31"><a href="#cb75-31" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb75-32"><a href="#cb75-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-33"><a href="#cb75-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb75-34"><a href="#cb75-34" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb75-35"><a href="#cb75-35" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>sorted_merged_df_cleaned[<span class="st">'numeric_region'</span>], </span>
+<span id="cb75-36"><a href="#cb75-36" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb75-37"><a href="#cb75-37" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">False</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb75-38"><a href="#cb75-38" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb75-39"><a href="#cb75-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[sorted_merged_df_cleaned[dim].<span class="bu">min</span>(), sorted_merged_df_cleaned[dim].<span class="bu">max</span>()],</span>
+<span id="cb75-40"><a href="#cb75-40" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>dim, values<span class="op">=</span>sorted_merged_df_cleaned[dim])</span>
+<span id="cb75-41"><a href="#cb75-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim <span class="kw">in</span> dimensions</span>
+<span id="cb75-42"><a href="#cb75-42" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb75-43"><a href="#cb75-43" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb77-7"><a href="#cb77-7" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb77-8"><a href="#cb77-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb77-9"><a href="#cb77-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb77-10"><a href="#cb77-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-11"><a href="#cb77-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb77-12"><a href="#cb77-12" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
+<span id="cb77-13"><a href="#cb77-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-14"><a href="#cb77-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb77-15"><a href="#cb77-15" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb77-16"><a href="#cb77-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-17"><a href="#cb77-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the dimensions</span></span>
+<span id="cb77-18"><a href="#cb77-18" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [<span class="st">'GDP per capita'</span>, <span class="st">'Primary and secondary School'</span>, <span class="st">'GNI per capita'</span>]</span>
+<span id="cb77-19"><a href="#cb77-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-20"><a href="#cb77-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb77-21"><a href="#cb77-21" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb77-22"><a href="#cb77-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-23"><a href="#cb77-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb77-24"><a href="#cb77-24" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb77-25"><a href="#cb77-25" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
+<span id="cb77-26"><a href="#cb77-26" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb77-27"><a href="#cb77-27" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb77-28"><a href="#cb77-28" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb77-29"><a href="#cb77-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[df_normalized[dim].<span class="bu">min</span>(), df_normalized[dim].<span class="bu">max</span>()],</span>
+<span id="cb77-30"><a href="#cb77-30" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>label,  <span class="co"># Use custom label</span></span>
+<span id="cb77-31"><a href="#cb77-31" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim])</span>
+<span id="cb77-32"><a href="#cb77-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim, label <span class="kw">in</span> <span class="bu">zip</span>(dimensions, custom_labels)</span>
+<span id="cb77-33"><a href="#cb77-33" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb77-34"><a href="#cb77-34" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb77-35"><a href="#cb77-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-36"><a href="#cb77-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb77-37"><a href="#cb77-37" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb77-38"><a href="#cb77-38" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"2014 Female Enrollment vs. Economic Measures in US$"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb77-39"><a href="#cb77-39" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb77-40"><a href="#cb77-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-41"><a href="#cb77-41" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized contains the normalized data</span></span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-10"><a href="#cb79-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb79-11"><a href="#cb79-11" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
+<span id="cb79-12"><a href="#cb79-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-13"><a href="#cb79-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the color scale</span></span>
+<span id="cb79-14"><a href="#cb79-14" aria-hidden="true" tabindex="-1"></a>color_labels <span class="op">=</span> [<span class="st">'Low income'</span>, <span class="st">'Lower middle income'</span>, <span class="st">'Upper middle income'</span>, <span class="st">'High income'</span>]</span>
+<span id="cb79-15"><a href="#cb79-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-16"><a href="#cb79-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb79-17"><a href="#cb79-17" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb79-18"><a href="#cb79-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-19"><a href="#cb79-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the dimensions</span></span>
+<span id="cb79-20"><a href="#cb79-20" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [<span class="st">'GDP per capita'</span>, <span class="st">'Primary and secondary School'</span>, <span class="st">'GNI per capita'</span>]</span>
+<span id="cb79-21"><a href="#cb79-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-22"><a href="#cb79-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb79-23"><a href="#cb79-23" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb79-24"><a href="#cb79-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-25"><a href="#cb79-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb79-26"><a href="#cb79-26" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb79-27"><a href="#cb79-27" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
+<span id="cb79-28"><a href="#cb79-28" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb79-29"><a href="#cb79-29" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>,  <span class="co"># Set showscale to True to display the color scale</span></span>
+<span id="cb79-30"><a href="#cb79-30" aria-hidden="true" tabindex="-1"></a>              colorbar<span class="op">=</span><span class="bu">dict</span>(  <span class="co"># Define the color bar properties</span></span>
+<span id="cb79-31"><a href="#cb79-31" aria-hidden="true" tabindex="-1"></a>                  title<span class="op">=</span><span class="st">'Income Group'</span>,  <span class="co"># Set the title of the color scale</span></span>
+<span id="cb79-32"><a href="#cb79-32" aria-hidden="true" tabindex="-1"></a>                  tickvals<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],  <span class="co"># Specify the tick values</span></span>
+<span id="cb79-33"><a href="#cb79-33" aria-hidden="true" tabindex="-1"></a>                  ticktext<span class="op">=</span>color_labels,  <span class="co"># Specify the tick labels</span></span>
+<span id="cb79-34"><a href="#cb79-34" aria-hidden="true" tabindex="-1"></a>                  tickmode<span class="op">=</span><span class="st">'array'</span>  <span class="co"># Use array mode for custom tick labels</span></span>
+<span id="cb79-35"><a href="#cb79-35" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb79-36"><a href="#cb79-36" aria-hidden="true" tabindex="-1"></a>             ),</span>
+<span id="cb79-37"><a href="#cb79-37" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb79-38"><a href="#cb79-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[df_normalized[dim].<span class="bu">min</span>(), df_normalized[dim].<span class="bu">max</span>()],</span>
+<span id="cb79-39"><a href="#cb79-39" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>label,  <span class="co"># Use custom label</span></span>
+<span id="cb79-40"><a href="#cb79-40" aria-hidden="true" tabindex="-1"></a>             tickformat<span class="op">=</span><span class="st">'.2f'</span> <span class="cf">if</span> dim <span class="op">==</span> dimensions[<span class="dv">1</span>] <span class="cf">else</span> <span class="st">''</span>,  <span class="co"># Set tick format to display percentages</span></span>
+<span id="cb79-41"><a href="#cb79-41" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim])  <span class="co"># Keep values unchanged</span></span>
+<span id="cb79-42"><a href="#cb79-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim, label <span class="kw">in</span> <span class="bu">zip</span>(dimensions, custom_labels)</span>
+<span id="cb79-43"><a href="#cb79-43" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb79-44"><a href="#cb79-44" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb79-45"><a href="#cb79-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-46"><a href="#cb79-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb79-47"><a href="#cb79-47" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb79-48"><a href="#cb79-48" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"2014 Female Enrollment vs. Economic Measures in US$"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb79-49"><a href="#cb79-49" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb79-50"><a href="#cb79-50" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
