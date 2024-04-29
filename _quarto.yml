@@ -5,8 +5,8 @@ website:
   title: "Global Female Education Attainment"
   navbar:
     left:
-      - href: report/index.qmd
-        text: Global Female Education Attainment
+      - text: Global Female Education Attainment
+        href: index.qmd
       - href: "https://github.com/ek976/data_viz_final_project"
         text: Code  
       - href: Authors.qmd
