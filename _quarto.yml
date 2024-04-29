@@ -11,7 +11,7 @@ website:
         text: Code  
       - href: Authors.qmd
         text: Authors
-
+        
 
 format:
   html:
