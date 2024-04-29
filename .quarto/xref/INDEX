@@ -97,5 +97,8 @@
   },
   "index.qmd": {
     "index.html": "434e730b"
+  },
+  "parallel_coordinates_plot/parallel_coordinates.qmd": {
+    "parallel_coordinates.html": "a7695c35"
   }
 }

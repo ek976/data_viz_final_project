@@ -3355,71 +3355,143 @@ The World Bank assigns the world’s economies to four income groups, low income
 
 The classifications are updated each year on July 1 and are based on the GNI per capita of the previous year (2021). GNI measures are expressed in United States dollars (USD), and are determined using conversion factors derived according to the Atlas method (The Atlas method smooths exchange rate fluctuations using a three-year moving average, price-adjusted conversion factor. The USD estimate of GNI per capita is derived by applying the Atlas conversion factor to estimates measured in  local currency units (LCU)).
 
-```{python}
-import pandas as pd
-import plotly.graph_objects as go
 
-# correct df 
-sorted_merged_df_cleaned = pd.read_csv('cleaned_data/sorted_merged_df_cleaned.csv')
+```{ojs}
+// Import the necessary libraries
+d3 = require("d3", "d3-svg-legend")
 
-# normalize enrollment 
-from sklearn.preprocessing import MinMaxScaler
+// Define and load your datasets
+dat = d3.csv('parallel_coordinates_df.csv', function(d){
+  return {
+    'Country': d['Country'], 
+    'Region': d['Region'], 
+    'Female enrolment ratio': +d['Female enrolment ratio'],
+    'GDP per capita (USD)': +d['GDP per capita (USD)'],
+    'GNI per capita (USD)': +d['GNI per capita (USD)'],
+    'Income group': d['Income group']
+  };
+});
 
-# Define the columns to normalize
-columns_to_normalize = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',
-                        '2011 (Gross enrolment ratio, primary and secondary, female (%))',
-                        '2012 (Gross enrolment ratio, primary and secondary, female (%))',
-                        '2013 (Gross enrolment ratio, primary and secondary, female (%))',
-                        '2014 (Gross enrolment ratio, primary and secondary, female (%))']
+dat;
 
-# Initialize the MinMaxScaler
-scaler = MinMaxScaler()
+```
 
-# Normalize the specified columns
-df_normalized = sorted_merged_df_cleaned.copy()  # Create a copy of the DataFrame to avoid modifying the original
-df_normalized[columns_to_normalize] = scaler.fit_transform(df_normalized[columns_to_normalize])
 
-# Define dimensions for the parallel coordinates plot
-dimensions = ['2014 (GDP per capita (current US$))', 
-              '2014 (Gross enrolment ratio, primary and secondary, female (%))',
-              '2014 (GNI per capita, Atlas method (current US$))']
 
-# Define your custom color scale
-hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#d40637"]
+```{ojs}
+import { slider } from "@jashkenas/inputs"
+import { vl } from "@vega/vega-lite-api"
+```
 
-# Define custom labels for the color scale
-color_labels = ['Low income', 'Lower middle income', 'Upper middle income', 'High income']
+```{ojs}
 
-# Calculate the intervals for each color in the custom scale
-color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]
+viewof numTicks = slider({
+  min: 0,
+  max: 1,
+  value: 2,
+  step: 1,
+  title: "Number of vertical ticks"
+})
 
-# Define custom labels for the dimensions
-custom_labels = ['GDP per capita', 'Primary and secondary School', 'GNI per capita']
+```
 
-# Create the parallel coordinates plot using plotly.graph_objects
-fig = go.Figure(data=go.Parcoords(
-    line=dict(color=df_normalized['numeric_income'], 
-              colorscale=hex_colors,
-              showscale=True,
-              colorbar=dict(
-                  title='Income Group',
-                  tickvals=[0, 1, 2, 3],
-                  ticktext=color_labels,
-                  tickmode='array'
-              )),
-    dimensions=[
-        dict(range=[df_normalized[dim].min(), df_normalized[dim].max()],
-             label=label,
-             tickformat='.2f' if dim == dimensions[1] else '',
-             values=df_normalized[dim])
-        for dim, label in zip(dimensions, custom_labels)
-    ]
-))
 
-fig.update_layout(
-    title_text="2014 Female Enrollment vs. Economic Measures in US$",  # Set the title of the plot
-    title_x=0.5  # Center the title
-)
+```{ojs}
+
+chart = {
+  const height = 350;
+  const labelMap = {
+    gdp_per_capita: "GDP per Capita",
+    gni_per_capita: "GNI per Capita",
+    enrolment_ratio_female: "Female Enrolment Ratio",
+    income_group: "Income Group",
+  };
+  
+  const hover = vl
+    .selectSingle()
+    .on("mouseover")
+    .nearest(true)
+    .empty("none");
+
+  const base = vl.markRule({ color: "#ccc" }).encode(
+  vl.x().fieldN("key").sort(['GDP per capita (USD)', 'Female enrolment ratio', 'GNI per capita (USD)']).title(d => labelMap[d] || d),  // Explicitly sort by desired order
+  vl.detail().count()
+);
+
+const line = base.markLine().encode(
+  vl.color().fieldN("Income group").scale({
+    domain: ['Low income', 'Lower middle income', 'Upper middle income', 'High income'],  // Adjust these categories based on your actual data
+    range: ['#ff4500', '#ffa205', '#d40637', '#5f0922']
+  }),
+  vl.detail().fieldN("index"),
+  vl.opacity().if(hover, vl.value(1)).value(0.3),
+  vl.y().fieldQ("norm_val").axis(null),
+  vl.tooltip([
+    'Country',
+    'Region',
+    'Female enrolment ratio', 
+    'GDP per capita (USD)', 
+    'GNI per capita (USD)', 
+    'Income group'
+  ])
+);
+  const points = line.markCircle()
+    .select(hover)
+    .encode(vl.size().if(hover, vl.value(50)).value(5));
+
+  // Generates a spec to show tick values at an specific value of y0
+  const tick = y0 =>
+    vl.layer(
+        base.markText({ style: "label" }).encode(vl.text().max("max")),
+        base.markTick({ style: "tick", size: 8, color: "#ccc" })
+      )
+      .encode(vl.y().value(y0));
+
+  // Create an array with *numTicks* ticks
+  const ticks = Array.from({ length: numTicks })
+    .map((_, i) => tick((height / (numTicks - 1)) * i));
+
+return vl
+    .layer(base, line, points, ...ticks)
+    .data(dat)
+    .transform(
+      vl.filter(attribs.map(a => `datum["${a}"] != null`).join(" && ")),
+      vl.window(vl.count().as("index")),
+      vl.fold(attribs),
+      vl.groupby("key").joinaggregate(vl.min("value").as("min"), vl.max("value").as("max")),
+      vl.calculate("(datum.value - datum.min) / (datum.max - datum.min)").as("norm_val"),
+      vl.calculate("(datum.min + datum.max) / 2").as("mid")
+    )
+    .config({
+      axisX: { domain: false, labelAngle: 0, tickColor: "#ccc", title: null },
+      view: { stroke: null },
+      style: {
+        label: { baseline: "middle", align: "right", dx: -5 },
+        tick: { orient: "horizontal" }
+      }
+    })
+    .width(width - 100)
+    .height(height)
+    .title({
+      text: 'Economic and Educational Indicators by Income Group',
+      fontSize: 12,
+      fontWeight: 'normal',
+      anchor: 'middle',
+      color: 'black',
+      font: 'monospace',
+      offset: 40
+    })
+    .render();
+
+
+}
+
+
+```
+
+
+```{ojs}
+attribs = Object.keys(dat[0]).filter(a => !isNaN(dat[0][a])) //Find the attributes that are numbers
 ```
 
 ## Government Spending (Dollar per person)
