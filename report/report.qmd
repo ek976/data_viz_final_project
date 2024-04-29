@@ -944,7 +944,7 @@ cat('
             map: topology
         },
         title: {
-            text: 'Gross Enrolment Ratio in Secondary Education (Female)',
+            text: 'World Map divided by Regions',
             align: 'left'
         },
         credits: {
@@ -1021,7 +1021,7 @@ To begin our analysis, we will be looking at different regions usually studied b
 
 <figure>
   <div id="container"></div>
-  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. Note that because of the way data is collected, small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. </figcaption>
 </figure>
 
 <script>
@@ -1154,7 +1154,7 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 
 // bubble colors
 hex_colors = [
-    "#feeece", "#ffa205", "#ff4500", "#08030a", "#5f0922", "#3d6469", "#d40637"
+    "#a08a68", "#ffa205", "#ff4500", "#08030a", "#5f0922", "#3d6469", "#d40637"
 ]
 // plot
 function renderChart() {
@@ -1210,6 +1210,7 @@ This is important information to consider as we move forward with our analysis. 
 
 
 # Let's Start with the World 
+Having a sense of the global picture is important to understand the context of the data. We will start by looking at the Gross Enrollment Ratio per level in the world. this will allow us not only to identify different areas where there are discrepancies or the gender gap in education is more pronounced, but also what data was available to the World Bank. Furthermore, we can also contrast globally different levels of education.
 
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
 # Load necessary libraries
@@ -1257,18 +1258,19 @@ results <- lapply(indicators, save_json_by_indicator)
 <script>
 // Define colors
 colorPalette = [
-  [0, '#330f63'],    // dark blue-purple
-  [0.1, '#481567'],  // deep purple
-  [0.2, '#5f1868'],  // deep purple
-  [0.3, '#76216b'],  // dark purple
-  [0.4, '#8f2769'],  // dark purple-pink
-  [0.5, '#ab3e5b'],  // purplish red
-  [0.6, '#c7584c'],  // red-orange
-  [0.7, '#e1793e'],  // orange
-  [0.8, '#f5a234'],  // bright orange
-  [0.9, '#f9c957'],  // yellow-orange
-  [1, '#fcffa4']     // very light yellow
+  [0, '#4a0018'],    // very dark red
+  [0.1, '#5a2035'],  // dark red-maroon
+  [0.2, '#6a4060'],  // dark red-purple
+  [0.3, '#7a6078'],  // red-purple
+  [0.4, '#8a8090'],  // cool purple
+  [0.5, '#9a9fb0'],  // muted blue-purple
+  [0.6, '#aac0c0'],  // muted blue
+  [0.7, '#a6d0cc'],  // light blue-green
+  [0.8, '#a2dfd8'],  // lighter blue-green
+  [0.9, '#9eefde'],  // very light blue-green
+  [1, '#9afae4']     // pale blue-green
 ];
+
 // define data
 data1 = [
   {
@@ -1990,7 +1992,7 @@ async function renderMapChart(data, colorPalette) {
             map: topology
         },
         title: {
-            text: 'Gross Enrolment Ratio in Primary Education (Female)',
+            text: 'Gross Enrolment Ratio in 2014 - Primary Education (Female)',
             align: 'left'
         },
         credits: {
@@ -2005,7 +2007,7 @@ async function renderMapChart(data, colorPalette) {
         },
         colorAxis: {
             min: 0,
-            max: 100,
+            max: 101,
             type: 'linear',
             stops: colorPalette
         },
@@ -2678,7 +2680,7 @@ chart: {
 map: topology
 },
 title: {
-text: 'Gross Enrolment Ratio in Secondary Education (Female)',
+text: 'Gross Enrolment Ratio in 2014 - Secondary Education (Female)',
 align: 'left'
 },
 credits: {
@@ -2693,7 +2695,7 @@ verticalAlign: 'bottom'
 },
 colorAxis: {
     min: 0,
-    max: 100,
+    max: 101,
     type: 'linear',
     stops: colorPalette
   },
@@ -3299,7 +3301,7 @@ chart: {
 map: topology
 },
 title: {
-text: 'Gross Enrolment Ratio in Tertiary Education (Female)',
+text: 'Gross Enrolment Ratio in 2014 - Tertiary Education (Female)',
 align: 'left'
 },
 credits: {
@@ -3314,7 +3316,7 @@ verticalAlign: 'bottom'
 },
 colorAxis: {
     min: 0,
-    max: 100,
+    max: 101,
     type: 'linear',
     stops: colorPalette
   },
@@ -3336,8 +3338,7 @@ series: [{
 
 :::
 
-# 
-
+Clearly, from this plots, we can see that globally, thew greater education level, the lower the enrollment rate. This is expected as the higher the education level, the more specialized and innaccessible the education becomes and the less people are likely to enroll in it. However, there seems to be a great disparity in certain areas of the world. For the secundary level, while there is not too much data available in this region, Sub-Saharan Africa seems to have the lowest enrollment rates with rates as low as 28%. This is concerning as in many countries, secondary education is actually mandatory. For the tertiary level, the same region seems to have extremely low enrollment rates, along with Latin America and the Caribbean, East Asia and the Pacific, and the Middle East and North Africa. However, there are outliers in this countries and they can be identified and studied more in depth in order to identify the reasons behind the high enrollment rates and try to mimic them in other countries. Also, Europe and Central Asia along with North America seem to have the highest enrollment rates in the world, making them a good example to follow.
 
 # Economic Influences on Female Access to Education 
 
