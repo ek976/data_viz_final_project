@@ -3372,18 +3372,19 @@ function parseCSV(csvString) {
 d3 = require("d3", "d3-svg-legend")
 
 // Define and load your datasets
-dat = d3.csv('/parallel_coordinates_plot/parallel_coordinates_df.csv', function(d){
-  return {
+dat = await FileAttachment('parallel_coordinates_plot/parallel_coordinates_df.csv')
+ .text()
+ .then(parseCSV)
+ .then(data => data.map(d => ({
     'Country': d['Country'], 
     'Region': d['Region'], 
     'Female enrolment ratio': +d['Female enrolment ratio'],
     'GDP per capita (USD)': +d['GDP per capita (USD)'],
     'GNI per capita (USD)': +d['GNI per capita (USD)'],
     'Income group': d['Income group']
-  };
-});
+  })));
 
-dat;
+
 ```
 
 ```{ojs}
@@ -3398,7 +3399,7 @@ viewof numTicks = slider({
 
 
 ```{ojs}
-chart = {
+chart_parallel = {
   const height = 350;
   const labelMap = {
     gdp_per_capita: "GDP per Capita",
@@ -3502,7 +3503,7 @@ viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {la
 ```
 
 ```{ojs}
-chart = async () => {
+chart_gov_exp = async () => {
   // Load primary data
   const primaryData = await FileAttachment("report/primary_1.csv").text().then(parseCSV);
 
@@ -3618,7 +3619,7 @@ chart = async () => {
   return svg.node();
 }
 
-chart();
+chart_gov_exp();
 ```
 
 # Sources 
