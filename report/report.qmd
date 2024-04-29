@@ -5,6 +5,10 @@ format:
   html:
     embed-resources: true
     toc: true
+    code-fold: true
+    include-in-header:
+    - text : | 
+            <script src="https://d3js.org/d3.v7.min.js"></script>
 editor_options:
   chunk_output_type: console
 execute:
@@ -3424,7 +3428,7 @@ fig.update_layout(
 ```{ojs}
 
 d7 = require('d3@7') 
-primaryData = d7.csv('/Users/sheebamoghal/Desktop/DSAN_5200/data_viz_final_project/report/primary_1.csv', function(d){
+primaryData = d7.csv('primary_1.csv', function(d){
   return {
     country_name: d.country_name,
     year1: +d.year1,

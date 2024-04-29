@@ -125,6 +125,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="https://github.com/ek976/data_viz_final_project" rel="" target="">
  <span class="menu-text">Code</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Authors.html" rel="" target="">
+ <span class="menu-text">Authors</span></a>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -159,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -193,11 +197,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -229,7 +233,7 @@ Indicator Name      0
 dtype: int64</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print column names</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Column names:"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(filtered_df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -240,9 +244,9 @@ Index(['Country Name', 'Country Code', 'Indicator Name', '2010', '2011',
       dtype='object')</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>filtered_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
@@ -322,11 +326,11 @@ Index(['Country Name', 'Country Code', 'Indicator Name', '2010', '2011',
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with missing values</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>filtered_df.dropna(inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/dt/dqsy5q5s0yjbqldcj0ghd9fr0000gt/T/ipykernel_7617/129057884.py:2: SettingWithCopyWarning:
+<pre><code>/var/folders/dt/dqsy5q5s0yjbqldcj0ghd9fr0000gt/T/ipykernel_19810/129057884.py:2: SettingWithCopyWarning:
 
 
 A value is trying to be set on a copy of a slice from a DataFrame
@@ -335,9 +339,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>filtered_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
@@ -417,7 +421,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> filtered_df[<span class="st">'Country Name'</span>].unique()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -471,7 +475,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
  'Zambia' 'Zimbabwe']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># drop non-country aggregate from countries_only df </span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># List of values to drop</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>values_to_drop <span class="op">=</span> [<span class="st">'Arab World'</span>, <span class="st">'East Asia &amp; Pacific'</span>, <span class="st">'East Asia &amp; Pacific (excluding high income)'</span>,</span>
@@ -488,7 +492,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the specified values from the 'Country Name' column in filtered_df</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> filtered_df[<span class="op">~</span>filtered_df[<span class="st">'Country Name'</span>].isin(values_to_drop)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the DataFrame for the desired indicators</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="op">=</span> filtered_df[filtered_df[<span class="st">'Indicator Name'</span>].isin([<span class="st">'GNI per capita, Atlas method (current US$)'</span>,</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">'GDP per capita (current US$)'</span>,</span>
@@ -507,7 +511,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the resulting DataFrame</span></span>
 <span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>pivot_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
 
@@ -641,7 +645,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all unique Country Name </span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> pivot_df[<span class="st">'Country Name'</span>].unique()</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -684,12 +688,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
  'Zambia' 'Zimbabwe']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># replace Macedonia </span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace the value 'Macedonia, FYR' with 'Macedonia' in the 'Country Name' column</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>pivot_df[<span class="st">'Country Name'</span>].replace(<span class="st">'Macedonia, FYR'</span>, <span class="st">'Macedonia'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all unique Country Name </span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> pivot_df[<span class="st">'Country Name'</span>].unique()</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -732,7 +736,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
  'Zambia' 'Zimbabwe']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="14">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># assign colors per region </span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the Excel file</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -756,14 +760,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 4              NaN  </code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="15">
+<div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all column names of the DataFrame</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(region_country_df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Index(['Economy', 'Code', 'Region', 'Income group', 'Lending category'], dtype='object')</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="16">
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop Columns </span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the Excel file</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>region_country_df <span class="op">=</span> pd.read_excel(<span class="st">'Region_Country.xlsx'</span>)</span>
@@ -785,7 +789,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 4      Andorra      Europe &amp; Central Asia          High income</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all unique values in the 'Country Name' column</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>unique_countries <span class="op">=</span> region_country_df[<span class="st">'Country Name'</span>].unique()</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_countries)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -855,13 +859,13 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
  'Sub-Saharan Africa (IDA &amp; IBRD)' 'Upper middle income' 'World']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="18">
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge region_country_df with pivot_df based on 'Country Name'</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>merged_df <span class="op">=</span> pd.merge(pivot_df, region_country_df, on<span class="op">=</span><span class="st">'Country Name'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the merged DataFrame</span></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>merged_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
 
@@ -1007,7 +1011,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="19">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the 'Country Code' column</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>merged_df.drop(columns<span class="op">=</span>[<span class="st">'Country Code'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1018,7 +1022,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the modified DataFrame</span></span>
 <span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>merged_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <div>
 
 
@@ -1158,7 +1162,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="20">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all unique values in the 'Region' column</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>unique_regions <span class="op">=</span> merged_df[<span class="st">'Region'</span>].unique()</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_regions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1168,14 +1172,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
  'North America' nan]</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="21">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>na_count <span class="op">=</span> merged_df[<span class="st">'Region'</span>].isna().<span class="bu">sum</span>()</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of missing values in the 'Region' column:"</span>, na_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of missing values in the 'Region' column: 6</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="22">
+<div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the DataFrame for rows where the 'Region' column has missing values</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>na_countries <span class="op">=</span> merged_df[merged_df[<span class="st">'Region'</span>].isna()]</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1188,7 +1192,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
  'Swaziland' 'Turkey']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="23">
+<div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dictionary containing manual mappings of countries to regions</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>manual_mappings <span class="op">=</span> {</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cote d'Ivoire"</span>: <span class="st">"Sub-Saharan Africa"</span>,</span>
@@ -1205,7 +1209,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the updated DataFrame</span></span>
 <span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>merged_df.head() </span>
 <span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
+<div class="cell-output cell-output-display" data-execution_count="24">
 <div>
 
 
@@ -1345,13 +1349,13 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="24">
+<div class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the DataFrame by the values of the column 'Region'</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>sorted_merged_df <span class="op">=</span> merged_df.sort_values(by<span class="op">=</span><span class="st">'Region'</span>)</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the sorted DataFrame</span></span>
 <span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>sorted_merged_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
@@ -1491,14 +1495,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>na_count <span class="op">=</span> sorted_merged_df[<span class="st">'Region'</span>].isna().<span class="bu">sum</span>()</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of missing values in the 'Region' column:"</span>, na_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of missing values in the 'Region' column: 0</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="26">
+<div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
@@ -1516,7 +1520,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="27">
+<div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of missing values in each column</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>na_count <span class="op">=</span> sorted_merged_df.isna().<span class="bu">sum</span>()</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1546,11 +1550,11 @@ Income group                                                         7
 dtype: int64</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with NaN values</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned <span class="op">=</span> sorted_merged_df.dropna()</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="29">
 <div>
 
 
@@ -1690,21 +1694,21 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="29">
+<div class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned[<span class="st">'Region'</span>].dtype</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="29">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>dtype('O')</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="30">
+<div class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned[<span class="st">'Region'</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>array(['East Asia &amp; Pacific', 'Europe &amp; Central Asia',
        'Latin America &amp; Caribbean', 'Middle East &amp; North Africa',
        'North America', 'South Asia', 'Sub-Saharan Africa'], dtype=object)</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="31">
+<div class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the mapping dictionary</span></span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>region_mapping <span class="op">=</span> {</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'South Asia'</span>: <span class="dv">1</span>,</span>
@@ -1719,7 +1723,7 @@ dtype: int64</code></pre>
 <span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the 'numeric_region' column to the DataFrame next to the 'Region' column</span></span>
 <span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.insert(loc<span class="op">=</span>sorted_merged_df_cleaned.columns.get_loc(<span class="st">'Region'</span>) <span class="op">+</span> <span class="dv">1</span>, column<span class="op">=</span><span class="st">'numeric_region'</span>, value<span class="op">=</span>sorted_merged_df_cleaned[<span class="st">'Region'</span>].<span class="bu">map</span>(region_mapping))</span>
 <span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <div>
 
 
@@ -1865,7 +1869,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="32">
+<div class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add a new column 'numeric income'</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the mapping dictionary for income groups</span></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>income_mapping <span class="op">=</span> {</span>
@@ -1879,7 +1883,7 @@ dtype: int64</code></pre>
 <span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned[<span class="st">'numeric_income'</span>] <span class="op">=</span> sorted_merged_df_cleaned[<span class="st">'Income group'</span>].<span class="bu">map</span>(income_mapping)</span>
 <span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/dt/dqsy5q5s0yjbqldcj0ghd9fr0000gt/T/ipykernel_7617/1300855223.py:11: SettingWithCopyWarning:
+<pre><code>/var/folders/dt/dqsy5q5s0yjbqldcj0ghd9fr0000gt/T/ipykernel_19810/1300855223.py:11: SettingWithCopyWarning:
 
 
 A value is trying to be set on a copy of a slice from a DataFrame.
@@ -1889,169 +1893,267 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="33">
+<div class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the file path where you want to save the CSV file</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">'../cleaned_data/sorted_merged_df_cleaned.csv'</span></span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the DataFrame as a CSV file</span></span>
 <span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.to_csv(file_path, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
-<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
-<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
-<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
-<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
-<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
-<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
-<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
-<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (GDP per capita (current US$))', </span></span>
-<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2010 (GNI per capita, Atlas method (current US$))']</span></span>
-<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
-<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
-<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
-<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot and specify color based on 'numeric_region'</span></span>
-<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = px.parallel_coordinates(sorted_merged_df_cleaned, </span></span>
-<span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a><span class="co">#                                dimensions=dimensions,</span></span>
-<span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color='numeric_region',</span></span>
-<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_scale=hex_colors,</span></span>
-<span id="cb54-31"><a href="#cb54-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_midpoint=min(color_intervals) + 0.5,  # Set midpoint for discrete scale</span></span>
-<span id="cb54-32"><a href="#cb54-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                                range_color=(0, len(hex_colors) - 1))  # Ensure correct range for colors</span></span>
-<span id="cb54-33"><a href="#cb54-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-34"><a href="#cb54-34" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add annotations for 'Country Name' on the left axis</span></span>
-<span id="cb54-35"><a href="#cb54-35" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations = []</span></span>
-<span id="cb54-36"><a href="#cb54-36" aria-hidden="true" tabindex="-1"></a><span class="co"># for i, (country, gdp) in enumerate(zip(sorted_merged_df_cleaned['Country Name'], sorted_merged_df_cleaned['2010 (GDP per capita (current US$))'])):</span></span>
-<span id="cb54-37"><a href="#cb54-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     annotations.append(dict(x=gdp, y=i, xref='x', yref='y',</span></span>
-<span id="cb54-38"><a href="#cb54-38" aria-hidden="true" tabindex="-1"></a><span class="co">#                             text=country, showarrow=False,</span></span>
-<span id="cb54-39"><a href="#cb54-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                             font=dict(color='black', size=10)))</span></span>
-<span id="cb54-40"><a href="#cb54-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-41"><a href="#cb54-41" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(annotations=annotations)</span></span>
-<span id="cb54-42"><a href="#cb54-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-43"><a href="#cb54-43" aria-hidden="true" tabindex="-1"></a><span class="co"># # Hide the color scale that is useless in this case</span></span>
-<span id="cb54-44"><a href="#cb54-44" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(coloraxis_showscale=False)</span></span>
-<span id="cb54-45"><a href="#cb54-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-46"><a href="#cb54-46" aria-hidden="true" tabindex="-1"></a><span class="co"># # Show the plot</span></span>
-<span id="cb54-47"><a href="#cb54-47" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>sorted_merged_df_cleaned.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">numeric_region</th>
+<th data-quarto-table-cell-role="th">2010 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2010 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2011 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2011 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2012 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2012 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2013 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2013 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+<th data-quarto-table-cell-role="th">numeric_income</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>Lao PDR</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>1141.127115</td>
+<td>1000.0</td>
+<td>75.316368</td>
+<td>1304.384015</td>
+<td>1120.0</td>
+<td>71.887253</td>
+<td>1588.633147</td>
+<td>1350.0</td>
+<td>73.593727</td>
+<td>1838.806020</td>
+<td>1590.0</td>
+<td>76.030861</td>
+<td>2017.587781</td>
+<td>1840.0</td>
+<td>79.039917</td>
+<td>Lower middle income</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>Brunei Darussalam</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>35268.101170</td>
+<td>33300.0</td>
+<td>102.963638</td>
+<td>47017.027300</td>
+<td>35490.0</td>
+<td>103.664131</td>
+<td>47651.259090</td>
+<td>42290.0</td>
+<td>106.335953</td>
+<td>44597.279682</td>
+<td>45180.0</td>
+<td>106.268639</td>
+<td>41530.668979</td>
+<td>42930.0</td>
+<td>102.807732</td>
+<td>High income</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">173</td>
+<td>Timor-Leste</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>806.062774</td>
+<td>2850.0</td>
+<td>100.388390</td>
+<td>931.046033</td>
+<td>3770.0</td>
+<td>104.204803</td>
+<td>1027.784502</td>
+<td>4090.0</td>
+<td>105.107460</td>
+<td>1190.510366</td>
+<td>3570.0</td>
+<td>105.413261</td>
+<td>1196.061391</td>
+<td>2840.0</td>
+<td>107.542572</td>
+<td>Lower middle income</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">80</td>
+<td>Indonesia</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>3113.480635</td>
+<td>2640.0</td>
+<td>94.157623</td>
+<td>3634.276805</td>
+<td>3080.0</td>
+<td>95.573029</td>
+<td>3687.953996</td>
+<td>3570.0</td>
+<td>95.417648</td>
+<td>3620.663981</td>
+<td>3730.0</td>
+<td>93.966583</td>
+<td>3491.595887</td>
+<td>3620.0</td>
+<td>93.448242</td>
+<td>Upper middle income</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>China</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>4560.512586</td>
+<td>4340.0</td>
+<td>96.348831</td>
+<td>5633.795717</td>
+<td>5060.0</td>
+<td>98.502243</td>
+<td>6337.883323</td>
+<td>5940.0</td>
+<td>100.422417</td>
+<td>7077.770765</td>
+<td>6800.0</td>
+<td>102.656258</td>
+<td>7683.502613</td>
+<td>7520.0</td>
+<td>99.647728</td>
+<td>Upper middle income</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
-<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
-<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
-<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
-<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
-<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
-<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
-<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2014 (GDP per capita (current US$))', </span></span>
-<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (GNI per capita, Atlas method (current US$))']</span></span>
-<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
-<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
-<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
-<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-27"><a href="#cb55-27" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot and specify color based on 'numeric_region'</span></span>
-<span id="cb55-28"><a href="#cb55-28" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = px.parallel_coordinates(sorted_merged_df_cleaned, </span></span>
-<span id="cb55-29"><a href="#cb55-29" aria-hidden="true" tabindex="-1"></a><span class="co">#                                dimensions=dimensions,</span></span>
-<span id="cb55-30"><a href="#cb55-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color='numeric_region',</span></span>
-<span id="cb55-31"><a href="#cb55-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_scale=hex_colors,</span></span>
-<span id="cb55-32"><a href="#cb55-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_midpoint=min(color_intervals) + 0.5,  # Set midpoint for discrete scale</span></span>
-<span id="cb55-33"><a href="#cb55-33" aria-hidden="true" tabindex="-1"></a><span class="co">#                                range_color=(0, len(hex_colors) - 1))  # Ensure correct range for colors</span></span>
-<span id="cb55-34"><a href="#cb55-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-35"><a href="#cb55-35" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add annotations for 'Country Name' on the left axis</span></span>
-<span id="cb55-36"><a href="#cb55-36" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations = []</span></span>
-<span id="cb55-37"><a href="#cb55-37" aria-hidden="true" tabindex="-1"></a><span class="co"># for i, (country, gdp) in enumerate(zip(sorted_merged_df_cleaned['Country Name'], sorted_merged_df_cleaned['2014 (GDP per capita (current US$))'])):</span></span>
-<span id="cb55-38"><a href="#cb55-38" aria-hidden="true" tabindex="-1"></a><span class="co">#     annotations.append(dict(x=gdp, y=i, xref='x', yref='y',</span></span>
-<span id="cb55-39"><a href="#cb55-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                             text=country, showarrow=False,</span></span>
-<span id="cb55-40"><a href="#cb55-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                             font=dict(color='black', size=10)))</span></span>
-<span id="cb55-41"><a href="#cb55-41" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb55-42"><a href="#cb55-42" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(annotations=annotations)</span></span>
-<span id="cb55-43"><a href="#cb55-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-44"><a href="#cb55-44" aria-hidden="true" tabindex="-1"></a><span class="co"># # Hide the color scale that is useless in this case</span></span>
-<span id="cb55-45"><a href="#cb55-45" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(coloraxis_showscale=False)</span></span>
-<span id="cb55-46"><a href="#cb55-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-47"><a href="#cb55-47" aria-hidden="true" tabindex="-1"></a><span class="co"># # Show the plot</span></span>
-<span id="cb55-48"><a href="#cb55-48" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
-<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
-<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
-<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
-<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
-<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
-<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
-<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
-<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2014 (GDP per capita (current US$))', </span></span>
-<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (GNI per capita, Atlas method (current US$))']</span></span>
-<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
-<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
-<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
-<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-28"><a href="#cb56-28" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb56-29"><a href="#cb56-29" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
-<span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
-<span id="cb56-32"><a href="#cb56-32" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
-<span id="cb56-33"><a href="#cb56-33" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
-<span id="cb56-34"><a href="#cb56-34" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
-<span id="cb56-35"><a href="#cb56-35" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=True),  # Set showscale to True to display the color scale</span></span>
-<span id="cb56-36"><a href="#cb56-36" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
-<span id="cb56-37"><a href="#cb56-37" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
-<span id="cb56-38"><a href="#cb56-38" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=dim, values=sorted_merged_df_cleaned[dim])</span></span>
-<span id="cb56-39"><a href="#cb56-39" aria-hidden="true" tabindex="-1"></a><span class="co">#         for dim in dimensions</span></span>
-<span id="cb56-40"><a href="#cb56-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
-<span id="cb56-41"><a href="#cb56-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
-<span id="cb56-42"><a href="#cb56-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-43"><a href="#cb56-43" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add annotations for 'Country Name' on the left axis</span></span>
-<span id="cb56-44"><a href="#cb56-44" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations = []</span></span>
-<span id="cb56-45"><a href="#cb56-45" aria-hidden="true" tabindex="-1"></a><span class="co"># for i, (country, gdp) in enumerate(zip(sorted_merged_df_cleaned['Country Name'], sorted_merged_df_cleaned['2014 (GDP per capita (current US$))'])):</span></span>
-<span id="cb56-46"><a href="#cb56-46" aria-hidden="true" tabindex="-1"></a><span class="co">#     annotations.append(dict(x=gdp, y=i, xref='x', yref='y',</span></span>
-<span id="cb56-47"><a href="#cb56-47" aria-hidden="true" tabindex="-1"></a><span class="co">#                             text=country, showarrow=False,</span></span>
-<span id="cb56-48"><a href="#cb56-48" aria-hidden="true" tabindex="-1"></a><span class="co">#                             font=dict(color='black', size=10)))</span></span>
-<span id="cb56-49"><a href="#cb56-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-50"><a href="#cb56-50" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout with annotations</span></span>
-<span id="cb56-51"><a href="#cb56-51" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(annotations=annotations)</span></span>
-<span id="cb56-52"><a href="#cb56-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-53"><a href="#cb56-53" aria-hidden="true" tabindex="-1"></a><span class="co"># # Show the plot</span></span>
-<span id="cb56-54"><a href="#cb56-54" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (GDP per capita (current US$))', </span></span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2010 (GNI per capita, Atlas method (current US$))']</span></span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
+<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot and specify color based on 'numeric_region'</span></span>
+<span id="cb55-27"><a href="#cb55-27" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = px.parallel_coordinates(sorted_merged_df_cleaned, </span></span>
+<span id="cb55-28"><a href="#cb55-28" aria-hidden="true" tabindex="-1"></a><span class="co">#                                dimensions=dimensions,</span></span>
+<span id="cb55-29"><a href="#cb55-29" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color='numeric_region',</span></span>
+<span id="cb55-30"><a href="#cb55-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_scale=hex_colors,</span></span>
+<span id="cb55-31"><a href="#cb55-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_midpoint=min(color_intervals) + 0.5,  # Set midpoint for discrete scale</span></span>
+<span id="cb55-32"><a href="#cb55-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                                range_color=(0, len(hex_colors) - 1))  # Ensure correct range for colors</span></span>
+<span id="cb55-33"><a href="#cb55-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-34"><a href="#cb55-34" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add annotations for 'Country Name' on the left axis</span></span>
+<span id="cb55-35"><a href="#cb55-35" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations = []</span></span>
+<span id="cb55-36"><a href="#cb55-36" aria-hidden="true" tabindex="-1"></a><span class="co"># for i, (country, gdp) in enumerate(zip(sorted_merged_df_cleaned['Country Name'], sorted_merged_df_cleaned['2010 (GDP per capita (current US$))'])):</span></span>
+<span id="cb55-37"><a href="#cb55-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     annotations.append(dict(x=gdp, y=i, xref='x', yref='y',</span></span>
+<span id="cb55-38"><a href="#cb55-38" aria-hidden="true" tabindex="-1"></a><span class="co">#                             text=country, showarrow=False,</span></span>
+<span id="cb55-39"><a href="#cb55-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                             font=dict(color='black', size=10)))</span></span>
+<span id="cb55-40"><a href="#cb55-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-41"><a href="#cb55-41" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(annotations=annotations)</span></span>
+<span id="cb55-42"><a href="#cb55-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-43"><a href="#cb55-43" aria-hidden="true" tabindex="-1"></a><span class="co"># # Hide the color scale that is useless in this case</span></span>
+<span id="cb55-44"><a href="#cb55-44" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(coloraxis_showscale=False)</span></span>
+<span id="cb55-45"><a href="#cb55-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-46"><a href="#cb55-46" aria-hidden="true" tabindex="-1"></a><span class="co"># # Show the plot</span></span>
+<span id="cb55-47"><a href="#cb55-47" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2014 (GDP per capita (current US$))', </span></span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (GNI per capita, Atlas method (current US$))']</span></span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
+<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot and specify color based on 'numeric_region'</span></span>
+<span id="cb56-28"><a href="#cb56-28" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = px.parallel_coordinates(sorted_merged_df_cleaned, </span></span>
+<span id="cb56-29"><a href="#cb56-29" aria-hidden="true" tabindex="-1"></a><span class="co">#                                dimensions=dimensions,</span></span>
+<span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color='numeric_region',</span></span>
+<span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_scale=hex_colors,</span></span>
+<span id="cb56-32"><a href="#cb56-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                                color_continuous_midpoint=min(color_intervals) + 0.5,  # Set midpoint for discrete scale</span></span>
+<span id="cb56-33"><a href="#cb56-33" aria-hidden="true" tabindex="-1"></a><span class="co">#                                range_color=(0, len(hex_colors) - 1))  # Ensure correct range for colors</span></span>
+<span id="cb56-34"><a href="#cb56-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-35"><a href="#cb56-35" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add annotations for 'Country Name' on the left axis</span></span>
+<span id="cb56-36"><a href="#cb56-36" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations = []</span></span>
+<span id="cb56-37"><a href="#cb56-37" aria-hidden="true" tabindex="-1"></a><span class="co"># for i, (country, gdp) in enumerate(zip(sorted_merged_df_cleaned['Country Name'], sorted_merged_df_cleaned['2014 (GDP per capita (current US$))'])):</span></span>
+<span id="cb56-38"><a href="#cb56-38" aria-hidden="true" tabindex="-1"></a><span class="co">#     annotations.append(dict(x=gdp, y=i, xref='x', yref='y',</span></span>
+<span id="cb56-39"><a href="#cb56-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                             text=country, showarrow=False,</span></span>
+<span id="cb56-40"><a href="#cb56-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                             font=dict(color='black', size=10)))</span></span>
+<span id="cb56-41"><a href="#cb56-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb56-42"><a href="#cb56-42" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(annotations=annotations)</span></span>
+<span id="cb56-43"><a href="#cb56-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-44"><a href="#cb56-44" aria-hidden="true" tabindex="-1"></a><span class="co"># # Hide the color scale that is useless in this case</span></span>
+<span id="cb56-45"><a href="#cb56-45" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(coloraxis_showscale=False)</span></span>
+<span id="cb56-46"><a href="#cb56-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-47"><a href="#cb56-47" aria-hidden="true" tabindex="-1"></a><span class="co"># # Show the plot</span></span>
+<span id="cb56-48"><a href="#cb56-48" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
@@ -2086,368 +2188,579 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span id="cb57-32"><a href="#cb57-32" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
 <span id="cb57-33"><a href="#cb57-33" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
 <span id="cb57-34"><a href="#cb57-34" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
-<span id="cb57-35"><a href="#cb57-35" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
+<span id="cb57-35"><a href="#cb57-35" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=True),  # Set showscale to True to display the color scale</span></span>
 <span id="cb57-36"><a href="#cb57-36" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
 <span id="cb57-37"><a href="#cb57-37" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
 <span id="cb57-38"><a href="#cb57-38" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=dim, values=sorted_merged_df_cleaned[dim])</span></span>
 <span id="cb57-39"><a href="#cb57-39" aria-hidden="true" tabindex="-1"></a><span class="co">#         for dim in dimensions</span></span>
 <span id="cb57-40"><a href="#cb57-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
-<span id="cb57-41"><a href="#cb57-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb57-41"><a href="#cb57-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
+<span id="cb57-42"><a href="#cb57-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-43"><a href="#cb57-43" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add annotations for 'Country Name' on the left axis</span></span>
+<span id="cb57-44"><a href="#cb57-44" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations = []</span></span>
+<span id="cb57-45"><a href="#cb57-45" aria-hidden="true" tabindex="-1"></a><span class="co"># for i, (country, gdp) in enumerate(zip(sorted_merged_df_cleaned['Country Name'], sorted_merged_df_cleaned['2014 (GDP per capita (current US$))'])):</span></span>
+<span id="cb57-46"><a href="#cb57-46" aria-hidden="true" tabindex="-1"></a><span class="co">#     annotations.append(dict(x=gdp, y=i, xref='x', yref='y',</span></span>
+<span id="cb57-47"><a href="#cb57-47" aria-hidden="true" tabindex="-1"></a><span class="co">#                             text=country, showarrow=False,</span></span>
+<span id="cb57-48"><a href="#cb57-48" aria-hidden="true" tabindex="-1"></a><span class="co">#                             font=dict(color='black', size=10)))</span></span>
+<span id="cb57-49"><a href="#cb57-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-50"><a href="#cb57-50" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout with annotations</span></span>
+<span id="cb57-51"><a href="#cb57-51" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(annotations=annotations)</span></span>
+<span id="cb57-52"><a href="#cb57-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-53"><a href="#cb57-53" aria-hidden="true" tabindex="-1"></a><span class="co"># # Show the plot</span></span>
+<span id="cb57-54"><a href="#cb57-54" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
+<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb58-18"><a href="#cb58-18" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2014 (GDP per capita (current US$))', </span></span>
+<span id="cb58-19"><a href="#cb58-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb58-20"><a href="#cb58-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (GNI per capita, Atlas method (current US$))']</span></span>
+<span id="cb58-21"><a href="#cb58-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-22"><a href="#cb58-22" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
+<span id="cb58-23"><a href="#cb58-23" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
+<span id="cb58-24"><a href="#cb58-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-25"><a href="#cb58-25" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb58-26"><a href="#cb58-26" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
+<span id="cb58-27"><a href="#cb58-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-28"><a href="#cb58-28" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb58-29"><a href="#cb58-29" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
+<span id="cb58-30"><a href="#cb58-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-31"><a href="#cb58-31" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
+<span id="cb58-32"><a href="#cb58-32" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
+<span id="cb58-33"><a href="#cb58-33" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
+<span id="cb58-34"><a href="#cb58-34" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
+<span id="cb58-35"><a href="#cb58-35" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
+<span id="cb58-36"><a href="#cb58-36" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
+<span id="cb58-37"><a href="#cb58-37" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
+<span id="cb58-38"><a href="#cb58-38" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=dim, values=sorted_merged_df_cleaned[dim])</span></span>
+<span id="cb58-39"><a href="#cb58-39" aria-hidden="true" tabindex="-1"></a><span class="co">#         for dim in dimensions</span></span>
+<span id="cb58-40"><a href="#cb58-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
+<span id="cb58-41"><a href="#cb58-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Index(['Country Name', 'Country Code', 'Indicator Name', '2010', '2011',
        '2012', '2013', '2014'],
       dtype='object')</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># normalize enrollment </span></span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the columns to normalize</span></span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>columns_to_normalize <span class="op">=</span> [<span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
-<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
-<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
-<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
-<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the MinMaxScaler</span></span>
-<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span>
-<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize the specified columns</span></span>
-<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>df_normalized <span class="op">=</span> sorted_merged_df_cleaned.copy()  <span class="co"># Create a copy of the DataFrame to avoid modifying the original</span></span>
-<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a>df_normalized[columns_to_normalize] <span class="op">=</span> scaler.fit_transform(df_normalized[columns_to_normalize])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if any value in the specified columns is above 100</span></span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>above_100 <span class="op">=</span> df_normalized[columns_to_normalize] <span class="op">&gt;</span> <span class="dv">100</span></span>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># normalize enrollment </span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
 <span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if any value in any row of the specified columns is above 100</span></span>
-<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>any_above_100 <span class="op">=</span> above_100.<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the rows where any value is above 100</span></span>
-<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_normalized[any_above_100])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the columns to normalize</span></span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>columns_to_normalize <span class="op">=</span> [<span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>]</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the MinMaxScaler</span></span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-14"><a href="#cb61-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize the specified columns</span></span>
+<span id="cb61-15"><a href="#cb61-15" aria-hidden="true" tabindex="-1"></a>df_normalized <span class="op">=</span> sorted_merged_df_cleaned.copy()  <span class="co"># Create a copy of the DataFrame to avoid modifying the original</span></span>
+<span id="cb61-16"><a href="#cb61-16" aria-hidden="true" tabindex="-1"></a>df_normalized[columns_to_normalize] <span class="op">=</span> scaler.fit_transform(df_normalized[columns_to_normalize])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if any value in the specified columns is above 100</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>above_100 <span class="op">=</span> df_normalized[columns_to_normalize] <span class="op">&gt;</span> <span class="dv">100</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if any value in any row of the specified columns is above 100</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>any_above_100 <span class="op">=</span> above_100.<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the rows where any value is above 100</span></span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_normalized[any_above_100])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Empty DataFrame
 Columns: [Country Name, Region, numeric_region, 2010 (GDP per capita (current US$)), 2010 (GNI per capita, Atlas method (current US$)), 2010 (Gross enrolment ratio, primary and secondary, female (%)), 2011 (GDP per capita (current US$)), 2011 (GNI per capita, Atlas method (current US$)), 2011 (Gross enrolment ratio, primary and secondary, female (%)), 2012 (GDP per capita (current US$)), 2012 (GNI per capita, Atlas method (current US$)), 2012 (Gross enrolment ratio, primary and secondary, female (%)), 2013 (GDP per capita (current US$)), 2013 (GNI per capita, Atlas method (current US$)), 2013 (Gross enrolment ratio, primary and secondary, female (%)), 2014 (GDP per capita (current US$)), 2014 (GNI per capita, Atlas method (current US$)), 2014 (Gross enrolment ratio, primary and secondary, female (%)), Income group, numeric_income]
 Index: []</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
-<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
-<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
-<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
-<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
-<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
-<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
-<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
-<span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
-<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
-<span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-16"><a href="#cb63-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-17"><a href="#cb63-17" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb63-18"><a href="#cb63-18" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb63-19"><a href="#cb63-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb63-20"><a href="#cb63-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb63-21"><a href="#cb63-21" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb63-22"><a href="#cb63-22" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))']</span></span>
-<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-24"><a href="#cb63-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
-<span id="cb63-25"><a href="#cb63-25" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
-<span id="cb63-26"><a href="#cb63-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-27"><a href="#cb63-27" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb63-28"><a href="#cb63-28" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
-<span id="cb63-29"><a href="#cb63-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-30"><a href="#cb63-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-31"><a href="#cb63-31" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define custom dimension labels</span></span>
-<span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a><span class="co"># custom_labels = [</span></span>
-<span id="cb63-33"><a href="#cb63-33" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2010',</span></span>
-<span id="cb63-34"><a href="#cb63-34" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2011',</span></span>
-<span id="cb63-35"><a href="#cb63-35" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2012',</span></span>
-<span id="cb63-36"><a href="#cb63-36" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2013',</span></span>
-<span id="cb63-37"><a href="#cb63-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2014'</span></span>
-<span id="cb63-38"><a href="#cb63-38" aria-hidden="true" tabindex="-1"></a><span class="co"># ]</span></span>
-<span id="cb63-39"><a href="#cb63-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-40"><a href="#cb63-40" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb63-41"><a href="#cb63-41" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
-<span id="cb63-42"><a href="#cb63-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-43"><a href="#cb63-43" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
-<span id="cb63-44"><a href="#cb63-44" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
-<span id="cb63-45"><a href="#cb63-45" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
-<span id="cb63-46"><a href="#cb63-46" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
-<span id="cb63-47"><a href="#cb63-47" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
-<span id="cb63-48"><a href="#cb63-48" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
-<span id="cb63-49"><a href="#cb63-49" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
-<span id="cb63-50"><a href="#cb63-50" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=custom_labels[i],  # Use custom label</span></span>
-<span id="cb63-51"><a href="#cb63-51" aria-hidden="true" tabindex="-1"></a><span class="co">#              values=sorted_merged_df_cleaned[dim])</span></span>
-<span id="cb63-52"><a href="#cb63-52" aria-hidden="true" tabindex="-1"></a><span class="co">#         for i, dim in enumerate(dimensions)</span></span>
-<span id="cb63-53"><a href="#cb63-53" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
-<span id="cb63-54"><a href="#cb63-54" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
-<span id="cb63-55"><a href="#cb63-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-56"><a href="#cb63-56" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout to add title</span></span>
-<span id="cb63-57"><a href="#cb63-57" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(</span></span>
-<span id="cb63-58"><a href="#cb63-58" aria-hidden="true" tabindex="-1"></a><span class="co">#     title="Female Primary and Secondary School Enrollment",  # Set the title of the plot</span></span>
-<span id="cb63-59"><a href="#cb63-59" aria-hidden="true" tabindex="-1"></a><span class="co">#     title_x=0.5  # Set the x position of the title</span></span>
-<span id="cb63-60"><a href="#cb63-60" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb63-61"><a href="#cb63-61" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="42">
+<div class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming df_normalized contains the normalized data</span></span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))']</span></span>
-<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define custom dimension labels</span></span>
-<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="co"># custom_labels = [</span></span>
-<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2010',</span></span>
-<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2011',</span></span>
-<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2012',</span></span>
-<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2013',</span></span>
-<span id="cb64-18"><a href="#cb64-18" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2014'</span></span>
-<span id="cb64-19"><a href="#cb64-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ]</span></span>
-<span id="cb64-20"><a href="#cb64-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-21"><a href="#cb64-21" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb64-22"><a href="#cb64-22" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
+<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb64-18"><a href="#cb64-18" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb64-19"><a href="#cb64-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb64-20"><a href="#cb64-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb64-21"><a href="#cb64-21" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb64-22"><a href="#cb64-22" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))']</span></span>
 <span id="cb64-23"><a href="#cb64-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-24"><a href="#cb64-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
-<span id="cb64-25"><a href="#cb64-25" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
-<span id="cb64-26"><a href="#cb64-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=df_normalized['numeric_region'], </span></span>
-<span id="cb64-27"><a href="#cb64-27" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
-<span id="cb64-28"><a href="#cb64-28" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
-<span id="cb64-29"><a href="#cb64-29" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
-<span id="cb64-30"><a href="#cb64-30" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[0, 100],  # Set range from 0 to 100</span></span>
-<span id="cb64-31"><a href="#cb64-31" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=custom_labels[i],  # Use custom label</span></span>
-<span id="cb64-32"><a href="#cb64-32" aria-hidden="true" tabindex="-1"></a><span class="co">#              values=df_normalized[dim] * 100)  # Multiply normalized values by 100</span></span>
-<span id="cb64-33"><a href="#cb64-33" aria-hidden="true" tabindex="-1"></a><span class="co">#         for i, dim in enumerate(dimensions)</span></span>
-<span id="cb64-34"><a href="#cb64-34" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
-<span id="cb64-35"><a href="#cb64-35" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
-<span id="cb64-36"><a href="#cb64-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-37"><a href="#cb64-37" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout to add title</span></span>
-<span id="cb64-38"><a href="#cb64-38" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(</span></span>
-<span id="cb64-39"><a href="#cb64-39" aria-hidden="true" tabindex="-1"></a><span class="co">#     title="Female Primary and Secondary School Enrollment",  # Set the title of the plot</span></span>
-<span id="cb64-40"><a href="#cb64-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     title_x=0.5  # Set the x position of the title</span></span>
-<span id="cb64-41"><a href="#cb64-41" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb64-24"><a href="#cb64-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
+<span id="cb64-25"><a href="#cb64-25" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
+<span id="cb64-26"><a href="#cb64-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-27"><a href="#cb64-27" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb64-28"><a href="#cb64-28" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
+<span id="cb64-29"><a href="#cb64-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-30"><a href="#cb64-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-31"><a href="#cb64-31" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define custom dimension labels</span></span>
+<span id="cb64-32"><a href="#cb64-32" aria-hidden="true" tabindex="-1"></a><span class="co"># custom_labels = [</span></span>
+<span id="cb64-33"><a href="#cb64-33" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2010',</span></span>
+<span id="cb64-34"><a href="#cb64-34" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2011',</span></span>
+<span id="cb64-35"><a href="#cb64-35" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2012',</span></span>
+<span id="cb64-36"><a href="#cb64-36" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2013',</span></span>
+<span id="cb64-37"><a href="#cb64-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2014'</span></span>
+<span id="cb64-38"><a href="#cb64-38" aria-hidden="true" tabindex="-1"></a><span class="co"># ]</span></span>
+<span id="cb64-39"><a href="#cb64-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-40"><a href="#cb64-40" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb64-41"><a href="#cb64-41" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
+<span id="cb64-42"><a href="#cb64-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-43"><a href="#cb64-43" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
+<span id="cb64-44"><a href="#cb64-44" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
+<span id="cb64-45"><a href="#cb64-45" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
+<span id="cb64-46"><a href="#cb64-46" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
+<span id="cb64-47"><a href="#cb64-47" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
+<span id="cb64-48"><a href="#cb64-48" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
+<span id="cb64-49"><a href="#cb64-49" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
+<span id="cb64-50"><a href="#cb64-50" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=custom_labels[i],  # Use custom label</span></span>
+<span id="cb64-51"><a href="#cb64-51" aria-hidden="true" tabindex="-1"></a><span class="co">#              values=sorted_merged_df_cleaned[dim])</span></span>
+<span id="cb64-52"><a href="#cb64-52" aria-hidden="true" tabindex="-1"></a><span class="co">#         for i, dim in enumerate(dimensions)</span></span>
+<span id="cb64-53"><a href="#cb64-53" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
+<span id="cb64-54"><a href="#cb64-54" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
+<span id="cb64-55"><a href="#cb64-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-56"><a href="#cb64-56" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout to add title</span></span>
+<span id="cb64-57"><a href="#cb64-57" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(</span></span>
+<span id="cb64-58"><a href="#cb64-58" aria-hidden="true" tabindex="-1"></a><span class="co">#     title="Female Primary and Secondary School Enrollment",  # Set the title of the plot</span></span>
+<span id="cb64-59"><a href="#cb64-59" aria-hidden="true" tabindex="-1"></a><span class="co">#     title_x=0.5  # Set the x position of the title</span></span>
+<span id="cb64-60"><a href="#cb64-60" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb64-61"><a href="#cb64-61" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print unique values in the 'income group' column of the numeric_region DataFrame</span></span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>unique_income_groups <span class="op">=</span> sorted_merged_df_cleaned[<span class="st">'Income group'</span>].unique()</span>
-<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_income_groups)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming df_normalized contains the normalized data</span></span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))']</span></span>
+<span id="cb65-11"><a href="#cb65-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-12"><a href="#cb65-12" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define custom dimension labels</span></span>
+<span id="cb65-13"><a href="#cb65-13" aria-hidden="true" tabindex="-1"></a><span class="co"># custom_labels = [</span></span>
+<span id="cb65-14"><a href="#cb65-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2010',</span></span>
+<span id="cb65-15"><a href="#cb65-15" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2011',</span></span>
+<span id="cb65-16"><a href="#cb65-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2012',</span></span>
+<span id="cb65-17"><a href="#cb65-17" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2013',</span></span>
+<span id="cb65-18"><a href="#cb65-18" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2014'</span></span>
+<span id="cb65-19"><a href="#cb65-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ]</span></span>
+<span id="cb65-20"><a href="#cb65-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-21"><a href="#cb65-21" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb65-22"><a href="#cb65-22" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
+<span id="cb65-23"><a href="#cb65-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-24"><a href="#cb65-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
+<span id="cb65-25"><a href="#cb65-25" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
+<span id="cb65-26"><a href="#cb65-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=df_normalized['numeric_region'], </span></span>
+<span id="cb65-27"><a href="#cb65-27" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
+<span id="cb65-28"><a href="#cb65-28" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
+<span id="cb65-29"><a href="#cb65-29" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
+<span id="cb65-30"><a href="#cb65-30" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[0, 100],  # Set range from 0 to 100</span></span>
+<span id="cb65-31"><a href="#cb65-31" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=custom_labels[i],  # Use custom label</span></span>
+<span id="cb65-32"><a href="#cb65-32" aria-hidden="true" tabindex="-1"></a><span class="co">#              values=df_normalized[dim] * 100)  # Multiply normalized values by 100</span></span>
+<span id="cb65-33"><a href="#cb65-33" aria-hidden="true" tabindex="-1"></a><span class="co">#         for i, dim in enumerate(dimensions)</span></span>
+<span id="cb65-34"><a href="#cb65-34" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
+<span id="cb65-35"><a href="#cb65-35" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
+<span id="cb65-36"><a href="#cb65-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-37"><a href="#cb65-37" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout to add title</span></span>
+<span id="cb65-38"><a href="#cb65-38" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(</span></span>
+<span id="cb65-39"><a href="#cb65-39" aria-hidden="true" tabindex="-1"></a><span class="co">#     title="Female Primary and Secondary School Enrollment",  # Set the title of the plot</span></span>
+<span id="cb65-40"><a href="#cb65-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     title_x=0.5  # Set the x position of the title</span></span>
+<span id="cb65-41"><a href="#cb65-41" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print unique values in the 'income group' column of the numeric_region DataFrame</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>unique_income_groups <span class="op">=</span> sorted_merged_df_cleaned[<span class="st">'Income group'</span>].unique()</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_income_groups)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>['Lower middle income' 'High income' 'Upper middle income' 'Low income']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
-<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
-<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # # Define your color categories and their corresponding colors</span></span>
-<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # income_colors = {</span></span>
-<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'Low income': 0,</span></span>
-<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'Lower middle income': 1,</span></span>
-<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'Upper middle income': 2,</span></span>
-<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'High income': 3</span></span>
-<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a><span class="co"># # }</span></span>
-<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
-<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#d40637"]</span></span>
-<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming df_normalized contains the normalized data</span></span>
-<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb67-19"><a href="#cb67-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb67-20"><a href="#cb67-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
-<span id="cb67-21"><a href="#cb67-21" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))']</span></span>
-<span id="cb67-22"><a href="#cb67-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-23"><a href="#cb67-23" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define custom dimension labels</span></span>
-<span id="cb67-24"><a href="#cb67-24" aria-hidden="true" tabindex="-1"></a><span class="co"># custom_labels = [</span></span>
-<span id="cb67-25"><a href="#cb67-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2010',</span></span>
-<span id="cb67-26"><a href="#cb67-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2011',</span></span>
-<span id="cb67-27"><a href="#cb67-27" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2012',</span></span>
-<span id="cb67-28"><a href="#cb67-28" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2013',</span></span>
-<span id="cb67-29"><a href="#cb67-29" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2014'</span></span>
-<span id="cb67-30"><a href="#cb67-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ]</span></span>
-<span id="cb67-31"><a href="#cb67-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-32"><a href="#cb67-32" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb67-33"><a href="#cb67-33" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
-<span id="cb67-34"><a href="#cb67-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-35"><a href="#cb67-35" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
-<span id="cb67-36"><a href="#cb67-36" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
-<span id="cb67-37"><a href="#cb67-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=df_normalized['numeric_income'], </span></span>
-<span id="cb67-38"><a href="#cb67-38" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
-<span id="cb67-39"><a href="#cb67-39" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=True),  # Set showscale to False to hide the color scale</span></span>
-<span id="cb67-40"><a href="#cb67-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
-<span id="cb67-41"><a href="#cb67-41" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[0, 100],  # Set range from 0 to 100</span></span>
-<span id="cb67-42"><a href="#cb67-42" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=custom_labels[i],  # Use custom label</span></span>
-<span id="cb67-43"><a href="#cb67-43" aria-hidden="true" tabindex="-1"></a><span class="co">#              values=df_normalized[dim] * 100)  # Multiply normalized values by 100</span></span>
-<span id="cb67-44"><a href="#cb67-44" aria-hidden="true" tabindex="-1"></a><span class="co">#         for i, dim in enumerate(dimensions)</span></span>
-<span id="cb67-45"><a href="#cb67-45" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
-<span id="cb67-46"><a href="#cb67-46" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
-<span id="cb67-47"><a href="#cb67-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb67-48"><a href="#cb67-48" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout to add title</span></span>
-<span id="cb67-49"><a href="#cb67-49" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(</span></span>
-<span id="cb67-50"><a href="#cb67-50" aria-hidden="true" tabindex="-1"></a><span class="co">#     title="Female Primary and Secondary School Enrollment",  # Set the title of the plot</span></span>
-<span id="cb67-51"><a href="#cb67-51" aria-hidden="true" tabindex="-1"></a><span class="co">#     title_x=0.5  # Set the x position of the title</span></span>
-<span id="cb67-52"><a href="#cb67-52" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="45">
+<div class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
-<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
-<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
-<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
-<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
-<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
-<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
-<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
-<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
-<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
-<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb68-16"><a href="#cb68-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-17"><a href="#cb68-17" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming df_normalized contains the normalized data</span></span>
-<span id="cb68-18"><a href="#cb68-18" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb68-19"><a href="#cb68-19" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (GDP per capita (current US$))',</span></span>
-<span id="cb68-20"><a href="#cb68-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (GDP per capita (current US$))',</span></span>
-<span id="cb68-21"><a href="#cb68-21" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (GDP per capita (current US$))',</span></span>
-<span id="cb68-22"><a href="#cb68-22" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (GDP per capita (current US$))',</span></span>
-<span id="cb68-23"><a href="#cb68-23" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (GDP per capita (current US$))']</span></span>
-<span id="cb68-24"><a href="#cb68-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
-<span id="cb68-25"><a href="#cb68-25" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
-<span id="cb68-26"><a href="#cb68-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-27"><a href="#cb68-27" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb68-28"><a href="#cb68-28" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
-<span id="cb68-29"><a href="#cb68-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-30"><a href="#cb68-30" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb68-31"><a href="#cb68-31" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
-<span id="cb68-32"><a href="#cb68-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-33"><a href="#cb68-33" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
-<span id="cb68-34"><a href="#cb68-34" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
-<span id="cb68-35"><a href="#cb68-35" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
-<span id="cb68-36"><a href="#cb68-36" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
-<span id="cb68-37"><a href="#cb68-37" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
-<span id="cb68-38"><a href="#cb68-38" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
-<span id="cb68-39"><a href="#cb68-39" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
-<span id="cb68-40"><a href="#cb68-40" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=dim, values=sorted_merged_df_cleaned[dim])</span></span>
-<span id="cb68-41"><a href="#cb68-41" aria-hidden="true" tabindex="-1"></a><span class="co">#         for dim in dimensions</span></span>
-<span id="cb68-42"><a href="#cb68-42" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
-<span id="cb68-43"><a href="#cb68-43" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
-<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
-<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
-<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
-<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
-<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
-<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-14"><a href="#cb69-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb69-15"><a href="#cb69-15" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
-<span id="cb69-16"><a href="#cb69-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-17"><a href="#cb69-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the dimensions</span></span>
-<span id="cb69-18"><a href="#cb69-18" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [<span class="st">'GDP per capita'</span>, <span class="st">'Primary and secondary School'</span>, <span class="st">'GNI per capita'</span>]</span>
-<span id="cb69-19"><a href="#cb69-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-20"><a href="#cb69-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb69-21"><a href="#cb69-21" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
-<span id="cb69-22"><a href="#cb69-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-23"><a href="#cb69-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
-<span id="cb69-24"><a href="#cb69-24" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
-<span id="cb69-25"><a href="#cb69-25" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
-<span id="cb69-26"><a href="#cb69-26" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
-<span id="cb69-27"><a href="#cb69-27" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
-<span id="cb69-28"><a href="#cb69-28" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
-<span id="cb69-29"><a href="#cb69-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[df_normalized[dim].<span class="bu">min</span>(), df_normalized[dim].<span class="bu">max</span>()],</span>
-<span id="cb69-30"><a href="#cb69-30" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>label,  <span class="co"># Use custom label</span></span>
-<span id="cb69-31"><a href="#cb69-31" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim])</span>
-<span id="cb69-32"><a href="#cb69-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim, label <span class="kw">in</span> <span class="bu">zip</span>(dimensions, custom_labels)</span>
-<span id="cb69-33"><a href="#cb69-33" aria-hidden="true" tabindex="-1"></a>    ],</span>
-<span id="cb69-34"><a href="#cb69-34" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb69-35"><a href="#cb69-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-36"><a href="#cb69-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
-<span id="cb69-37"><a href="#cb69-37" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
-<span id="cb69-38"><a href="#cb69-38" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"2014 Female Enrollment vs. Economic Measures in US$"</span>,  <span class="co"># Set the title of the plot</span></span>
-<span id="cb69-39"><a href="#cb69-39" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
-<span id="cb69-40"><a href="#cb69-40" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb69-41"><a href="#cb69-41" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
-</div>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # # Define your color categories and their corresponding colors</span></span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # income_colors = {</span></span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'Low income': 0,</span></span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'Lower middle income': 1,</span></span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'Upper middle income': 2,</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a><span class="co"># #     'High income': 3</span></span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a><span class="co"># # }</span></span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#d40637"]</span></span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming df_normalized contains the normalized data</span></span>
+<span id="cb68-16"><a href="#cb68-16" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb68-17"><a href="#cb68-17" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb68-18"><a href="#cb68-18" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb68-19"><a href="#cb68-19" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb68-20"><a href="#cb68-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (Gross enrolment ratio, primary and secondary, female (%))',</span></span>
+<span id="cb68-21"><a href="#cb68-21" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (Gross enrolment ratio, primary and secondary, female (%))']</span></span>
+<span id="cb68-22"><a href="#cb68-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-23"><a href="#cb68-23" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define custom dimension labels</span></span>
+<span id="cb68-24"><a href="#cb68-24" aria-hidden="true" tabindex="-1"></a><span class="co"># custom_labels = [</span></span>
+<span id="cb68-25"><a href="#cb68-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2010',</span></span>
+<span id="cb68-26"><a href="#cb68-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2011',</span></span>
+<span id="cb68-27"><a href="#cb68-27" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2012',</span></span>
+<span id="cb68-28"><a href="#cb68-28" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2013',</span></span>
+<span id="cb68-29"><a href="#cb68-29" aria-hidden="true" tabindex="-1"></a><span class="co">#     '2014'</span></span>
+<span id="cb68-30"><a href="#cb68-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ]</span></span>
+<span id="cb68-31"><a href="#cb68-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-32"><a href="#cb68-32" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb68-33"><a href="#cb68-33" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
+<span id="cb68-34"><a href="#cb68-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-35"><a href="#cb68-35" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
+<span id="cb68-36"><a href="#cb68-36" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
+<span id="cb68-37"><a href="#cb68-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=df_normalized['numeric_income'], </span></span>
+<span id="cb68-38"><a href="#cb68-38" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
+<span id="cb68-39"><a href="#cb68-39" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=True),  # Set showscale to False to hide the color scale</span></span>
+<span id="cb68-40"><a href="#cb68-40" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
+<span id="cb68-41"><a href="#cb68-41" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[0, 100],  # Set range from 0 to 100</span></span>
+<span id="cb68-42"><a href="#cb68-42" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=custom_labels[i],  # Use custom label</span></span>
+<span id="cb68-43"><a href="#cb68-43" aria-hidden="true" tabindex="-1"></a><span class="co">#              values=df_normalized[dim] * 100)  # Multiply normalized values by 100</span></span>
+<span id="cb68-44"><a href="#cb68-44" aria-hidden="true" tabindex="-1"></a><span class="co">#         for i, dim in enumerate(dimensions)</span></span>
+<span id="cb68-45"><a href="#cb68-45" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
+<span id="cb68-46"><a href="#cb68-46" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span>
+<span id="cb68-47"><a href="#cb68-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-48"><a href="#cb68-48" aria-hidden="true" tabindex="-1"></a><span class="co"># # Update layout to add title</span></span>
+<span id="cb68-49"><a href="#cb68-49" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.update_layout(</span></span>
+<span id="cb68-50"><a href="#cb68-50" aria-hidden="true" tabindex="-1"></a><span class="co">#     title="Female Primary and Secondary School Enrollment",  # Set the title of the plot</span></span>
+<span id="cb68-51"><a href="#cb68-51" aria-hidden="true" tabindex="-1"></a><span class="co">#     title_x=0.5  # Set the x position of the title</span></span>
+<span id="cb68-52"><a href="#cb68-52" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="47">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized contains the normalized data</span></span>
-<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
-<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
-<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
-<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
-<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-10"><a href="#cb71-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
-<span id="cb71-11"><a href="#cb71-11" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
-<span id="cb71-12"><a href="#cb71-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-13"><a href="#cb71-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the color scale</span></span>
-<span id="cb71-14"><a href="#cb71-14" aria-hidden="true" tabindex="-1"></a>color_labels <span class="op">=</span> [<span class="st">'Low income'</span>, <span class="st">'Lower middle income'</span>, <span class="st">'Upper middle income'</span>, <span class="st">'High income'</span>]</span>
-<span id="cb71-15"><a href="#cb71-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-16"><a href="#cb71-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
-<span id="cb71-17"><a href="#cb71-17" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
-<span id="cb71-18"><a href="#cb71-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-19"><a href="#cb71-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the dimensions</span></span>
-<span id="cb71-20"><a href="#cb71-20" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [<span class="st">'GDP per capita'</span>, <span class="st">'Primary and secondary School'</span>, <span class="st">'GNI per capita'</span>]</span>
-<span id="cb71-21"><a href="#cb71-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-22"><a href="#cb71-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
-<span id="cb71-23"><a href="#cb71-23" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
-<span id="cb71-24"><a href="#cb71-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-25"><a href="#cb71-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
-<span id="cb71-26"><a href="#cb71-26" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
-<span id="cb71-27"><a href="#cb71-27" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
-<span id="cb71-28"><a href="#cb71-28" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
-<span id="cb71-29"><a href="#cb71-29" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>,  <span class="co"># Set showscale to True to display the color scale</span></span>
-<span id="cb71-30"><a href="#cb71-30" aria-hidden="true" tabindex="-1"></a>              colorbar<span class="op">=</span><span class="bu">dict</span>(  <span class="co"># Define the color bar properties</span></span>
-<span id="cb71-31"><a href="#cb71-31" aria-hidden="true" tabindex="-1"></a>                  title<span class="op">=</span><span class="st">'Income Group'</span>,  <span class="co"># Set the title of the color scale</span></span>
-<span id="cb71-32"><a href="#cb71-32" aria-hidden="true" tabindex="-1"></a>                  tickvals<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],  <span class="co"># Specify the tick values</span></span>
-<span id="cb71-33"><a href="#cb71-33" aria-hidden="true" tabindex="-1"></a>                  ticktext<span class="op">=</span>color_labels,  <span class="co"># Specify the tick labels</span></span>
-<span id="cb71-34"><a href="#cb71-34" aria-hidden="true" tabindex="-1"></a>                  tickmode<span class="op">=</span><span class="st">'array'</span>  <span class="co"># Use array mode for custom tick labels</span></span>
-<span id="cb71-35"><a href="#cb71-35" aria-hidden="true" tabindex="-1"></a>              )</span>
-<span id="cb71-36"><a href="#cb71-36" aria-hidden="true" tabindex="-1"></a>             ),</span>
-<span id="cb71-37"><a href="#cb71-37" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
-<span id="cb71-38"><a href="#cb71-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[df_normalized[dim].<span class="bu">min</span>(), df_normalized[dim].<span class="bu">max</span>()],</span>
-<span id="cb71-39"><a href="#cb71-39" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>label,  <span class="co"># Use custom label</span></span>
-<span id="cb71-40"><a href="#cb71-40" aria-hidden="true" tabindex="-1"></a>             tickformat<span class="op">=</span><span class="st">'.2f'</span> <span class="cf">if</span> dim <span class="op">==</span> dimensions[<span class="dv">1</span>] <span class="cf">else</span> <span class="st">''</span>,  <span class="co"># Set tick format to display percentages</span></span>
-<span id="cb71-41"><a href="#cb71-41" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim])  <span class="co"># Keep values unchanged</span></span>
-<span id="cb71-42"><a href="#cb71-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim, label <span class="kw">in</span> <span class="bu">zip</span>(dimensions, custom_labels)</span>
-<span id="cb71-43"><a href="#cb71-43" aria-hidden="true" tabindex="-1"></a>    ],</span>
-<span id="cb71-44"><a href="#cb71-44" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb71-45"><a href="#cb71-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-46"><a href="#cb71-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
-<span id="cb71-47"><a href="#cb71-47" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
-<span id="cb71-48"><a href="#cb71-48" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"2014 Female Enrollment vs. Economic Measures in US$"</span>,  <span class="co"># Set the title of the plot</span></span>
-<span id="cb71-49"><a href="#cb71-49" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
-<span id="cb71-50"><a href="#cb71-50" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pandas as pd</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.graph_objects as go</span></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="co"># import plotly.express as px</span></span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create a dictionary to map regions to numeric values</span></span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a><span class="co"># region_mapping = {</span></span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     'South Asia': 1,</span></span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Europe &amp; Central Asia': 2,</span></span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Latin America &amp; Caribbean': 3,</span></span>
+<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     'East Asia &amp; Pacific': 4,</span></span>
+<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Sub-Saharan Africa': 5,</span></span>
+<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     'Middle East &amp; North Africa': 6,</span></span>
+<span id="cb69-14"><a href="#cb69-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     'North America': 7</span></span>
+<span id="cb69-15"><a href="#cb69-15" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb69-16"><a href="#cb69-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-17"><a href="#cb69-17" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assuming df_normalized contains the normalized data</span></span>
+<span id="cb69-18"><a href="#cb69-18" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb69-19"><a href="#cb69-19" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions = ['2010 (GDP per capita (current US$))',</span></span>
+<span id="cb69-20"><a href="#cb69-20" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2011 (GDP per capita (current US$))',</span></span>
+<span id="cb69-21"><a href="#cb69-21" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2012 (GDP per capita (current US$))',</span></span>
+<span id="cb69-22"><a href="#cb69-22" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2013 (GDP per capita (current US$))',</span></span>
+<span id="cb69-23"><a href="#cb69-23" aria-hidden="true" tabindex="-1"></a><span class="co">#               '2014 (GDP per capita (current US$))']</span></span>
+<span id="cb69-24"><a href="#cb69-24" aria-hidden="true" tabindex="-1"></a><span class="co"># # Define your custom color scale</span></span>
+<span id="cb69-25"><a href="#cb69-25" aria-hidden="true" tabindex="-1"></a><span class="co"># hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#08030a", "#feeece", "#d40637", "#5f0922"]</span></span>
+<span id="cb69-26"><a href="#cb69-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-27"><a href="#cb69-27" aria-hidden="true" tabindex="-1"></a><span class="co"># # Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb69-28"><a href="#cb69-28" aria-hidden="true" tabindex="-1"></a><span class="co"># color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]</span></span>
+<span id="cb69-29"><a href="#cb69-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-30"><a href="#cb69-30" aria-hidden="true" tabindex="-1"></a><span class="co"># # Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb69-31"><a href="#cb69-31" aria-hidden="true" tabindex="-1"></a><span class="co"># fig = go.Figure()</span></span>
+<span id="cb69-32"><a href="#cb69-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-33"><a href="#cb69-33" aria-hidden="true" tabindex="-1"></a><span class="co"># # Add parallel coordinates trace</span></span>
+<span id="cb69-34"><a href="#cb69-34" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.add_trace(go.Parcoords(</span></span>
+<span id="cb69-35"><a href="#cb69-35" aria-hidden="true" tabindex="-1"></a><span class="co">#     line=dict(color=sorted_merged_df_cleaned['numeric_region'], </span></span>
+<span id="cb69-36"><a href="#cb69-36" aria-hidden="true" tabindex="-1"></a><span class="co">#               colorscale=hex_colors,  # Use your custom color scale</span></span>
+<span id="cb69-37"><a href="#cb69-37" aria-hidden="true" tabindex="-1"></a><span class="co">#               showscale=False),  # Set showscale to False to hide the color scale</span></span>
+<span id="cb69-38"><a href="#cb69-38" aria-hidden="true" tabindex="-1"></a><span class="co">#     dimensions=[</span></span>
+<span id="cb69-39"><a href="#cb69-39" aria-hidden="true" tabindex="-1"></a><span class="co">#         dict(range=[sorted_merged_df_cleaned[dim].min(), sorted_merged_df_cleaned[dim].max()],</span></span>
+<span id="cb69-40"><a href="#cb69-40" aria-hidden="true" tabindex="-1"></a><span class="co">#              label=dim, values=sorted_merged_df_cleaned[dim])</span></span>
+<span id="cb69-41"><a href="#cb69-41" aria-hidden="true" tabindex="-1"></a><span class="co">#         for dim in dimensions</span></span>
+<span id="cb69-42"><a href="#cb69-42" aria-hidden="true" tabindex="-1"></a><span class="co">#     ],</span></span>
+<span id="cb69-43"><a href="#cb69-43" aria-hidden="true" tabindex="-1"></a><span class="co"># ))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming merged_df_cleaned is your DataFrame containing the cleaned data</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the dimensions</span></span>
+<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [<span class="st">'GDP per capita'</span>, <span class="st">'Primary and secondary School'</span>, <span class="st">'GNI per capita'</span>]</span>
+<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb70-21"><a href="#cb70-21" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb70-22"><a href="#cb70-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-23"><a href="#cb70-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb70-24"><a href="#cb70-24" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb70-25"><a href="#cb70-25" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
+<span id="cb70-26"><a href="#cb70-26" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb70-27"><a href="#cb70-27" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>),  <span class="co"># Set showscale to False to hide the color scale</span></span>
+<span id="cb70-28"><a href="#cb70-28" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb70-29"><a href="#cb70-29" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[df_normalized[dim].<span class="bu">min</span>(), df_normalized[dim].<span class="bu">max</span>()],</span>
+<span id="cb70-30"><a href="#cb70-30" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>label,  <span class="co"># Use custom label</span></span>
+<span id="cb70-31"><a href="#cb70-31" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim])</span>
+<span id="cb70-32"><a href="#cb70-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim, label <span class="kw">in</span> <span class="bu">zip</span>(dimensions, custom_labels)</span>
+<span id="cb70-33"><a href="#cb70-33" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb70-34"><a href="#cb70-34" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb70-35"><a href="#cb70-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-36"><a href="#cb70-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb70-37"><a href="#cb70-37" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb70-38"><a href="#cb70-38" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"2014 Female Enrollment vs. Economic Measures in US$"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb70-39"><a href="#cb70-39" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb70-40"><a href="#cb70-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-41"><a href="#cb70-41" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
 </div>
+</div>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized contains the normalized data</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dimensions for the parallel coordinates plot</span></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>dimensions <span class="op">=</span> [<span class="st">'2014 (GDP per capita (current US$))'</span>, </span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'2014 (GNI per capita, Atlas method (current US$))'</span>]</span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define your custom color scale</span></span>
+<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a>hex_colors <span class="op">=</span> [<span class="st">"#3d6469"</span>, <span class="st">"#ffa205"</span>, <span class="st">"#ff4500"</span>, <span class="st">"#d40637"</span>]</span>
+<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the color scale</span></span>
+<span id="cb72-14"><a href="#cb72-14" aria-hidden="true" tabindex="-1"></a>color_labels <span class="op">=</span> [<span class="st">'Low income'</span>, <span class="st">'Lower middle income'</span>, <span class="st">'Upper middle income'</span>, <span class="st">'High income'</span>]</span>
+<span id="cb72-15"><a href="#cb72-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-16"><a href="#cb72-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the intervals for each color in the custom scale</span></span>
+<span id="cb72-17"><a href="#cb72-17" aria-hidden="true" tabindex="-1"></a>color_intervals <span class="op">=</span> [i <span class="op">/</span> (<span class="bu">len</span>(hex_colors) <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(hex_colors))]</span>
+<span id="cb72-18"><a href="#cb72-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-19"><a href="#cb72-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Define custom labels for the dimensions</span></span>
+<span id="cb72-20"><a href="#cb72-20" aria-hidden="true" tabindex="-1"></a>custom_labels <span class="op">=</span> [<span class="st">'GDP per capita'</span>, <span class="st">'Primary and secondary School'</span>, <span class="st">'GNI per capita'</span>]</span>
+<span id="cb72-21"><a href="#cb72-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-22"><a href="#cb72-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the parallel coordinates plot using plotly.graph_objects</span></span>
+<span id="cb72-23"><a href="#cb72-23" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb72-24"><a href="#cb72-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-25"><a href="#cb72-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Add parallel coordinates trace</span></span>
+<span id="cb72-26"><a href="#cb72-26" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Parcoords(</span>
+<span id="cb72-27"><a href="#cb72-27" aria-hidden="true" tabindex="-1"></a>    line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>df_normalized[<span class="st">'numeric_income'</span>], </span>
+<span id="cb72-28"><a href="#cb72-28" aria-hidden="true" tabindex="-1"></a>              colorscale<span class="op">=</span>hex_colors,  <span class="co"># Use your custom color scale</span></span>
+<span id="cb72-29"><a href="#cb72-29" aria-hidden="true" tabindex="-1"></a>              showscale<span class="op">=</span><span class="va">True</span>,  <span class="co"># Set showscale to True to display the color scale</span></span>
+<span id="cb72-30"><a href="#cb72-30" aria-hidden="true" tabindex="-1"></a>              colorbar<span class="op">=</span><span class="bu">dict</span>(  <span class="co"># Define the color bar properties</span></span>
+<span id="cb72-31"><a href="#cb72-31" aria-hidden="true" tabindex="-1"></a>                  title<span class="op">=</span><span class="st">'Income Group'</span>,  <span class="co"># Set the title of the color scale</span></span>
+<span id="cb72-32"><a href="#cb72-32" aria-hidden="true" tabindex="-1"></a>                  tickvals<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],  <span class="co"># Specify the tick values</span></span>
+<span id="cb72-33"><a href="#cb72-33" aria-hidden="true" tabindex="-1"></a>                  ticktext<span class="op">=</span>color_labels,  <span class="co"># Specify the tick labels</span></span>
+<span id="cb72-34"><a href="#cb72-34" aria-hidden="true" tabindex="-1"></a>                  tickmode<span class="op">=</span><span class="st">'array'</span>  <span class="co"># Use array mode for custom tick labels</span></span>
+<span id="cb72-35"><a href="#cb72-35" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb72-36"><a href="#cb72-36" aria-hidden="true" tabindex="-1"></a>             ),</span>
+<span id="cb72-37"><a href="#cb72-37" aria-hidden="true" tabindex="-1"></a>    dimensions<span class="op">=</span>[</span>
+<span id="cb72-38"><a href="#cb72-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">dict</span>(<span class="bu">range</span><span class="op">=</span>[df_normalized[dim].<span class="bu">min</span>(), df_normalized[dim].<span class="bu">max</span>()],</span>
+<span id="cb72-39"><a href="#cb72-39" aria-hidden="true" tabindex="-1"></a>             label<span class="op">=</span>label,  <span class="co"># Use custom label</span></span>
+<span id="cb72-40"><a href="#cb72-40" aria-hidden="true" tabindex="-1"></a>             tickformat<span class="op">=</span><span class="st">'.2f'</span> <span class="cf">if</span> dim <span class="op">==</span> dimensions[<span class="dv">1</span>] <span class="cf">else</span> <span class="st">''</span>,  <span class="co"># Set tick format to display percentages</span></span>
+<span id="cb72-41"><a href="#cb72-41" aria-hidden="true" tabindex="-1"></a>             values<span class="op">=</span>df_normalized[dim])  <span class="co"># Keep values unchanged</span></span>
+<span id="cb72-42"><a href="#cb72-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> dim, label <span class="kw">in</span> <span class="bu">zip</span>(dimensions, custom_labels)</span>
+<span id="cb72-43"><a href="#cb72-43" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb72-44"><a href="#cb72-44" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb72-45"><a href="#cb72-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-46"><a href="#cb72-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Update layout to add title</span></span>
+<span id="cb72-47"><a href="#cb72-47" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb72-48"><a href="#cb72-48" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"2014 Female Enrollment vs. Economic Measures in US$"</span>,  <span class="co"># Set the title of the plot</span></span>
+<span id="cb72-49"><a href="#cb72-49" aria-hidden="true" tabindex="-1"></a>    title_x<span class="op">=</span><span class="fl">0.5</span>  <span class="co"># Set the x position of the title</span></span>
+<span id="cb72-50"><a href="#cb72-50" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>df_normalized.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Country Name
+Region
+numeric_region
+2010 (GDP per capita (current US$))
+2010 (GNI per capita, Atlas method (current US$))
+2010 (Gross enrolment ratio, primary and secondary, female (%))
+2011 (GDP per capita (current US$))
+2011 (GNI per capita, Atlas method (current US$))
+2011 (Gross enrolment ratio, primary and secondary, female (%))
+2012 (GDP per capita (current US$))
+2012 (GNI per capita, Atlas method (current US$))
+2012 (Gross enrolment ratio, primary and secondary, female (%))
+2013 (GDP per capita (current US$))
+2013 (GNI per capita, Atlas method (current US$))
+2013 (Gross enrolment ratio, primary and secondary, female (%))
+2014 (GDP per capita (current US$))
+2014 (GNI per capita, Atlas method (current US$))
+2014 (Gross enrolment ratio, primary and secondary, female (%))
+Income group
+numeric_income</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> df_normalized.columns:</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(column)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Country Name
+Region
+numeric_region
+2010 (GDP per capita (current US$))
+2010 (GNI per capita, Atlas method (current US$))
+2010 (Gross enrolment ratio, primary and secondary, female (%))
+2011 (GDP per capita (current US$))
+2011 (GNI per capita, Atlas method (current US$))
+2011 (Gross enrolment ratio, primary and secondary, female (%))
+2012 (GDP per capita (current US$))
+2012 (GNI per capita, Atlas method (current US$))
+2012 (Gross enrolment ratio, primary and secondary, female (%))
+2013 (GDP per capita (current US$))
+2013 (GNI per capita, Atlas method (current US$))
+2013 (Gross enrolment ratio, primary and secondary, female (%))
+2014 (GDP per capita (current US$))
+2014 (GNI per capita, Atlas method (current US$))
+2014 (Gross enrolment ratio, primary and secondary, female (%))
+Income group
+numeric_income</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming df_normalized is your DataFrame</span></span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>columns_to_drop <span class="op">=</span> [</span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2010 (GDP per capita (current US$))'</span>,</span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2010 (GNI per capita, Atlas method (current US$))'</span>,</span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2010 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb78-8"><a href="#cb78-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2011 (GDP per capita (current US$))'</span>,</span>
+<span id="cb78-9"><a href="#cb78-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2011 (GNI per capita, Atlas method (current US$))'</span>,</span>
+<span id="cb78-10"><a href="#cb78-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2011 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb78-11"><a href="#cb78-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2012 (GDP per capita (current US$))'</span>,</span>
+<span id="cb78-12"><a href="#cb78-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2012 (GNI per capita, Atlas method (current US$))'</span>,</span>
+<span id="cb78-13"><a href="#cb78-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2012 (Gross enrolment ratio, primary and secondary, female (%))'</span>,</span>
+<span id="cb78-14"><a href="#cb78-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2013 (GDP per capita (current US$))'</span>,</span>
+<span id="cb78-15"><a href="#cb78-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2013 (GNI per capita, Atlas method (current US$))'</span>,</span>
+<span id="cb78-16"><a href="#cb78-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'2013 (Gross enrolment ratio, primary and secondary, female (%))'</span></span>
+<span id="cb78-17"><a href="#cb78-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb78-18"><a href="#cb78-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-19"><a href="#cb78-19" aria-hidden="true" tabindex="-1"></a>sheeba_df <span class="op">=</span> df_normalized.drop(columns<span class="op">=</span>columns_to_drop)</span>
+<span id="cb78-20"><a href="#cb78-20" aria-hidden="true" tabindex="-1"></a>sheeba_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country Name</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">numeric_region</th>
+<th data-quarto-table-cell-role="th">2014 (GDP per capita (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (GNI per capita, Atlas method (current US$))</th>
+<th data-quarto-table-cell-role="th">2014 (Gross enrolment ratio, primary and secondary, female (%))</th>
+<th data-quarto-table-cell-role="th">Income group</th>
+<th data-quarto-table-cell-role="th">numeric_income</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>Lao PDR</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>2017.587781</td>
+<td>1840.0</td>
+<td>0.377251</td>
+<td>Lower middle income</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>Brunei Darussalam</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>41530.668979</td>
+<td>42930.0</td>
+<td>0.619644</td>
+<td>High income</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">173</td>
+<td>Timor-Leste</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>1196.061391</td>
+<td>2840.0</td>
+<td>0.667932</td>
+<td>Lower middle income</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">80</td>
+<td>Indonesia</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>3491.595887</td>
+<td>3620.0</td>
+<td>0.524193</td>
+<td>Upper middle income</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>China</td>
+<td>East Asia &amp; Pacific</td>
+<td>4</td>
+<td>7683.502613</td>
+<td>7520.0</td>
+<td>0.587417</td>
+<td>Upper middle income</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>sheeba_df.to_csv(<span class="st">'../cleaned_data/sheeba_df.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

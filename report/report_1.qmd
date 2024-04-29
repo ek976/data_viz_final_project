@@ -1,0 +1,252 @@
+---
+title: "Lab 4: An opinionated introduction to Javascript"
+author: "Tiana Le"
+format:
+  html:
+    embed-resources: true
+    include-in-header:
+      - text: |
+            <script src="https://d3js.org/d3.v7.min.js"></script>
+
+---
+
+```{r} 
+#| label: common-setup
+#| echo: false 
+#| warning: false 
+#library(reticulate)
+#use_condaenv("/opt/homebrew/Caskroom/miniconda/base", required = TRUE) 
+``` 
+
+# Abstract
+In this article we aim to explore gender inequality in education access across the globe. Education is one of the key drivers in the development of society. Using data obtained from the World Bank, our team analyzed the relationship between education attainment, gender, and other economic factors such as Gross Domestic Product (GDP), the Gross National Income (GNI) index, population, and other variables. The data utilized is from the years 2010, 2011, 2012, 2013, and 2014. This project focuses on a larger global scale and then provides the interactivity for readers to dive into specific regions, countries, and demographics in order to identify trends and patterns. We hope that you find this dataset as interesting and expository as we did - from regions with the highest diparity in education enrollment based on gender to the linkage of other factors that may be contributing to this disparity encourages us to ask questions about the forces at play (economic, political, social) affecting women's access to education and thus to a better life.
+
+
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+# correct df 
+sorted_merged_df_cleaned = pd.read_csv('../cleaned_data/sorted_merged_df_cleaned.csv')
+
+# normalize enrollment 
+from sklearn.preprocessing import MinMaxScaler
+
+# Define the columns to normalize
+columns_to_normalize = ['2010 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2011 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2012 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2013 (Gross enrolment ratio, primary and secondary, female (%))',
+                        '2014 (Gross enrolment ratio, primary and secondary, female (%))']
+
+# Initialize the MinMaxScaler
+scaler = MinMaxScaler()
+
+# Normalize the specified columns
+df_normalized = sorted_merged_df_cleaned.copy()  # Create a copy of the DataFrame to avoid modifying the original
+df_normalized[columns_to_normalize] = scaler.fit_transform(df_normalized[columns_to_normalize])
+
+# Define dimensions for the parallel coordinates plot
+dimensions = ['2014 (GDP per capita (current US$))', 
+              '2014 (Gross enrolment ratio, primary and secondary, female (%))',
+              '2014 (GNI per capita, Atlas method (current US$))']
+
+# Define your custom color scale
+hex_colors = ["#3d6469", "#ffa205", "#ff4500", "#d40637"]
+
+# Define custom labels for the color scale
+color_labels = ['Low income', 'Lower middle income', 'Upper middle income', 'High income']
+
+# Calculate the intervals for each color in the custom scale
+color_intervals = [i / (len(hex_colors) - 1) for i in range(len(hex_colors))]
+
+# Define custom labels for the dimensions
+custom_labels = ['GDP per capita', 'Primary and secondary School', 'GNI per capita']
+
+# Create the parallel coordinates plot using plotly.graph_objects
+fig = go.Figure(data=go.Parcoords(
+    line=dict(color=df_normalized['numeric_income'], 
+              colorscale=hex_colors,
+              showscale=True,
+              colorbar=dict(
+                  title='Income Group',
+                  tickvals=[0, 1, 2, 3],
+                  ticktext=color_labels,
+                  tickmode='array'
+              )),
+    dimensions=[
+        dict(range=[df_normalized[dim].min(), df_normalized[dim].max()],
+             label=label,
+             tickformat='.2f' if dim == dimensions[1] else '',
+             values=df_normalized[dim])
+        for dim, label in zip(dimensions, custom_labels)
+    ]
+))
+
+fig.update_layout(
+    title_text="2014 Female Enrollment vs. Economic Measures in US$",  # Set the title of the plot
+    title_x=0.5  # Center the title
+)
+```
+
+## Government Spending (Dollar per person)
+
+```{ojs}
+
+d7 = require('d3@7') 
+primaryData = d7.csv('primary_1.csv', function(d){
+  return {
+    country_name: d.country_name,
+    year1: +d.year1,
+    year2: +d.year2,
+  }
+})
+primaryData
+```
+
+```{ojs}
+secondaryData = d7.csv('secondary_1.csv', function(d){
+  return {
+    country_name: d.country_name,
+    year1: +d.year1,
+    year2: +d.year2,
+  }
+})
+secondaryData
+```
+
+```{ojs}
+tertiaryData = d7.csv('tertiary_1.csv', function(d){
+  return {
+    country_name: d.country_name,
+    year1: +d.year1,
+    year2: +d.year2,
+  }
+})
+tertiaryData
+```
+
+```{ojs}
+viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"})
+```
+
+```{ojs}
+viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Dataset: ', value: 'Primary'})
+```
+
+```{ojs}
+
+chart = async () => {
+  const selected = await selectedDataset;
+  let data;
+  if (selected === 'Primary') {
+    data = await primaryData;
+  } else if (selected === 'Secondary') {
+    data = await secondaryData;
+  } else if (selected === 'Tertiary') {
+    data = await tertiaryData;
+  }
+  
+  data = data.map(d => ({
+    country_name: d.country_name,
+    value: metric === 'absolute' ? d.year2 - d.year1 : (d.year2 - d.year1) / d.year1
+  }));
+
+  const barHeight = 25;
+  const marginTop = 50; 
+  const marginRight = 70;
+  const marginBottom = 50; 
+  const marginLeft = 120;
+  const height = Math.ceil((data.length + 0.1) * barHeight) + marginTop + marginBottom;
+
+  const x = d3.scaleLinear()
+    .domain(d3.extent(data, d => d.value))
+    .rangeRound([marginLeft, width - marginRight]);
+
+  const y = d3.scaleBand()
+    .domain(data.map(d => d.country_name))
+    .rangeRound([marginTop, height - marginBottom])
+    .padding(0.1);
+
+  const format = d3.format(metric === 'absolute' ? '+,d' : '+.1%');
+  const tickFormat = metric === 'absolute' ? d3.formatPrefix('+.1', 1e1) : d3.format('+.0%');
+
+  const svg = d3.create('svg')
+    .attr('viewBox', [0, 0, width, height])
+    .attr('style', 'max-width: 100%; height: auto; font-family: monospace; font-size: 10px;');
+
+  // Chart Title
+  svg.append('text')
+    .attr('x', width / 2)
+    .attr('y', 13)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '16px')
+    .style('font-weight', 'bold')
+    .text('Government Spending for Education');
+
+  // X-axis Label
+  svg.append('text')
+    .attr('x', width / 2)
+    .attr('y', height - 15)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .text('Dollar / Per Person');
+
+  // Y-axis Label
+  svg.append('text')
+    .attr('transform', `rotate(-90)`)
+    .attr('x', -(height / 2))
+    .attr('y', marginLeft - 40)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .text('Country');
+
+  // Remaining SVG drawing code unchanged, add bars, texts, and axes
+  svg.append('g')
+    .selectAll('rect')
+    .data(data)
+    .join('rect')
+    .attr('fill', d => d.value > 0 ? '#3d6469' : '#d40637')
+    .attr('x', d => x(Math.min(d.value, 0)))
+    .attr('y', d => y(d.country_name))
+    .attr('width', d => Math.abs(x(d.value) - x(0)))
+    .attr('height', y.bandwidth());
+
+  svg.append('g')
+    .attr('font-family', 'monospace')
+    .attr('font-size', 10)
+    .selectAll('text')
+    .data(data)
+    .join('text')
+    .attr('text-anchor', d => d.value < 0 ? 'end' : 'start')
+    .attr('x', d => x(d.value) + Math.sign(d.value) * 4)
+    .attr('y', d => y(d.country_name) + y.bandwidth() / 2)
+    .attr('dy', '0.35em')
+    .text(d => format(d.value));
+
+  svg.append('g')
+    .attr('transform', `translate(0,${marginTop})`)
+    .call(d3.axisTop(x).ticks(width / 80).tickFormat(tickFormat))
+    .call(g => g.selectAll('.tick line').clone()
+      .attr('y2', height - marginTop - marginBottom)
+      .attr('stroke-opacity', 0.1))
+    .call(g => g.select('.domain').remove());
+
+  svg.append('g')
+    .attr('transform', `translate(${x(0)},0)`)
+    .call(d3.axisLeft(y).tickSize(0).tickPadding(6))
+    .call(g => g.selectAll('.tick text').filter((d, i) => data[i].value < 0)
+      .attr('text-anchor', 'start')
+      .attr('x', 6));
+
+  return svg.node();
+}
+
+chart();
+
+```
+
+
+# Sources 
+
+https://blogs.worldbank.org/en/opendata/new-world-bank-country-classifications-income-level-2022-2023
