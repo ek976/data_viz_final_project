@@ -1235,7 +1235,7 @@ save_json_by_indicator <- function(indicator_name) {
 
   if (nrow(filtered_data) > 0) {
     json_data <- toJSON(filtered_data, pretty = TRUE)
-    file_name <- paste0("Jorge_Plot/data/", gsub("[, %]", "", gsub(" ", "_", indicator_name)), ".json")
+    file_name <- paste0("map/data/", gsub("[, %]", "", gsub(" ", "_", indicator_name)), ".json")
     write(json_data, file = file_name)
     return(paste("Data written to", file_name, "with", nrow(filtered_data), "records"))
   } else {
