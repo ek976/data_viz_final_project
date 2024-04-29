@@ -127,5 +127,14 @@
   },
   "tiana_le/code/linked_plotting_v3.ipynb": {
     "linked_plotting_v3.html": "c784ee00"
+  },
+  "data_cleaning/linked_plot_cleaning.ipynb": {
+    "linked_plot_cleaning.html": "43e5796e"
+  },
+  "linked_plot/linked_plot.qmd": {
+    "linked_plot.html": "f6b9dc69"
+  },
+  "linked_plot/linked_plot.ipynb": {
+    "linked_plot.html": "fa4072af"
   }
 }

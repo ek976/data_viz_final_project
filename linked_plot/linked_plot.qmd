@@ -1,0 +1,107 @@
+---
+title: Global study of Gender Inequality in Education Access
+authors: 'Jorge Bris Moreno, Liz Kovalchuk, Tiana Le, and Sheeba Moghal'
+format:
+  html:
+    embed-resources: true
+    toc: true
+---
+
+```{python}
+# Load packages
+import pandas as pd
+import altair as alt
+import numpy as np
+from datetime import datetime, time
+
+# Get the data from jsonfile local
+region_count = pd.read_json("map/regions.json")
+
+# create df, clumn one is Region (which is currently as value), column two is count (number of times that region appears)
+region_count = region_count['Region'].value_counts().reset_index()
+region_count.columns = ['region', 'count']
+
+region_count.head()
+```
+
+```{python}
+# Make our custom color scheme
+color_scheme = ['#0099FF', '#009643', '#CB4349', '#FF818C', '#FCC92B', '#FD5109', '#CE6DD3','#FA8F38', '#8538B1', '#4983F8', '#A9DDD6', '#A2F17D', '#0C0582', '#960505']
+
+# UPPER LEFT BAR CHART - region count
+bar1 = (alt.Chart(region_count)
+.mark_bar()
+.encode(y = "count",
+         x = "region",
+         color = alt.Color("region", scale = alt.Scale(range = color_scheme), title = "Region")
+).properties(
+    title = {"text": "Region Count"}, 
+    width = 450, 
+    height = 225
+))
+bar1.encoding.x.title = "Region"
+bar1.encoding.y.title = "Count"
+
+# LOWER LEFT BAR CHART - region count ( duplicate for now, can be modified later)
+bar2 = (alt.Chart(region_count)
+.mark_bar()
+.encode(y = "count",
+         x = "region",
+         color = alt.Color("region", scale = alt.Scale(range = color_scheme), title = "Region")
+).properties(
+    title = {"text": "Region Count"}, 
+    width = 450, 
+    height = 225
+))
+bar2.encoding.x.title = "Region"
+bar2.encoding.y.title = "Count"
+
+## SCATTER PLOT 1
+scatter1_i = (alt.Chart(overtime)
+.mark_circle(size = 45)
+.encode(x = alt.X("year:Q"),
+         y = "Gross enrolment ratio, primary, female (%)",
+         color = alt.Color("Country Name", scale = alt.Scale(range = color_scheme), title = "Country Name")
+).properties(
+    title = {"text": "Gross Enrolment Ratio, Primary, Female (%) Over Time"}, 
+    width = 450, 
+    height = 167
+))
+scatter1_i.encoding.x.title = "Year"
+scatter1_i.encoding.y.title = "Gross Enrolment Ratio, Primary, Female (%)"
+
+## SCATTER PLOT 2
+scatter2_i = (alt.Chart(overtime)
+.mark_circle(size = 45)
+.encode(x = alt.X("year:Q"),
+         y = "Gross enrolment ratio, secondary, female (%)",
+         color = alt.Color("Country Name", scale = alt.Scale(range = color_scheme), title = "Country Name")
+).properties(
+    title = {"text": "Gross Enrolment Ratio, Secondary, Female (%) Over Time"}, 
+    width = 450, 
+    height = 167
+))
+scatter2_i.encoding.x.title = "Year"
+scatter2_i.encoding.y.title = "Gross Enrolment Ratio, Secondary, Female (%)"
+
+## SCATTER PLOT 3
+scatter3_i = (alt.Chart(overtime)
+.mark_circle(size = 45)
+.encode(x = alt.X("year:Q"),
+         y = "Gross enrolment ratio, tertiary, female (%)",  # assuming this column exists
+         color = alt.Color("Country Name", scale = alt.Scale(range = color_scheme), title = "Country Name")
+).properties(
+    title = {"text": "Gross Enrolment Ratio, Tertiary, Female (%) Over Time"}, 
+    width = 450, 
+    height = 167
+))
+scatter3_i.encoding.x.title = "Year"
+scatter3_i.encoding.y.title = "Gross Enrolment Ratio, Tertiary, Female (%)"
+
+bar1 & bar2 | scatter1_i & scatter2_i & scatter3_i
+
+chart1 = alt.vconcat(bar1, bar2)
+chart2 = alt.vconcat(scatter1_i, scatter2_i, scatter3_i)
+alt.hconcat(chart1, chart2, spacing = 5).configure(background = "#F1F0DA").configure_title(fontSize = 15)
+```
+
