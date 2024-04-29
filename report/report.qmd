@@ -16,7 +16,7 @@ execute:
 #| echo: false 
 #| warning: false 
 library(reticulate)
-use_condaenv("/opt/homebrew/Caskroom/miniconda/base", required = TRUE) 
+#use_condaenv("/opt/homebrew/Caskroom/miniconda/base", required = TRUE) 
 ``` 
 
 # Abstract
@@ -39,7 +39,7 @@ To do this, we will not only take into account factors like global development o
 By answering the above, we will be able to find out the importance of education in the development of countries and population, the influence it has within the working industry, what role economics plays in education, and explore further issues in the current gender gap. Hopefully, this study will help us better understand this gap and how to address it in the future.
 
 # Regions
-
+Before analyzing the world, it is important to understand its nature. Analyzing the whole world can be overwhelming at times, due to its complexity and number of countries in it. For that reason, we need to understand how to divide it. The world Bank does a great job dividing it into 7 different regions: South Asia, Europe & Central Asia, Latin America & Caribbean, Middle East & North Africa, East Asia & Pacific, Sub-Saharan Africa, and North America. We can see this division here:
 ```{r, echo=FALSE, results='asis', runtime="js"}
 # data from here: https://ourworldindata.org/grapher/world-regions-according-to-the-world-bank?tab=table
 
@@ -1011,11 +1011,13 @@ color: '#feeece',
 })();
 </script>
 
+This map is very useful for categorizing countries into regions. This regions have been selected by the World Bank due to their location and other similarities.
+
 # Teasing out Enrollment by Region 
 
-[ Female Gross Enrollment Ratios by Region (2014) ] 
+To begin our analysis, we will be looking at different regions usually studied by the World Bank and represented above. While this graph may not have a great impact in an analysis, we can see how higher level of education bubbles are smaller, specially the Tertiary level:
 
-To begin our analysis, we will be looking at different regions usually studied by global organizations like the World Bank. We will be focusing on the following regions: Arab World, East Asia & Pacific, Euro area, Europe & Central Asia, Heavily indebted poor countries (HIPC), Latin America & Caribbean (excluding high income), Middle East & North Africa, Middle East & North Africa (excluding high income), OECD members, and Sub-Saharan Africa (excluding high income). The objective is to visualize the differences in women's enrollment at different education levels across the world at a global scale and identify any trends or patterns that may arise. This will also allow us to consider if some regions are worth exploring in more detail than others in our analysis.
+To begin our analysis, we will be looking at different regions usually studied by global organizations like the World Bank. We will be focusing on the following regions: South Asia, Europe & Central Asia, Latin America & Caribbean, Middle East & North Africa, East Asia & Pacific, Sub-Saharan Africa, and North America. The objective is to visualize the differences in women's enrollment at different education levels across the world at a global scale and identify any trends or patterns that may arise. This will also allow us to consider if some regions are worth exploring in more detail than others in our analysis.
 
 <figure>
   <div id="container"></div>
@@ -1202,7 +1204,7 @@ function renderChart() {
 renderChart();
 </script>
 
-From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. While looking at every regions data is important, it is worth noting that for some of them there is a lack of information for some education levels. This limits our ability to make a full comparison between regions. However, it still allows us to see the disparities between regions. Subsahaaran Africa, heavily indebted poor countries, and the Middle East and North Africa seem to have the lowest enrollment ratios across all education levels for female students. On the other hand, the Euro area, Europe and Central Asia, and OECD members have the highest enrollment ratios for female students. 
+From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. Specifically, the regions with the lowest enrollment, specifically South Asia and Sub-Saharan Africa, followed by Mid due East & North Africa, Latin America & Caribbean, and East Asia & Pacific. However, the scope of regions limits our ability to make a thoughtful comparison, as we do not know if data has not been collected by the World Bank in some countries. 
 
 This is important information to consider as we move forward with our analysis. One can think that it may be due to economic reasons, social and ideological reasons, or even political reasons. However, this problem has been present for decades and instead of taking assumptions to answer this question, we should identify the key reasons for this disparity and address it accordingly.
 
