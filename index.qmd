@@ -3357,11 +3357,22 @@ The classifications are updated each year on July 1 and are based on the GNI per
 
 
 ```{ojs}
+import { slider } from "@jashkenas/inputs"
+import { vl } from "@vega/vega-lite-api"
+```
+
+```{ojs}
+function parseCSV(csvString) {
+  return d3.csvParse(csvString);
+}
+```
+
+```{ojs}
 // Import the necessary libraries
 d3 = require("d3", "d3-svg-legend")
 
 // Define and load your datasets
-dat = d3.csv('parallel_coordinates_df.csv', function(d){
+dat = d3.csv('/parallel_coordinates_plot/parallel_coordinates_df.csv', function(d){
   return {
     'Country': d['Country'], 
     'Region': d['Region'], 
@@ -3373,18 +3384,9 @@ dat = d3.csv('parallel_coordinates_df.csv', function(d){
 });
 
 dat;
-
-```
-
-
-
-```{ojs}
-import { slider } from "@jashkenas/inputs"
-import { vl } from "@vega/vega-lite-api"
 ```
 
 ```{ojs}
-
 viewof numTicks = slider({
   min: 0,
   max: 1,
@@ -3392,12 +3394,10 @@ viewof numTicks = slider({
   step: 1,
   title: "Number of vertical ticks"
 })
-
 ```
 
 
 ```{ojs}
-
 chart = {
   const height = 350;
   const labelMap = {
@@ -3485,8 +3485,6 @@ return vl
 
 
 }
-
-
 ```
 
 
@@ -3495,15 +3493,6 @@ attribs = Object.keys(dat[0]).filter(a => !isNaN(dat[0][a])) //Find the attribut
 ```
 
 ## Government Spending (Dollar per person)
-
-```{ojs}
-// Define a function to parse CSV data
-function parseCSV(csvString) {
-  return d3.csvParse(csvString);
-}
-```
-
-
 ```{ojs}
 viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"})
 ```
@@ -3512,9 +3501,7 @@ viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "re
 viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Dataset: ', value: 'Primary'})
 ```
 
-
 ```{ojs}
-
 chart = async () => {
   // Load primary data
   const primaryData = await FileAttachment("report/primary_1.csv").text().then(parseCSV);
