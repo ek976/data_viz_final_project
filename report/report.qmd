@@ -1011,6 +1011,202 @@ color: '#feeece',
 })();
 </script>
 
+# Teasing out Enrollment by Region 
+
+[ Female Gross Enrollment Ratios by Region (2014) ] 
+
+To begin our analysis, we will be looking at different regions usually studied by global organizations like the World Bank. We will be focusing on the following regions: Arab World, East Asia & Pacific, Euro area, Europe & Central Asia, Heavily indebted poor countries (HIPC), Latin America & Caribbean (excluding high income), Middle East & North Africa, Middle East & North Africa (excluding high income), OECD members, and Sub-Saharan Africa (excluding high income). The objective is to visualize the differences in women's enrollment at different education levels across the world at a global scale and identify any trends or patterns that may arise. This will also allow us to consider if some regions are worth exploring in more detail than others in our analysis.
+
+<figure>
+  <div id="container"></div>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
+</figure>
+
+<script>
+// Define initial dataset
+initialData = [
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "primary",
+    "Value": 104.9668
+  },
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "secondary",
+    "Value": 88.3206
+  },
+  {
+    "Country Name": "East Asia & Pacific",
+    "Indicator": "tertiary",
+    "Value": 41.4262
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "primary",
+    "Value": 103.1583
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "secondary",
+    "Value": 105.389
+  },
+  {
+    "Country Name": "Europe & Central Asia",
+    "Indicator": "tertiary",
+    "Value": 69.8713
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "primary",
+    "Value": 107.0963
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "secondary",
+    "Value": 97.2036
+  },
+  {
+    "Country Name": "Latin America & Caribbean",
+    "Indicator": "tertiary",
+    "Value": 50.4229
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "primary",
+    "Value": 103.047
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "secondary",
+    "Value": 76.9069
+  },
+  {
+    "Country Name": "Middle East & North Africa",
+    "Indicator": "tertiary",
+    "Value": 38.2514
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "primary",
+    "Value": 99.3733
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "secondary",
+    "Value": 99.5089
+  },
+  {
+    "Country Name": "North America",
+    "Indicator": "tertiary",
+    "Value": 97.5233
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "primary",
+    "Value": 112.5074
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "secondary",
+    "Value": 64.4181
+  },
+  {
+    "Country Name": "South Asia",
+    "Indicator": "tertiary",
+    "Value": 19.9473
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "primary",
+    "Value": 94.7694
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "secondary",
+    "Value": 39.5397
+  },
+  {
+    "Country Name": "Sub-Saharan Africa",
+    "Indicator": "tertiary",
+    "Value": 7.2428
+  }
+]
+;
+
+// Filter and parse the dataset to remove "NA" values and convert "Value" to float
+parsedData = initialData.filter(d => d.Value !== "NA").map(d => ({
+  ...d,
+  Value: parseFloat(d.Value)
+}));
+
+// Reduce the data to group it by "Country Name" and accumulate the indicators and values
+seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, Value }) => {
+  let group = acc.find(g => g.name === countryName);
+  if (!group) {
+    group = { name: countryName, data: [] };
+    acc.push(group);
+  }
+  group.data.push({ name: Indicator, value: Value });
+  return acc;
+}, []);
+
+// bubble colors
+hex_colors = [
+    "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
+]
+// plot
+function renderChart() {
+    Highcharts.chart('container', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
+        title: {
+            text: 'Female Gross Enrollment Ratios by Region (2014)'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}%'
+        },
+        plotOptions: {
+            packedbubble: {
+                minSize: '5%',
+                maxSize: '100%',
+                zMin: 0,
+                zMax: 400,
+                layoutAlgorithm: {
+                    gravitationalConstant: 0.05,
+                    splitSeries: true,
+                    seriesInteraction: false,
+                    dragBetweenSeries: true,
+                    parentNodeLimit: true
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    style: {
+                        color: 'black',
+                        textOutline: 'none',
+                        fontWeight: 'normal'
+                    }
+                }
+            }
+        },
+        series: seriesData.map((series, index) => ({
+           ...series,
+            color: hex_colors[index % hex_colors.length]
+        }))
+    });
+};
+// call function
+renderChart();
+</script>
+
+From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. While looking at every regions data is important, it is worth noting that for some of them there is a lack of information for some education levels. This limits our ability to make a full comparison between regions. However, it still allows us to see the disparities between regions. Subsahaaran Africa, heavily indebted poor countries, and the Middle East and North Africa seem to have the lowest enrollment ratios across all education levels for female students. On the other hand, the Euro area, Europe and Central Asia, and OECD members have the highest enrollment ratios for female students. 
+
+This is important information to consider as we move forward with our analysis. One can think that it may be due to economic reasons, social and ideological reasons, or even political reasons. However, this problem has been present for decades and instead of taking assumptions to answer this question, we should identify the key reasons for this disparity and address it accordingly.
+
+
 # Let's Start with the World 
 
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
@@ -3137,201 +3333,6 @@ series: [{
 </script>
 
 :::
-
-# Teasing out Enrollment by Region 
-
-[ Female Gross Enrollment Ratios by Region (2014) ] 
-
-To begin our analysis, we will be looking at different regions usually studied by global organizations like the World Bank. We will be focusing on the following regions: Arab World, East Asia & Pacific, Euro area, Europe & Central Asia, Heavily indebted poor countries (HIPC), Latin America & Caribbean (excluding high income), Middle East & North Africa, Middle East & North Africa (excluding high income), OECD members, and Sub-Saharan Africa (excluding high income). The objective is to visualize the differences in women's enrollment at different education levels across the world at a global scale and identify any trends or patterns that may arise. This will also allow us to consider if some regions are worth exploring in more detail than others in our analysis.
-
-<figure>
-  <div id="container"></div>
-  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what global organizations like the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. If levels of education are not present in a region is due to the lack of information about that specific combination of education level and region.</figcaption>
-</figure>
-
-<script>
-// Define initial dataset
-initialData = [
-  {
-    "Country Name": "East Asia & Pacific",
-    "Indicator": "primary",
-    "Value": 104.9668
-  },
-  {
-    "Country Name": "East Asia & Pacific",
-    "Indicator": "secondary",
-    "Value": 88.3206
-  },
-  {
-    "Country Name": "East Asia & Pacific",
-    "Indicator": "tertiary",
-    "Value": 41.4262
-  },
-  {
-    "Country Name": "Europe & Central Asia",
-    "Indicator": "primary",
-    "Value": 103.1583
-  },
-  {
-    "Country Name": "Europe & Central Asia",
-    "Indicator": "secondary",
-    "Value": 105.389
-  },
-  {
-    "Country Name": "Europe & Central Asia",
-    "Indicator": "tertiary",
-    "Value": 69.8713
-  },
-  {
-    "Country Name": "Latin America & Caribbean",
-    "Indicator": "primary",
-    "Value": 107.0963
-  },
-  {
-    "Country Name": "Latin America & Caribbean",
-    "Indicator": "secondary",
-    "Value": 97.2036
-  },
-  {
-    "Country Name": "Latin America & Caribbean",
-    "Indicator": "tertiary",
-    "Value": 50.4229
-  },
-  {
-    "Country Name": "Middle East & North Africa",
-    "Indicator": "primary",
-    "Value": 103.047
-  },
-  {
-    "Country Name": "Middle East & North Africa",
-    "Indicator": "secondary",
-    "Value": 76.9069
-  },
-  {
-    "Country Name": "Middle East & North Africa",
-    "Indicator": "tertiary",
-    "Value": 38.2514
-  },
-  {
-    "Country Name": "North America",
-    "Indicator": "primary",
-    "Value": 99.3733
-  },
-  {
-    "Country Name": "North America",
-    "Indicator": "secondary",
-    "Value": 99.5089
-  },
-  {
-    "Country Name": "North America",
-    "Indicator": "tertiary",
-    "Value": 97.5233
-  },
-  {
-    "Country Name": "South Asia",
-    "Indicator": "primary",
-    "Value": 112.5074
-  },
-  {
-    "Country Name": "South Asia",
-    "Indicator": "secondary",
-    "Value": 64.4181
-  },
-  {
-    "Country Name": "South Asia",
-    "Indicator": "tertiary",
-    "Value": 19.9473
-  },
-  {
-    "Country Name": "Sub-Saharan Africa",
-    "Indicator": "primary",
-    "Value": 94.7694
-  },
-  {
-    "Country Name": "Sub-Saharan Africa",
-    "Indicator": "secondary",
-    "Value": 39.5397
-  },
-  {
-    "Country Name": "Sub-Saharan Africa",
-    "Indicator": "tertiary",
-    "Value": 7.2428
-  }
-]
-;
-
-// Filter and parse the dataset to remove "NA" values and convert "Value" to float
-parsedData = initialData.filter(d => d.Value !== "NA").map(d => ({
-  ...d,
-  Value: parseFloat(d.Value)
-}));
-
-// Reduce the data to group it by "Country Name" and accumulate the indicators and values
-seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, Value }) => {
-  let group = acc.find(g => g.name === countryName);
-  if (!group) {
-    group = { name: countryName, data: [] };
-    acc.push(group);
-  }
-  group.data.push({ name: Indicator, value: Value });
-  return acc;
-}, []);
-
-// bubble colors
-hex_colors = [
-    "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
-]
-// plot
-function renderChart() {
-    Highcharts.chart('container', {
-        chart: {
-            type: 'packedbubble',
-            height: '100%'
-        },
-        title: {
-            text: 'Female Gross Enrollment Ratios by Region (2014)'
-        },
-        tooltip: {
-            useHTML: true,
-            pointFormat: '<b>{point.name}:</b> {point.value}%'
-        },
-        plotOptions: {
-            packedbubble: {
-                minSize: '5%',
-                maxSize: '100%',
-                zMin: 0,
-                zMax: 400,
-                layoutAlgorithm: {
-                    gravitationalConstant: 0.05,
-                    splitSeries: true,
-                    seriesInteraction: false,
-                    dragBetweenSeries: true,
-                    parentNodeLimit: true
-                },
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}',
-                    style: {
-                        color: 'black',
-                        textOutline: 'none',
-                        fontWeight: 'normal'
-                    }
-                }
-            }
-        },
-        series: seriesData.map((series, index) => ({
-           ...series,
-            color: hex_colors[index % hex_colors.length]
-        }))
-    });
-};
-// call function
-renderChart();
-</script>
-
-From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. While looking at every regions data is important, it is worth noting that for some of them there is a lack of information for some education levels. This limits our ability to make a full comparison between regions. However, it still allows us to see the disparities between regions. Subsahaaran Africa, heavily indebted poor countries, and the Middle East and North Africa seem to have the lowest enrollment ratios across all education levels for female students. On the other hand, the Euro area, Europe and Central Asia, and OECD members have the highest enrollment ratios for female students. 
-
-This is important information to consider as we move forward with our analysis. One can think that it may be due to economic reasons, social and ideological reasons, or even political reasons. However, this problem has been present for decades and instead of taking assumptions to answer this question, we should identify the key reasons for this disparity and address it accordingly.
 
 # 
 
