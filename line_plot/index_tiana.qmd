@@ -1,0 +1,93 @@
+---
+author: "Tiana Le"
+title: ""
+format:
+    html:
+        embed-resources: true
+---
+
+
+
+```{python}
+#| eval: true
+#| echo: false
+
+import pandas as pd
+import numpy as np
+import hvplot.pandas
+import holoviews as hv
+import panel as pn
+from bokeh.sampledata.iris import flowers
+from bokeh.resources import INLINE
+
+df = pd.read_csv('data/tidy_data.csv')
+
+plot_df = df[(df['Series Name']=="GDP per capita (constant 2010 US$)") | (df['Series Name']=="Literacy rate, adult total (% of people ages 15 and above)") 
+             | (df['Series Name']=="Literacy rate, adult male (% of males ages 15 and above)") 
+             | (df['Series Name']=="Literacy rate, adult female (% of females ages 15 and above)")]
+
+plot_df = plot_df[plot_df['Year']==2014]
+plot_df = plot_df.drop(columns=['Country Code', 'Year'])
+plot_df = plot_df[plot_df['Country Name'].isin(['East Asia & Pacific', 'Europe & Central Asia', 
+                                                'Latin America & Caribbean', 'Middle East & North Africa',
+                                                'North America', 'South Asia', 'Sub-Saharan Africa'])]
+
+pivot_df = plot_df.pivot(index='Country Name', columns='Series Name', values='Value')
+pivot_df = pivot_df.rename(columns={'Literacy rate, adult female (% of females ages 15 and above)': 'Literacy rate, adult female (%)'})
+pivot_df.reset_index()
+pivot_df = pivot_df.dropna()
+
+hv.extension('bokeh')
+# Scatter plot: GDP vs. Female Literacy
+scatter = hv.Scatter(pivot_df, 'GDP per capita (constant 2010 US$)', 
+                     'Literacy rate, adult female (%)', 
+                     label='GDP per capita vs. Adult Female Literacy in 2014').opts(width=800, color="#3d6469")
+
+# change font
+scatter = scatter.opts(fontsize={'title': '20pt', 'labels': '12pt'}, size=12, xlim=(None, 30000))
+
+# Bar plot: Frequency of Female Literacy by Country
+bar = hv.Bars(pivot_df, 
+              'Country Name', 
+              'Literacy rate, adult female (%)', 
+              label='Adult Female Literacy by Country in 2014').opts(width=800, color="#3d6469")
+
+# change font
+bar = bar.opts(fontsize={'title': '14pt', 'labels': '12pt'})
+
+# Rotate x-axis labels by 45 degrees
+bar = bar.opts(xrotation=45)
+
+# Define a linking function to update bar plot based on scatter plot selection
+def update_bar_plot(index):
+    if index:
+        selected_countries = pivot_df.iloc[index]['Country Name']
+        selected_data = pivot_df[pivot_df['Country Name'].isin(selected_countries)]
+        return hv.Bars(selected_data, 
+                       'Country Name', 
+                       'Literacy rate, adult female (%)', 
+                       label='Female Literacy by Region in 2014').opts(width=800, height=600, color="#3d6469").opts(xrotation=45)
+    else:
+        return hv.Bars(pivot_df, 
+                       'Country Name', 
+                       'Literacy rate, adult female (%)', 
+                       label='Female Literacy by Region in 2014').opts(width=800, height=600, color="#3d6469").opts(xrotation=45)
+
+# Define a DynamicMap to link the plots
+linked_bar = hv.DynamicMap(update_bar_plot, streams=[hv.streams.Selection1D(source=scatter)])
+
+# change font
+linked_bar = linked_bar.opts(fontsize={'title': '20pt', 'labels': '12pt'})
+
+# Arrange plots in a column layout: scatter plot on top, bar plot below
+layout = pn.Column(scatter, linked_bar)
+
+# Display the layout 
+layout.servable()
+```
+
+
+![Labor-plot](images/labor_barplot.png)
+
+
+![Line-plot](images/line_plot.png)

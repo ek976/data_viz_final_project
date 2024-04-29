@@ -109,5 +109,23 @@
   },
   "map/map_plot_regions.qmd": {
     "map_plot_regions.html": "cccdc329"
+  },
+  "line_plot/index_tiana.qmd": {
+    "index_tiana.html": "5feed902"
+  },
+  "tiana_le/code/linked_plotting.ipynb": {
+    "linked_plotting.html": "30ad86f9"
+  },
+  "tiana_le/code/linked_plotting_v2.ipynb": {
+    "linked_plotting_v2.html": "96c7b91f"
+  },
+  "tiana_le/code/reviewingdata.ipynb": {
+    "reviewingdata.html": "1d1547c1"
+  },
+  "tiana_le/code/plotting.qmd": {
+    "plotting.html": "d5c7b215"
+  },
+  "tiana_le/code/linked_plotting_v3.ipynb": {
+    "linked_plotting_v3.html": "c784ee00"
   }
 }
