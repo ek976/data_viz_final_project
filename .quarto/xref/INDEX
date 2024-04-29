@@ -100,5 +100,14 @@
   },
   "parallel_coordinates_plot/parallel_coordinates.qmd": {
     "parallel_coordinates.html": "a7695c35"
+  },
+  "map/Jorge_plot.qmd": {
+    "Jorge_plot.html": "85354d58"
+  },
+  "map/Globe_plot.qmd": {
+    "Globe_plot.html": "3b5c826a"
+  },
+  "map/map_plot_regions.qmd": {
+    "map_plot_regions.html": "cccdc329"
   }
 }
