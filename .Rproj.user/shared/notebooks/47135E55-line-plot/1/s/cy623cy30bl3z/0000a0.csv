@@ -1,4 +1,0 @@
-"0",""
-"0","library(gridExtra)"
-"0",""
-"0","facet_plots <- grid.arrange(plot1, plot2, plot3, plot4, ncol = 2)"

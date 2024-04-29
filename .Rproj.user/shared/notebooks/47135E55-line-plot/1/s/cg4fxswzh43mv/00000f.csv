@@ -1,4 +1,0 @@
-"0","df <- subset_df"
-"0","df <- df[((df$Year==2012) | (df$Year==2013) | (df$Year==2014)) ,]"
-"0","df <- df[(df$Indicator.Name==""Labor force, female (% of total labor force)""),]"
-"0","tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')"

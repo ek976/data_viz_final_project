@@ -1,5 +1,0 @@
-"0","# Unpivot the data"
-"0","read <- pivot_longer(read, cols = -c(1:2), names_to = ""Year"", values_to = ""Value"")"
-"0","read <- na.omit(read)"
-"0","read$Year <- gsub(""X"", """", read$Year)"
-"0","read$Year <- as.numeric(read$Year)"

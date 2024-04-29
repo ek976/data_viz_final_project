@@ -16,6 +16,7 @@ execute:
 #| echo: false 
 #| warning: false 
 library(reticulate)
+py_install("plotly")
 #use_condaenv("/opt/homebrew/Caskroom/miniconda/base", required = TRUE) 
 ``` 
 
@@ -3425,39 +3426,12 @@ fig.update_layout(
 ## Government Spending (Dollar per person)
 
 ```{ojs}
-
-d7 = require('d3@7') 
-primaryData = d7.csv('/Users/sheebamoghal/Desktop/DSAN_5200/data_viz_final_project/report/primary_1.csv', function(d){
-  return {
-    country_name: d.country_name,
-    year1: +d.year1,
-    year2: +d.year2,
-  }
-})
-primaryData
+// Define a function to parse CSV data
+function parseCSV(csvString) {
+  return d3.csvParse(csvString);
+}
 ```
 
-```{ojs}
-secondaryData = d7.csv('secondary_1.csv', function(d){
-  return {
-    country_name: d.country_name,
-    year1: +d.year1,
-    year2: +d.year2,
-  }
-})
-secondaryData
-```
-
-```{ojs}
-tertiaryData = d7.csv('tertiary_1.csv', function(d){
-  return {
-    country_name: d.country_name,
-    year1: +d.year1,
-    year2: +d.year2,
-  }
-})
-tertiaryData
-```
 
 ```{ojs}
 viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"})
@@ -3467,17 +3441,28 @@ viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "re
 viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Dataset: ', value: 'Primary'})
 ```
 
+
 ```{ojs}
 
 chart = async () => {
+  // Load primary data
+  const primaryData = await FileAttachment("primary_1.csv").text().then(parseCSV);
+
+  // Load secondary data
+  const secondaryData = await FileAttachment("secondary_1.csv").text().then(parseCSV);
+
+  // Load tertiary data
+  const tertiaryData = await FileAttachment("tertiary_1.csv").text().then(parseCSV);
+
   const selected = await selectedDataset;
+
   let data;
   if (selected === 'Primary') {
-    data = await primaryData;
+    data = primaryData;
   } else if (selected === 'Secondary') {
-    data = await secondaryData;
+    data = secondaryData;
   } else if (selected === 'Tertiary') {
-    data = await tertiaryData;
+    data = tertiaryData;
   }
   
   data = data.map(d => ({
@@ -3576,9 +3561,7 @@ chart = async () => {
 }
 
 chart();
-
 ```
-
 
 # Sources 
 
