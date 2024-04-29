@@ -8,6 +8,10 @@ library(tidyr)
 ```{r}
 read <- read.csv('../../cleaned_data/labor_force_all.csv')
 read <- select(read, -Country.Code, -Indicator.Code)
+read$Indicator.Name[read$Indicator.Name == "Labor force with advanced education, female (% of female labor force)"] <- "With advanced education, female"
+read$Indicator.Name[read$Indicator.Name == "Labor force with advanced education, male (% of male labor force)"] <- "With advanced education, male"
+read$Indicator.Name[read$Indicator.Name == "Labor force with basic education, female (% of female labor force)"] <- "With basic education, female"
+read$Indicator.Name[read$Indicator.Name == "Labor force with basic education, male (% of male labor force)"] <- "With basic education, male"
 unique_values1 <- unique(read$Indicator.Name)
 print(unique_values1)
 ```
@@ -119,21 +123,21 @@ read <- read[!is.na(read$Country.Name), ]
 
 my_theme <- theme_minimal() +
   theme(
-    plot.background = element_rect(fill = "#2589BD"),
-    axis.title.x = element_text(family = "Georgia", color="black"),
+    #plot.background = element_rect(fill = "#2589BD"),
+    axis.title.x = element_text(family = "Helvetica", color="black"),
     axis.ticks = element_blank(),
-    axis.text = element_text(family = "Georgia", color="black"),
-    plot.subtitle = element_text(family = "Georgia", face = "italic"),
-    panel.background = element_rect(fill = "#DCEFF9", color="#DCEFF9"),
-    panel.grid.minor = element_line(color="#EEF7FC"),
-    panel.grid.major = element_line(color = "#EEF7FC"),
-    legend.key = element_rect(fill = "#EEF7FC", color="#EEF7FC"),
-    legend.background = element_rect(fill="#EEF7FC", color="#124A68"), 
-    legend.text = element_text(family = "Georgia"),
-    plot.title = element_text(family = "Georgia", size = 16, face = "bold"),
-    axis.title = element_text(family = "Georgia", face = "bold"),
-    legend.title = element_text(family = "Georgia", face = "bold"),
-    plot.caption = element_text(family = "Georgia", face = "italic"))
+    axis.text = element_text(family = "Helvetica", color="black", size=7),
+    plot.subtitle = element_text(family = "Helvetica", face = "italic"),
+    #panel.background = element_rect(fill = "#DCEFF9", color="#DCEFF9"),
+    panel.grid.minor = element_blank(),
+    #panel.grid.major = element_line(color = "#EEF7FC"),
+    #legend.key = element_rect(fill = "#EEF7FC", color="#EEF7FC"),
+    #legend.background = element_rect(fill="#EEF7FC", color="#124A68"), 
+    legend.text = element_text(family = "Helvetica"),
+    plot.title = element_text(family = "Helvetica", size = 16, face = "bold"),
+    axis.title = element_text(family = "Helvetica", face = "bold"),
+    legend.title = element_text(family = "Helvetica", face = "bold"),
+    plot.caption = element_text(family = "Helvetica", face = "italic"))
 
 ```
 
@@ -147,9 +151,17 @@ theme_set(my_theme)
 ```{r}
 
 
-df <- read[((read$Indicator.Name == "Labor force with advanced education, female (% of female labor force)") | (read$Indicator.Name == "Labor force with advanced education, male (% of male labor force)") | (read$Indicator.Name == "Labor force with basic education, female (% of female labor force)") |
-(read$Indicator.Name == "Labor force with basic education, male (% of male labor force)")),]
+df <- read[((read$Indicator.Name == "With advanced education, female") | (read$Indicator.Name == "With advanced education, male") | (read$Indicator.Name == "With basic education, female") |
+(read$Indicator.Name == "With basic education, male")),]
 df <- na.omit(df)
+
+```
+
+
+
+
+
+```{r}
 
 # Calculate average percentage by income group
 df_avg <- aggregate(Value ~ Income_Group + Year + Indicator.Name, data = df, FUN = mean, na.rm = TRUE)
@@ -157,17 +169,15 @@ df_avg <- aggregate(Value ~ Income_Group + Year + Indicator.Name, data = df, FUN
 # Filter for the years 2010 to 2013
 df_avg <- df_avg[df_avg$Year >= 2010 & df_avg$Year <= 2013, ]
 
-# Filter for the year 2011 to use for labeling
-df_label <- df_avg[df_avg$Year == 2011, ]
 
-tiana_palette <- c('#EFA9AE','#D29E08','#4C91D1','#E70E02','#6B892F',  '#332288')
+tiana_palette <- c("#3d6469", "#ffa205", "#d40637", "#00c1c1")
 
 # Define the plot function
 plot_fun <- function(df, df_label, title) {
   ggplot(df, aes(x = Year, y = Value, color = Income_Group)) +
     geom_line() +
     geom_text(data = df_label, aes(label = Income_Group),
-              nudge_x = 0.25, nudge_y = 3, check_overlap = TRUE) +
+              nudge_x = 0.5, nudge_y = 3, check_overlap = TRUE) +
     scale_color_manual(values = tiana_palette, name = "Country") +
     ylim(20, 100) + 
     labs(title = title,
@@ -179,7 +189,7 @@ plot_fun <- function(df, df_label, title) {
 # Create facet_wrap plot
 facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
   geom_line() +
-  scale_color_manual(values = tiana_palette, name = "Country") +
+  scale_color_manual(values = tiana_palette, name = "Income Group") +
   ylim(20, 100) +
   labs(title = "Labor Force with Education Levels",
        x = "Year",
@@ -188,6 +198,26 @@ facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
 
 print(facet_plot)
 
+ggsave("line_plot.png", facet_plot, width = 6, height = 4)
 ```
+```{r}
 
+income_group_count <- df[c('Country.Name', 'Income_Group')]
+income_group_count <- unique(income_group_count)
+
+income_group_count <- income_group_count %>%
+  group_by(Income_Group) %>%
+  summarise(Count = n_distinct(Country.Name))
+
+# Bar Plot to show Count of Country for each Income Group
+labor <- ggplot(income_group_count, aes(x = Income_Group, y = Count, fill = Income_Group)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = tiana_palette, name = "Income Group") +
+  labs(title = "Countries with Labor Force Statistics Collected",
+       x = "Income Group",
+       y = "Number of Countries")
+
+ggsave("labor_barplot.png", labor, width = 7, height = 4)
+
+```
 
