@@ -29,4 +29,16 @@ execute:
 # Tiana Le 
 
 # Liz Kovalchuk
+<table>
+  <tr>
+    <td><img src="images/liz.jpeg" alt="Liz Kovalchuk" width="180" /></td>
+    <td>
+      <ul>
+        <li>Email: <a href="mailto:ek976@georgetown.edu">jb3128@georgetown.edu</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/elizabeth-kovalchuk/">Liz Kovalchuk</a></li>
+        <li>GitHub: <a href="https://github.com/ek976">Liz Kovalchuk</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
