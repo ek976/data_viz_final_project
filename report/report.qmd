@@ -1154,7 +1154,7 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 
 // bubble colors
 hex_colors = [
-    "#3d6469", "#af882e", "#ff8f04", "#ff5901", "#9c2b04", "#0b060c", "#9c9080", "#f5bdae","#dc3455", "#a4072e", "#5f0922"
+    "#feeece", "#ffa205", "#ff4500", "#08030a", "#5f0922", "#3d6469", "#d40637"
 ]
 // plot
 function renderChart() {
