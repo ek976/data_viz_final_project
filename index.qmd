@@ -3505,13 +3505,13 @@ viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {la
 ```{ojs}
 chart_gov_exp = async () => {
   // Load primary data
-  const primaryData = await FileAttachment("report/primary_1.csv").text().then(parseCSV);
+  const primaryData = await FileAttachment("government_expenditure_plot/primary_1.csv").text().then(parseCSV);
 
   // Load secondary data
-  const secondaryData = await FileAttachment("report/secondary_1.csv").text().then(parseCSV);
+  const secondaryData = await FileAttachment("government_expenditure_plot/secondary_1.csv").text().then(parseCSV);
 
   // Load tertiary data
-  const tertiaryData = await FileAttachment("report/tertiary_1.csv").text().then(parseCSV);
+  const tertiaryData = await FileAttachment("government_expenditure_plot/tertiary_1.csv").text().then(parseCSV);
 
   const selected = await selectedDataset;
 
