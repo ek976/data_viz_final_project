@@ -136,5 +136,8 @@
   },
   "linked_plot/linked_plot.ipynb": {
     "linked_plot.html": "fa4072af"
+  },
+  "linked_plot/linking.qmd": {
+    "linking.html": "920e240b"
   }
 }

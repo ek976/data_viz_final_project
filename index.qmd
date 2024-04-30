@@ -3622,6 +3622,83 @@ chart_gov_exp = async () => {
 chart_gov_exp();
 ```
 
+# linky ploty
+
+```{python}
+import altair as alt
+import pandas as pd
+
+# Load data
+region_count = pd.read_json("map/data/regions.json")
+overtime = pd.read_csv("cleaned_data/filtered_linked_plot_data.csv")
+
+# Define color scheme
+color_scheme = ['#feeece', '#ffa205', '#ff4500', '#08030a', '#5f0922', '#3d6469', '#d40637']
+
+# Data processing
+region_count = region_count['value'].value_counts().reset_index()
+region_count.columns = ['region', 'count']
+region_order = ['North America', 'South Asia', 'Europe & Central Asia', 'Latin America & Caribbean', 'Middle East & North Africa', 'East Asia & Pacific', 'Sub-Saharan Africa']
+region_count['region'] = region_count['region'].replace([1, 2, 3, 4, 5, 6, 7], region_order)
+
+overtime = overtime[overtime['Indicator Name'].isin(['Gross enrolment ratio, primary, female (%)', 'Gross enrolment ratio, secondary, female (%)', 'Gross enrolment ratio, tertiary, female (%)'])]
+overtime['Indicator Name'] = overtime['Indicator Name'].replace({
+    'Gross enrolment ratio, primary, female (%)': 'Gross_enrolment_ratio_primary_female_pct',
+    'Gross enrolment ratio, secondary, female (%)': 'Gross_enrolment_ratio_secondary_female_pct',
+    'Gross enrolment ratio, tertiary, female (%)': 'Gross_enrolment_ratio_tertiary_female_pct'
+})
+
+over_melted = overtime.melt(id_vars=['Country Name', 'Indicator Name'], var_name='Year', value_name='Value')
+over_melted = over_melted[over_melted['Country Name'].isin(region_order)]
+
+# Change 'Country Name' column name to 'region'
+over_melted = over_melted.rename(columns={'Country Name': 'region'})
+
+# Define selection
+region_selection = alt.selection_point(fields=['region'], on='mouseover')
+
+# Create bar chart for region counts with North America first
+bar1 = alt.Chart(region_count).mark_bar().encode(
+    x=alt.X('region:N', axis=alt.Axis(title="", labelAngle=-45), sort=region_order),  # Specify order of regions
+    y=alt.Y('count:Q', axis=alt.Axis(title="Count")),
+    color=alt.Color('region:N', scale=alt.Scale(range=color_scheme), title="Region"),
+    opacity=alt.condition(region_selection, alt.value(1), alt.value(0.5))
+).properties(
+    title="Region Count",
+    width=300,
+    height=225
+).add_params(
+    region_selection
+)
+
+# Define function to create scatter plots
+def create_scatter(melted_df, indicator, title, legend_position=None):
+    scatter = alt.Chart(melted_df[melted_df['Indicator Name'] == indicator]).mark_circle(size=30).encode(
+        x=alt.X('Year:Q', title="Year", scale=alt.Scale(domain=[1968, 2015])),
+        y=alt.Y('Value:Q', title="Ratio"),
+        color=alt.Color('region', scale=alt.Scale(range=color_scheme), title="Region", legend=legend_position)
+    ).properties(
+        title=title,
+        width=300,
+        height=150
+    ).transform_filter(
+        region_selection
+    )
+    return scatter
+
+# Create scatter plots
+scatter1 = create_scatter(over_melted, 'Gross_enrolment_ratio_primary_female_pct', 'Female Enrollment Ratio, Primary')
+scatter2 = create_scatter(over_melted, 'Gross_enrolment_ratio_secondary_female_pct', 'Female Enrollment Ratio, Secondary')
+scatter3 = create_scatter(over_melted, 'Gross_enrolment_ratio_tertiary_female_pct', 'Female Enrollment Ratio, Tertiary', alt.Legend(orient='left'))
+
+# Combine the charts
+chart1 = alt.vconcat(bar1)
+chart2 = alt.vconcat(scatter1, scatter2, scatter3)
+final_chart = alt.hconcat(chart1, chart2).configure_title(fontSize=12)
+
+final_chart
+```
+
 # Sources 
 
 https://blogs.worldbank.org/en/opendata/new-world-bank-country-classifications-income-level-2022-2023
