@@ -139,5 +139,20 @@
   },
   "linked_plot/linking.qmd": {
     "linking.html": "920e240b"
+  },
+  "tiana/code/final-line-plot.qmd": {
+    "final-line-plot.html": "07373968"
+  },
+  "tiana/code/index_tiana.qmd": {
+    "index_tiana.html": "aa63b072"
+  },
+  "tiana/code/archive/reviewingdata.ipynb": {
+    "reviewingdata.html": "e22a618b"
+  },
+  "tiana/code/archive/plotting.qmd": {
+    "plotting.html": "3761bb25"
+  },
+  "tiana/code/final-linked-plot.ipynb": {
+    "final-linked-plot.html": "2c06724e"
   }
 }
