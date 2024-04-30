@@ -7,6 +7,10 @@ format:
 ---
 
 
+# GDP per capita and Female Literacy in Different Regions
+
+Gross Domestic Product (GDP) is a standard metric to determine economic performance. According to World Bank, countries with low female educational attainement have a relationship with lower GDP. In the pl
+
 
 ```{python}
 #| eval: true
@@ -93,7 +97,20 @@ layout.servable()
 ```
 
 
+# Labor Force with Education Levels
+
+The World Bank Data Catalog includes data about the proporition of males and females in the labor forces with advanced education and basic education. The proportion of high-income, low-income, lower middle income, and upper middle income countries is uneven in the bar plot below. High income countries reported the most labor statistics while low-income countries reported the least. In the high income category, over 40 countries reported these statistics. Although capturing data about female educational attainment is a priority for global development, only four low income countries reported labor statistics based on education level between 2010 and 2013. These four countries include Ethiopia, Madagascar, Mozambique, Uganda. The low income group represents the recent state of these four countries rather than the total of 26 low income countries classified by the World Bank. 
+
 ![Labor-plot](labor_barplot.png)
+
+Labor force participation is an important statistic in assessing the progress for equal opporunity for women. For each income group, the proportion of males and females were captured for different levels of education, including basic education and advanced education. The proportion for each gender and education level was calculated with respect to the percentage of total labor forces participation for each gender. The countries were grouped by income group and the average labor percentage was calculated for each year.  
+
+From 2010 to 2013, in high income countries, the proportion of male labor with advanced educaiton is above 80% while the proportion for female labor with the same education level is below 80%. The lower middle income countries showed the largest gap between female labor with advanced education and male labor, which was higher. For male and females labor with basic education, there are more males than females in the labor force. Interestingly, the gap between female labor and male labor is larger at the basic education level.  
+
+Surprisingly, the "low income" group, which includes Ethiopia, Madagascar, Mozambique, Uganda, showed high proportions of female labor with basic and advanced education levels. According to the World Bank, "In many countries, enrollment in tertiary education slightly favors young women, however, better learning outcomes are not translating into better work and life outcomes for women. There is a large gender gap in labor force participation rates globally." These findings suggest that reviewing overall labor force participation may begin the analysis of the recent progress in female education attainment. However, further research and more questions about different types of female labor can bring a better focus and attention to this developmental goal.
 
 
 ![Line-plot](line_plot.png)
+
+
+https://www.worldbank.org/en/topic/girlseducation

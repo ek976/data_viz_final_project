@@ -12,6 +12,8 @@ read$Indicator.Name[read$Indicator.Name == "Labor force with advanced education,
 read$Indicator.Name[read$Indicator.Name == "Labor force with advanced education, male (% of male labor force)"] <- "With advanced education, male"
 read$Indicator.Name[read$Indicator.Name == "Labor force with basic education, female (% of female labor force)"] <- "With basic education, female"
 read$Indicator.Name[read$Indicator.Name == "Labor force with basic education, male (% of male labor force)"] <- "With basic education, male"
+read$Indicator.Name[read$Indicator.Name == "Labor force with advanced education (% of total)"] <- "With advanced education (% total)"
+read$Indicator.Name[read$Indicator.Name == "Labor force with basic education (% of total)"] <- "With basic education (% total)"
 unique_values1 <- unique(read$Indicator.Name)
 print(unique_values1)
 ```
@@ -151,8 +153,7 @@ theme_set(my_theme)
 ```{r}
 
 
-df <- read[((read$Indicator.Name == "With advanced education, female") | (read$Indicator.Name == "With advanced education, male") | (read$Indicator.Name == "With basic education, female") |
-(read$Indicator.Name == "With basic education, male")),]
+df <- read[((read$Indicator.Name == "With advanced education, female") | (read$Indicator.Name == "With advanced education, male") | (read$Indicator.Name == "With basic education, female") | (read$Indicator.Name == "With basic education, male")),]
 df <- na.omit(df)
 
 ```
@@ -198,7 +199,7 @@ facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
 
 print(facet_plot)
 
-ggsave("line_plot.png", facet_plot, width = 6, height = 4)
+ggsave("line_plot.png", facet_plot, width = 16, height = 4)
 ```
 ```{r}
 
