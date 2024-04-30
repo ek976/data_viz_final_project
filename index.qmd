@@ -3674,7 +3674,7 @@ bar1 = alt.Chart(region_count).mark_bar().encode(
 # Define function to create scatter plots
 def create_scatter(melted_df, indicator, title, legend_position=None):
     scatter = alt.Chart(melted_df[melted_df['Indicator Name'] == indicator]).mark_circle(size=30).encode(
-        x=alt.X('Year:Q', title="Year", scale=alt.Scale(domain=[1968, 2015])),
+        x=alt.X('Year:Q', title="Year", scale=alt.Scale(domain=[1968, 2015]), axis=alt.Axis(format='d')),
         y=alt.Y('Value:Q', title="Ratio"),
         color=alt.Color('region', scale=alt.Scale(range=color_scheme), title="Region", legend=legend_position)
     ).properties(
