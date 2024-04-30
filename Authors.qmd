@@ -27,6 +27,19 @@ execute:
 # Sheeba Moghal
 
 # Tiana Le 
+<table>
+  <tr>
+    <td><img src="images/tiana.jpeg" alt="Liz Kovalchuk" width="180" /></td>
+    <td>
+      <ul>
+        <li>Email: <a href="mailto:tvl8@georgetown.edu">tvl8@georgetown.edu</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/tiana-le-395274140//">Tiana Le</a></li>
+        <li>GitHub: <a href="https://github.com/tvl8">Tiana Le</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 
 # Liz Kovalchuk
 <table>
@@ -34,7 +47,7 @@ execute:
     <td><img src="images/liz.jpeg" alt="Liz Kovalchuk" width="180" /></td>
     <td>
       <ul>
-        <li>Email: <a href="mailto:ek976@georgetown.edu">jb3128@georgetown.edu</a></li>
+        <li>Email: <a href="mailto:ek976@georgetown.edu">ek976@georgetown.edu</a></li>
         <li>LinkedIn: <a href="https://www.linkedin.com/in/elizabeth-kovalchuk/">Liz Kovalchuk</a></li>
         <li>GitHub: <a href="https://github.com/ek976">Liz Kovalchuk</a></li>
       </ul>
