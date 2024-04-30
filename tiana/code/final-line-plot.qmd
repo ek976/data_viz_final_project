@@ -199,7 +199,7 @@ facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
 
 print(facet_plot)
 
-ggsave("line_plot.png", facet_plot, width = 16, height = 4)
+ggsave("line_plot.png", facet_plot, width = 10, height = 4)
 ```
 ```{r}
 

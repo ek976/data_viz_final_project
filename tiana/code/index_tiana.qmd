@@ -103,18 +103,18 @@ pivot_df = pd.read_csv('../data/grad_gdp.csv')
 
 hv.extension('bokeh')
 # Scatter plot: GDP vs. Female Literacy
-scatter = hv.Scatter(pivot_df, 'GDP per capita in 2014', 
-                     'Female Graduates from tertiary education', 
-                     label='GDP per capita').opts(width=1500, color="#3d6469")
+scatter = hv.Scatter(pivot_df, 'GDP per capita (current US$)', 
+                     'Percentage of Graduates', 
+                     label='GDP vs. Female Graduates from Tertiary Education').opts(width=1300, color="#3d6469")
 
 # change font
-scatter = scatter.opts(fontsize={'title': '20pt', 'labels': '12pt'}, size=12, xlim=(None, 30000))
+scatter = scatter.opts(fontsize={'title': '20pt', 'labels': '12pt'}, size=12, xlim=(0, 30000))
 
 # Bar plot: Frequency of Female Literacy by Country
 bar = hv.Bars(pivot_df, 
               'Country Name', 
-              'Female Graduates from tertiary education', 
-              label='Female Graduates from tertiary education in 2014').opts(width=1500, color="#3d6469")
+              'Percentage of Graduates', 
+              label='Female Graduates from Tertiary Education in 2014').opts(width=1300, color="#3d6469")
 
 # change font
 bar = bar.opts(fontsize={'title': '14pt', 'labels': '12pt'})
@@ -129,13 +129,13 @@ def update_bar_plot(index):
         selected_data = pivot_df[pivot_df['Country Name'].isin(selected_countries)]
         return hv.Bars(selected_data, 
                        'Country Name', 
-                       'Female Graduates from tertiary education', 
-                       label='Female Graduates from tertiary education in 2014').opts(width=1500, height=600, color="#3d6469").opts(xrotation=45)
+                       'Percentage of Graduates', 
+                       label='Female Graduates from Tertiary Education in 2014').opts(width=1300, height=600, color="#3d6469").opts(xrotation=45)
     else:
         return hv.Bars(pivot_df, 
                        'Country Name', 
-                       'Female Graduates from tertiary education', 
-                       label='Female Graduates from tertiary educationin 2014').opts(width=1500, height=600, color="#3d6469").opts(xrotation=45)
+                       'Percentage of Graduates', 
+                       label='Female Graduates from Tertiary Education in 2014').opts(width=1300, height=600, color="#3d6469").opts(xrotation=45)
 
 
 
