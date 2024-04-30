@@ -97,6 +97,63 @@ layout.servable()
 ```
 
 
+```{python}
+
+pivot_df = pd.read_csv('../data/grad_gdp.csv')
+
+hv.extension('bokeh')
+# Scatter plot: GDP vs. Female Literacy
+scatter = hv.Scatter(pivot_df, 'GDP per capita in 2014', 
+                     'Female Graduates from tertiary education', 
+                     label='GDP per capita').opts(width=1500, color="#3d6469")
+
+# change font
+scatter = scatter.opts(fontsize={'title': '20pt', 'labels': '12pt'}, size=12, xlim=(None, 30000))
+
+# Bar plot: Frequency of Female Literacy by Country
+bar = hv.Bars(pivot_df, 
+              'Country Name', 
+              'Female Graduates from tertiary education', 
+              label='Female Graduates from tertiary education in 2014').opts(width=1500, color="#3d6469")
+
+# change font
+bar = bar.opts(fontsize={'title': '14pt', 'labels': '12pt'})
+
+# Rotate x-axis labels by 45 degrees
+bar = bar.opts(xrotation=45)
+
+# Define a linking function to update bar plot based on scatter plot selection
+def update_bar_plot(index):
+    if index:
+        selected_countries = pivot_df.iloc[index]['Country Name']
+        selected_data = pivot_df[pivot_df['Country Name'].isin(selected_countries)]
+        return hv.Bars(selected_data, 
+                       'Country Name', 
+                       'Female Graduates from tertiary education', 
+                       label='Female Graduates from tertiary education in 2014').opts(width=1500, height=600, color="#3d6469").opts(xrotation=45)
+    else:
+        return hv.Bars(pivot_df, 
+                       'Country Name', 
+                       'Female Graduates from tertiary education', 
+                       label='Female Graduates from tertiary educationin 2014').opts(width=1500, height=600, color="#3d6469").opts(xrotation=45)
+
+
+
+# Define a DynamicMap to link the plots
+linked_bar = hv.DynamicMap(update_bar_plot, streams=[hv.streams.Selection1D(source=scatter)])
+
+# change font
+linked_bar = linked_bar.opts(fontsize={'title': '20pt', 'labels': '12pt'})
+
+# Arrange plots in a column layout: scatter plot on top, bar plot below
+layout = pn.Column(scatter, linked_bar)
+
+
+# Display the layout 
+layout.servable()
+```
+
+
 # Labor Force with Education Levels
 
 The World Bank Data Catalog includes data about the proportion of males and females in the labor forces with advanced education and basic education. The proportion of high-income, low-income, lower middle income, and upper middle income countries is uneven in the bar plot below. High income countries reported the most labor statistics while low-income countries reported the least. In the high income category, over 40 countries reported these statistics. Although capturing data about female educational attainment is a priority for global development, only four low income countries reported labor statistics based on education level between 2010 and 2013. These four countries include Ethiopia, Madagascar, Mozambique, Uganda. The low income group represents the recent state of these four countries rather than the total of 26 low income countries classified by the World Bank. 
