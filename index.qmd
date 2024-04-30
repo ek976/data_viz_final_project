@@ -15,14 +15,14 @@ execute:
 #| label: common-setup
 #| echo: false 
 #| warning: false 
-library(reticulate)
+#library(reticulate)
 #py_install("plotly")
 #use_condaenv("/opt/homebrew/Caskroom/miniconda/base", required = TRUE)
 
-py_install('hvplot')
+#py_install('hvplot')
 
-py_install('holoviews')
-py_install('panel')
+#py_install('holoviews')
+#py_install('panel')
 
 ``` 
 
@@ -3731,7 +3731,7 @@ region_count = pd.read_json("map/data/regions.json")
 overtime = pd.read_csv("cleaned_data/filtered_linked_plot_data.csv")
 
 # Define color scheme
-color_scheme = ['#feeece', '#ffa205', '#ff4500', '#08030a', '#5f0922', '#3d6469', '#d40637']
+color_scheme = ['#e8cda2', '#ffa205', '#ff4500', '#08030a', '#5f0922', '#3d6469', '#d40637']
 
 # Data processing
 region_count = region_count['value'].value_counts().reset_index()
