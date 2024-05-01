@@ -189,17 +189,20 @@ plot_fun <- function(df, df_label, title) {
 
 # Create facet_wrap plot
 facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
-  geom_line() +
+  geom_line(size = 1.5) +
   scale_color_manual(values = tiana_palette, name = "Income Group") +
   ylim(20, 100) +
   labs(title = "Labor Force with Education Levels",
        x = "Year",
        y = "Percentage") +
-  facet_wrap(~Indicator.Name)
+  facet_wrap(~Indicator.Name, strip.position = "top") + 
+  theme(
+    strip.text = element_text(face = "bold")
+  )
 
 print(facet_plot)
 
-ggsave("line_plot.png", facet_plot, width = 10, height = 4)
+ggsave("line_plot.png", facet_plot, width = 10, height = 8)
 ```
 ```{r}
 
@@ -210,11 +213,14 @@ income_group_count <- income_group_count %>%
   group_by(Income_Group) %>%
   summarise(Count = n_distinct(Country.Name))
 
+# Reorder factor levels for Income_Group from low to high income
+income_group_count$Income_Group <- factor(income_group_count$Income_Group, levels = c("Low-Income", "Lower-Middle-Income", "Upper-Middle-Income", "High-Income"))
+
 # Bar Plot to show Count of Country for each Income Group
 labor <- ggplot(income_group_count, aes(x = Income_Group, y = Count, fill = Income_Group)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = tiana_palette, name = "Income Group") +
-  labs(title = "Countries with Labor Force Statistics Collected",
+  labs(title = "Countries with Labor Force Statistics Collected (2014)",
        x = "Income Group",
        y = "Number of Countries")
 

@@ -27,33 +27,32 @@ execute:
 
 ``` 
 
+![](images/edu.png)
+
 # Abstract
 Education is one of the key drivers in the development of society. In the global pursuit of gender equality, education stands out as both a fundamental right and a pivotal area of progress and challenge. In this article we aim to explore gender inequality in education access across the globe.  
 
 Using data obtained from the World Bank, our team analyzed the relationship between education attainment, education enrollment, gender, and other economic factors such as Gross Domestic Product (GDP), the Gross National Income (GNI) index, and population size. The data utilized is from the years 2010 - 2017. This project focuses on a larger global scale and then provides interactivity for readers to dive into specific regions, countries, and demographics in order to identify trends and patterns. We hope that you find this dataset as interesting and expository as we did - from regions with the highest diparity in education enrollment based on gender to the linkage of other factors that may be contributing to gendered disparity. It encouraged us to ask questions about the forces at play (economic, political, social) affecting women's access to education and thus to a better life. We encourage you to investigate these revelations, which illuminate noteworthy discrepancies and their wider consequences for realizing gender parity in education.
 
+# Introduction
+In the global pursuit of gender equality, education stands out as both a fundamental right and a pivotal area of progress and challenge [1]. The accessibility of education for women is closely associated with several economic metrics, such as GDP per capita, GNI per capita, and the fiscal priorities of the government [2]. 
 
-In the global pursuit of gender equality, education stands out as both a fundamental right and a pivotal area of progress and challenge [1] .The accessibility of education for females, particularly women, is closely associated with several economic metrics, such as GDP per capita, GNI per capita, and the fiscal priorities of the government [2]. 
+Throughout history, women have faced significant barriers to equitable access not only to education and the fundamental freedom to control their own lives. These challenges have both directly and indirectly fueled the ongoing global gaps in educational attainment. The Universal Declaration of Human Rights declares that everyone has the right to education is a bold and basic right [3]. This acknowledgement acts as a call to action to overcome the remaining obstacles that impede women from enjoying this right to the fullest extent possible, as well as a reminder of the progress that has been done. By examining these disparities and understanding their deep-rooted causes, we can better advocate for and implement strategies that ensure all women have the opportunity to learn, grow, and participate fully in society. 
 
-Throughout history, women have faced significant barriers to equitable access not only to education but also to the fundamental freedom to control their own lives.These challenges have both directly and indirectly fueled the ongoing global gaps in educational attainment. Declaring that everyone has the right to education is a bold and basic right, as stated in Article 26 of the Universal Declaration of Human Rights [3]. This acknowledgement acts as a call to action to overcome the remaining obstacles that impede women from enjoying their right to the fullest extent possible, as well as a reminder of the progress that has been done.By examining these disparities and understanding their deep-rooted causes, we can better advocate for and implement strategies that ensure all women have the opportunity to learn, grow, and participate fully in society. 
-
-
-Our exploration will delve into the current state of this divide, examining the myriad factors—from economic to socio-political—that perpetuate it. By understanding these underlying causes, we can more effectively devise strategies to overcome these barriers and ensure that women and girls everywhere have equal opportunities to learn and succeed. This analysis will not only shed light on the challenges but also highlight the areas where progress has been made, offering a nuanced perspective on the global journey towards educational equity.
+Our exploration will delve into the current state of this divide, examining the myriad factors — from economic to socio-political — that perpetuate it. By understanding these underlying causes, we can more effectively devise strategies to overcome these barriers and ensure that women and girls everywhere have equal opportunities to learn and succeed. This analysis will not only shed light on the challenges but also highlight the areas where progress has been made, offering a nuanced perspective on the global journey towards educational equity.
 
  We will address six critical questions:
 
-- How do literacy rates correlate with population growth across different regions and time periods?
-- How does resource allocation to education impact literacy rates?
-- What role do literacy and education play in economic growth?
+- How does female enrollment in education differ between different regions? How do these trends continue over time?
+- What role does education play in economic growth and development?
 - To what extent is gender equality present in educational access and outcomes?
-- How do education trends reflect employment trends, especially regarding gender?
-- What barriers hinder gender equality in education?
+- How do education trends reflect labor employment trends, especially regarding gender?
+- How much do governments prioritize resource allocation to education?
 
 This analysis will not only shed light on the challenges but also highlight the areas where progress has been made, offering a nuanced perspective on the global journey towards educational equity.
 
-
-# Let's Start with the World 
-Having a sense of the global picture is important to understand the context of the data. We will start by looking at the Gross Enrollment Ratio per level in the world. this will allow us not only to identify different areas where there are discrepancies or the gender gap in education is more pronounced, but also what data was available to the World Bank. Furthermore, we can also contrast globally different levels of education.
+# Visualizing Enrollment Disparities
+Having a sense of  global picture is important to understand the context of the data. We will start by looking at the Gross Enrollment Ratio per education level in the world. Gross enrollment ratio is calculated by dividing the number of students enrolled in a specific education category regardless of age by the population of the age group which officially corresponds to education category, and multiplying by 100. This will allow us not only to identify different areas where there are discrepancies or the gender gap in education is more pronounced, but also what data was available to the World Bank. Furthermore, we can also contrast globally different levels of education.
 
 ```{r, message=FALSE, warning=FALSE, eval=FALSE}
 # Load necessary libraries
@@ -2181,11 +2180,11 @@ series: [{
 
 :::
 
-Clearly, from this plots, we can see that globally, thew greater education level, the lower the enrollment rate. This is expected as the higher the education level, the more specialized and innaccessible the education becomes and the less people are likely to enroll in it. However, there seems to be a great disparity in certain areas of the world. For the secundary level, while there is not too much data available in this region, Sub-Saharan Africa seems to have the lowest enrollment rates with rates as low as 28%. This is concerning as in many countries, secondary education is actually mandatory. For the tertiary level, the same region seems to have extremely low enrollment rates, along with Latin America and the Caribbean, East Asia and the Pacific, and the Middle East and North Africa. However, there are outliers in this countries and they can be identified and studied more in depth in order to identify the reasons behind the high enrollment rates and try to mimic them in other countries. Also, Europe and Central Asia along with North America seem to have the highest enrollment rates in the world, making them a good example to follow.
+From these plots, we can see that globally, the greater education level, the lower the enrollment rate. This is expected as the higher the education level, the more specialized and innaccessible the education becomes and the less people are likely to enroll in it. Additionally, in most countries, the primary education level is mandatory by law. However, there seems to be a greater disparity in certain areas of the world. For the secondary level, while there is not too much data available in this region, Sub-Saharan Africa seems to have the lowest enrollment rates with rates as low as 28%. This is concerning as in many countries, secondary education is also mandatory. For the tertiary level, the same region seems to have extremely low enrollment rates, along with Latin America and the Caribbean, East Asia and the Pacific, and the Middle East and North Africa. However, there are outliers in these countries and they can be identified and studied more in depth in order to identify the reasons behind the high enrollment rates and try to mimic them in other nations. Additionally, Europe and Central Asia along with North America seem to have the highest female enrollment rates in the world, making them a good example to follow.
 
 # Global Regions: A Tapestry of Economic and Educational Landscapes
 
-The idea of education as a global source of hope is frequently associated with economic success. However, the way this connection appears varies greatly throughout the world, greatly impacted by local economic conditions. The World Bank's seven-region model, which divides the world into Europe & Central Asia, Latin America & Caribbean, Middle East & North Africa, East Asia & Pacific, Sub-Saharan Africa, and North America, offers a structural lens through which to view these variations. The tale of educational access varies by region, depending on the economic context.
+The idea of education as a global source of hope is frequently associated with economic success. However, the way this connection appears varies greatly throughout the world, greatly impacted by local economic conditions. The World Bank's seven-region model, which divides the world into Europe & Central Asia, Latin America & Caribbean, Middle East & North Africa, East Asia & Pacific, Sub-Saharan Africa, and North America, offers a structural lens through which to view these variations. The tale of educational access varies by region, depending on the economic context [4].
 
 We can see this division here:
 ```{r, echo=FALSE, results='asis', runtime="js"}
@@ -3171,7 +3170,7 @@ To begin our analysis, we will be looking at different regions usually studied b
 
 <figure>
   <div id="container"></div>
-  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ration for 2014. The sizes of the bubbles correlate to the values. Note that because of the way data is collected, small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. </figcaption>
+  <figcaption>This chart shows the Female Gross Enrollment Ratios by Region for the year 2014. These region delimitations have been chosen from what the World Bank utilize for their studies. You can select and deselect regions to focus on different regions, each bubble inside the region represents an education level, and the values inside are the female gross enrollment ratio for 2014. The sizes of the bubbles correlate to the values. Note that because of the way data is collected, small discrepancies in the reported age of children may occasionally cause net enrollment rates to exceed 100 percent by the World Bank. </figcaption>
 </figure>
 
 <script>
@@ -3304,7 +3303,7 @@ seriesData = parsedData.reduce((acc, { "Country Name": countryName, Indicator, V
 
 // bubble colors
 hex_colors = [
-    "#a08a68", "#ffa205", "#ff4500", "#08030a", "#5f0922", "#3d6469", "#d40637"
+    "#848884", "#848884", "#848884", "#848884", "#848884", "#3d6469", "#d40637"
 ]
 // plot
 function renderChart() {
@@ -3354,15 +3353,15 @@ function renderChart() {
 renderChart();
 </script>
 
-From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. This is expected as the higher the education level, the more specialized and less accessible it becomes. However, we can see that there are some regions that have higher enrollment ratios than others. Specifically, the regions with the lowest enrollment, specifically South Asia and Sub-Saharan Africa, followed by Mid due East & North Africa, Latin America & Caribbean, and East Asia & Pacific. However, the scope of regions limits our ability to make a thoughtful comparison, as we do not know if data has not been collected by the World Bank in some countries. 
+From the chart above, not surprisingly, we can see that for all regions, the higher the education level, the lower the enrollment ratio. As highlighted, the regions with the largest disparity in higher education enrollment are significant. This is expected as the higher the education level, the more specialized and less accessible it becomes - we can see that these regions have higher enrollment ratios than others. Specifically, the regions with the lowest enrollment, South Asia and Sub-Saharan Africa, are followed by Mid due East & North Africa, Latin America & Caribbean, and East Asia & Pacific. However, the scope of regions limits our ability to make a thoughtful comparison, as we do not know if data has not been collected by the World Bank in some countries. 
 
 This is important information to consider as we move forward with our analysis. One can think that it may be due to economic reasons, social and ideological reasons, or even political reasons. However, this problem has been present for decades and instead of taking assumptions to answer this question, we should identify the key reasons for this disparity and address it accordingly.
 
 # Labor Force with Education Levels
 
-The World Bank Data Catalog includes data about the proportion of males and females in the labor forces with advanced education and basic education. The proportion of high-income, low-income, lower middle income, and upper middle income countries is uneven in the bar plot below. High income countries reported the most labor statistics while low-income countries reported the least. In the high income category, over 40 countries reported these statistics. Although capturing data about female educational attainment is a priority for global development, only four low income countries reported labor statistics based on education level between 2010 and 2013. These four countries include Ethiopia, Madagascar, Mozambique, Uganda. The low income group represents the recent state of these four countries rather than the total of 26 low income countries classified by the World Bank. 
+The World Bank Data Catalog includes data about the proportion of males and females in the labor forces with advanced education and basic education. The proportion of high-income, upper middle income, lower middle income, and  low-income countries is uneven in the bar plot below. High income countries reported the most labor statistics while low-income countries reported the least. In the high income category, over 40 countries reported these statistics. Although capturing data about female educational attainment is a priority for global development, only four low income countries reported labor statistics based on education level between 2010 and 2013. These four countries include Ethiopia, Madagascar, Mozambique, Uganda. The low income group represents the recent state of these four countries rather than the total of 26 low income countries classified by the World Bank. 
 
-![Labor-plot](tiana/code/labor_barplot.png)
+![The corresponding metric to female representation in education is understanding female labor force composition. One indicator of equality is the percentage of women in the work force, and their level of education. This plot is broken into high, medium, and low-income groups for countries. The World Bank´s classification of income countries means that most countries fall above low income, and for those nations it is also more challenging to collect data. Most countries, according to the World Bank´s classification are considered ´high income.´ It is important to understand this underlying distriubtion and classification of nations in order to view other color encodings throughout the remainder of this analysis.](tiana/code/labor_barplot.png)
 
 Labor force participation is an important statistic in assessing the progress for equal opporunity for women. For each income group, the proportion of males and females was captured for different levels of education, including basic education and advanced education. The proportion for each gender and education level was calculated with respect to the percentage of total labor forces participation for each gender. The countries were grouped by income group and the average labor percentage was calculated for each year.  
 
@@ -3370,28 +3369,11 @@ From 2010 to 2013, in high income countries, the proportion of male labor with a
 
 Surprisingly, the "low income" group, which includes Ethiopia, Madagascar, Mozambique, Uganda, showed high proportions of female labor with basic and advanced education levels. According to the World Bank, "In many countries, enrollment in tertiary education slightly favors young women, however, better learning outcomes are not translating into better work and life outcomes for women. There is a large gender gap in labor force participation rates globally." These findings suggest that reviewing overall labor force participation may begin the analysis of the recent progress in female education attainment. However, further research and more questions about different types of female labor can bring a better focus and attention to this developmental goal.
 
-
-![Line-plot](tiana/code/line_plot.png)
-
-
-https://www.worldbank.org/en/topic/girlseducation
-
-
+![Comparing the percent of females in the labor force with basic and advanced education tells a more detailed story of what demographic (advanced or non-advanced education) is part of the work force composition.](tiana/code/line_plot.png)
 
 # Economic Influences on Female Access to Education 
 
-The World Bank assigns the world’s economies to four income groups, low income, lower-middle, upper-middle, and high income. 
-
-| Income Category   | FY 2022           | FY 2023           | FY 2024           |
-|-------------------|-------------------|-------------------|-------------------|
-| Low Income        | ≤ 1,045           | ≤ 1,085           | ≤ 1,135           |
-| Lower-middle      | 1,046 - 4,095     | 1,086 - 4,255     | 1,136 - 4,465     |
-| Upper-middle      | 4,096 - 12,695    | 4,256 - 13,205    | 4,466 - 13,845    |
-| High Income       | ≥ 12,695          | ≥ 13,205          | ≥ 13,846         |
-
-
-
-The classifications are updated each year on July 1 and are based on the GNI per capita of the previous year (2021). GNI measures are expressed in United States dollars (USD), and are determined using conversion factors derived according to the Atlas method (The Atlas method smooths exchange rate fluctuations using a three-year moving average, price-adjusted conversion factor. The USD estimate of GNI per capita is derived by applying the Atlas conversion factor to estimates measured in  local currency units (LCU)).
+The World Bank assigns the world’s economies to four income groups, low income, lower-middle, upper-middle, and high income. The classifications are updated each year on July 1 and are based on the GNI per capita of the previous year (2021). GNI measures are expressed in United States dollars (USD), and are determined using conversion factors derived according to the Atlas method (The Atlas method smooths exchange rate fluctuations using a three-year moving average, price-adjusted conversion factor. The USD estimate of GNI per capita is derived by applying the Atlas conversion factor to estimates measured in  local currency units (LCU)).
 
 
 ```{ojs}
@@ -3445,6 +3427,7 @@ chart_parallel = {
     enrolment_ratio_female: "Female Enrolment Ratio",
     income_group: "Income Group",
   };
+
   
   const hover = vl
     .selectSingle()
@@ -3462,6 +3445,8 @@ const line = base.markLine().encode(
     domain: ['Low income', 'Lower middle income', 'Upper middle income', 'High income'],  // Adjust these categories based on your actual data
     range: ['#ff4500', '#ffa205', '#d40637', '#5f0922']
   }),
+
+
   vl.detail().fieldN("index"),
   vl.opacity().if(hover, vl.value(1)).value(0.3),
   vl.y().fieldQ("norm_val").axis(null),
@@ -3512,12 +3497,12 @@ return vl
     .width(width - 100)
     .height(height)
     .title({
-      text: 'Economic and Educational Indicators by Income Group',
+      text: 'Economic and Educational Indicators by Income Group (2014)',
       fontSize: 12,
-      fontWeight: 'normal',
+      fontWeight: 'bold',
       anchor: 'middle',
       color: 'black',
-      font: 'monospace',
+      font: 'sans-serif',
       offset: 40
     })
     .render();
@@ -3531,10 +3516,14 @@ return vl
 attribs = Object.keys(dat[0]).filter(a => !isNaN(dat[0][a])) //Find the attributes that are numbers
 ```
 
+A clear indicator between a higher female enrollment rate is an increased GDP per capital and a higher GNI per capita. The socio-economic implications of this are clear: female education enrollment is linked to a higher female enrollment rate. This plot also visually helps to highlight standout data, who have an inverted relationship between enrollment and economic indicators: a higher GDP and GNI per capita and still have a lower female enrollment ratio. The inverted "V" of Switzerland and Norway at the top of the plot show one of the few flipped relationships between GDP & GNI - either due to the relative wealth of those nations, or the pedigree of their education systems (perhaps their students don´t require tertiary education). Income is included by color to show that high income countries do have a higher female enrollment ratio, although even for lower middle and low income countries, the GDP and GNI per capita ratios show that the female enrollment ratio can outstrip economic information. 
 
-# linky ploty
+# Regional Female Enrollment 1970 - 2013 
+
+It is also important to understand the historical changes in female enrollment of different regions. This would alllow us to identify which regions are making an effort to support female education and which regions are not. Trends often emerge over longer periods in time. For this, we introduce the plot below - it shows the country count of each region (as it may be important to understand the data distribution and may be linked to agreements between them on certain aspects linked to education). It also shows the Gross Enrollment Ratio for females per education level overtime.
 
 ```{python}
+#| fig-cap: "Hovering over the bars will highlight the change overtime of Gross Enrollment Ration for women in all education levels" 
 import altair as alt
 import pandas as pd
 
@@ -3549,7 +3538,7 @@ color_scheme = ['#e8cda2', '#ffa205', '#ff4500', '#08030a', '#5f0922', '#3d6469'
 region_count = region_count['value'].value_counts().reset_index()
 region_count.columns = ['region', 'count']
 region_order = ['North America', 'South Asia', 'Europe & Central Asia', 'Latin America & Caribbean', 'Middle East & North Africa', 'East Asia & Pacific', 'Sub-Saharan Africa']
-region_count['region'] = region_count['region'].replace([1, 2, 3, 4, 5, 6, 7], region_order)
+region_count['region'] = region_count['region'].replace([7, 1, 2, 3, 4, 5, 6], region_order)
 
 overtime = overtime[overtime['Indicator Name'].isin(['Gross enrolment ratio, primary, female (%)', 'Gross enrolment ratio, secondary, female (%)', 'Gross enrolment ratio, tertiary, female (%)'])]
 overtime['Indicator Name'] = overtime['Indicator Name'].replace({
@@ -3609,9 +3598,13 @@ final_chart = alt.hconcat(chart1, chart2).configure_title(fontSize=12)
 final_chart
 ```
 
-# Government Spending (Dollar per person)
+One of the primary reported metrics when education is covered in press is that the female enrollment rate for higher education (tertiary, in most countries) has surpassed the enrollment rate of men. In order to visualize the comparative rate of female enrollment over time for each education demographic, our interactive plot shows a breakdown of this (happily) increasing ratio of female enrollment. 
+
+Some of the most interesting findings were that the increase in tertiary female enrollment over time supports the coverage that there are more women enrolling in higher education. The other, more surprising finding was that some regions relative enrollment were so low when seen on the global scale. For instance South Asia’s tertiary gross enrollment ratio is in the low twenties. The other humorous finding was that North America’s enrollment was consistently at 100% for primary school - a straight line - likely due to the mandatory enrollment rules for education. 
+
+# Government Spending (Dollar per capita, Purchasing Power Parity)
 ```{ojs}
-viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"})
+viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative(%)", "relative"]]), {value: "absolute", label: "Change"})
 ```
 
 ```{ojs}
@@ -3666,7 +3659,7 @@ chart_gov_exp = async () => {
 
   const svg = d3.create('svg')
     .attr('viewBox', [0, 0, width, height])
-    .attr('style', 'max-width: 100%; height: auto; font-family: monospace; font-size: 10px;');
+    .attr('style', 'max-width: 100%; height: auto; font-family: sans-serif; font-size: 10px;');
 
   // Chart Title
   svg.append('text')
@@ -3675,7 +3668,7 @@ chart_gov_exp = async () => {
     .attr('text-anchor', 'middle')
     .style('font-size', '16px')
     .style('font-weight', 'bold')
-    .text('Government Spending for Education');
+    .text('Government Spending for Education (2014 - 2018)');
 
   // X-axis Label
   svg.append('text')
@@ -3683,7 +3676,7 @@ chart_gov_exp = async () => {
     .attr('y', height - 15)
     .attr('text-anchor', 'middle')
     .style('font-size', '12px')
-    .text('Dollar / Per Person');
+    .text('Dollar / Per Capita (Purchasing Power Parity)');
 
   // Y-axis Label
   svg.append('text')
@@ -3694,7 +3687,6 @@ chart_gov_exp = async () => {
     .style('font-size', '12px')
     .text('Country');
 
-  // Remaining SVG drawing code unchanged, add bars, texts, and axes
   svg.append('g')
     .selectAll('rect')
     .data(data)
@@ -3706,7 +3698,7 @@ chart_gov_exp = async () => {
     .attr('height', y.bandwidth());
 
   svg.append('g')
-    .attr('font-family', 'monospace')
+    .attr('font-family', 'sans-serif') 
     .attr('font-size', 10)
     .selectAll('text')
     .data(data)
@@ -3736,8 +3728,21 @@ chart_gov_exp = async () => {
 }
 
 chart_gov_exp();
+
 ```
+
+Throughout this narrative, we looked at the data through the aggretates of regions and in terms of economic classes, however it is also important to understand this change on a granular scale and see if there any change within the Government spending per capita in Purchasing Power Parity between 2014-2018, as an extension to see if there has been any change prior to COVID-19´s emergence. This plot shows the link between national spending on education (per capita) and level of education (primary, secondary, tertiary). We see a lot of interesting patterns here how few countries such as Mexico has greater change in government spending in terms of Primary education than Secondary and Tertiary. On the other hand, Iceland has lowest relative change in government spending per capita for Primary than the others, but Chile has lowest change in Tertiary than others. In constrast, if we look at the OECD average overall, which measures the aggregate change for all its member nations, we see there is constant change across primary, secondary and tertiary. This highlights the importance of looking at countries on a granular level. In terms of thw plot, the relative view in dollars per capita, it is quickly highlighted which nations spend per education demographic relative to their peers. The absolute view shows the actual spending per person, which can be a more useful metric for understanding the actual spending on education. All of these metrics are important for understanding the economic and social implications of education spending, and are standardized to be shown in USD. 
+
+# Conclusion
+
+The data presented in this analysis is a small part of the global education data available. The data is collected by the World Bank and other global organizations to help understand the state of education in the world. The data and the team´s subsequent analysis can be used by policymakers, researchers, and development practitioners to identify best practices, learn from each other's experiences, and design more targeted interventions. The data is also used to monitor progress towards the Sustainable Development Goals (SDGs) and other global development goals.
 
 # Sources 
 
-https://blogs.worldbank.org/en/opendata/new-world-bank-country-classifications-income-level-2022-2023
+[1] Nussbaum, M. C. (2004). Women’s education: A global challenge. Signs: Journal of Women in Culture and Society, 29(2), 325-355.
+
+[2] Adams, D. K. (2002). Education and national development: Priorities, policies, and planning (Vol. 1). Manila Philippine: Asian Development Bank.
+
+[3]https://www.un.org/en/about-us/universal-declaration-of-human-rights#:~:text=Article%2026,on%20the%20basis%20of%20merit
+
+[4]https://ourworldindata.org/grapher/world-regions-according-to-the-world-bank?tab=table

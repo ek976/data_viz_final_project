@@ -25,6 +25,18 @@ execute:
 </table>
 
 # Sheeba Moghal
+<table>
+  <tr>
+    <td><img src="images/sheeba.jpeg" alt="Jorge Bris Moreno" width="180" /></td>
+    <td>
+      <ul>
+        <li>Email: <a href="mailto:sm3924@georgetown.edu">sm3924@georgetown.edu</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/moghalsheeba/">Sheeba Moghal</a></li>
+        <li>GitHub: <a href="https://github.com/msheeba4848">Sheeba Moghal</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 # Tiana Le 
 <table>
