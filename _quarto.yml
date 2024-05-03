@@ -7,7 +7,7 @@ website:
     left:
       - text: Global Female Education Attainment
         href: index.qmd
-      - href: "https://github.com/ek976/data_viz_final_project"
+      - href: "https://github.com/gu-dsan5200/spring-2024-dsan-5200-project-repo-project-group-20"
         text: Code  
       - href: Authors.qmd
         text: Authors
