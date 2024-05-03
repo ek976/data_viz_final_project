@@ -1,14 +1,8 @@
 ---
-title: "Plot 5: Government GDP"
-author: "Sheeba"
+title: ""
+author: ""
 draft: true
 ---
-
-```{r}
-#  include-in-header:
-#    - text: |
-#         <script src="https://d3js.org/d3.v7.min.js"></script>
-```
 
 ```{ojs}
 d7 = require('d3@7') 
@@ -48,22 +42,14 @@ tertiaryData
 ```
 
 ```{ojs}
-
 viewof metric = Inputs.radio(new Map([["Absolute", "absolute"], ["Relative", "relative"]]), {value: "absolute", label: "Change"})
-
-
 ```
 
 ```{ojs}
-
-
 viewof selectedDataset = Inputs.select(['Primary', 'Secondary', 'Tertiary'], {label: 'Dataset: ', value: 'Primary'})
 ```
 
 ```{ojs}
-
-
-
 chart = async () => {
   const selected = await selectedDataset;
   let data;
@@ -171,7 +157,5 @@ chart = async () => {
 }
 
 chart();
+
 ```
-
-
-

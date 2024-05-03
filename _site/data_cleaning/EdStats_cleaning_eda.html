@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tiana Le">
+<meta name="dcterms.date" content="2024-02-19">
+
+<title>DSAN5200 - Ed Stats EDA</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DSAN5200</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Global Female Education Attainment</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/ek976/data_viz_final_project" rel="" target="">
+ <span class="menu-text">Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Authors.html" rel="" target="">
+ <span class="menu-text">Authors</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#read-me" id="toc-read-me" class="nav-link active" data-scroll-target="#read-me">READ ME</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ed Stats EDA</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tiana Le </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 19, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="read-me" class="level1">
+<h1>READ ME</h1>
+<p>Please download the Education Data locally to run this notebook on your computer. (The Education Data was too large for git commit.)</p>
+<p>https://drive.google.com/drive/folders/1DMgypB9L6VsSHt2jGA4cKqAYOjkuN3Sx?usp=drive_link</p>
+<div class="cell" data-execution_count="132">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>https://datacatalog.worldbank.org/search/dataset/0038480/education-statistics</p>
+<div class="cell" data-execution_count="133">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ed <span class="op">=</span> pd.read_csv(<span class="st">'../../EdStats_CSV/EdStatsData.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ed.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                      Indicator Name
+0  Adjusted net enrolment rate, lower secondary, ...
+1  Adjusted net enrolment rate, lower secondary, ...
+2  Adjusted net enrolment rate, lower secondary, ...
+3  Adjusted net enrolment rate, lower secondary, ...
+4  Adjusted net enrolment rate, primary, both sex...</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="134">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>indicator_counts <span class="op">=</span> ed[<span class="st">'Indicator Name'</span>].nunique()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(indicator_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3665</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="135">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ed.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(3665, 1)</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="136">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>indicator_values <span class="op">=</span> ed[<span class="st">'Indicator Name'</span>].unique()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(indicator_values[:<span class="dv">10</span>])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(indicator_values[<span class="dv">10</span>:<span class="dv">20</span>])</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(indicator_values[<span class="dv">20</span>:<span class="dv">30</span>])</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>indicator_values <span class="op">=</span> indicator_values[:<span class="dv">30</span>]</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Adjusted net enrolment rate, lower secondary, both sexes (%)'
+ 'Adjusted net enrolment rate, lower secondary, female (%)'
+ 'Adjusted net enrolment rate, lower secondary, gender parity index (GPI)'
+ 'Adjusted net enrolment rate, lower secondary, male (%)'
+ 'Adjusted net enrolment rate, primary, both sexes (%)'
+ 'Adjusted net enrolment rate, primary, female (%)'
+ 'Adjusted net enrolment rate, primary, gender parity index (GPI)'
+ 'Adjusted net enrolment rate, primary, male (%)'
+ 'Adjusted net enrolment rate, upper secondary, both sexes (%)'
+ 'Adjusted net enrolment rate, upper secondary, female (%)']
+['Adjusted net enrolment rate, upper secondary, gender parity index (GPI)'
+ 'Adjusted net enrolment rate, upper secondary, male (%)'
+ 'Adjusted net intake rate to Grade 1 of primary education, both sexes (%)'
+ 'Adjusted net intake rate to Grade 1 of primary education, female (%)'
+ 'Adjusted net intake rate to Grade 1 of primary education, gender parity index (GPI)'
+ 'Adjusted net intake rate to Grade 1 of primary education, male (%)'
+ 'Adult illiterate population, 15+ years, % female'
+ 'Adult illiterate population, 15+ years, both sexes (number)'
+ 'Adult illiterate population, 15+ years, female (number)'
+ 'Adult illiterate population, 15+ years, male (number)']
+['Adult literacy rate, population 15+ years, both sexes (%)'
+ 'Adult literacy rate, population 15+ years, female (%)'
+ 'Adult literacy rate, population 15+ years, gender parity index (GPI)'
+ 'Adult literacy rate, population 15+ years, male (%)'
+ 'Africa Dataset: Average number of grades per multigrade class in primary schools (number of grades)'
+ 'Africa Dataset: Average number of pupils per mathematics textbook in Grade 1 of primary education (number)'
+ 'Africa Dataset: Average number of pupils per mathematics textbook in Grade 2 of primary education (number)'
+ 'Africa Dataset: Average number of pupils per mathematics textbook in Grade 3 of primary education (number)'
+ 'Africa Dataset: Average number of pupils per mathematics textbook in Grade 4 of primary education (number)'
+ 'Africa Dataset: Average number of pupils per mathematics textbook in Grade 5 of primary education (number)']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="137">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#primary = ed[ed["Indicator Name"]=="Adjusted net enrolment rate, primary, gender parity index (GPI)"]</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#tidy_primary = pd.melt(primary, id_vars=['Country Name', 'Country Code', 'Indicator Name', 'Indicator Code'],</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                  <span class="co">#var_name='Year', value_name='Value')</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#tidy_primary = tidy_primary.dropna()</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#year_unique = tidy_primary['Year'].unique()</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#print(tidy_primary.head())</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#print(tidy_primary.shape)</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">#print(year_unique)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="138">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># function to tidy data</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_to_tidy(df, variable):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter the DataFrame for the desired indicator</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    ed_level <span class="op">=</span> df[df[<span class="st">"Indicator Name"</span>] <span class="op">==</span> variable]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Melt the filtered DataFrame</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    tidy_ed_level <span class="op">=</span> pd.melt(ed_level, id_vars<span class="op">=</span>[<span class="st">'Country Name'</span>, <span class="st">'Country Code'</span>, <span class="st">'Indicator Name'</span>, <span class="st">'Indicator Code'</span>],</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>                           var_name<span class="op">=</span><span class="st">'Year'</span>, value_name<span class="op">=</span><span class="st">'Value'</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># drop Country Name for now</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    tidy_ed_level.drop(<span class="st">'Indicator Name'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    tidy_ed_level.drop(<span class="st">'Indicator Code'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    tidy_ed_level.drop(<span class="st">'Country Name'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Drop rows with NA values</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    tidy_ed_level <span class="op">=</span> tidy_ed_level.dropna()</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert to year to numeric</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    tidy_ed_level[<span class="st">'Year'</span>] <span class="op">=</span> pd.to_numeric(tidy_ed_level[<span class="st">'Year'</span>])</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get unique years</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    year_unique <span class="op">=</span> tidy_ed_level[<span class="st">'Year'</span>].unique()</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print the head, shape, and unique years</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tidy_ed_level.head())</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tidy_ed_level.shape)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year_unique)</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(tidy_ed_level)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="co">#lower_second = "Adjusted net enrolment rate, lower secondary, gender parity index (GPI)"</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="co">#lower_second = convert_to_tidy(ed, lower_second)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="139">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(indicator_values[<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Adjusted net enrolment rate, lower secondary, both sexes (%)</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="140">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>selected_variables <span class="op">=</span> [<span class="st">"Adjusted net enrolment rate, lower secondary, both sexes (%)"</span>,<span class="st">"Adjusted net enrolment rate, lower secondary, female (%)"</span>,<span class="st">"Adjusted net enrolment rate, lower secondary, gender parity index (GPI)"</span>,<span class="st">"Adjusted net enrolment rate, lower secondary, male (%)"</span>,<span class="st">"Adjusted net enrolment rate, primary, both sexes (%)"</span>,<span class="st">"Adjusted net enrolment rate, primary, female (%)"</span>,<span class="st">"Adjusted net enrolment rate, primary, gender parity index (GPI)"</span>,<span class="st">"Adjusted net enrolment rate, primary, male (%)"</span>,<span class="st">"Adjusted net enrolment rate, upper secondary, both sexes (%)"</span>,<span class="st">"Adjusted net enrolment rate, upper secondary, female (%)"</span>,<span class="st">"Adjusted net enrolment rate, upper secondary, gender parity index (GPI)"</span>,<span class="st">"Adjusted net enrolment rate, upper secondary, male (%)"</span>,<span class="st">"Adjusted net intake rate to Grade 1 of primary education, both sexes (%)"</span>,<span class="st">"Adjusted net intake rate to Grade 1 of primary education, female (%)"</span>,<span class="st">"Adjusted net intake rate to Grade 1 of primary education, gender parity index (GPI)"</span>,<span class="st">"Adjusted net intake rate to Grade 1 of primary education, male (%)"</span>,<span class="st">"Adult illiterate population, 15+ years, </span><span class="sc">% f</span><span class="st">emale"</span>,<span class="st">"Adult illiterate population, 15+ years, both sexes (number)"</span>,<span class="st">"Adult illiterate population, 15+ years, female (number)"</span>,<span class="st">"Adult illiterate population, 15+ years, male (number)"</span>,<span class="st">"Adult literacy rate, population 15+ years, both sexes (%)"</span>,<span class="st">"Adult literacy rate, population 15+ years, female (%)"</span>,<span class="st">"Adult literacy rate, population 15+ years, gender parity index (GPI)"</span>,<span class="st">"Adult literacy rate, population 15+ years, male (%)"</span>,<span class="st">"Expenditure on education as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on education not allocated by level as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on lower secondary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on lower secondary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on post-secondary non-tertiary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on post-secondary non-tertiary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on pre-primary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on pre-primary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on primary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on primary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on secondary and post-secondary non-tertiary vocational as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on secondary and post-secondary non-tertiary vocational education as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on secondary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on secondary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on tertiary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on tertiary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"Expenditure on upper secondary as </span><span class="sc">% o</span><span class="st">f government expenditure on education (%)"</span>,<span class="st">"Expenditure on upper secondary as </span><span class="sc">% o</span><span class="st">f total government expenditure (%)"</span>,<span class="st">"GDP at market prices (constant 2005 US$)"</span>,<span class="st">"GDP at market prices (current US$)"</span>,<span class="st">"GDP per capita (constant 2005 US$)"</span>,<span class="st">"GDP per capita (current US$)"</span>,<span class="st">"GDP per capita, PPP (constant 2011 international $)"</span>,<span class="st">"GDP per capita, PPP (current international $)"</span>,<span class="st">"GDP, PPP (constant 2011 international $)"</span>,<span class="st">"GDP, PPP (current international $)"</span>,<span class="st">"GNI (current US$)"</span>,<span class="st">"GNI per capita, Atlas method (current US$)"</span>,<span class="st">"GNI per capita, PPP (current international $)"</span>,<span class="st">"GNI, PPP (current international $)"</span>,<span class="st">"Government expenditure in educational institutions as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure in post-secondary non-tertiary institutions as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure in pre-primary institutions as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure in primary institutions as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure in secondary institutions education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure in tertiary institutions as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on post-secondary non-tertiary education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on pre-primary education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on primary education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on secondary and post-secondary non-tertiary vocational education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on secondary education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure on tertiary education as </span><span class="sc">% o</span><span class="st">f GDP (%)"</span>,<span class="st">"Government expenditure per lower secondary student (constant PPP$)"</span>,<span class="st">"Government expenditure per lower secondary student (constant US$)"</span>,<span class="st">"Government expenditure per lower secondary student (PPP$)"</span>,<span class="st">"Government expenditure per lower secondary student (US$)"</span>,<span class="st">"Government expenditure per lower secondary student as </span><span class="sc">% o</span><span class="st">f GDP per capita (%)"</span>,<span class="st">"Government expenditure per post-secondary non-tertiary student (constant PPP$)"</span>,<span class="st">"Government expenditure per post-secondary non-tertiary student (constant US$)"</span>,<span class="st">"Government expenditure per post-secondary non-tertiary student (PPP$)"</span>,<span class="st">"Government expenditure per post-secondary non-tertiary student (US$)"</span>,<span class="st">"Government expenditure per post-secondary non-tertiary student as </span><span class="sc">% o</span><span class="st">f GDP per capita (%)"</span>,<span class="st">"Labor force with advanced education (</span><span class="sc">% o</span><span class="st">f total)"</span>,<span class="st">"Labor force with advanced education, female (</span><span class="sc">% o</span><span class="st">f female labor force)"</span>,<span class="st">"Labor force with advanced education, male (</span><span class="sc">% o</span><span class="st">f male labor force)"</span>,<span class="st">"Labor force with basic education (</span><span class="sc">% o</span><span class="st">f total)"</span>,<span class="st">"Labor force with basic education, female (</span><span class="sc">% o</span><span class="st">f female labor force)"</span>,<span class="st">"Labor force with basic education, male (</span><span class="sc">% o</span><span class="st">f male labor force)"</span>,<span class="st">"Labor force with intermediate education (</span><span class="sc">% o</span><span class="st">f total)"</span>,<span class="st">"Labor force with intermediate education, female (</span><span class="sc">% o</span><span class="st">f female labor force)"</span>,<span class="st">"Labor force with intermediate education, male (</span><span class="sc">% o</span><span class="st">f male labor force)"</span>,<span class="st">"Labor force, female (</span><span class="sc">% o</span><span class="st">f total labor force)"</span>,<span class="st">"Labor force, total"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Agriculture programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Education programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Engineering, Manufacturing and Construction programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Health and Welfare programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Humanities and Arts programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from programmes in unspecified fields, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Science programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Services programmes, female (%)"</span>,<span class="st">"Percentage of female graduates from tertiary education graduating from Social Sciences, Business and Law programmes, female (%)"</span>,<span class="st">"Percentage of female students enrolled in primary education who are over-age, female (%)"</span>,<span class="st">"Percentage of female students enrolled in primary education who are under-age, female (%)"</span>,<span class="st">"Percentage of female students in lower secondary education enrolled in general programmes, female (%)"</span>,<span class="st">"Percentage of female students in lower secondary education enrolled in vocational programmes, female (%)"</span>,<span class="st">"Percentage of female students in post-secondary non-tertiary education enrolled in general programmes, female (%)"</span>,<span class="st">"Percentage of female students in post-secondary non-tertiary education enrolled in vocational programmes, female (%)"</span>,<span class="st">"Percentage of female students in secondary education enrolled in general programmes, female (%)"</span>,<span class="st">"Percentage of female students in secondary education enrolled in vocational programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Agriculture programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Education programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Engineering, Manufacturing and Construction programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Health and Welfare programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Humanities and Arts programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in programmes in unspecified fields, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Science programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Services programmes, female (%)"</span>,<span class="st">"Percentage of female students in tertiary education enrolled in Social Sciences, Business and Law programmes, female (%)"</span>,<span class="st">"Percentage of female students in upper secondary education enrolled in general programmes, female (%)"</span>,<span class="st">"Percentage of female students in upper secondary education enrolled in vocational programmes, female (%)"</span>,<span class="st">"Percentage of female teachers in lower secondary education who are trained, female (%)"</span>,<span class="st">"Percentage of female teachers in post-secondary non-tertiary education who are trained, female (%)"</span>,<span class="st">"Percentage of female teachers in pre-primary education who are trained, female (%)"</span>,<span class="st">"Percentage of female teachers in primary education who are trained, female (%)"</span>,<span class="st">"Percentage of female teachers in secondary education who are trained, female (%)"</span>,<span class="st">"Percentage of female teachers in upper secondary education who are trained, female (%)"</span>,<span class="st">"Percentage of graduates from Agriculture programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Education programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Engineering, Manufacturing and Construction programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Health and Welfare programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Humanities and Arts programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from non-science and non-technology fields in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from programmes in unspecified fields in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Science and Technology programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Science programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Services programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from Social Sciences, Business and Law programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Agriculture programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Education programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Engineering, Manufacturing and Construction programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Health and Welfare programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Humanities and Arts programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from programmes in unspecified fields, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Science programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Services programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education graduating from Social Sciences, Business and Law programmes, both sexes (%)"</span>,<span class="st">"Percentage of graduates from tertiary education who are female (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Agriculture programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Education programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Engineering, Manufacturing and Construction programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Health and Welfare programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Humanities and Arts programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from programmes in unspecified fields, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Science programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Services programmes, male (%)"</span>,<span class="st">"Percentage of male graduates from tertiary education graduating from Social Sciences, Business and Law programmes, male (%)"</span>,<span class="st">"Percentage of male students in secondary education enrolled in general programmes, male (%)"</span>,<span class="st">"Percentage of male students in secondary education enrolled in vocational programmes, male (%)"</span>,<span class="st">"Percentage of male students in tertiary education enrolled in Agriculture programmes, male (%)"</span>,<span class="st">"Percentage of male students in tertiary education enrolled in Education programmes, male (%)"</span>,<span class="st">"Percentage of male students in tertiary education enrolled in Engineering, Manufacturing and Construction programmes, male (%)"</span>,<span class="st">"Percentage of male students in tertiary education enrolled in Health and Welfare programmes, male (%)"</span>,<span class="st">"Percentage of male students in tertiary education enrolled in Humanities and Arts programmes, male (%)"</span>,<span class="st">"Percentage of students enrolled in Agriculture programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Education programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Engineering, Manufacturing and Construction programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Health and Welfare programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Humanities and Arts programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in primary education who are over-age, both sexes (%)"</span>,<span class="st">"Percentage of students enrolled in primary education who are under-age, both sexes (%)"</span>,<span class="st">"Percentage of students enrolled in programmes in unspecified fields in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Science programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Services programmes in tertiary education who are female (%)"</span>,<span class="st">"Percentage of students enrolled in Social Sciences, Business and Law programmes in tertiary education who are female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, fourth quintile, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, fourth quintile, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, fourth quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, fourth quintile, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, middle quintile, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, middle quintile, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, middle quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, middle quintile, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, poorest quintile, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, poorest quintile, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, poorest quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, poorest quintile, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, richest quintile, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, richest quintile, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, richest quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, richest quintile, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, rural, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, rural, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, rural, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, rural, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, second quintile, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, second quintile, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, second quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, second quintile, male (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, urban, both sexes (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, urban, female (%)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, urban, gender parity index (GPI)"</span>,<span class="st">"UIS: Adjusted net attendance rate, primary, urban, male (%)"</span>,<span class="st">"UIS: Mean years of schooling of the population age 25+. Female"</span>,<span class="st">"UIS: Mean years of schooling of the population age 25+. Male"</span>,<span class="st">"UIS: Mean years of schooling of the population age 25+. Total"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, fourth quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, fourth quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, fourth quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, fourth quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, middle quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, middle quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, middle quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, middle quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, poorest quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, poorest quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, poorest quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, poorest quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, richest quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, richest quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, richest quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, richest quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, rural, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, rural, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, rural, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, rural, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, second quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, second quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, second quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, second quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, urban, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, urban, female (%)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, urban, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, lower secondary, urban, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, fourth quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, fourth quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, fourth quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, fourth quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, middle quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, middle quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, middle quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, middle quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, poorest quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, poorest quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, poorest quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, poorest quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, richest quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, richest quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, richest quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, richest quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, rural, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, rural, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, rural, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, rural, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, second quintile, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, second quintile, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, second quintile, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, second quintile, male (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, urban, both sexes (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, urban, female (%)"</span>,<span class="st">"UIS: Net attendance rate, primary, urban, gender parity index (GPI)"</span>,<span class="st">"UIS: Net attendance rate, primary, urban, male (%)"</span>,<span class="st">"Youth illiterate population, 15-24 years, </span><span class="sc">% f</span><span class="st">emale"</span>,<span class="st">"Youth illiterate population, 15-24 years, both sexes (number)"</span>,<span class="st">"Youth illiterate population, 15-24 years, female (number)"</span>,<span class="st">"Youth illiterate population, 15-24 years, male (number)"</span>,<span class="st">"Youth literacy rate, population 15-24 years, both sexes (%)"</span>,<span class="st">"Youth literacy rate, population 15-24 years, female (%)"</span>,<span class="st">"Youth literacy rate, population 15-24 years, gender parity index (GPI)"</span>,<span class="st">"Youth literacy rate, population 15-24 years, male (%)"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="141">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(selected_variables[<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Adjusted net enrolment rate, lower secondary, both sexes (%)</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="142">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#df1 = lower_second</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#for selected_variable in selected_variables:</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df = convert_to_tidy(ed, selected_variable)</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df = df.rename(columns={"Value": selected_variable})</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combined_df = pd.merge(df1, df, on=["Country Code", "Year"], how="outer")</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combined_df = combined_df[(combined_df['Year']&gt;=2005) &amp; (combined_df['Year']&lt;=2014)]</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df1 = combined_df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="143">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df1.shape)</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="144">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#df1.to_csv('../data/education.csv', index=False)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="145">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#df2 = lower_second</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">#for indicator_value in indicator_values:</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df = convert_to_tidy(ed, indicator_value)</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df = df.rename(columns={"Value": indicator_value})</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combined_df = pd.merge(df1, df, on=["Country Code", "Year"], how="outer")</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combined_df = combined_df[(combined_df['Year']&gt;=2005) &amp; (combined_df['Year']&lt;=2012)]</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combined_df = combined_df.dropna()</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df2 = combined_df</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="146">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df1.head())</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="147">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lower_second_year = lower_second.groupby(['Year']).size().reset_index(name='Count')</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">#print(lower_second_year)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="148">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lower_second_country = lower_second[(lower_second['Year']&gt;=2005) &amp; (lower_second['Year']&lt;=2014)]</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#lower_second_country = lower_second_country.dropna()</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#print(lower_second_country.shape)</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print(lower_second_country.head())</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">#print(lower_second_country['Country Name'].nunique())</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="149">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#upper_second = "Adjusted net enrolment rate, upper secondary, gender parity index (GPI)"</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">#upper_second = convert_to_tidy(ed, upper_second)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="150">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#adult_literacy = "Adult literacy rate, population 15+ years, gender parity index (GPI)"</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#adult_literacy = convert_to_tidy(ed, adult_literacy)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="151">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#countries = ed['Country Name'].nunique()</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">#print(countries)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

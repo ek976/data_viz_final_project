@@ -154,5 +154,14 @@
   },
   "tiana/code/final-linked-plot.ipynb": {
     "final-linked-plot.html": "2c06724e"
+  },
+  "sheeba/plot-2-data_munging.ipynb": {
+    "plot-2-data_munging.html": "a763fb2f"
+  },
+  "sheeba/plot-1-data_munging.ipynb": {
+    "plot-1-data_munging.html": "bc12e24c"
+  },
+  "data_cleaning/EdStats_cleaning_eda.ipynb": {
+    "EdStats_cleaning_eda.html": "c71ca409"
   }
 }

@@ -194,7 +194,7 @@ facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
   geom_line(size = 1.5) +
   scale_color_manual(values = tiana_palette, name = "Income Group") +
   ylim(20, 100) +
-  labs(title = "Labor Force with Education Levels",
+  labs(title = "Labour Force with Education Levels (2010-2013)",
        x = "Year",
        y = "Percentage") +
   facet_wrap(~Indicator.Name, strip.position = "top") + 
