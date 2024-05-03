@@ -95,10 +95,7 @@ income_groups <- list(
 ```
 
 ```{r}
-# Assuming you have loaded your dataframe into a variable named df
-# And you have already created the income_groups list as provided earlier
-# Assuming your dataframe is named "read_df"
-# And you have already created the income_groups list as provided earlier
+
 
 # Function to categorize countries into income groups
 categorize_income <- function(country_name) {
@@ -192,7 +189,7 @@ plot_fun <- function(df, df_label, title) {
     theme(legend.position = "none")
 }
 
-# Create facet_wrap plot
+# Create line plot with facets for each gender and education level
 facet_plot <- ggplot(df_avg, aes(x = Year, y = Value, color = Income_Group)) +
   geom_line(size = 1.5) +
   scale_color_manual(values = tiana_palette, name = "Income Group") +
