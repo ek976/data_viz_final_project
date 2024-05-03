@@ -1,5 +1,4 @@
 ---
-title: "Lab 4: An opinionated introduction to Javascript"
 author: "Tiana Le"
 format:
   html:
