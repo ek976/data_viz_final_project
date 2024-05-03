@@ -1,10 +1,7 @@
 ---
 title: "Split Packed Bubble Plot"
 author: "Jorge Bris Moreno"
-format:
-  html:
-    embed-resources: true
-    toc: true
+draft: true
 editor_options:
   chunk_output_type: console
 execute:

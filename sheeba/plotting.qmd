@@ -1,12 +1,10 @@
 ---
 title: "Lab 4: An opinionated introduction to Javascript"
 author: "Tiana Le"
-format:
-  html:
-    embed-resources: true
-    include-in-header:
-      - text: |
-            <script src="https://d3js.org/d3.v7.min.js"></script>
+draft: true
+ # include-in-header:
+ #   - text: |
+ #         <script src="https://d3js.org/d3.v7.min.js"></script>
 
 ---
 

@@ -1,9 +1,6 @@
 ---
 author: "Tiana Le"
-title: ""
-format:
-    html:
-        embed-resources: true
+draft: true
 ---
 
 

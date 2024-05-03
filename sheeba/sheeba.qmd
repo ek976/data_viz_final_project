@@ -1,14 +1,14 @@
 ---
 title: "Plot 5: Government GDP"
 author: "Sheeba"
-format:
-  html:
-    embed-resources: true
-    code-fold: true
-    include-in-header:
-      - text: |
-            <script src="https://d3js.org/d3.v7.min.js"></script>
+draft: true
 ---
+
+```{r}
+#  include-in-header:
+#    - text: |
+#         <script src="https://d3js.org/d3.v7.min.js"></script>
+```
 
 ```{ojs}
 d7 = require('d3@7') 

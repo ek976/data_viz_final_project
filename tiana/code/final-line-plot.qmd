@@ -1,3 +1,8 @@
+---
+title: "Linked Plot"
+author: "Tiana Le"
+draft: true
+---
 
 ```{r}
 library(ggplot2)
