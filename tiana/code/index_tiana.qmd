@@ -19,7 +19,6 @@ import numpy as np
 import hvplot.pandas
 import holoviews as hv
 import panel as pn
-from bokeh.sampledata.iris import flowers
 from bokeh.resources import INLINE
 
 
